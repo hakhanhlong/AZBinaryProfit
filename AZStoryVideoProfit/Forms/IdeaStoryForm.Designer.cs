@@ -30,12 +30,12 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtResult = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNumberOfIdea = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtIdeaText = new System.Windows.Forms.RichTextBox();
             this.btnExecute = new System.Windows.Forms.Button();
+            this.txtResult = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -82,16 +82,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(421, 681);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // txtResult
+            // label2
             // 
-            this.txtResult.BackColor = System.Drawing.Color.Wheat;
-            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtResult.Location = new System.Drawing.Point(0, 0);
-            this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(839, 681);
-            this.txtResult.TabIndex = 0;
-            this.txtResult.Text = "";
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(415, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Topic / Idea";
             // 
             // label1
             // 
@@ -128,17 +128,6 @@
             0,
             0});
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(415, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Topic / Idea";
-            // 
             // txtIdeaText
             // 
             this.txtIdeaText.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -157,6 +146,17 @@
             this.btnExecute.TabIndex = 4;
             this.btnExecute.Text = "Execute";
             this.btnExecute.UseVisualStyleBackColor = true;
+            // 
+            // txtResult
+            // 
+            this.txtResult.BackColor = System.Drawing.Color.Wheat;
+            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtResult.Location = new System.Drawing.Point(0, 0);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.Size = new System.Drawing.Size(839, 681);
+            this.txtResult.TabIndex = 0;
+            this.txtResult.Text = "";
             // 
             // IdeaStoryForm
             // 
