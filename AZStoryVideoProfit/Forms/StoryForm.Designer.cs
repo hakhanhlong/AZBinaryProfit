@@ -44,18 +44,22 @@
             this.txtIdeaText = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.txtViewStorySetting = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.txtResultIdea = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.lbProcessing = new System.Windows.Forms.ToolStripLabel();
-            this.txtSelectedIdea = new System.Windows.Forms.RichTextBox();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.lvResultIdeas = new System.Windows.Forms.ListView();
+            this.lvColumnSttResultIdea = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvColumnNameResultIdea = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtViewResultIdea = new System.Windows.Forms.RichTextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -67,15 +71,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfIdea)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.txtViewStorySetting.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -293,7 +298,7 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.tabControl1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtViewStorySetting, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -304,24 +309,27 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(836, 650);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // tabControl1
+            // txtViewStorySetting
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(830, 596);
-            this.tabControl1.TabIndex = 0;
+            this.txtViewStorySetting.Controls.Add(this.tabPage1);
+            this.txtViewStorySetting.Controls.Add(this.tabPage2);
+            this.txtViewStorySetting.Controls.Add(this.tabPage3);
+            this.txtViewStorySetting.Controls.Add(this.tabPage4);
+            this.txtViewStorySetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtViewStorySetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtViewStorySetting.Location = new System.Drawing.Point(3, 3);
+            this.txtViewStorySetting.Name = "txtViewStorySetting";
+            this.txtViewStorySetting.SelectedIndex = 0;
+            this.txtViewStorySetting.Size = new System.Drawing.Size(830, 596);
+            this.txtViewStorySetting.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.tableLayoutPanel7);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(822, 570);
+            this.tabPage1.Size = new System.Drawing.Size(822, 568);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Story Ideas";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -329,79 +337,37 @@
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Controls.Add(this.splitContainer2, 0, 1);
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Controls.Add(this.splitContainer3, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(816, 564);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(816, 562);
             this.tableLayoutPanel7.TabIndex = 0;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 28);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.txtResultIdea);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.txtSelectedIdea);
-            this.splitContainer2.Size = new System.Drawing.Size(810, 533);
-            this.splitContainer2.SplitterDistance = 400;
-            this.splitContainer2.TabIndex = 1;
-            // 
-            // txtResultIdea
-            // 
-            this.txtResultIdea.BackColor = System.Drawing.Color.Wheat;
-            this.txtResultIdea.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtResultIdea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtResultIdea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtResultIdea.Location = new System.Drawing.Point(0, 0);
-            this.txtResultIdea.Name = "txtResultIdea";
-            this.txtResultIdea.Size = new System.Drawing.Size(400, 533);
-            this.txtResultIdea.TabIndex = 4;
-            this.txtResultIdea.Text = "";
             // 
             // tableLayoutPanel8
             // 
-            this.tableLayoutPanel8.ColumnCount = 2;
+            this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.label6, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(810, 19);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(810, 24);
             this.tableLayoutPanel8.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(408, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 15);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Selected Idea";
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 2);
+            this.label3.Location = new System.Drawing.Point(3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 1;
@@ -409,12 +375,13 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Controls.Add(this.richTextBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(822, 570);
+            this.tabPage2.Size = new System.Drawing.Size(822, 568);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Story Setting";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // toolStrip1
@@ -436,14 +403,90 @@
             this.lbProcessing.Text = "Processing ...";
             this.lbProcessing.Visible = false;
             // 
-            // txtSelectedIdea
+            // splitContainer3
             // 
-            this.txtSelectedIdea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSelectedIdea.Location = new System.Drawing.Point(0, 0);
-            this.txtSelectedIdea.Name = "txtSelectedIdea";
-            this.txtSelectedIdea.Size = new System.Drawing.Size(406, 533);
-            this.txtSelectedIdea.TabIndex = 0;
-            this.txtSelectedIdea.Text = "";
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 33);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.lvResultIdeas);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.txtViewResultIdea);
+            this.splitContainer3.Size = new System.Drawing.Size(810, 526);
+            this.splitContainer3.SplitterDistance = 208;
+            this.splitContainer3.TabIndex = 3;
+            // 
+            // lvResultIdeas
+            // 
+            this.lvResultIdeas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvColumnSttResultIdea,
+            this.lvColumnNameResultIdea});
+            this.lvResultIdeas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvResultIdeas.FullRowSelect = true;
+            this.lvResultIdeas.GridLines = true;
+            this.lvResultIdeas.HideSelection = false;
+            this.lvResultIdeas.Location = new System.Drawing.Point(0, 0);
+            this.lvResultIdeas.Name = "lvResultIdeas";
+            this.lvResultIdeas.Size = new System.Drawing.Size(810, 208);
+            this.lvResultIdeas.TabIndex = 0;
+            this.lvResultIdeas.UseCompatibleStateImageBehavior = false;
+            this.lvResultIdeas.View = System.Windows.Forms.View.Details;
+            this.lvResultIdeas.SelectedIndexChanged += new System.EventHandler(this.lvResultIdeas_SelectedIndexChanged);
+            // 
+            // lvColumnSttResultIdea
+            // 
+            this.lvColumnSttResultIdea.Text = "STT";
+            // 
+            // lvColumnNameResultIdea
+            // 
+            this.lvColumnNameResultIdea.Text = "Name";
+            this.lvColumnNameResultIdea.Width = 320;
+            // 
+            // txtViewResultIdea
+            // 
+            this.txtViewResultIdea.BackColor = System.Drawing.Color.Wheat;
+            this.txtViewResultIdea.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtViewResultIdea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtViewResultIdea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtViewResultIdea.Location = new System.Drawing.Point(0, 0);
+            this.txtViewResultIdea.Name = "txtViewResultIdea";
+            this.txtViewResultIdea.Size = new System.Drawing.Size(810, 314);
+            this.txtViewResultIdea.TabIndex = 5;
+            this.txtViewResultIdea.Text = "";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(822, 570);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(822, 570);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Wheat;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(816, 562);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
             // 
             // StoryForm
             // 
@@ -472,17 +515,18 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.txtViewStorySetting.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -507,15 +551,19 @@
         private System.Windows.Forms.RichTextBox txtIdeaText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl txtViewStorySetting;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.RichTextBox txtResultIdea;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox txtSelectedIdea;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.ListView lvResultIdeas;
+        private System.Windows.Forms.ColumnHeader lvColumnSttResultIdea;
+        private System.Windows.Forms.ColumnHeader lvColumnNameResultIdea;
+        private System.Windows.Forms.RichTextBox txtViewResultIdea;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

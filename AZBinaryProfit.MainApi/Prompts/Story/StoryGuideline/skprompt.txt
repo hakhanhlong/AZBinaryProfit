@@ -1,0 +1,10 @@
+﻿Writing Guide: Dig Deeper. Immerse yourself in the world you are building.
+Use vivid descriptions to paint the scenes in the reader's mind. Develop characters — let their motivations,
+fears, and complexities unfold naturally. Weave in the outline, but don't feel constrained.
+Let your story surprise you as you write. Use rich imagery, sensory details, and evocative language to bring the setting, characters, and events to life.
+Introduce elements subtly that can develop into subplots,
+relationships, or complex world-building details later in the story.
+Keep things interesting but not too resolved.Avoid forcing the story into a corner too early.
+Plant the seeds for subplots or potential character arc changes that can be expanded upon later.Remember,
+your main goal is to write as much as possible. If you finish the story too quickly, it won't be good. Expand,
+never summarize.Your goal is to write a story that is at least {{$number_words}} words (approximately {{$pages}}).

@@ -94,5 +94,42 @@ namespace AZBinaryProfit.MainApi.Controllers
             });
 
         }
+
+        [HttpPost]
+        [Route("StorySetting")]
+        public async Task<IActionResult> StorySetting([FromBody] StorySettingRequestViewModel request)
+        {
+
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story", "StorySetting", "skprompt.txt");
+            var settings = System.IO.File.ReadAllText(promptFilePath);
+            settings = settings.Replace("{{$story}}", request.Story);
+            settings = settings.Replace("{{$language}}", request.Language);
+            settings = settings.Replace("{{$persona}}", request.Persona);
+            settings = settings.Replace("{{$story_setting}}", request.Story_Setting);
+            settings = settings.Replace("{{$character_input}}", request.Character);
+            settings = settings.Replace("{{$plot_element}}", request.Plot_Elements);
+            settings = settings.Replace("{{$writing_style}}", request.Story_Writing_Style);
+            settings = settings.Replace("{{$story_tone}}", request.Story_Tone);
+            settings = settings.Replace("{{$narrative_pov}}", request.Narrative_Pov);
+            settings = settings.Replace("{{$audience_age_group}}", request.Audience_Age_Group);
+            settings = settings.Replace("{{$content_rating}}", request.Content_Rating);
+            settings = settings.Replace("{{$ending_preference}}", request.Ending_Preference);
+
+
+
+            promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story", "StoryGuideline", "skprompt.txt");
+            string guidelines = System.IO.File.ReadAllText(promptFilePath);
+            guidelines = guidelines.Replace("{{$number_words}}", $"{request.NumberWords * request.NumberPages}");
+            guidelines = guidelines.Replace("{{$pages}}", $"{request.NumberPages}");
+
+
+            return new JsonResult(new StorySettingResponseViewModel
+            {
+                Settings = settings,
+                Guidelines = guidelines,
+            });
+
+        }
     }
 }

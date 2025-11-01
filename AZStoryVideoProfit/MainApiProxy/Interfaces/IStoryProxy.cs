@@ -10,5 +10,8 @@ namespace AZStoryVideoProfit.MainApiProxy.Interfaces
     public interface IStoryProxy
     {
         StoryIdeaResponseViewModel StoryIdea(StoryIdeaRequestViewModel requestViewModel);
+
+        StorySettingResponseViewModel StorySetting(StorySettingRequestViewModel requestViewModel);
+        
     }
 }
