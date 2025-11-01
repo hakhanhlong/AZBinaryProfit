@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AZStoryVideoProfit", "AZStoryVideoProfit\AZStoryVideoProfit.csproj", "{4CAD022E-CED8-412C-BA5A-1E0B87D23E08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{C1ADEDB2-E2C8-4E99-BCD2-01CDB6547757}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{F34B6757-6336-40DA-BAE2-3B2324B6A339}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AZBinaryProfit.MainApi", "AZBinaryProfit.MainApi\AZBinaryProfit.MainApi.csproj", "{860E9FCF-9F98-423F-B1DF-997C80DD8C4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,11 +21,16 @@ Global
 		{4CAD022E-CED8-412C-BA5A-1E0B87D23E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CAD022E-CED8-412C-BA5A-1E0B87D23E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CAD022E-CED8-412C-BA5A-1E0B87D23E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860E9FCF-9F98-423F-B1DF-997C80DD8C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860E9FCF-9F98-423F-B1DF-997C80DD8C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860E9FCF-9F98-423F-B1DF-997C80DD8C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860E9FCF-9F98-423F-B1DF-997C80DD8C4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4CAD022E-CED8-412C-BA5A-1E0B87D23E08} = {C1ADEDB2-E2C8-4E99-BCD2-01CDB6547757}
+		{860E9FCF-9F98-423F-B1DF-997C80DD8C4E} = {F34B6757-6336-40DA-BAE2-3B2324B6A339}
 	EndGlobalSection
 EndGlobal

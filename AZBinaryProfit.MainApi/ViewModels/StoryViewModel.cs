@@ -1,0 +1,37 @@
+﻿namespace AZBinaryProfit.MainApi.ViewModels
+{
+
+
+
+
+    public class StoryIdeaRequestViewModel
+    {
+        public int IdeaNumber { get; set; }
+        public string Topic { get; set; }
+        public string Language { get; set; }
+    }
+
+
+    public class StoryIdeaResponseViewModel
+    {
+        public List<IdeaStoryItemViewModel> IdeaStories { get; set; } = new();
+    }
+
+    public class IdeaStoryItemViewModel
+    {
+        public string Name { get; set; }
+        public string Story { get; set; }
+        public string Genre { get; set; }
+        public string Story_Setting { get; set; }
+        public string Character { get; set; }
+        public string Plot_Elements { get; set; }
+        public string Story_Writing_Style { get; set; }
+        public string Story_Tone { get; set; }
+        public string Narrative_Pov { get; set; }
+        public string Audience_Age_Group { get; set; }
+        public string Content_Rating { get; set; }
+        public string Ending_Preference { get; set; }
+        public string Guidelines { get; set; }
+    }
+
+}

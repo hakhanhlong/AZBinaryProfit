@@ -13,7 +13,7 @@ namespace AZStoryVideoProfit
 {
     public partial class Main : Form
     {
-        IdeaStoryForm _IdeaStoryForm;
+        StoryForm _IdeaStoryForm;
         public Main()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace AZStoryVideoProfit
 
                 if (_IdeaStoryForm == null)
                 {
-                    _IdeaStoryForm = new IdeaStoryForm();
+                    _IdeaStoryForm = new StoryForm();
                     _IdeaStoryForm.MdiParent = this;
                     _IdeaStoryForm.Show();
                 }
@@ -34,7 +34,7 @@ namespace AZStoryVideoProfit
                 {
                     if (_IdeaStoryForm.IsDisposed)
                     {
-                        _IdeaStoryForm = new IdeaStoryForm();
+                        _IdeaStoryForm = new StoryForm();
                         _IdeaStoryForm.MdiParent = this;
                         _IdeaStoryForm.Show();
                     }

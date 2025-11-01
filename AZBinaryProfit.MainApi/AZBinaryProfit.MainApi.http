@@ -1,0 +1,6 @@
+@AZBinaryProfit.MainApi_HostAddress = http://localhost:5140
+
+GET {{AZBinaryProfit.MainApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
