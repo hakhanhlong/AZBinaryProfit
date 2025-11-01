@@ -76,4 +76,18 @@ namespace AZStoryVideoProfit.MainApiProxy.ViewModels
         public string Guidelines { get; set; }
     }
 
+
+
+    public class StoryPremiseRequestViewModel
+    {
+        public string Persona { get; set; }
+        public string StorySetting { get; set; }
+        public string Character { get; set; }
+    }
+
+    public class StoryPremiseResponseViewModel: BaseViewModel
+    {        
+        public string Data { get; set; }        
+    }
+
 }

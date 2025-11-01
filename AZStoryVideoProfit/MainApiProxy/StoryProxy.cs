@@ -58,10 +58,19 @@ namespace AZStoryVideoProfit.MainApiProxy
         {
            
             var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
-            var request = new RestRequest($"Story/StoryIdea", Method.Post);
+            var request = new RestRequest($"Story/StorySetting", Method.Post);
             request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
             var response = client.Execute(request);
             return JsonConvert.DeserializeObject<StorySettingResponseViewModel>(response.Content);
+        }
+
+        public StoryPremiseResponseViewModel StoryPremise(StoryPremiseRequestViewModel requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Story/StoryPremise", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(response.Content);
         }
     }
 }

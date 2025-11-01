@@ -131,5 +131,66 @@ namespace AZBinaryProfit.MainApi.Controllers
             });
 
         }
+
+
+        [HttpPost]
+        [Route("StoryPremise")]
+        public async Task<IActionResult> StoryPremise([FromBody] StoryPremiseRequestViewModel request)
+        {
+
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story", "StoryPremise", "skprompt.txt");
+            var configFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story", "StoryPremise", "config.json");
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+            // Read and parse config.json
+            var configJson = System.IO.File.ReadAllText(configFilePath);
+            var configOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            var config = PromptTemplateConfig.FromJson(configJson);
+
+
+            // Create the function with both prompt and config
+            //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
+            var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+            var kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+            {
+                ThinkingConfig = new GeminiThinkingConfig
+                {
+                    ThinkingBudget = 0
+                },
+                MaxTokens = 4000,
+                Temperature = 1,
+                TopK = 0,
+                TopP = 0.7
+
+            })
+            {
+                ["persona"] = request.Persona,
+                ["story_setting"] = request.StorySetting,
+                ["character_input"] = request.Character,
+            };
+
+            // Querying the prompt function
+            var response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+            var responsePremise = response.GetValue<string>();
+
+            var metadata = response.Metadata;
+
+            return new JsonResult(new
+            {
+                Data = responsePremise,
+                Info = new
+                {
+                    TotalTokenCount = metadata!["TotalTokenCount"],
+                    PromptTokenCount = metadata!["PromptTokenCount"],
+                    CandidatesTokenCount = metadata!["CandidatesTokenCount"],
+                    CurrentCandidateTokenCount = metadata!["CurrentCandidateTokenCount"]
+                }
+            });
+
+        }
+
     }
 }

@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "type": "completion",
+  "description": "Story Premise Vietnam.",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1024,
+      "temperature": 0.7
+    }
+  },
+  "input_variables": [
+    {
+      "name": "persona",
+      "description": "",
+      "required": true
+    },
+    {
+      "name": "story_setting",
+      "description": "",
+      "required": true
+    },
+    {
+      "name": "character_input",
+      "description": "",
+      "required": true
+    }
+  ]
+}

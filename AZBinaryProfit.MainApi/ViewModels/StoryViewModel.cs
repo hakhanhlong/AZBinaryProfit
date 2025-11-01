@@ -65,4 +65,13 @@
     }
 
 
+
+
+
+    public class StoryPremiseRequestViewModel
+    {
+        public string Persona { get; set; }
+        public string StorySetting { get; set; }
+        public string Character { get; set; }
+    }
 }

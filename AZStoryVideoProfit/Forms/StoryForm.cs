@@ -67,7 +67,7 @@ namespace AZStoryVideoProfit.Forms
 
 
                     Task.Run(() => {
-                        SetProcessStatus(true);
+                        SetProcessStatus(true, "Process Make Story Idea ...");
                         var jsonResult = StoryProxy.Instance.StoryIdea(request);
 
                         if (jsonResult.Data != null && jsonResult.Data.IdeaStories.Any())
@@ -81,7 +81,7 @@ namespace AZStoryVideoProfit.Forms
                                 _StoryIdeas.Add(item);
                             }
                         }
-                        SetProcessStatus(false);
+                        SetProcessStatus(false, "");
                     });
                     
 
@@ -90,9 +90,9 @@ namespace AZStoryVideoProfit.Forms
                
 
             }
-            catch
+            catch (Exception ex)
             {
-                SetProcessStatus(false);
+                SetProcessStatus(false, ex.Message);
             }
 
 
@@ -114,7 +114,7 @@ namespace AZStoryVideoProfit.Forms
 
         }
 
-        private void SetProcessStatus(bool isProcess)
+        private void SetProcessStatus(bool isProcess, string text)
         {
 
 
@@ -122,12 +122,15 @@ namespace AZStoryVideoProfit.Forms
                 if (isProcess)
                 {
                     lbProcessing.Visible = true;
+                    lbProcessing.Text = text;
                     btnExecute.Enabled = false;
+                    btnStoryPremise.Enabled = false;
                 }
                 else
                 {
                     lbProcessing.Visible = false;
                     btnExecute.Enabled = true;
+                    btnStoryPremise.Enabled = true;
                 }
             }));
             
@@ -138,31 +141,113 @@ namespace AZStoryVideoProfit.Forms
             if (lvResultIdeas.SelectedItems.Count > 0)
             {
                 int _Id = Convert.ToInt32(lvResultIdeas.SelectedItems[0].Tag);
-
                 var item = _StoryIdeas.FirstOrDefault(x => x.Id == _Id);
                 txtViewResultIdea.Text = JsonConvert.SerializeObject(item, Formatting.Indented);
 
-                var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story" ,"StorySetting", "skprompt.txt");
-                var personaContent = System.IO.File.ReadAllText(promptFilePath);
-                personaContent = personaContent.Replace("{{$story}}", item.Story);
-                personaContent = personaContent.Replace("{{$language}}", selectLanguage.SelectedValue.ToString());
-                personaContent = personaContent.Replace("{{$persona}}", selectPersonas.SelectedValue.ToString());
-                personaContent = personaContent.Replace("{{$story_setting}}", item.Story_Setting);
-                personaContent = personaContent.Replace("{{$character_input}}", item.Character);
-                personaContent = personaContent.Replace("{{$plot_element}}", item.Plot_Elements);
-                personaContent = personaContent.Replace("{{$writing_style}}", item.Story_Writing_Style);
-                personaContent = personaContent.Replace("{{$story_tone}}", item.Story_Tone);
-                personaContent = personaContent.Replace("{{$narrative_pov}}", item.Narrative_Pov);
-                personaContent = personaContent.Replace("{{$audience_age_group}}", item.Audience_Age_Group);
-                personaContent = personaContent.Replace("{{$content_rating}}", item.Content_Rating);
-                personaContent = personaContent.Replace("{{$ending_preference}}", item.Ending_Preference);
 
-                txtViewStorySetting.Text = personaContent;
+                try
+                {
+                    this.Invoke(new Action(() => {
+
+                        var request = new StorySettingRequestViewModel
+                        {
+
+                            Audience_Age_Group = item.Audience_Age_Group,
+                            Character = item.Character,
+                            Content_Rating = item.Content_Rating,
+                            Ending_Preference = item.Ending_Preference,
+                            Genre = item.Genre,
+                            Guidelines = item.Guidelines,
+                            Language = selectLanguage.SelectedValue.ToString(),
+                            Name = item.Name,
+                            Narrative_Pov = item.Narrative_Pov,
+                            Persona = selectPersonas.SelectedValue.ToString(),
+                            Plot_Elements = item.Plot_Elements,
+                            Story = item.Story,
+                            Story_Tone = item.Story_Tone,
+                            Story_Setting = item.Story_Setting,
+                            Story_Writing_Style = item.Story_Writing_Style,
+                            NumberPages = (int)txtNumberOfPages.Value,
+                            NumberWords = (int)txtNumberOfWords.Value
+                            
+                        };
+                       
+                        Task.Run(() => {
+                            SetProcessStatus(true, "Process Story Setting ...");
+
+                            var response = StoryProxy.Instance.StorySetting(request);
+                            this.Invoke(new Action(() => {
+
+                                txtViewStorySetting.Text = JsonConvert.SerializeObject(response, Formatting.Indented);
+                                txtViewStorySetting.Text = txtViewStorySetting.Text.Replace("\n", "").Replace("\r", "").Replace("\t", "");
+
+                            }));
 
 
+                            SetProcessStatus(false, "");
+                        });
 
+                    }));
+
+
+                    }
+                catch 
+                { }
+                             
             }
         }
-       
+
+        private void btnStoryPremise_Click(object sender, EventArgs e)
+        {
+
+            if (lvResultIdeas.SelectedItems.Count > 0)
+            {
+                int _Id = Convert.ToInt32(lvResultIdeas.SelectedItems[0].Tag);
+                var item = _StoryIdeas.FirstOrDefault(x => x.Id == _Id);
+
+
+                try
+                {
+                    this.Invoke(new Action(() => {
+
+
+                        var storySettingResponseViewModel = JsonConvert.DeserializeObject<StorySettingResponseViewModel>(txtViewStorySetting.Text);
+
+                        var request = new StoryPremiseRequestViewModel
+                        {
+
+                            Persona = storySettingResponseViewModel.Settings,
+                            Character = item.Character,
+                            StorySetting = item.Story_Setting
+
+
+                        };
+
+                        Task.Run(() => {
+                            SetProcessStatus(true, "Process Story Premise ...");
+
+                            var response = StoryProxy.Instance.StoryPremise(request);
+                            this.Invoke(new Action(() => {
+
+                                txtViewStoryPremise.Text = JsonConvert.SerializeObject(response, Formatting.Indented);
+
+                            }));
+
+
+                            SetProcessStatus(false, "");
+                        });
+
+                    }));
+
+
+                }
+                catch
+                { }
+
+            }
+
+            
+            
+        }
     }
 }
