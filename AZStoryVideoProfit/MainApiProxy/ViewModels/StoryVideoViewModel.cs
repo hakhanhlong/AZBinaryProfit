@@ -1,4 +1,10 @@
-﻿namespace AZBinaryProfit.MainApi.ViewModels
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AZStoryVideoProfit.MainApiProxy.ViewModels
 {
     public class StoryVideoSceneRequestViewModel
     {
@@ -27,18 +33,25 @@
     }
 
 
+    public class StoryVideoResponseViewModel : BaseViewModel
+    {        
+        public StoryVideoSceneResponseViewModel Data { get; set; }
+
+    }
+
     public class StoryVideoSceneResponseViewModel
     {
 
         public string Name { get; set; }
-        public List<StoryVideoSceneItem> Scenes { get; set; }        
+        public List<StoryVideoSceneItem> Scenes { get; set; }
 
     }
 
     public class StoryVideoSceneItem
     {
+        public int Id { get; set; }
         public string Description { get; set; }
-        public string Narration { get; set; }        
+        public string Narration { get; set; }
     }
 
 }

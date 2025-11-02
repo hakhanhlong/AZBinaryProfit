@@ -101,9 +101,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainApiProxy\Interfaces\IStoryVideoProxy.cs" />
     <Compile Include="MainApiProxy\Interfaces\IStoryProxy.cs" />
     <Compile Include="MainApiProxy\StoryProxy.cs" />
+    <Compile Include="MainApiProxy\StoryVideoProxy.cs" />
     <Compile Include="MainApiProxy\ViewModels\BaseViewModel.cs" />
+    <Compile Include="MainApiProxy\ViewModels\StoryVideoViewModel.cs" />
     <Compile Include="MainApiProxy\ViewModels\StoryViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

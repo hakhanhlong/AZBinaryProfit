@@ -77,12 +77,12 @@
             this.txtViewStoryStarting = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.btnStoryContinuationPlusEnd = new System.Windows.Forms.Button();
+            this.lbStoryStartingWordCount = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.txtStoryContinuationPlusEnd = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.lbProcessing = new System.Windows.Forms.ToolStripLabel();
-            this.lbStoryStartingWordCount = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -797,6 +797,16 @@
             this.btnStoryContinuationPlusEnd.UseVisualStyleBackColor = false;
             this.btnStoryContinuationPlusEnd.Click += new System.EventHandler(this.btnStoryContinuationPlusEnd_Click);
             // 
+            // lbStoryStartingWordCount
+            // 
+            this.lbStoryStartingWordCount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbStoryStartingWordCount.AutoSize = true;
+            this.lbStoryStartingWordCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStoryStartingWordCount.Location = new System.Drawing.Point(3, 11);
+            this.lbStoryStartingWordCount.Name = "lbStoryStartingWordCount";
+            this.lbStoryStartingWordCount.Size = new System.Drawing.Size(0, 20);
+            this.lbStoryStartingWordCount.TabIndex = 7;
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.tableLayoutPanel15);
@@ -850,16 +860,6 @@
             this.lbProcessing.Size = new System.Drawing.Size(76, 22);
             this.lbProcessing.Text = "Processing ...";
             this.lbProcessing.Visible = false;
-            // 
-            // lbStoryStartingWordCount
-            // 
-            this.lbStoryStartingWordCount.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbStoryStartingWordCount.AutoSize = true;
-            this.lbStoryStartingWordCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStoryStartingWordCount.Location = new System.Drawing.Point(3, 11);
-            this.lbStoryStartingWordCount.Name = "lbStoryStartingWordCount";
-            this.lbStoryStartingWordCount.Size = new System.Drawing.Size(0, 20);
-            this.lbStoryStartingWordCount.TabIndex = 7;
             // 
             // StoryForm
             // 
