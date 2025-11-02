@@ -1,4 +1,5 @@
-﻿using AZStoryVideoProfit.MainApiProxy;
+﻿using AZStoryVideoProfit.Helpers;
+using AZStoryVideoProfit.MainApiProxy;
 using AZStoryVideoProfit.MainApiProxy.ViewModels;
 using AZStoryVideoProfit.Settings;
 using Newtonsoft.Json;
@@ -229,7 +230,7 @@ namespace AZStoryVideoProfit.Forms
                             var response = StoryProxy.Instance.StoryPremise(request);
                             this.Invoke(new Action(() => {
 
-                                txtViewStoryPremise.Text = JsonConvert.SerializeObject(response, Formatting.Indented);
+                                txtViewStoryPremise.Text = response.Data;//JsonConvert.SerializeObject(response, Formatting.Indented);
 
                             }));
 
@@ -264,7 +265,7 @@ namespace AZStoryVideoProfit.Forms
 
 
                         var storySettingResponseViewModel = JsonConvert.DeserializeObject<StorySettingResponseViewModel>(txtViewStorySetting.Text);
-                        var storyPremiseResponseViewMidel = JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(txtViewStoryPremise.Text);
+                        //var storyPremiseResponseViewMidel = JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(txtViewStoryPremise.Text);
 
 
                         
@@ -274,7 +275,7 @@ namespace AZStoryVideoProfit.Forms
                         {
 
                             Persona = storySettingResponseViewModel.Settings,
-                            Premise = storyPremiseResponseViewMidel.Data
+                            Premise = txtViewStoryPremise.Text//storyPremiseResponseViewMidel.Data
 
 
                         };
@@ -285,7 +286,7 @@ namespace AZStoryVideoProfit.Forms
                             var response = StoryProxy.Instance.StoryOutline(request);
                             this.Invoke(new Action(() => {
 
-                                txtViewStoryOutline.Text = JsonConvert.SerializeObject(response, Formatting.Indented);
+                                txtViewStoryOutline.Text = response.Data;//JsonConvert.SerializeObject(response, Formatting.Indented);
 
                             }));
 
@@ -318,8 +319,8 @@ namespace AZStoryVideoProfit.Forms
 
 
                         var storySettingResponseViewModel = JsonConvert.DeserializeObject<StorySettingResponseViewModel>(txtViewStorySetting.Text);
-                        var storyPremiseResponseViewMidel = JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(txtViewStoryPremise.Text);
-                        var storyOutlineResponseViewMidel = JsonConvert.DeserializeObject<StoryOutlineResponseViewModel>(txtViewStoryOutline.Text);
+                        //var storyPremiseResponseViewMidel = JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(txtViewStoryPremise.Text);
+                       // var storyOutlineResponseViewMidel = JsonConvert.DeserializeObject<StoryOutlineResponseViewModel>(txtViewStoryOutline.Text);
 
 
 
@@ -329,8 +330,8 @@ namespace AZStoryVideoProfit.Forms
                         {
 
                             Persona = storySettingResponseViewModel.Settings,
-                            Premise = storyPremiseResponseViewMidel.Data,
-                            Outline = storyOutlineResponseViewMidel.Data,
+                            Premise = txtViewStoryPremise.Text,//storyPremiseResponseViewMidel.Data,
+                            Outline = txtViewStoryOutline.Text,//storyOutlineResponseViewMidel.Data,
                             Guidelines = storySettingResponseViewModel.Guidelines
 
 
@@ -345,6 +346,7 @@ namespace AZStoryVideoProfit.Forms
                             {
 
                                 txtViewStoryStarting.Text = response.Data;
+                                lbStoryStartingWordCount.Text = $"{StringHelper.CountWords(response.Data)} words";
 
                             }));
 
@@ -376,8 +378,8 @@ namespace AZStoryVideoProfit.Forms
 
 
                         var storySettingResponseViewModel = JsonConvert.DeserializeObject<StorySettingResponseViewModel>(txtViewStorySetting.Text);
-                        var storyPremiseResponseViewMidel = JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(txtViewStoryPremise.Text);
-                        var storyOutlineResponseViewMidel = JsonConvert.DeserializeObject<StoryOutlineResponseViewModel>(txtViewStoryOutline.Text);
+                        //var storyPremiseResponseViewMidel = JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(txtViewStoryPremise.Text);
+                        //var storyOutlineResponseViewMidel = JsonConvert.DeserializeObject<StoryOutlineResponseViewModel>(txtViewStoryOutline.Text);
 
 
 
@@ -388,8 +390,8 @@ namespace AZStoryVideoProfit.Forms
                         {
 
                             Persona = storySettingResponseViewModel.Settings,
-                            Premise = storyPremiseResponseViewMidel.Data,
-                            Outline = storyOutlineResponseViewMidel.Data,
+                            Premise = txtViewStoryPremise.Text,//storyPremiseResponseViewMidel.Data,
+                            Outline = txtViewStoryOutline.Text,//storyOutlineResponseViewMidel.Data,
                             Guidelines = storySettingResponseViewModel.Guidelines,
                             StoryStarting = txtViewStoryStarting.Text,
                             Number_Pages = (int)txtNumberOfPages.Value,
@@ -422,5 +424,6 @@ namespace AZStoryVideoProfit.Forms
                 { }
             }
         }
+        
     }
 }

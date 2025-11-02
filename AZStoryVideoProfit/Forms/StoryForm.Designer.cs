@@ -69,18 +69,20 @@
             this.btnStoryOutline = new System.Windows.Forms.Button();
             this.txtViewStoryPremise = new System.Windows.Forms.RichTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.lbProcessing = new System.Windows.Forms.ToolStripLabel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtViewStoryOutline = new System.Windows.Forms.RichTextBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.btnStoryStarting = new System.Windows.Forms.Button();
+            this.txtViewStoryOutline = new System.Windows.Forms.RichTextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnStoryContinuationPlusEnd = new System.Windows.Forms.Button();
             this.txtViewStoryStarting = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnStoryContinuationPlusEnd = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.txtStoryContinuationPlusEnd = new System.Windows.Forms.RichTextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.lbProcessing = new System.Windows.Forms.ToolStripLabel();
+            this.lbStoryStartingWordCount = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -109,12 +111,13 @@
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -682,35 +685,6 @@
             this.tabPage4.Text = "4. Story Outline";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.tableLayoutPanel14);
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(822, 616);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "5. Story Starting";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lbProcessing});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1264, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // lbProcessing
-            // 
-            this.lbProcessing.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.lbProcessing.Name = "lbProcessing";
-            this.lbProcessing.Size = new System.Drawing.Size(76, 22);
-            this.lbProcessing.Text = "Processing ...";
-            this.lbProcessing.Visible = false;
-            // 
             // tableLayoutPanel13
             // 
             this.tableLayoutPanel13.ColumnCount = 1;
@@ -725,27 +699,6 @@
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel13.Size = new System.Drawing.Size(822, 616);
             this.tableLayoutPanel13.TabIndex = 0;
-            // 
-            // txtViewStoryOutline
-            // 
-            this.txtViewStoryOutline.BackColor = System.Drawing.Color.Wheat;
-            this.txtViewStoryOutline.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtViewStoryOutline.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtViewStoryOutline.Location = new System.Drawing.Point(3, 3);
-            this.txtViewStoryOutline.Name = "txtViewStoryOutline";
-            this.txtViewStoryOutline.Size = new System.Drawing.Size(816, 562);
-            this.txtViewStoryOutline.TabIndex = 2;
-            this.txtViewStoryOutline.Text = "";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.tableLayoutPanel15);
-            this.tabPage6.Location = new System.Drawing.Point(4, 24);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(822, 616);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "6. Story Continuation + End";
-            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // btnStoryStarting
             // 
@@ -763,12 +716,33 @@
             this.btnStoryStarting.UseVisualStyleBackColor = false;
             this.btnStoryStarting.Click += new System.EventHandler(this.btnStoryStarting_Click);
             // 
+            // txtViewStoryOutline
+            // 
+            this.txtViewStoryOutline.BackColor = System.Drawing.Color.Wheat;
+            this.txtViewStoryOutline.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtViewStoryOutline.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtViewStoryOutline.Location = new System.Drawing.Point(3, 3);
+            this.txtViewStoryOutline.Name = "txtViewStoryOutline";
+            this.txtViewStoryOutline.Size = new System.Drawing.Size(816, 562);
+            this.txtViewStoryOutline.TabIndex = 2;
+            this.txtViewStoryOutline.Text = "";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.tableLayoutPanel14);
+            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(822, 616);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "5. Story Starting";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel14
             // 
             this.tableLayoutPanel14.ColumnCount = 1;
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel14.Controls.Add(this.txtViewStoryStarting, 0, 0);
-            this.tableLayoutPanel14.Controls.Add(this.btnStoryContinuationPlusEnd, 0, 1);
+            this.tableLayoutPanel14.Controls.Add(this.tableLayoutPanel16, 0, 1);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
@@ -777,22 +751,6 @@
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel14.Size = new System.Drawing.Size(822, 616);
             this.tableLayoutPanel14.TabIndex = 0;
-            // 
-            // btnStoryContinuationPlusEnd
-            // 
-            this.btnStoryContinuationPlusEnd.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnStoryContinuationPlusEnd.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnStoryContinuationPlusEnd.FlatAppearance.BorderSize = 0;
-            this.btnStoryContinuationPlusEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStoryContinuationPlusEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStoryContinuationPlusEnd.ForeColor = System.Drawing.Color.White;
-            this.btnStoryContinuationPlusEnd.Location = new System.Drawing.Point(630, 571);
-            this.btnStoryContinuationPlusEnd.Name = "btnStoryContinuationPlusEnd";
-            this.btnStoryContinuationPlusEnd.Size = new System.Drawing.Size(189, 42);
-            this.btnStoryContinuationPlusEnd.TabIndex = 5;
-            this.btnStoryContinuationPlusEnd.Text = "Story Continuation + End";
-            this.btnStoryContinuationPlusEnd.UseVisualStyleBackColor = false;
-            this.btnStoryContinuationPlusEnd.Click += new System.EventHandler(this.btnStoryContinuationPlusEnd_Click);
             // 
             // txtViewStoryStarting
             // 
@@ -804,6 +762,50 @@
             this.txtViewStoryStarting.Size = new System.Drawing.Size(816, 562);
             this.txtViewStoryStarting.TabIndex = 6;
             this.txtViewStoryStarting.Text = "";
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.ColumnCount = 5;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel16.Controls.Add(this.btnStoryContinuationPlusEnd, 4, 0);
+            this.tableLayoutPanel16.Controls.Add(this.lbStoryStartingWordCount, 0, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 571);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(816, 42);
+            this.tableLayoutPanel16.TabIndex = 7;
+            // 
+            // btnStoryContinuationPlusEnd
+            // 
+            this.btnStoryContinuationPlusEnd.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnStoryContinuationPlusEnd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStoryContinuationPlusEnd.FlatAppearance.BorderSize = 0;
+            this.btnStoryContinuationPlusEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStoryContinuationPlusEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStoryContinuationPlusEnd.ForeColor = System.Drawing.Color.White;
+            this.btnStoryContinuationPlusEnd.Location = new System.Drawing.Point(614, 3);
+            this.btnStoryContinuationPlusEnd.Name = "btnStoryContinuationPlusEnd";
+            this.btnStoryContinuationPlusEnd.Size = new System.Drawing.Size(199, 36);
+            this.btnStoryContinuationPlusEnd.TabIndex = 6;
+            this.btnStoryContinuationPlusEnd.Text = "Story Continuation + End";
+            this.btnStoryContinuationPlusEnd.UseVisualStyleBackColor = false;
+            this.btnStoryContinuationPlusEnd.Click += new System.EventHandler(this.btnStoryContinuationPlusEnd_Click);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.tableLayoutPanel15);
+            this.tabPage6.Location = new System.Drawing.Point(4, 24);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(822, 616);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "6. Story Continuation + End";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel15
             // 
@@ -829,6 +831,35 @@
             this.txtStoryContinuationPlusEnd.Size = new System.Drawing.Size(816, 562);
             this.txtStoryContinuationPlusEnd.TabIndex = 6;
             this.txtStoryContinuationPlusEnd.Text = "";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbProcessing});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip1.Size = new System.Drawing.Size(1264, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // lbProcessing
+            // 
+            this.lbProcessing.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.lbProcessing.Name = "lbProcessing";
+            this.lbProcessing.Size = new System.Drawing.Size(76, 22);
+            this.lbProcessing.Text = "Processing ...";
+            this.lbProcessing.Visible = false;
+            // 
+            // lbStoryStartingWordCount
+            // 
+            this.lbStoryStartingWordCount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbStoryStartingWordCount.AutoSize = true;
+            this.lbStoryStartingWordCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStoryStartingWordCount.Location = new System.Drawing.Point(3, 11);
+            this.lbStoryStartingWordCount.Name = "lbStoryStartingWordCount";
+            this.lbStoryStartingWordCount.Size = new System.Drawing.Size(0, 20);
+            this.lbStoryStartingWordCount.TabIndex = 7;
             // 
             // StoryForm
             // 
@@ -877,13 +908,15 @@
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel16.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.tableLayoutPanel13.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
-            this.tableLayoutPanel14.ResumeLayout(false);
-            this.tableLayoutPanel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -939,9 +972,11 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Button btnStoryStarting;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
-        private System.Windows.Forms.Button btnStoryContinuationPlusEnd;
         private System.Windows.Forms.RichTextBox txtViewStoryStarting;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.RichTextBox txtStoryContinuationPlusEnd;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
+        private System.Windows.Forms.Button btnStoryContinuationPlusEnd;
+        private System.Windows.Forms.Label lbStoryStartingWordCount;
     }
 }
