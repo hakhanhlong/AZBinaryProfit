@@ -249,5 +249,178 @@ namespace AZStoryVideoProfit.Forms
             
             
         }
+
+        private void btnStoryOutline_Click(object sender, EventArgs e)
+        {
+            if (lvResultIdeas.SelectedItems.Count > 0)
+            {
+                int _Id = Convert.ToInt32(lvResultIdeas.SelectedItems[0].Tag);
+                var item = _StoryIdeas.FirstOrDefault(x => x.Id == _Id);
+
+
+                try
+                {
+                    this.Invoke(new Action(() => {
+
+
+                        var storySettingResponseViewModel = JsonConvert.DeserializeObject<StorySettingResponseViewModel>(txtViewStorySetting.Text);
+                        var storyPremiseResponseViewMidel = JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(txtViewStoryPremise.Text);
+
+
+                        
+
+
+                        var request = new StoryOutlineRequestViewModel
+                        {
+
+                            Persona = storySettingResponseViewModel.Settings,
+                            Premise = storyPremiseResponseViewMidel.Data
+
+
+                        };
+
+                        Task.Run(() => {
+                            SetProcessStatus(true, "Process Story Outline ...");
+
+                            var response = StoryProxy.Instance.StoryOutline(request);
+                            this.Invoke(new Action(() => {
+
+                                txtViewStoryOutline.Text = JsonConvert.SerializeObject(response, Formatting.Indented);
+
+                            }));
+
+
+                            SetProcessStatus(false, "");
+                        });
+
+                    }));
+
+
+                }
+                catch
+                { }
+
+            }
+        }
+
+        private void btnStoryStarting_Click(object sender, EventArgs e)
+        {
+            if (lvResultIdeas.SelectedItems.Count > 0)
+            {
+                int _Id = Convert.ToInt32(lvResultIdeas.SelectedItems[0].Tag);
+                var item = _StoryIdeas.FirstOrDefault(x => x.Id == _Id);
+
+
+                try
+                {
+                    this.Invoke(new Action(() =>
+                    {
+
+
+                        var storySettingResponseViewModel = JsonConvert.DeserializeObject<StorySettingResponseViewModel>(txtViewStorySetting.Text);
+                        var storyPremiseResponseViewMidel = JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(txtViewStoryPremise.Text);
+                        var storyOutlineResponseViewMidel = JsonConvert.DeserializeObject<StoryOutlineResponseViewModel>(txtViewStoryOutline.Text);
+
+
+
+
+
+                        var request = new StoryStartingRequestViewModel
+                        {
+
+                            Persona = storySettingResponseViewModel.Settings,
+                            Premise = storyPremiseResponseViewMidel.Data,
+                            Outline = storyOutlineResponseViewMidel.Data,
+                            Guidelines = storySettingResponseViewModel.Guidelines
+
+
+                        };
+
+                        Task.Run(() =>
+                        {
+                            SetProcessStatus(true, "Process Story Starting ...");
+
+                            var response = StoryProxy.Instance.StoryStarting(request);
+                            this.Invoke(new Action(() =>
+                            {
+
+                                txtViewStoryStarting.Text = response.Data;
+
+                            }));
+
+
+                            SetProcessStatus(false, "");
+                        });
+
+                    }));
+
+
+                }
+                catch
+                { }
+            }
+        }
+
+        private void btnStoryContinuationPlusEnd_Click(object sender, EventArgs e)
+        {
+            if (lvResultIdeas.SelectedItems.Count > 0)
+            {
+                int _Id = Convert.ToInt32(lvResultIdeas.SelectedItems[0].Tag);
+                var item = _StoryIdeas.FirstOrDefault(x => x.Id == _Id);
+
+
+                try
+                {
+                    this.Invoke(new Action(() =>
+                    {
+
+
+                        var storySettingResponseViewModel = JsonConvert.DeserializeObject<StorySettingResponseViewModel>(txtViewStorySetting.Text);
+                        var storyPremiseResponseViewMidel = JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(txtViewStoryPremise.Text);
+                        var storyOutlineResponseViewMidel = JsonConvert.DeserializeObject<StoryOutlineResponseViewModel>(txtViewStoryOutline.Text);
+
+
+
+
+
+
+                        var request = new StoryContinuationRequestViewModel
+                        {
+
+                            Persona = storySettingResponseViewModel.Settings,
+                            Premise = storyPremiseResponseViewMidel.Data,
+                            Outline = storyOutlineResponseViewMidel.Data,
+                            Guidelines = storySettingResponseViewModel.Guidelines,
+                            StoryStarting = txtViewStoryStarting.Text,
+                            Number_Pages = (int)txtNumberOfPages.Value,
+                            Number_Words = (int)txtNumberOfWords.Value
+
+
+                        };
+
+                        Task.Run(() =>
+                        {
+                            SetProcessStatus(true, "Process Story Continuation ...");
+
+                            var response = StoryProxy.Instance.StoryContinuation(request);
+                            this.Invoke(new Action(() =>
+                            {
+
+                                txtStoryContinuationPlusEnd.Text = response.Data;
+
+                            }));
+
+
+                            SetProcessStatus(false, "");
+                        });
+
+                    }));
+
+
+                }
+                catch
+                { }
+            }
+        }
     }
 }

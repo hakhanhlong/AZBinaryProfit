@@ -40,9 +40,15 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.selectPersonas = new System.Windows.Forms.ComboBox();
-            this.btnExecute = new System.Windows.Forms.Button();
             this.txtIdeaText = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnExecute = new System.Windows.Forms.Button();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNumberOfWords = new System.Windows.Forms.NumericUpDown();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtNumberOfPages = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -55,23 +61,26 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnStoryPremise = new System.Windows.Forms.Button();
+            this.txtViewStorySetting = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnStoryOutline = new System.Windows.Forms.Button();
+            this.txtViewStoryPremise = new System.Windows.Forms.RichTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.lbProcessing = new System.Windows.Forms.ToolStripLabel();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNumberOfWords = new System.Windows.Forms.NumericUpDown();
-            this.txtNumberOfPages = new System.Windows.Forms.NumericUpDown();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtViewStorySetting = new System.Windows.Forms.RichTextBox();
-            this.btnStoryPremise = new System.Windows.Forms.Button();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtViewStoryPremise = new System.Windows.Forms.RichTextBox();
-            this.btnStoryOutline = new System.Windows.Forms.Button();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtViewStoryOutline = new System.Windows.Forms.RichTextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.btnStoryStarting = new System.Windows.Forms.Button();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnStoryContinuationPlusEnd = new System.Windows.Forms.Button();
+            this.txtViewStoryStarting = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtStoryContinuationPlusEnd = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -82,6 +91,10 @@
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfIdea)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfWords)).BeginInit();
+            this.tableLayoutPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfPages)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -92,14 +105,16 @@
             this.splitContainer3.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfWords)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfPages)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -280,22 +295,6 @@
             this.selectPersonas.Size = new System.Drawing.Size(200, 21);
             this.selectPersonas.TabIndex = 3;
             // 
-            // btnExecute
-            // 
-            this.btnExecute.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExecute.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnExecute.FlatAppearance.BorderSize = 0;
-            this.btnExecute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExecute.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExecute.ForeColor = System.Drawing.Color.White;
-            this.btnExecute.Location = new System.Drawing.Point(289, 605);
-            this.btnExecute.Name = "btnExecute";
-            this.btnExecute.Size = new System.Drawing.Size(126, 42);
-            this.btnExecute.TabIndex = 4;
-            this.btnExecute.Text = "Execute";
-            this.btnExecute.UseVisualStyleBackColor = false;
-            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
-            // 
             // txtIdeaText
             // 
             this.txtIdeaText.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -317,6 +316,120 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Topic / Idea";
             // 
+            // btnExecute
+            // 
+            this.btnExecute.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnExecute.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnExecute.FlatAppearance.BorderSize = 0;
+            this.btnExecute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExecute.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExecute.ForeColor = System.Drawing.Color.White;
+            this.btnExecute.Location = new System.Drawing.Point(289, 605);
+            this.btnExecute.Name = "btnExecute";
+            this.btnExecute.Size = new System.Drawing.Size(126, 42);
+            this.btnExecute.TabIndex = 4;
+            this.btnExecute.Text = "Execute";
+            this.btnExecute.UseVisualStyleBackColor = false;
+            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.txtNumberOfWords, 1, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 545);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(412, 24);
+            this.tableLayoutPanel9.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 4);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(200, 15);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Number of Words";
+            // 
+            // txtNumberOfWords
+            // 
+            this.txtNumberOfWords.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNumberOfWords.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.txtNumberOfWords.Location = new System.Drawing.Point(209, 3);
+            this.txtNumberOfWords.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.txtNumberOfWords.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtNumberOfWords.Name = "txtNumberOfWords";
+            this.txtNumberOfWords.Size = new System.Drawing.Size(200, 20);
+            this.txtNumberOfWords.TabIndex = 4;
+            this.txtNumberOfWords.Value = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 2;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Controls.Add(this.txtNumberOfPages, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 575);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(412, 24);
+            this.tableLayoutPanel10.TabIndex = 10;
+            // 
+            // txtNumberOfPages
+            // 
+            this.txtNumberOfPages.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNumberOfPages.Location = new System.Drawing.Point(209, 3);
+            this.txtNumberOfPages.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtNumberOfPages.Name = "txtNumberOfPages";
+            this.txtNumberOfPages.Size = new System.Drawing.Size(200, 20);
+            this.txtNumberOfPages.TabIndex = 5;
+            this.txtNumberOfPages.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(200, 15);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Number of Pages";
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -327,7 +440,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 650F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(836, 650);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -338,6 +451,7 @@
             this.tab.Controls.Add(this.tabPage3);
             this.tab.Controls.Add(this.tabPage4);
             this.tab.Controls.Add(this.tabPage5);
+            this.tab.Controls.Add(this.tabPage6);
             this.tab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tab.Location = new System.Drawing.Point(3, 3);
@@ -387,7 +501,7 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.txtViewResultIdea);
             this.splitContainer3.Size = new System.Drawing.Size(810, 574);
-            this.splitContainer3.SplitterDistance = 226;
+            this.splitContainer3.SplitterDistance = 225;
             this.splitContainer3.TabIndex = 3;
             // 
             // lvResultIdeas
@@ -401,7 +515,7 @@
             this.lvResultIdeas.HideSelection = false;
             this.lvResultIdeas.Location = new System.Drawing.Point(0, 0);
             this.lvResultIdeas.Name = "lvResultIdeas";
-            this.lvResultIdeas.Size = new System.Drawing.Size(810, 226);
+            this.lvResultIdeas.Size = new System.Drawing.Size(810, 225);
             this.lvResultIdeas.TabIndex = 0;
             this.lvResultIdeas.UseCompatibleStateImageBehavior = false;
             this.lvResultIdeas.View = System.Windows.Forms.View.Details;
@@ -424,7 +538,7 @@
             this.txtViewResultIdea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtViewResultIdea.Location = new System.Drawing.Point(0, 0);
             this.txtViewResultIdea.Name = "txtViewResultIdea";
-            this.txtViewResultIdea.Size = new System.Drawing.Size(810, 344);
+            this.txtViewResultIdea.Size = new System.Drawing.Size(810, 345);
             this.txtViewResultIdea.TabIndex = 5;
             this.txtViewResultIdea.Text = "";
             // 
@@ -464,6 +578,48 @@
             this.tabPage2.Text = "2. Story Setting";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 1;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.Controls.Add(this.btnStoryPremise, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.txtViewStorySetting, 0, 0);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 2;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(816, 610);
+            this.tableLayoutPanel11.TabIndex = 0;
+            // 
+            // btnStoryPremise
+            // 
+            this.btnStoryPremise.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnStoryPremise.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnStoryPremise.FlatAppearance.BorderSize = 0;
+            this.btnStoryPremise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStoryPremise.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStoryPremise.ForeColor = System.Drawing.Color.White;
+            this.btnStoryPremise.Location = new System.Drawing.Point(621, 565);
+            this.btnStoryPremise.Name = "btnStoryPremise";
+            this.btnStoryPremise.Size = new System.Drawing.Size(192, 42);
+            this.btnStoryPremise.TabIndex = 5;
+            this.btnStoryPremise.Text = "Story Premise";
+            this.btnStoryPremise.UseVisualStyleBackColor = false;
+            this.btnStoryPremise.Click += new System.EventHandler(this.btnStoryPremise_Click);
+            // 
+            // txtViewStorySetting
+            // 
+            this.txtViewStorySetting.BackColor = System.Drawing.Color.Wheat;
+            this.txtViewStorySetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtViewStorySetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtViewStorySetting.Location = new System.Drawing.Point(3, 3);
+            this.txtViewStorySetting.Name = "txtViewStorySetting";
+            this.txtViewStorySetting.Size = new System.Drawing.Size(810, 556);
+            this.txtViewStorySetting.TabIndex = 1;
+            this.txtViewStorySetting.Text = "";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.tableLayoutPanel12);
@@ -474,14 +630,67 @@
             this.tabPage3.Text = "3. Story Premise";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 1;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.btnStoryOutline, 0, 1);
+            this.tableLayoutPanel12.Controls.Add(this.txtViewStoryPremise, 0, 0);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 2;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(822, 616);
+            this.tableLayoutPanel12.TabIndex = 0;
+            // 
+            // btnStoryOutline
+            // 
+            this.btnStoryOutline.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnStoryOutline.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnStoryOutline.FlatAppearance.BorderSize = 0;
+            this.btnStoryOutline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStoryOutline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStoryOutline.ForeColor = System.Drawing.Color.White;
+            this.btnStoryOutline.Location = new System.Drawing.Point(627, 571);
+            this.btnStoryOutline.Name = "btnStoryOutline";
+            this.btnStoryOutline.Size = new System.Drawing.Size(192, 42);
+            this.btnStoryOutline.TabIndex = 6;
+            this.btnStoryOutline.Text = "Story Outline";
+            this.btnStoryOutline.UseVisualStyleBackColor = false;
+            this.btnStoryOutline.Click += new System.EventHandler(this.btnStoryOutline_Click);
+            // 
+            // txtViewStoryPremise
+            // 
+            this.txtViewStoryPremise.BackColor = System.Drawing.Color.Wheat;
+            this.txtViewStoryPremise.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtViewStoryPremise.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtViewStoryPremise.Location = new System.Drawing.Point(3, 3);
+            this.txtViewStoryPremise.Name = "txtViewStoryPremise";
+            this.txtViewStoryPremise.Size = new System.Drawing.Size(816, 562);
+            this.txtViewStoryPremise.TabIndex = 1;
+            this.txtViewStoryPremise.Text = "";
+            // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.tableLayoutPanel13);
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(822, 616);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "4. Story Outline";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.tableLayoutPanel14);
+            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(822, 616);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "5. Story Starting";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // toolStrip1
             // 
@@ -502,195 +711,124 @@
             this.lbProcessing.Text = "Processing ...";
             this.lbProcessing.Visible = false;
             // 
-            // tableLayoutPanel9
+            // tableLayoutPanel13
             // 
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.txtNumberOfWords, 1, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 545);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 1;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(412, 24);
-            this.tableLayoutPanel9.TabIndex = 9;
+            this.tableLayoutPanel13.ColumnCount = 1;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.Controls.Add(this.btnStoryStarting, 0, 1);
+            this.tableLayoutPanel13.Controls.Add(this.txtViewStoryOutline, 0, 0);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 2;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(822, 616);
+            this.tableLayoutPanel13.TabIndex = 0;
             // 
-            // tableLayoutPanel10
+            // txtViewStoryOutline
             // 
-            this.tableLayoutPanel10.ColumnCount = 2;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Controls.Add(this.txtNumberOfPages, 1, 0);
-            this.tableLayoutPanel10.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 575);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 1;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(412, 24);
-            this.tableLayoutPanel10.TabIndex = 10;
+            this.txtViewStoryOutline.BackColor = System.Drawing.Color.Wheat;
+            this.txtViewStoryOutline.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtViewStoryOutline.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtViewStoryOutline.Location = new System.Drawing.Point(3, 3);
+            this.txtViewStoryOutline.Name = "txtViewStoryOutline";
+            this.txtViewStoryOutline.Size = new System.Drawing.Size(816, 562);
+            this.txtViewStoryOutline.TabIndex = 2;
+            this.txtViewStoryOutline.Text = "";
             // 
-            // label6
+            // tabPage6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 15);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Number of Words";
+            this.tabPage6.Controls.Add(this.tableLayoutPanel15);
+            this.tabPage6.Location = new System.Drawing.Point(4, 24);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(822, 616);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "6. Story Continuation + End";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // btnStoryStarting
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 4);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(200, 15);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Number of Pages";
+            this.btnStoryStarting.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnStoryStarting.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnStoryStarting.FlatAppearance.BorderSize = 0;
+            this.btnStoryStarting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStoryStarting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStoryStarting.ForeColor = System.Drawing.Color.White;
+            this.btnStoryStarting.Location = new System.Drawing.Point(693, 571);
+            this.btnStoryStarting.Name = "btnStoryStarting";
+            this.btnStoryStarting.Size = new System.Drawing.Size(126, 42);
+            this.btnStoryStarting.TabIndex = 5;
+            this.btnStoryStarting.Text = "Story Starting";
+            this.btnStoryStarting.UseVisualStyleBackColor = false;
+            this.btnStoryStarting.Click += new System.EventHandler(this.btnStoryStarting_Click);
             // 
-            // txtNumberOfWords
+            // tableLayoutPanel14
             // 
-            this.txtNumberOfWords.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNumberOfWords.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.txtNumberOfWords.Location = new System.Drawing.Point(209, 3);
-            this.txtNumberOfWords.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.txtNumberOfWords.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtNumberOfWords.Name = "txtNumberOfWords";
-            this.txtNumberOfWords.Size = new System.Drawing.Size(200, 20);
-            this.txtNumberOfWords.TabIndex = 4;
-            this.txtNumberOfWords.Value = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
+            this.tableLayoutPanel14.ColumnCount = 1;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel14.Controls.Add(this.txtViewStoryStarting, 0, 0);
+            this.tableLayoutPanel14.Controls.Add(this.btnStoryContinuationPlusEnd, 0, 1);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 2;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(822, 616);
+            this.tableLayoutPanel14.TabIndex = 0;
             // 
-            // txtNumberOfPages
+            // btnStoryContinuationPlusEnd
             // 
-            this.txtNumberOfPages.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNumberOfPages.Location = new System.Drawing.Point(209, 3);
-            this.txtNumberOfPages.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtNumberOfPages.Name = "txtNumberOfPages";
-            this.txtNumberOfPages.Size = new System.Drawing.Size(200, 20);
-            this.txtNumberOfPages.TabIndex = 5;
-            this.txtNumberOfPages.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
+            this.btnStoryContinuationPlusEnd.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnStoryContinuationPlusEnd.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnStoryContinuationPlusEnd.FlatAppearance.BorderSize = 0;
+            this.btnStoryContinuationPlusEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStoryContinuationPlusEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStoryContinuationPlusEnd.ForeColor = System.Drawing.Color.White;
+            this.btnStoryContinuationPlusEnd.Location = new System.Drawing.Point(630, 571);
+            this.btnStoryContinuationPlusEnd.Name = "btnStoryContinuationPlusEnd";
+            this.btnStoryContinuationPlusEnd.Size = new System.Drawing.Size(189, 42);
+            this.btnStoryContinuationPlusEnd.TabIndex = 5;
+            this.btnStoryContinuationPlusEnd.Text = "Story Continuation + End";
+            this.btnStoryContinuationPlusEnd.UseVisualStyleBackColor = false;
+            this.btnStoryContinuationPlusEnd.Click += new System.EventHandler(this.btnStoryContinuationPlusEnd_Click);
             // 
-            // tableLayoutPanel11
+            // txtViewStoryStarting
             // 
-            this.tableLayoutPanel11.ColumnCount = 1;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Controls.Add(this.btnStoryPremise, 0, 1);
-            this.tableLayoutPanel11.Controls.Add(this.txtViewStorySetting, 0, 0);
-            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 2;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(816, 610);
-            this.tableLayoutPanel11.TabIndex = 0;
+            this.txtViewStoryStarting.BackColor = System.Drawing.Color.Wheat;
+            this.txtViewStoryStarting.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtViewStoryStarting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtViewStoryStarting.Location = new System.Drawing.Point(3, 3);
+            this.txtViewStoryStarting.Name = "txtViewStoryStarting";
+            this.txtViewStoryStarting.Size = new System.Drawing.Size(816, 562);
+            this.txtViewStoryStarting.TabIndex = 6;
+            this.txtViewStoryStarting.Text = "";
             // 
-            // txtViewStorySetting
+            // tableLayoutPanel15
             // 
-            this.txtViewStorySetting.BackColor = System.Drawing.Color.Wheat;
-            this.txtViewStorySetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtViewStorySetting.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtViewStorySetting.Location = new System.Drawing.Point(3, 3);
-            this.txtViewStorySetting.Name = "txtViewStorySetting";
-            this.txtViewStorySetting.Size = new System.Drawing.Size(810, 556);
-            this.txtViewStorySetting.TabIndex = 1;
-            this.txtViewStorySetting.Text = "";
+            this.tableLayoutPanel15.ColumnCount = 1;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Controls.Add(this.txtStoryContinuationPlusEnd, 0, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 2;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(822, 616);
+            this.tableLayoutPanel15.TabIndex = 1;
             // 
-            // btnStoryPremise
+            // txtStoryContinuationPlusEnd
             // 
-            this.btnStoryPremise.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnStoryPremise.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnStoryPremise.FlatAppearance.BorderSize = 0;
-            this.btnStoryPremise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStoryPremise.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStoryPremise.ForeColor = System.Drawing.Color.White;
-            this.btnStoryPremise.Location = new System.Drawing.Point(621, 565);
-            this.btnStoryPremise.Name = "btnStoryPremise";
-            this.btnStoryPremise.Size = new System.Drawing.Size(192, 42);
-            this.btnStoryPremise.TabIndex = 5;
-            this.btnStoryPremise.Text = "Story Premise";
-            this.btnStoryPremise.UseVisualStyleBackColor = false;
-            this.btnStoryPremise.Click += new System.EventHandler(this.btnStoryPremise_Click);
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(822, 616);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel12
-            // 
-            this.tableLayoutPanel12.ColumnCount = 1;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Controls.Add(this.btnStoryOutline, 0, 1);
-            this.tableLayoutPanel12.Controls.Add(this.txtViewStoryPremise, 0, 0);
-            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 2;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(822, 616);
-            this.tableLayoutPanel12.TabIndex = 0;
-            // 
-            // txtViewStoryPremise
-            // 
-            this.txtViewStoryPremise.BackColor = System.Drawing.Color.Wheat;
-            this.txtViewStoryPremise.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtViewStoryPremise.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtViewStoryPremise.Location = new System.Drawing.Point(3, 3);
-            this.txtViewStoryPremise.Name = "txtViewStoryPremise";
-            this.txtViewStoryPremise.Size = new System.Drawing.Size(816, 562);
-            this.txtViewStoryPremise.TabIndex = 1;
-            this.txtViewStoryPremise.Text = "";
-            // 
-            // btnStoryOutline
-            // 
-            this.btnStoryOutline.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnStoryOutline.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnStoryOutline.FlatAppearance.BorderSize = 0;
-            this.btnStoryOutline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStoryOutline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStoryOutline.ForeColor = System.Drawing.Color.White;
-            this.btnStoryOutline.Location = new System.Drawing.Point(627, 571);
-            this.btnStoryOutline.Name = "btnStoryOutline";
-            this.btnStoryOutline.Size = new System.Drawing.Size(192, 42);
-            this.btnStoryOutline.TabIndex = 6;
-            this.btnStoryOutline.Text = "Story Outline";
-            this.btnStoryOutline.UseVisualStyleBackColor = false;
+            this.txtStoryContinuationPlusEnd.BackColor = System.Drawing.Color.Wheat;
+            this.txtStoryContinuationPlusEnd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStoryContinuationPlusEnd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtStoryContinuationPlusEnd.Location = new System.Drawing.Point(3, 3);
+            this.txtStoryContinuationPlusEnd.Name = "txtStoryContinuationPlusEnd";
+            this.txtStoryContinuationPlusEnd.Size = new System.Drawing.Size(816, 562);
+            this.txtStoryContinuationPlusEnd.TabIndex = 6;
+            this.txtStoryContinuationPlusEnd.Text = "";
             // 
             // StoryForm
             // 
@@ -718,6 +856,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfIdea)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfWords)).EndInit();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfPages)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -729,17 +873,17 @@
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
-            this.tableLayoutPanel10.ResumeLayout(false);
-            this.tableLayoutPanel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfWords)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumberOfPages)).EndInit();
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -790,5 +934,14 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.RichTextBox txtViewStoryPremise;
         private System.Windows.Forms.Button btnStoryOutline;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.RichTextBox txtViewStoryOutline;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Button btnStoryStarting;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.Button btnStoryContinuationPlusEnd;
+        private System.Windows.Forms.RichTextBox txtViewStoryStarting;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.RichTextBox txtStoryContinuationPlusEnd;
     }
 }

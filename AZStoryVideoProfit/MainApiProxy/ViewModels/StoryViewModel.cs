@@ -90,4 +90,55 @@ namespace AZStoryVideoProfit.MainApiProxy.ViewModels
         public string Data { get; set; }        
     }
 
+
+    public class StoryOutlineRequestViewModel
+    {
+        public string Persona { get; set; }
+        public string Premise { get; set; }        
+    }
+
+    public class StoryOutlineResponseViewModel : BaseViewModel
+    {
+        public string Data { get; set; }
+    }
+
+
+    public class StoryStartingRequestViewModel
+    {
+        public string Persona { get; set; }
+        public string Premise { get; set; }
+
+        public string Outline {  get; set; }
+
+        public string Guidelines {  get; set; }
+    }
+
+    public class StoryStartingResponseViewModel : BaseViewModel
+    {
+        public string Data { get; set; }
+    }
+
+
+    public class StoryContinuationRequestViewModel
+    {
+        public string Persona { get; set; }
+        public string Premise { get; set; }
+
+        public string Outline { get; set; }
+
+        public string Guidelines { get; set; }
+
+        public string StoryStarting { get; set; }
+        
+        public int Number_Pages { get; set; }
+        public int Number_Words { get; set; }
+    }
+
+    public class StoryContinuationResponseViewModel : BaseViewModel
+    {
+        public string Data { get; set; }
+    }
+
+
+
 }

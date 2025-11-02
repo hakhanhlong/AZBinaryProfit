@@ -15,5 +15,11 @@ namespace AZStoryVideoProfit.MainApiProxy.Interfaces
 
         StoryPremiseResponseViewModel StoryPremise(StoryPremiseRequestViewModel requestViewModel);
 
+        StoryOutlineResponseViewModel StoryOutline(StoryOutlineRequestViewModel requestViewModel);
+
+        StoryStartingResponseViewModel StoryStarting(StoryStartingRequestViewModel requestViewModel);
+
+        StoryContinuationResponseViewModel StoryContinuation(StoryContinuationRequestViewModel requestViewModel);
+
     }
 }

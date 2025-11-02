@@ -7,6 +7,7 @@ using AZBinaryProfit.MainApi.ViewModels;
 using Microsoft.SemanticKernel.Connectors.Google;
 using System.Text.Json;
 using Newtonsoft.Json;
+using AZBinaryProfit.MainApi.Helpers;
 
 namespace AZBinaryProfit.MainApi.Controllers
 {
@@ -181,6 +182,247 @@ namespace AZBinaryProfit.MainApi.Controllers
             return new JsonResult(new
             {
                 Data = responsePremise,
+                Info = new
+                {
+                    TotalTokenCount = metadata!["TotalTokenCount"],
+                    PromptTokenCount = metadata!["PromptTokenCount"],
+                    CandidatesTokenCount = metadata!["CandidatesTokenCount"],
+                    CurrentCandidateTokenCount = metadata!["CurrentCandidateTokenCount"]
+                }
+            });
+
+        }
+
+
+        [HttpPost]
+        [Route("StoryOutline")]
+        public async Task<IActionResult> StoryOutline([FromBody] StoryOutlineRequestViewModel request)
+        {
+
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story", "StoryOutline", "skprompt.txt");
+            var configFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story", "StoryOutline", "config.json");
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+            // Read and parse config.json
+            var configJson = System.IO.File.ReadAllText(configFilePath);
+            var configOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            var config = PromptTemplateConfig.FromJson(configJson);
+
+
+            // Create the function with both prompt and config
+            //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
+            var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+            var kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+            {
+                ThinkingConfig = new GeminiThinkingConfig
+                {
+                    ThinkingBudget = 0
+                },
+                MaxTokens = 4000,
+                Temperature = 1,
+                TopK = 0,
+                TopP = 0.7
+
+            })
+            {
+                ["persona"] = request.Persona,
+                ["premise"] = request.Premise
+            };
+
+            // Querying the prompt function
+            var response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+            var responsePremise = response.GetValue<string>();
+
+            var metadata = response.Metadata;
+
+            return new JsonResult(new
+            {
+                Data = responsePremise,
+                Info = new
+                {
+                    TotalTokenCount = metadata!["TotalTokenCount"],
+                    PromptTokenCount = metadata!["PromptTokenCount"],
+                    CandidatesTokenCount = metadata!["CandidatesTokenCount"],
+                    CurrentCandidateTokenCount = metadata!["CurrentCandidateTokenCount"]
+                }
+            });
+
+        }
+
+
+
+        [HttpPost]
+        [Route("StoryStarting")]
+        public async Task<IActionResult> StoryStarting([FromBody] StoryStartingRequestViewModel request)
+        {
+
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story", "StoryStarting", "skprompt.txt");
+            var configFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story", "StoryStarting", "config.json");
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+            // Read and parse config.json
+            var configJson = System.IO.File.ReadAllText(configFilePath);
+            var configOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            var config = PromptTemplateConfig.FromJson(configJson);
+
+
+            // Create the function with both prompt and config
+            //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
+            var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+            var kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+            {
+                //ResponseSchema = typeof(StoryGenerateResponseViewModel),
+                //ResponseMimeType = "application/json",
+                ThinkingConfig = new GeminiThinkingConfig
+                {
+                    ThinkingBudget = 0
+                },
+                MaxTokens = 8192,
+                Temperature = 1,
+                TopK = 0,
+                TopP = 0.7
+
+            })
+            {
+                ["persona"] = request.Persona,
+                ["premise"] = request.Premise,
+                ["outline"] = request.Outline,
+                ["guidelines"] = request.Guidelines,
+            };
+
+            // Querying the prompt function
+            var response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+            var responsePremise = response.GetValue<string>();
+
+            var metadata = response.Metadata;
+
+            return new JsonResult(new
+            {
+                Data = responsePremise,
+                Info = new
+                {
+                    TotalTokenCount = metadata!["TotalTokenCount"],
+                    PromptTokenCount = metadata!["PromptTokenCount"],
+                    CandidatesTokenCount = metadata!["CandidatesTokenCount"],
+                    CurrentCandidateTokenCount = metadata!["CurrentCandidateTokenCount"]
+                }
+            });
+
+        }
+
+
+
+        [HttpPost]
+        [Route("StoryContinuation")]
+        public async Task<IActionResult> StoryContinuation([FromBody] StoryContinuationRequestViewModel request)
+        {
+
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story", "StoryContinuation", "skprompt.txt");
+            var configFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Story", "StoryContinuation", "config.json");
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+            // Read and parse config.json
+            var configJson = System.IO.File.ReadAllText(configFilePath);
+            var configOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            var config = PromptTemplateConfig.FromJson(configJson);
+
+
+            // Create the function with both prompt and config
+            //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
+            var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+            var kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+            {
+                //ResponseSchema = typeof(StoryGenerateResponseViewModel),
+                //ResponseMimeType = "application/json",
+                ThinkingConfig = new GeminiThinkingConfig
+                {
+                    ThinkingBudget = 0
+                },
+                MaxTokens = 8192,
+                Temperature = 1,
+                TopK = 0,
+                TopP = 0.7
+
+            })
+            {
+                ["persona"] = request.Persona,
+                ["premise"] = request.Premise,
+                ["outline"] = request.Outline,
+                ["guidelines"] = request.Guidelines,
+                ["story"] = request.StoryStarting,
+                ["chunkedtext"] = ""
+            };
+
+            // Querying the prompt function
+            var response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+            var responseContinuation = response.GetValue<string>();
+
+
+
+
+            int count = 1;
+            string story_text = request.StoryStarting + $"\n\n --count {count}-- \n\n" + responseContinuation;
+
+            
+            int target_words =  request.Number_Pages * request.Number_Words; //pages * words
+            while (!responseContinuation.Contains("IAMDONE") && StringHelper.CountWords(story_text) < target_words)
+            {
+
+                int remaining_words = target_words - StringHelper.CountWords(story_text);
+                int chunk_words = Math.Min(request.Number_Words, remaining_words);
+
+                promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+                kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+                {
+                    //ResponseSchema = typeof(StoryGenerateResponseViewModel),
+                    //ResponseMimeType = "application/json",
+                    ThinkingConfig = new GeminiThinkingConfig
+                    {
+                        ThinkingBudget = 0
+                    },
+                    MaxTokens = 8192,
+                    Temperature = 1,
+                    TopK = 0,
+                    TopP = 0.7
+
+                })
+                {
+                    ["persona"] = request.Persona,
+                    ["premise"] = request.Premise,
+                    ["outline"] = request.Outline,
+                    ["story"] = story_text,
+                    ["guidelines"] = request.Guidelines,
+                    ["chunkedtext"] = ""
+                };
+
+
+                // Querying the prompt function
+                response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+                responseContinuation = response.GetValue<string>();
+                
+
+                System.Diagnostics.Debug.WriteLine($"Run number:{count}");
+                count++;
+
+                story_text += $"\n\n --count {count}-- \n\n" + responseContinuation;
+            }
+
+
+
+            var metadata = response.Metadata;
+
+            return new JsonResult(new
+            {
+                Data = story_text,
                 Info = new
                 {
                     TotalTokenCount = metadata!["TotalTokenCount"],

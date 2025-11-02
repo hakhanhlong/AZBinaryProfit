@@ -72,5 +72,34 @@ namespace AZStoryVideoProfit.MainApiProxy
             var response = client.Execute(request);
             return JsonConvert.DeserializeObject<StoryPremiseResponseViewModel>(response.Content);
         }
+
+
+        public StoryOutlineResponseViewModel StoryOutline(StoryOutlineRequestViewModel requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Story/StoryOutline", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<StoryOutlineResponseViewModel>(response.Content);
+        }
+
+
+        public StoryStartingResponseViewModel StoryStarting(StoryStartingRequestViewModel requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Story/StoryStarting", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<StoryStartingResponseViewModel>(response.Content);
+        }
+
+        public StoryContinuationResponseViewModel StoryContinuation(StoryContinuationRequestViewModel requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Story/StoryContinuation", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<StoryContinuationResponseViewModel>(response.Content);
+        }
     }
 }

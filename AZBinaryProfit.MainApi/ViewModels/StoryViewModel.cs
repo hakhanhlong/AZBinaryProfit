@@ -74,4 +74,38 @@
         public string StorySetting { get; set; }
         public string Character { get; set; }
     }
+
+
+    public class StoryOutlineRequestViewModel
+    {
+        public string Persona { get; set; }
+        public string Premise { get; set; }        
+    }
+
+    public class StoryStartingRequestViewModel
+    {
+        public string Persona { get; set; }
+        public string Premise { get; set; }
+
+        public string Outline { get; set; }
+
+        public string Guidelines { get; set; }
+    }
+
+
+    public class StoryContinuationRequestViewModel
+    {
+        public string Persona { get; set; }
+        public string Premise { get; set; }
+
+        public string Outline { get; set; }
+
+        public string Guidelines { get; set; }
+
+        public string StoryStarting { get; set; }        
+
+        public int Number_Pages { get; set; }
+        public int Number_Words { get; set; }
+    }
+
 }
