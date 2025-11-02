@@ -1,0 +1,15 @@
+﻿<message role="system">
+	You are a creative story writer specializing in {{$genre}} stories.
+    Create a short story based on the prompt below.
+    The story should have exactly {{$num_scenes}} scenes.
+    Ensure each scene has a clear visual description and corresponding narration.
+</message>
+<message role="user">
+
+Create a {{$genre}} story about: {{$story}}
+
+Requirement: 
+ - Duration per scene {{$scene_per_second}}
+ - Character must be consistent betweem scene
+ 
+</message>
