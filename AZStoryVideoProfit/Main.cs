@@ -14,6 +14,7 @@ namespace AZStoryVideoProfit
     public partial class Main : Form
     {
         StoryForm _IdeaStoryForm;
+        VideoForm _VideoForm;
         public Main()
         {
             InitializeComponent();
@@ -46,6 +47,33 @@ namespace AZStoryVideoProfit
             }));
 
 
+        }
+
+        private void StoryVideo_Click(object sender, EventArgs e)
+        {
+            this.Invoke(new Action(() =>
+            {
+
+                if (_VideoForm == null)
+                {
+                    _VideoForm = new VideoForm();
+                    _VideoForm.MdiParent = this;
+                    _VideoForm.Show();
+                }
+                else
+                {
+                    if (_VideoForm.IsDisposed)
+                    {
+                        _VideoForm = new VideoForm();
+                        _VideoForm.MdiParent = this;
+                        _VideoForm.Show();
+                    }
+                    else
+                    {
+                        _VideoForm.Activate();
+                    }
+                }
+            }));
         }
     }
 }
