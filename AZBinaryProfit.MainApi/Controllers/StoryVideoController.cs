@@ -61,7 +61,7 @@ namespace AZBinaryProfit.MainApi.Controllers
                 {
                     ThinkingBudget = 0
                 },
-                MaxTokens = 32000,
+                MaxTokens = 64000,
                 Temperature = 0.0,
                 //Temperature = 0.7,
                 //TopP = 0.9,
@@ -71,7 +71,9 @@ namespace AZBinaryProfit.MainApi.Controllers
                 ["genre"] = request.Genre,
                 ["num_scenes"] = request.Num_Scenes,
                 ["story"] = request.Story,
-                ["scene_per_second"] = request.Scene_Per_Second
+                ["scene_per_second"] = request.Scene_Per_Second,
+                ["style"] = request.VideoStyle,
+                ["aspectratio"] = request.Video_AspectRatio
             };
 
             // Querying the prompt function

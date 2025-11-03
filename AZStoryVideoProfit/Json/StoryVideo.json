@@ -1,0 +1,82 @@
+{
+  "StoryVideoStyles": [
+    {
+      "Name": "2D Cartoon",
+      "Description": "2D Cartoon"
+    },
+    {
+      "Name": "Theatrical Stage Performance",
+      "Description": "Theatrical Stage Performance"
+    },
+    {
+      "Name": "Pixel Art",
+      "Description": "Pixel Art"
+    },
+    {
+      "Name": "Experimental Art Film",
+      "Description": "Experimental Art Film"
+    },
+    {
+      "Name": "Realistic",
+      "Description": "Realistic"
+    },
+    {
+      "Name": "3D CGI Realistic",
+      "Description": "3D CGI Realistic"
+    },
+    {
+      "Name": "Anime Japan",
+      "Description": "Anime Japan"
+    },
+    {
+      "Name": "3D Pixar",
+      "Description": "3D Pixar"
+    },
+    {
+      "Name": "CCTV Found Footage",
+      "Description": "CCTV Found Footage"
+    },
+    {
+      "Name": "Music Video Aesthetic",
+      "Description": "Music Video Aesthetic"
+    },
+    {
+      "Name": "POV First Person",
+      "Description": "POV First Person"
+    },
+    {
+      "Name": "Vintage Rentro",
+      "Description": "Vintage Rentro"
+    },
+    {
+      "Name": "Live Action Cinematic",
+      "Description": "Live Action Cinematic"
+    },
+    {
+      "Name": "Noir Black And White",
+      "Description": "Noir Black And White"
+    },
+    {
+      "Name": "Documentary Style",
+      "Description": "Documentary Style"
+    },
+    {
+      "Name": "Epic Survival Cinematic",
+      "Description": "Epic Survival Cinematic"
+    },
+    {
+      "Name": "3D Cartoon",
+      "Description": "3D Cartoon"
+    }
+  ],
+  "StoryVideoAspectRatios": [    
+    {
+      "Name": "16:9",
+      "Description": "16:9"
+    },
+    {
+      "Name": "9:16",
+      "Description": "9:16"
+    }
+  ]
+}

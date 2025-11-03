@@ -1,5 +1,6 @@
 ﻿using AZStoryVideoProfit.MainApiProxy;
 using AZStoryVideoProfit.MainApiProxy.ViewModels;
+using AZStoryVideoProfit.Settings;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -18,15 +19,33 @@ namespace AZStoryVideoProfit.Forms
 
         private List<StoryVideoSceneItem> _VideScenes;
 
+        public List<StoryVideoSceneCharacter> _VideScenesCharacters;
+
         public VideoForm()
         {
             InitializeComponent();
         }
 
+
+        private void InitData()
+        {
+            selectStoryVideoStyle.DataSource = StoryVideoSetting.Instance.Data.StoryVideoStyles;
+            selectStoryVideoStyle.DisplayMember = "Name";
+            selectStoryVideoStyle.ValueMember = "Description";
+
+
+            selectVideoAspectRatio.DataSource = StoryVideoSetting.Instance.Data.StoryVideoAspectRatios;
+            selectVideoAspectRatio.DisplayMember = "Name";
+            selectVideoAspectRatio.ValueMember = "Description";
+        }
+
+
         private void VideoForm_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             _VideScenes = new List<StoryVideoSceneItem>();
+            _VideScenesCharacters = new List<StoryVideoSceneCharacter>();
+            InitData();
         }
 
 
@@ -75,6 +94,8 @@ namespace AZStoryVideoProfit.Forms
                         Num_Scenes = (int)txtNumberOfScene.Value,
                         Scene_Per_Second = (int)txtScenePerSecond.Value,
                         Story = txtStory.Text,
+                        VideoStyle = (string)selectStoryVideoStyle.SelectedValue,
+                        Video_AspectRatio = (string)selectVideoAspectRatio.SelectedValue
                     };
 
 
@@ -92,7 +113,19 @@ namespace AZStoryVideoProfit.Forms
                                 item.Id = count;
                                 _VideScenes.Add(item);
                             }
+                           
                         }
+
+
+                        if (!_VideScenesCharacters.Any())
+                        {
+                            if (jsonResult.Data != null && jsonResult.Data.Characters.Any())
+                            {
+                                _VideScenesCharacters.AddRange(jsonResult.Data.Characters);
+                            }
+                        }
+
+                       
                         SetProcessStatus(false, "");
                     });
 
@@ -115,7 +148,7 @@ namespace AZStoryVideoProfit.Forms
             {
                 int _Id = Convert.ToInt32(lvScenes.SelectedItems[0].Tag);
                 var item = _VideScenes.FirstOrDefault(x => x.Id == _Id);
-                txtViewScene.Text = JsonConvert.SerializeObject(item, Formatting.Indented);
+                txtViewScene.Text = JsonConvert.SerializeObject(new { Scene = item, Characters = _VideScenesCharacters }, Formatting.Indented);
             }
        }
     }

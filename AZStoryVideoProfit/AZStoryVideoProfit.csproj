@@ -110,6 +110,7 @@
     <Compile Include="MainApiProxy\ViewModels\StoryViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\StoryVideoSetting.cs" />
     <Compile Include="Settings\StorySetting.cs" />
     <EmbeddedResource Include="Forms\StoryForm.resx">
       <DependentUpon>StoryForm.cs</DependentUpon>
@@ -129,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Json\StoryVideo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Json\Story.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
