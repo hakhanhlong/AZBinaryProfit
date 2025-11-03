@@ -50,7 +50,7 @@ namespace AZStoryVideoProfit.MainApiProxy.ViewModels
 
         public List<StoryVideoSceneItem> Scenes { get; set; }
 
-        public List<StoryVideoSceneCharacter> Characters { get; set; } = new List<StoryVideoSceneCharacter>();
+        //public List<StoryVideoSceneCharacter> Characters { get; set; } = new List<StoryVideoSceneCharacter>();
 
     }
 
@@ -69,7 +69,7 @@ namespace AZStoryVideoProfit.MainApiProxy.ViewModels
 
         public string Description { get; set; }
         public string Narration { get; set; }
-        public List<string> CharacterId { get; set; }
+       // public List<string> CharacterId { get; set; }
 
         public StoryVideoScene_Background Background { get; set; }
         //public StoryVideoScene_Scene Scene { get; set; }
@@ -78,10 +78,19 @@ namespace AZStoryVideoProfit.MainApiProxy.ViewModels
 
         public List<string> Nagative_Prompt { get; set; }
 
+        public Subject Subject {  get; set; }
+
         //public StoryVideoSceneCinematography Cinematography { get; set; }
 
         //public StoryVideoScene_Background Background {  get; set; }
 
+    }
+
+    public class Subject
+    {
+        public string characters { get; set; }
+        public string blocking { get; set; }
+        public string environment { get; set; }
     }
 
     public class StoryVideoSceneCharacter

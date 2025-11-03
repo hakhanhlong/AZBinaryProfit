@@ -35,7 +35,7 @@
     {
 
         public string Name { get; set; }
-        public List<StoryVideoSceneCharacter> Characters { get; set; }
+        //public List<StoryVideoSceneCharacter> Characters { get; set; }
         public List<StoryVideoSceneItem> Scenes { get; set; }
 
     }
@@ -54,7 +54,7 @@
 
         public string Description { get; set; }
         public string Narration { get; set; }
-        public List<string> CharacterId {  get; set; }
+        //public List<string> CharacterId {  get; set; }
 
         public StoryVideoScene_Background Background {  get; set; }
 
@@ -69,7 +69,16 @@
 
         //public StoryVideoScene_Background Background { get; set; }
 
+        public Subject Subject { get; set; }
 
+
+    }
+
+    public class Subject
+    {
+        public string characters { get; set; }
+        public string blocking { get; set; }
+        public string environment { get; set; }
     }
 
     public class StoryVideoSceneCharacter

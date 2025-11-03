@@ -117,13 +117,13 @@ namespace AZStoryVideoProfit.Forms
                         }
 
 
-                        if (!_VideScenesCharacters.Any())
-                        {
-                            if (jsonResult.Data != null && jsonResult.Data.Characters.Any())
-                            {
-                                _VideScenesCharacters.AddRange(jsonResult.Data.Characters);
-                            }
-                        }
+                        //if (!_VideScenesCharacters.Any())
+                        //{
+                        //    if (jsonResult.Data != null && jsonResult.Data.Characters.Any())
+                        //    {
+                        //        _VideScenesCharacters.AddRange(jsonResult.Data.Characters);
+                        //    }
+                        //}
 
                        
                         SetProcessStatus(false, "");
