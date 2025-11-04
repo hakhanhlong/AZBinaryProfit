@@ -354,7 +354,9 @@ namespace AZBinaryProfit.MainApi.Controllers
             promptContent = promptContent.Replace("{{$style_preference}}", request.Style_Preference);
             promptContent = promptContent.Replace("{{$aspect_ratio}}", request.Aspect_Ratio);
             promptContent = promptContent.Replace("{{$image_style}}", request.Image_Style);
-            promptContent = promptContent.Replace("{{$image_focus}}", request.Image_Focus);            
+            promptContent = promptContent.Replace("{{$image_focus}}", request.Image_Focus);
+            promptContent = promptContent.Replace("{{$text_style}}", request.Text_Style);
+            
 
 
 

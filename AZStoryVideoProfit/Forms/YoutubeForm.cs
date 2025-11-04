@@ -90,6 +90,10 @@ namespace AZStoryVideoProfit.Forms
             ThumbnailImagePrompt_AspectRatio.DisplayMember = "Name";
             ThumbnailImagePrompt_AspectRatio.ValueMember = "Description";
 
+            ThumbnailImagePrompt_TextStyles.DataSource = YoutubeSetting.Instance.Data.GenerateThumbnail.TextStyles;
+            ThumbnailImagePrompt_TextStyles.DisplayMember = "Name";
+            ThumbnailImagePrompt_TextStyles.ValueMember = "Description";
+
         }
 
 
@@ -191,7 +195,7 @@ namespace AZStoryVideoProfit.Forms
                         var response = YoutubeProxy.Instance.GenerateDescription(request);
                         this.Invoke(new Action(() => {
 
-                            txtGenerateDescription_Results.Text = JsonConvert.SerializeObject(response, Formatting.Indented);
+                            txtGenerateDescription_Results.Text = response.Data;
 
                         }));
 
@@ -270,7 +274,8 @@ namespace AZStoryVideoProfit.Forms
                         Image_Style  = ThumbnailImagePrompt_ImageTypes.SelectedValue.ToString(),
                         Aspect_Ratio = ThumbnailImagePrompt_AspectRatio.SelectedValue.ToString(),
                         Concept_Description = txtThumbnailImagePrompt_ConceptDescription.Text,                        
-                        Style_Preference = ThumbnailImagePrompt_StylePreferences.SelectedValue.ToString()
+                        Style_Preference = ThumbnailImagePrompt_StylePreferences.SelectedValue.ToString(),
+                        Text_Style = ThumbnailImagePrompt_TextStyles.SelectedValue.ToString()
                     };
 
 

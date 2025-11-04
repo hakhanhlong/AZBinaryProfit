@@ -115,8 +115,9 @@ namespace AZStoryVideoProfit.Settings
 
         public List<YoutubeGenerateThumbnail_BaseViewModel> TextStyles { get; set; }
         public List<YoutubeGenerateThumbnail_BaseViewModel> ImageStyles { get; set; }
-        public List<YoutubeGenerateThumbnail_BaseViewModel> ImageFocus { get; set; }
+        public List<YoutubeGenerateThumbnail_BaseViewModel> ImageFocus { get; set; }        
         
+
     }
 
     public class YoutubeGenerateThumbnail_BaseViewModel

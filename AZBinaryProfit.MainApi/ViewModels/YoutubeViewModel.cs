@@ -51,6 +51,8 @@
         public string Image_Style { get; set; }
         public string Image_Focus { get; set; }
 
+        public string Text_Style { get; set; }
+
     }
 
 

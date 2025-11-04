@@ -65,7 +65,7 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.toolStrip1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.IdeaStoryVideo,
             this.StoryVideo,
@@ -79,29 +79,32 @@
             // 
             // IdeaStoryVideo
             // 
+            this.IdeaStoryVideo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.IdeaStoryVideo.Image = ((System.Drawing.Image)(resources.GetObject("IdeaStoryVideo.Image")));
             this.IdeaStoryVideo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.IdeaStoryVideo.Name = "IdeaStoryVideo";
-            this.IdeaStoryVideo.Size = new System.Drawing.Size(90, 22);
+            this.IdeaStoryVideo.Size = new System.Drawing.Size(95, 22);
             this.IdeaStoryVideo.Text = "IDEA STORY";
             this.IdeaStoryVideo.ToolTipText = "Idea Story Video";
             this.IdeaStoryVideo.Click += new System.EventHandler(this.IdeaStoryVideo_Click);
             // 
             // StoryVideo
             // 
+            this.StoryVideo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.StoryVideo.Image = ((System.Drawing.Image)(resources.GetObject("StoryVideo.Image")));
             this.StoryVideo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.StoryVideo.Name = "StoryVideo";
-            this.StoryVideo.Size = new System.Drawing.Size(98, 22);
+            this.StoryVideo.Size = new System.Drawing.Size(104, 22);
             this.StoryVideo.Text = "STORY VIDEO";
             this.StoryVideo.Click += new System.EventHandler(this.StoryVideo_Click);
             // 
             // btnYoutube
             // 
+            this.btnYoutube.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnYoutube.Image = ((System.Drawing.Image)(resources.GetObject("btnYoutube.Image")));
             this.btnYoutube.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnYoutube.Name = "btnYoutube";
-            this.btnYoutube.Size = new System.Drawing.Size(79, 22);
+            this.btnYoutube.Size = new System.Drawing.Size(82, 22);
             this.btnYoutube.Text = "YOUTUBE";
             this.btnYoutube.ToolTipText = "Youtube";
             this.btnYoutube.Click += new System.EventHandler(this.btnYoutube_Click);

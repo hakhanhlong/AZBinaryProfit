@@ -4,6 +4,7 @@ Thumbnail Style: {{$style_preference}}
 Aspect Ratio: {{$aspect_ratio}}
 Image Style: {{$image_style}}
 Image Focus: {{$image_focus}}
+Text Style: {{$text_style}}
     
 The image should be:
 - High contrast and visually striking
