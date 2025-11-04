@@ -216,7 +216,163 @@ namespace AZBinaryProfit.MainApi.Controllers
                 has_brackets = hasBrackets,
             };
         }
-        
+
+
+
+        [HttpPost]
+        [Route("GenerateDescription")]
+        public async Task<IActionResult> GenerateDescription([FromBody] YoutubeGenerateDescriptionRequestViewModel request)
+        {
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Youtube", "GenerateDescription", "skprompt.txt");
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+
+            // Create the function with both prompt and config
+            //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
+            var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+            var kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+            {                
+                ThinkingConfig = new GeminiThinkingConfig
+                {
+                    ThinkingBudget = 0
+                },
+                MaxTokens = 8192,
+                Temperature = 0.7,
+                TopK = 1,
+                TopP = 0.9
+
+            })
+            {
+                ["main_points"] = request.MainPoint,                
+                ["target_audience"] = request.TargetAudience,
+                ["tone_style"] = request.ToneStyle,
+                ["use_case"] = request.UseCase,
+                ["primary_keywords"] = request.UseCase,
+                ["secondary_keywords"] = request.UseCase,
+                ["seo_goals"] = request.UseCase,
+            };
+
+            // Querying the prompt function
+            var response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+            var responseData = response.GetValue<string>();
+
+
+            var metadata = response.Metadata;
+
+         
+
+            return new JsonResult(new
+            {
+                Data = responseData,
+                Info = new
+                {
+                    TotalTokenCount = metadata!["TotalTokenCount"],
+                    PromptTokenCount = metadata!["PromptTokenCount"],
+                    CandidatesTokenCount = metadata!["CandidatesTokenCount"],
+                    CurrentCandidateTokenCount = metadata!["CurrentCandidateTokenCount"]
+                }
+            });
+
+        }
+
+
+
+        [HttpPost]
+        [Route("GenerateThumbnail_ThumbnailConcepts")]
+        public async Task<IActionResult> GenerateThumbnail_ThumbnailConcepts([FromBody] YoutubeGenerateThumbnail_ThumbnailConceptRequestViewModel request)
+        {
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Youtube", "GenerateThumbnail", "ThumbnailConcepts", "skprompt.txt");
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+
+            // Create the function with both prompt and config
+            //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
+            var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+            var kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+            {
+                ThinkingConfig = new GeminiThinkingConfig
+                {
+                    ThinkingBudget = 0
+                },
+                MaxTokens = 8192,
+                Temperature = 0.7,
+                TopK = 1,
+                TopP = 0.9
+
+            })
+            {
+                ["num_concepts"] = request.NumConcepts,
+                ["video_title"] = request.VideoTitle,
+                ["video_description"] = request.VideoDescription,
+                ["target_audience"] = request.TargetAudience,
+                ["content_type"] = request.ContentType,
+                ["style_preference"] = request.Style_Preference,                
+            };
+
+            // Querying the prompt function
+            var response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+            var responseData = response.GetValue<string>();
+
+
+            var metadata = response.Metadata;
+
+
+
+            return new JsonResult(new
+            {
+                Data = responseData,
+                Info = new
+                {
+                    TotalTokenCount = metadata!["TotalTokenCount"],
+                    PromptTokenCount = metadata!["PromptTokenCount"],
+                    CandidatesTokenCount = metadata!["CandidatesTokenCount"],
+                    CurrentCandidateTokenCount = metadata!["CurrentCandidateTokenCount"]
+                }
+            });
+
+        }
+
+
+
+        [HttpPost]
+        [Route("GenerateThumbnail_ThumbnailImagePrompt")]
+        public async Task<IActionResult> GenerateThumbnail_ThumbnailImagePrompt([FromBody] YoutubeGenerateThumbnail_ThumbnailImagePromptRequestViewModel request)
+        {
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Youtube", "GenerateThumbnail", "ThumbnailDesign", "skprompt.txt");
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+            promptContent = promptContent.Replace("{{$concept_description}}", request.Concept_Description);
+            promptContent = promptContent.Replace("{{$style_preference}}", request.Style_Preference);
+            promptContent = promptContent.Replace("{{$aspect_ratio}}", request.Aspect_Ratio);
+            promptContent = promptContent.Replace("{{$image_style}}", request.Image_Style);
+            promptContent = promptContent.Replace("{{$image_focus}}", request.Image_Focus);            
+
+
+
+            return new JsonResult(new
+            {
+                Data = promptContent,
+                Info = new
+                {
+                    TotalTokenCount = 0,
+                    PromptTokenCount = 0,
+                    CandidatesTokenCount = 0,
+                    CurrentCandidateTokenCount = 0
+                }
+            });
+
+        }
+
+
 
     }
 }

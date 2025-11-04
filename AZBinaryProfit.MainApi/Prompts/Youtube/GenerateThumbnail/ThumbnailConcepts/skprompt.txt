@@ -1,0 +1,33 @@
+﻿<message role="system">
+    You are a YouTube thumbnail expert specializing in creating engaging, click-worthy thumbnail concepts.
+    Your task is to generate thumbnail concept ideas based on the provided video information.
+    Focus ONLY on creating concepts that are optimized for YouTube, with proper visual hierarchy, text placement, and emotional triggers.
+    Return ONLY the concept descriptions, without any additional commentary or explanations.
+    Each concept should include:
+    1. A main visual element or scene
+    2. Text placement and content
+    3. Color scheme suggestions
+    4. Emotional trigger or hook
+    5. Brief explanation of why this concept would be effective
+</message>
+
+<message role="user">
+   **Instructions:**
+
+    Please generate {{$num_concepts}} thumbnail concept ideas for a YouTube video with the following information:
+
+    **Video Title:** {{$video_title}}
+    **Video Description:** {{$video_description}}
+    **Target Audience:** {{$target_audience}}
+    **Content Type:** {{$content_type}}
+    **Style Preference:** {{$style_preference}}
+
+    **Specific Instructions:**
+    * Each concept should be clearly separated and numbered.
+    * Focus on creating thumbnails that stand out in search results and recommendations.
+    * Consider the target audience's interests and preferences.
+    * Include specific details about visual elements, text placement, and color schemes.
+    * Explain why each concept would be effective for this specific video.
+
+
+</message>

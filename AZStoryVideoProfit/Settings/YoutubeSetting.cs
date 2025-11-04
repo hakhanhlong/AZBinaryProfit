@@ -67,6 +67,10 @@ namespace AZStoryVideoProfit.Settings
     {
         public YoutubeGenerateTitleViewModel GenerateTitle { get; set; }
 
+        public YoutubeGenerateDescriptionViewModel GenerateDescription { get; set; }
+
+        public YoutubeGenerateThumbnailViewModel GenerateThumbnail {  get; set; }
+
     }
 
     public class YoutubeGenerateTitleViewModel
@@ -83,5 +87,43 @@ namespace AZStoryVideoProfit.Settings
         public string Name { get; set; }
         public string Description { get; set; }
     }
+
+    public class YoutubeGenerateDescriptionViewModel
+    {
+
+        public List<YoutubeGenerateDescription_BaseViewModel> ToneStyles { get; set; }
+        public List<YoutubeGenerateDescription_BaseViewModel> TargetAudiences { get; set; }
+        public List<YoutubeGenerateDescription_BaseViewModel> UseCases { get; set; }
+        public List<YoutubeGenerateDescription_BaseViewModel> SeoGoals { get; set; }
+
+    }
+
+    public class YoutubeGenerateDescription_BaseViewModel
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+    }
+
+
+    public class YoutubeGenerateThumbnailViewModel
+    {
+
+        public List<YoutubeGenerateThumbnail_BaseViewModel> TargetAudiences { get; set; }
+        public List<YoutubeGenerateThumbnail_BaseViewModel> ContentTypes { get; set; }
+        public List<YoutubeGenerateThumbnail_BaseViewModel> StylePreferences { get; set; }
+        public List<YoutubeGenerateThumbnail_BaseViewModel> AspectRatios { get; set; }
+
+        public List<YoutubeGenerateThumbnail_BaseViewModel> TextStyles { get; set; }
+        public List<YoutubeGenerateThumbnail_BaseViewModel> ImageStyles { get; set; }
+        public List<YoutubeGenerateThumbnail_BaseViewModel> ImageFocus { get; set; }
+        
+    }
+
+    public class YoutubeGenerateThumbnail_BaseViewModel
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+    }
+
 
 }

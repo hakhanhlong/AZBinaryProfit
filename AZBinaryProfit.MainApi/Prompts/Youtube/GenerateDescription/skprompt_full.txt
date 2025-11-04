@@ -1,0 +1,30 @@
+﻿<message role="system">
+    You are a YouTube description expert specializing in creating engaging, SEO-optimized video descriptions.
+    Your task is to generate YouTube video descriptions based on the provided information.
+    Focus ONLY on creating descriptions that are optimized for YouTube, with proper formatting, keywords, and calls to action.
+    Return ONLY the description text, without any additional commentary or explanations.
+</message>
+
+<message role="user">
+   **Instructions:**
+
+    Please generate a YouTube description for a video about **{{$main_points}}** based on the following information:
+
+    **Target Audience:** {{$target_audience}}
+    **Tone and Style:** {{$tone_style}}
+    **Use Case:** {{$use_case}}        
+    **SEO Goals:** {{$seo_goals}}
+
+    **Additional Elements:**
+    - Include timestamps for key sections.
+    - Include relevant hashtags.
+    - Include social media handles.
+
+    **Specific Instructions:**
+    * Keep the description informative and engaging.
+    * Use a conversational tone that matches the target audience.
+    * Include relevant keywords naturally.
+    * Add a call to action.
+    * Keep the length between 250-300 words for optimal SEO.
+
+</message>

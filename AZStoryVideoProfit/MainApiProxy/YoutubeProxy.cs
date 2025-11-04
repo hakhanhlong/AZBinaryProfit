@@ -42,5 +42,33 @@ namespace AZStoryVideoProfit.MainApiProxy
             var response = client.Execute(request);
             return JsonConvert.DeserializeObject<YoutubeGenerateTitleResponseViewModel>(response.Content);
         }
+
+        public YoutubeGenerateDescriptionResponseViewModel GenerateDescription(YoutubeGenerateDescriptionRequestViewModel requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Youtube/GenerateDescription", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<YoutubeGenerateDescriptionResponseViewModel>(response.Content);
+        }
+
+
+        public YoutubeGenerateThumbnail_ThumbnailConceptResponseViewModel GenerateThumbnailConcept(YoutubeGenerateThumbnail_ThumbnailConceptRequestViewModel requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Youtube/GenerateThumbnail_ThumbnailConcepts", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<YoutubeGenerateThumbnail_ThumbnailConceptResponseViewModel>(response.Content);
+        }
+
+        public YoutubeGenerateThumbnail_ThumbnailImagePromptResponseViewModel GenerateThumbnail_ImagePrompt(YoutubeGenerateThumbnail_ThumbnailImagePromptRequestViewModel requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Youtube/GenerateThumbnail_ThumbnailImagePrompt", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<YoutubeGenerateThumbnail_ThumbnailImagePromptResponseViewModel>(response.Content);
+        }
     }
 }

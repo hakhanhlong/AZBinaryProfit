@@ -62,5 +62,267 @@
         "Description": "News"
       }
     ]
-  }  
+  },
+  "GenerateDescription": {
+    "ToneStyles": [
+      {
+        "Name": "Professional",
+        "Description": "Professional"
+      },
+      {
+        "Name": "Casual",
+        "Description": "Casual"
+      },
+      {
+        "Name": "Humorous",
+        "Description": "Humorous"
+      },
+      {
+        "Name": "Educational",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Entertaining",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Inspirational",
+        "Description": "Educational"
+      }
+    ],
+    "TargetAudiences": [
+      {
+        "Name": "Beginners",
+        "Description": "Beginners"
+      },
+      {
+        "Name": "Professionals",
+        "Description": "Professionals"
+      },
+      {
+        "Name": "Parents",
+        "Description": "Parents"
+      }
+    ],
+    "UseCases": [
+      {
+        "Name": "How-to/Tutorial",
+        "Description": "How-to/Tutorial"
+      },
+      {
+        "Name": "Vlog",
+        "Description": "Vlog"
+      },
+      {
+        "Name": "Review",
+        "Description": "Review"
+      },
+      {
+        "Name": "Educational",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Entertainment",
+        "Description": "News"
+      }
+    ],
+    "SeoGoals": [
+      {
+        "Name": "Increase Views",
+        "Description": "Increase Views"
+      },
+      {
+        "Name": "Drive Engagement",
+        "Description": "Drive Engagement"
+      },
+      {
+        "Name": "Build Subscribers",
+        "Description": "Build Subscribers"
+      },
+      {
+        "Name": "Promote Products/Services",
+        "Description": "Promote Products/Services"
+      }
+    ]
+  },
+  "GenerateThumbnail": {
+    "TargetAudiences": [
+      {
+        "Name": "Beginners",
+        "Description": "Beginners"
+      },
+      {
+        "Name": "Professionals",
+        "Description": "Professionals"
+      },
+      {
+        "Name": "Parents",
+        "Description": "Parents"
+      }
+    ],
+    "ContentTypes": [
+      {
+        "Name": "Tutorial/How-to",
+        "Description": "Tutorial/How-to"
+      },
+      {
+        "Name": "Vlog",
+        "Description": "Vlog"
+      },
+      {
+        "Name": "Review",
+        "Description": "Review"
+      },
+      {
+        "Name": "Educational",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Entertainment",
+        "Description": "Entertainment"
+      },
+      {
+        "Name": "News/Update",
+        "Description": "News/Update"
+      },
+      {
+        "Name": "Product Showcase",
+        "Description": "Product Showcase"
+      },
+      {
+        "Name": "Challenge",
+        "Description": "Challenge"
+      },
+      {
+        "Name": "Reaction",
+        "Description": "Reaction"
+      },
+      {
+        "Name": "Comparison",
+        "Description": "Comparison"
+      }
+    ],
+    "StylePreferences": [
+      {
+        "Name": "Bold and Dramatic",
+        "Description": "Bold and Dramatic"
+      },
+      {
+        "Name": "Clean and Minimal",
+        "Description": "Clean and Minimal"
+      },
+      {
+        "Name": "Colorful and Vibrant",
+        "Description": "Colorful and Vibrant"
+      },
+      {
+        "Name": "Dark and Moody",
+        "Description": "Dark and Moody"
+      },
+      {
+        "Name": "Professional and Corporate",
+        "Description": "Professional and Corporate"
+      },
+      {
+        "Name": "Playful and Fun",
+        "Description": "Playful and Fun"
+      },
+      {
+        "Name": "Retro/Vintage",
+        "Description": "Retro/Vintage"
+      },
+      {
+        "Name": "Modern and Sleek",
+        "Description": "Modern and Sleek"
+      }
+    ],
+    "AspectRatios": [
+      {
+        "Name": "16:9 (Standard)",
+        "Description": "16:9 (Standard)"
+      },
+      {
+        "Name": "1:1 (Square)",
+        "Description": "1:1 (Square)"
+      },
+      {
+        "Name": "4:3 (Classic)",
+        "Description": "4:3 (Classic)"
+      },
+      {
+        "Name": "9:16 (Vertical)",
+        "Description": "9:16 (Vertical)"
+      }
+    ],
+    "TextStyles": [
+      {
+        "Name": "Bold and Impactful",
+        "Description": "Bold and Impactful"
+      },
+      {
+        "Name": "Clean and Readable",
+        "Description": "Clean and Readable"
+      },
+      {
+        "Name": "Stylized and Thematic",
+        "Description": "Stylized and Thematic"
+      },
+      {
+        "Name": "Minimal and Subtle",
+        "Description": "Minimal and Subtle"
+      }
+    ],
+    "ImageStyles": [
+      {
+        "Name": "Auto (AI will choose best style)",
+        "Description": ""
+      },
+      {
+        "Name": "Photorealistic",
+        "Description": "photorealistic"
+      },
+      {
+        "Name": "Artistic",
+        "Description": "artistic"
+      },
+      {
+        "Name": "Cartoon/Anime",
+        "Description": "cartoon"
+      },
+      {
+        "Name": "Sketch/Drawing",
+        "Description": "sketch"
+      },
+      {
+        "Name": "Digital Art",
+        "Description": "digital_art"
+      },
+      {
+        "Name": "3D Render",
+        "Description": "3d_render"
+      }
+    ],
+    "ImageFocus": [
+      {
+        "Name": "Auto (AI will choose best focus)",
+        "Description": ""
+      },
+      {
+        "Name": "Portraits",
+        "Description": "portraits"
+      },
+      {
+        "Name": "Objects",
+        "Description": "objects"
+      },
+      {
+        "Name": "Motion",
+        "Description": "motion"
+      },
+      {
+        "Name": "Wide-angle",
+        "Description": "wide-angle"
+      }
+    ]
+  }
 }
