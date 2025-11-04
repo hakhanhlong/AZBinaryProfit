@@ -1,0 +1,66 @@
+{
+  "GenerateTitle": {
+    "ToneStyles": [
+      {
+        "Name": "Professional",
+        "Description": "Professional"
+      },
+      {
+        "Name": "Casual",
+        "Description": "Casual"
+      },
+      {
+        "Name": "Humorous",
+        "Description": "Humorous"
+      },
+      {
+        "Name": "Educational",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Entertaining",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Inspirational",
+        "Description": "Educational"
+      }
+    ],
+    "TargetAudiences": [
+      {
+        "Name": "Beginners",
+        "Description": "Beginners"
+      },
+      {
+        "Name": "Professionals",
+        "Description": "Professionals"
+      },
+      {
+        "Name": "Parents",
+        "Description": "Parents"
+      }
+    ],
+    "UseCases": [
+      {
+        "Name": "How-to/Tutorial",
+        "Description": "How-to/Tutorial"
+      },
+      {
+        "Name": "Vlog",
+        "Description": "Vlog"
+      },
+      {
+        "Name": "Review",
+        "Description": "Review"
+      },
+      {
+        "Name": "Educational",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Entertainment",
+        "Description": "News"
+      }
+    ]
+  }  
+}

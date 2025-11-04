@@ -94,6 +94,12 @@
     <Compile Include="Forms\VideoForm.Designer.cs">
       <DependentUpon>VideoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\YoutubeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YoutubeForm.Designer.cs">
+      <DependentUpon>YoutubeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -101,6 +107,7 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainApiProxy\Interfaces\IYoutubeProxy.cs" />
     <Compile Include="MainApiProxy\Interfaces\IStoryVideoProxy.cs" />
     <Compile Include="MainApiProxy\Interfaces\IStoryProxy.cs" />
     <Compile Include="MainApiProxy\StoryProxy.cs" />
@@ -108,15 +115,21 @@
     <Compile Include="MainApiProxy\ViewModels\BaseViewModel.cs" />
     <Compile Include="MainApiProxy\ViewModels\StoryVideoViewModel.cs" />
     <Compile Include="MainApiProxy\ViewModels\StoryViewModel.cs" />
+    <Compile Include="MainApiProxy\ViewModels\YoutubeViewModel.cs" />
+    <Compile Include="MainApiProxy\YoutubeProxy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\StoryVideoSetting.cs" />
     <Compile Include="Settings\StorySetting.cs" />
+    <Compile Include="Settings\YoutubeSetting.cs" />
     <EmbeddedResource Include="Forms\StoryForm.resx">
       <DependentUpon>StoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VideoForm.resx">
       <DependentUpon>VideoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YoutubeForm.resx">
+      <DependentUpon>YoutubeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -130,6 +143,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Json\Youtube.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Json\StoryVideo.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

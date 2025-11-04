@@ -33,7 +33,12 @@
             this.lbProcessing = new System.Windows.Forms.ToolStripLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnExecute = new System.Windows.Forms.Button();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.selectVideoAspectRatio = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.selectStoryVideoStyle = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -46,6 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNumberOfScene = new System.Windows.Forms.NumericUpDown();
             this.txtStory = new System.Windows.Forms.RichTextBox();
+            this.btnExecute = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,12 +62,6 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtViewScene = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.selectStoryVideoStyle = new System.Windows.Forms.ComboBox();
-            this.selectVideoAspectRatio = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -69,6 +69,8 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -82,8 +84,6 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -166,22 +166,79 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(489, 751);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // btnExecute
+            // tableLayoutPanel9
             // 
-            this.btnExecute.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExecute.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnExecute.FlatAppearance.BorderSize = 0;
-            this.btnExecute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExecute.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExecute.ForeColor = System.Drawing.Color.White;
-            this.btnExecute.Location = new System.Drawing.Point(338, 699);
-            this.btnExecute.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnExecute.Name = "btnExecute";
-            this.btnExecute.Size = new System.Drawing.Size(147, 48);
-            this.btnExecute.TabIndex = 5;
-            this.btnExecute.Text = "Execute";
-            this.btnExecute.UseVisualStyleBackColor = false;
-            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.selectVideoAspectRatio, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(4, 664);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(481, 29);
+            this.tableLayoutPanel9.TabIndex = 7;
+            // 
+            // selectVideoAspectRatio
+            // 
+            this.selectVideoAspectRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selectVideoAspectRatio.FormattingEnabled = true;
+            this.selectVideoAspectRatio.Location = new System.Drawing.Point(243, 3);
+            this.selectVideoAspectRatio.Name = "selectVideoAspectRatio";
+            this.selectVideoAspectRatio.Size = new System.Drawing.Size(235, 23);
+            this.selectVideoAspectRatio.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(4, 7);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 15);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Aspect Ratio";
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 2;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.selectStoryVideoStyle, 1, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 629);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(481, 29);
+            this.tableLayoutPanel8.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(4, 7);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 15);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Styles";
+            // 
+            // selectStoryVideoStyle
+            // 
+            this.selectStoryVideoStyle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selectStoryVideoStyle.FormattingEnabled = true;
+            this.selectStoryVideoStyle.Location = new System.Drawing.Point(243, 3);
+            this.selectStoryVideoStyle.Name = "selectStoryVideoStyle";
+            this.selectStoryVideoStyle.Size = new System.Drawing.Size(235, 23);
+            this.selectStoryVideoStyle.TabIndex = 2;
             // 
             // tableLayoutPanel6
             // 
@@ -338,6 +395,23 @@
             this.txtStory.TabIndex = 4;
             this.txtStory.Text = "";
             // 
+            // btnExecute
+            // 
+            this.btnExecute.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnExecute.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnExecute.FlatAppearance.BorderSize = 0;
+            this.btnExecute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExecute.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExecute.ForeColor = System.Drawing.Color.White;
+            this.btnExecute.Location = new System.Drawing.Point(338, 699);
+            this.btnExecute.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnExecute.Name = "btnExecute";
+            this.btnExecute.Size = new System.Drawing.Size(147, 48);
+            this.btnExecute.TabIndex = 5;
+            this.btnExecute.Text = "Execute";
+            this.btnExecute.UseVisualStyleBackColor = false;
+            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -458,80 +532,6 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 2;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.selectStoryVideoStyle, 1, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 629);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(481, 29);
-            this.tableLayoutPanel8.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(4, 7);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 15);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Styles";
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Controls.Add(this.selectVideoAspectRatio, 1, 0);
-            this.tableLayoutPanel9.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(4, 664);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 1;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(481, 29);
-            this.tableLayoutPanel9.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(4, 7);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 15);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Aspect Ratio";
-            // 
-            // selectStoryVideoStyle
-            // 
-            this.selectStoryVideoStyle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.selectStoryVideoStyle.FormattingEnabled = true;
-            this.selectStoryVideoStyle.Location = new System.Drawing.Point(243, 3);
-            this.selectStoryVideoStyle.Name = "selectStoryVideoStyle";
-            this.selectStoryVideoStyle.Size = new System.Drawing.Size(235, 23);
-            this.selectStoryVideoStyle.TabIndex = 2;
-            // 
-            // selectVideoAspectRatio
-            // 
-            this.selectVideoAspectRatio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.selectVideoAspectRatio.FormattingEnabled = true;
-            this.selectVideoAspectRatio.Location = new System.Drawing.Point(243, 3);
-            this.selectVideoAspectRatio.Name = "selectVideoAspectRatio";
-            this.selectVideoAspectRatio.Size = new System.Drawing.Size(235, 23);
-            this.selectVideoAspectRatio.TabIndex = 3;
-            // 
             // VideoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -554,6 +554,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -572,10 +576,6 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
             this.ResumeLayout(false);
 
         }

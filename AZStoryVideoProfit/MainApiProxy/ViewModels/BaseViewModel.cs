@@ -17,5 +17,7 @@ namespace AZStoryVideoProfit.MainApiProxy.ViewModels
         public int PromptTokenCount { get; set; }
         public int CandidatesTokenCount { get; set; }
         public int CurrentCandidateTokenCount { get; set; }
+
+        public object Analyze {  get; set; }
     }
 }
