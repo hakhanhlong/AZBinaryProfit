@@ -20,7 +20,7 @@ namespace AZStoryVideoProfit.Helpers
             var options = new RestClientOptions($"https://generativelanguage.googleapis.com")
             {
                 ThrowOnAnyError = true,                
-                Timeout = TimeSpan.FromSeconds(300) // 1 second
+                Timeout = TimeSpan.FromSeconds(900) // 1 second
             };
             var client = new RestClient(options);
             

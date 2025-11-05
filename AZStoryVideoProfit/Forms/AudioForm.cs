@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
@@ -192,54 +193,100 @@ namespace AZStoryVideoProfit.Forms
         private void btnAudioScript_ExecuteText2Speech_Click(object sender, EventArgs e)
         {
 
-            if (lvChunkScripts.SelectedItems.Count > 0)
-            {
-                int _Id = Convert.ToInt32(lvChunkScripts.SelectedItems[0].Tag);
+
+            if (chkAudioScript_Text2Speech_CheckAll.Checked) {
+
+                var listBase64Audio = new List<string>();
 
                 Task.Run(() => {
-                    SetProcessStatus(true, "Process Audio Generate ...");
 
-                    
-                    var item = _ChunkTexts.FirstOrDefault(x => x.Id == _Id);
-
-
-                    string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyBvLmvOz_OUcWI2fVqwW56cCTy6ARQ-uNE");
-
-                    dynamic dynamicObject = JsonConvert.DeserializeObject<dynamic>(responseAudio);
-
-
-                    try
+                    foreach (var item in _ChunkTexts)
                     {
-                        string audioData = (string)dynamicObject.candidates[0].content.parts[0].inlineData.data;
-                        string base64AudioString = audioData;
-                        byte[] audioBytes = Convert.FromBase64String(base64AudioString);
-
-                        string filePath = $"C:\\temp\\output_audio_{_Id}.mp3"; // Or .mp3, .ogg, etc.
-                        //File.WriteAllBytes(filePath, audioBytes);
 
 
-                        AudioConverterHelper.ProcessAudioChunks(base64AudioString, filePath);
+                        SetProcessStatus(true, $"Process Audio Generate {item.Id}/{_ChunkTexts.Count} ...");
+
+                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyBvLmvOz_OUcWI2fVqwW56cCTy6ARQ-uNE");
+
+                        dynamic dynamicObject = JsonConvert.DeserializeObject<dynamic>(responseAudio);
+
+                        try
+                        {
+                            string audioData = (string)dynamicObject.candidates[0].content.parts[0].inlineData.data;
+                            string base64AudioString = audioData;
+                            //byte[] audioBytes = Convert.FromBase64String(base64AudioString);
+                            listBase64Audio.Add(base64AudioString);
+
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show($"{item.Id}=> {ex.Message}");
+
+                        }
+
+                        SetProcessStatus(false, "");
                     }
-                    catch(Exception ex) {
 
-                        MessageBox.Show(ex.Message);
+
+                    if(listBase64Audio.Count == _ChunkTexts.Count)
+                    {
+                        string filePath = $"C:\\temp\\output_audio_full.mp3"; // Or .mp3, .ogg, etc.
+
+                        AudioConverterHelper.ProcessAudioChunks(listBase64Audio, filePath);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error not full chunks for merge audio");
+                    }
+
                     
-                    }
-
-                   
-
-
-
-
-                    SetProcessStatus(false, "");
                 });
-
                
+
+            }
+            else
+            {
+                if (lvChunkScripts.SelectedItems.Count > 0)
+                {
+                    int _Id = Convert.ToInt32(lvChunkScripts.SelectedItems[0].Tag);
+
+                    Task.Run(() => {
+                        SetProcessStatus(true, "Process Audio Generate ...");
+
+                        var item = _ChunkTexts.FirstOrDefault(x => x.Id == _Id);
+                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyBvLmvOz_OUcWI2fVqwW56cCTy6ARQ-uNE");
+
+                        dynamic dynamicObject = JsonConvert.DeserializeObject<dynamic>(responseAudio);
+
+                        try
+                        {
+                            string audioData = (string)dynamicObject.candidates[0].content.parts[0].inlineData.data;
+                            string base64AudioString = audioData;
+                            //byte[] audioBytes = Convert.FromBase64String(base64AudioString);
+
+                            string filePath = $"C:\\temp\\output_audio_{_Id}.mp3"; // Or .mp3, .ogg, etc.                                                                                   
+                            AudioConverterHelper.ProcessAudioChunks(new List<string> { base64AudioString }, filePath);
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show(ex.Message);
+
+                        }
+
+                        SetProcessStatus(false, "");
+                    });
+
+
+                }
             }
 
-        }
 
-       
+            
+
+        }
     }
 
 

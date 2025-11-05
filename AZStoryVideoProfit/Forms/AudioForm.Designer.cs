@@ -66,7 +66,6 @@
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.label18 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAudioScript_ExecuteText2Speech = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAudioScript_Results = new System.Windows.Forms.RichTextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -76,6 +75,9 @@
             this.ColChunkScript_Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtChunkScript_ChunkText = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAudioScript_ExecuteText2Speech = new System.Windows.Forms.Button();
+            this.chkAudioScript_Text2Speech_CheckAll = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -100,6 +102,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -566,10 +569,10 @@
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.btnAudioScript_ExecuteText2Speech, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.txtAudioScript_Results, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.splitContainer1, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 3);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 33);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -580,23 +583,6 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(821, 575);
             this.tableLayoutPanel5.TabIndex = 2;
-            // 
-            // btnAudioScript_ExecuteText2Speech
-            // 
-            this.btnAudioScript_ExecuteText2Speech.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAudioScript_ExecuteText2Speech.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnAudioScript_ExecuteText2Speech.FlatAppearance.BorderSize = 0;
-            this.btnAudioScript_ExecuteText2Speech.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAudioScript_ExecuteText2Speech.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAudioScript_ExecuteText2Speech.ForeColor = System.Drawing.Color.White;
-            this.btnAudioScript_ExecuteText2Speech.Location = new System.Drawing.Point(637, 530);
-            this.btnAudioScript_ExecuteText2Speech.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAudioScript_ExecuteText2Speech.Name = "btnAudioScript_ExecuteText2Speech";
-            this.btnAudioScript_ExecuteText2Speech.Size = new System.Drawing.Size(180, 42);
-            this.btnAudioScript_ExecuteText2Speech.TabIndex = 10;
-            this.btnAudioScript_ExecuteText2Speech.Text = "Execute Text to Speech";
-            this.btnAudioScript_ExecuteText2Speech.UseVisualStyleBackColor = false;
-            this.btnAudioScript_ExecuteText2Speech.Click += new System.EventHandler(this.btnAudioScript_ExecuteText2Speech_Click);
             // 
             // label4
             // 
@@ -690,6 +676,52 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 4;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.btnAudioScript_ExecuteText2Speech, 3, 0);
+            this.tableLayoutPanel6.Controls.Add(this.chkAudioScript_Text2Speech_CheckAll, 2, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 530);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(815, 42);
+            this.tableLayoutPanel6.TabIndex = 10;
+            // 
+            // btnAudioScript_ExecuteText2Speech
+            // 
+            this.btnAudioScript_ExecuteText2Speech.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAudioScript_ExecuteText2Speech.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnAudioScript_ExecuteText2Speech.FlatAppearance.BorderSize = 0;
+            this.btnAudioScript_ExecuteText2Speech.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAudioScript_ExecuteText2Speech.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAudioScript_ExecuteText2Speech.ForeColor = System.Drawing.Color.White;
+            this.btnAudioScript_ExecuteText2Speech.Location = new System.Drawing.Point(631, 3);
+            this.btnAudioScript_ExecuteText2Speech.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAudioScript_ExecuteText2Speech.Name = "btnAudioScript_ExecuteText2Speech";
+            this.btnAudioScript_ExecuteText2Speech.Size = new System.Drawing.Size(180, 36);
+            this.btnAudioScript_ExecuteText2Speech.TabIndex = 11;
+            this.btnAudioScript_ExecuteText2Speech.Text = "Execute Text to Speech";
+            this.btnAudioScript_ExecuteText2Speech.UseVisualStyleBackColor = false;
+            this.btnAudioScript_ExecuteText2Speech.Click += new System.EventHandler(this.btnAudioScript_ExecuteText2Speech_Click);
+            // 
+            // chkAudioScript_Text2Speech_CheckAll
+            // 
+            this.chkAudioScript_Text2Speech_CheckAll.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.chkAudioScript_Text2Speech_CheckAll.AutoSize = true;
+            this.chkAudioScript_Text2Speech_CheckAll.Location = new System.Drawing.Point(523, 11);
+            this.chkAudioScript_Text2Speech_CheckAll.Name = "chkAudioScript_Text2Speech_CheckAll";
+            this.chkAudioScript_Text2Speech_CheckAll.Size = new System.Drawing.Size(83, 19);
+            this.chkAudioScript_Text2Speech_CheckAll.TabIndex = 12;
+            this.chkAudioScript_Text2Speech_CheckAll.Text = "All Chunks";
+            this.chkAudioScript_Text2Speech_CheckAll.UseVisualStyleBackColor = true;
+            // 
             // AudioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -736,6 +768,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -789,6 +823,8 @@
         private System.Windows.Forms.ColumnHeader ColChunkScript_ChunkText;
         private System.Windows.Forms.ColumnHeader ColChunkScript_Status;
         private System.Windows.Forms.RichTextBox txtChunkScript_ChunkText;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button btnAudioScript_ExecuteText2Speech;
+        private System.Windows.Forms.CheckBox chkAudioScript_Text2Speech_CheckAll;
     }
 }

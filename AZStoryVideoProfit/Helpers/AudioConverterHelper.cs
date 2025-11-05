@@ -15,12 +15,18 @@ namespace AZStoryVideoProfit.Helpers
         private const int BitsPerSample = 16; // Corresponds to 2 bytes (2 * 8 = 16)
         private const int BytesPerSample = BitsPerSample / 8;
 
-        public static void ProcessAudioChunks(string audioBase64, string output_path)
+        public static void ProcessAudioChunks(List<string> arrBase64, string output_path)
         {
             // 1. Decode Base64 audio data
             List<byte[]> allAudioData = new List<byte[]>();
 
-            allAudioData.Add(Convert.FromBase64String(audioBase64));
+
+            foreach (string base64Item in arrBase64) {
+
+                allAudioData.Add(Convert.FromBase64String(base64Item));
+            }
+
+            
 
             // 2. Logging            
 
