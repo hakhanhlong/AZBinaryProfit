@@ -110,6 +110,7 @@
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.label20 = new System.Windows.Forms.Label();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
+            this.ThumbnailImagePrompt_TextStyles = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
             this.ThumbnailImagePrompt_StylePreferences = new System.Windows.Forms.ComboBox();
@@ -127,7 +128,6 @@
             this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
             this.txtThumbnailImagePrompt_Result = new System.Windows.Forms.RichTextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.ThumbnailImagePrompt_TextStyles = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1248,6 +1248,15 @@
             this.tableLayoutPanel26.Size = new System.Drawing.Size(398, 24);
             this.tableLayoutPanel26.TabIndex = 4;
             // 
+            // ThumbnailImagePrompt_TextStyles
+            // 
+            this.ThumbnailImagePrompt_TextStyles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ThumbnailImagePrompt_TextStyles.FormattingEnabled = true;
+            this.ThumbnailImagePrompt_TextStyles.Location = new System.Drawing.Point(202, 3);
+            this.ThumbnailImagePrompt_TextStyles.Name = "ThumbnailImagePrompt_TextStyles";
+            this.ThumbnailImagePrompt_TextStyles.Size = new System.Drawing.Size(193, 23);
+            this.ThumbnailImagePrompt_TextStyles.TabIndex = 4;
+            // 
             // label21
             // 
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -1447,15 +1456,6 @@
             this.label26.Size = new System.Drawing.Size(48, 15);
             this.label26.TabIndex = 1;
             this.label26.Text = "Results";
-            // 
-            // ThumbnailImagePrompt_TextStyles
-            // 
-            this.ThumbnailImagePrompt_TextStyles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ThumbnailImagePrompt_TextStyles.FormattingEnabled = true;
-            this.ThumbnailImagePrompt_TextStyles.Location = new System.Drawing.Point(202, 3);
-            this.ThumbnailImagePrompt_TextStyles.Name = "ThumbnailImagePrompt_TextStyles";
-            this.ThumbnailImagePrompt_TextStyles.Size = new System.Drawing.Size(193, 23);
-            this.ThumbnailImagePrompt_TextStyles.TabIndex = 4;
             // 
             // YoutubeForm
             // 

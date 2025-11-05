@@ -15,8 +15,8 @@ namespace AZStoryVideoProfit
     {
         StoryForm _IdeaStoryForm;
         VideoForm _VideoForm;
-
         YoutubeForm _YoutubeForm;
+        AudioForm _AudioForm;
         public Main()
         {
             InitializeComponent();
@@ -100,6 +100,33 @@ namespace AZStoryVideoProfit
                     else
                     {
                         _YoutubeForm.Activate();
+                    }
+                }
+            }));
+        }
+
+        private void btnAudio_Click(object sender, EventArgs e)
+        {
+            this.Invoke(new Action(() =>
+            {
+
+                if (_AudioForm == null)
+                {
+                    _AudioForm = new AudioForm();
+                    _AudioForm.MdiParent = this;
+                    _AudioForm.Show();
+                }
+                else
+                {
+                    if (_AudioForm.IsDisposed)
+                    {
+                        _AudioForm = new AudioForm();
+                        _AudioForm.MdiParent = this;
+                        _AudioForm.Show();
+                    }
+                    else
+                    {
+                        _AudioForm.Activate();
                     }
                 }
             }));

@@ -1,0 +1,214 @@
+{
+  "ContentStyles": [
+    {
+      "Name": "Informative News",
+      "Description": "Adopt a balanced, journalistic tone. Focus on clarity, factual accuracy, and presenting key information concisely."
+    },
+    {
+      "Name": "Comedy / Entertaining",
+      "Description": "Inject humor, witty banter, and playful disagreements. Use exaggeration and amusing analogies."
+    },
+    {
+      "Name": "Educational / Explainer",
+      "Description": "Break down complex topics into simple, understandable segments. Use analogies and real-world examples."
+    },
+    {
+      "Name": "Motivational / Inspiring",
+      "Description": "Use powerful, uplifting language. Build towards an inspiring conclusion. Share personal anecdotes."
+    },
+    {
+      "Name": "Casual Conversational",
+      "Description": "Create a relaxed, 'friends chatting' vibe. The dialogue should be natural, with slang and overlapping thoughts."
+    },
+    {
+      "Name": "Serious Debate",
+      "Description": "Construct a structured argument with clear points and counterpoints. The tone should be formal and persuasive."
+    },
+    {
+      "Name": "Story Mode",
+      "Description": "Narrate a compelling story. Use descriptive language to build atmosphere and suspense."
+    },
+    {
+      "Name": "Documentary",
+      "Description": "Follow a formal, narrative structure. Act as a narrator guiding the listener with clarity and authority."
+    },
+    {
+      "Name": "ASMR",
+      "Description": "Focus on soft, gentle, and relaxing words. Emphasize crisp consonant sounds and create a calming atmosphere."
+    }
+  ],
+  "Styles": [
+    {
+      "Name": "Informative News",
+      "Description": "Informative News"
+    },
+    {
+      "Name": "Comedy / Entertaining",
+      "Description": "Comedy / Entertaining"
+    },
+    {
+      "Name": "Educational / Explainer",
+      "Description": "Educational / Explainer"
+    },
+    {
+      "Name": "Motivational / Inspiring",
+      "Description": "Motivational / Inspiring"
+    },
+    {
+      "Name": "Casual Conversational",
+      "Description": "Casual Conversational"
+    },
+    {
+      "Name": "Serious Debate",
+      "Description": "Serious Debate"
+    },
+    {
+      "Name": "Story Mode",
+      "Description": "Story Mode"
+    },
+    {
+      "Name": "Documentary",
+      "Description": "Documentary"
+    },
+    {
+      "Name": "ASMR",
+      "Description": "ASMR"
+    }
+  ],
+  "TTSStyles": [
+    {
+      "Name": "Informative News",
+      "Description": "(Speaking with a clear, professional, and authoritative tone)"
+    },
+    {
+      "Name": "Comedy / Entertaining",
+      "Description": "(Speaking in a witty, energetic, and humorous tone)"
+    },
+    {
+      "Name": "Educational / Explainer",
+      "Description": "(Speaking in a clear, patient, and encouraging tone, like a teacher)"
+    },
+    {
+      "Name": "Motivational / Inspiring",
+      "Description": "(Speaking with a passionate, uplifting, and powerful voice)"
+    },
+    {
+      "Name": "Casual Conversational",
+      "Description": "(Speaking in a relaxed, friendly, and casual tone)"
+    },
+    {
+      "Name": "Serious Debate",
+      "Description": "(Speaking with a firm, assertive, and persuasive tone)"
+    },
+    {
+      "Name": "Story Mode",
+      "Description": "(Speaking as a storyteller, with a dramatic and engaging narrative pace)"
+    },
+    {
+      "Name": "Documentary",
+      "Description": "(Speaking with a formal, professional, and informative narrator's voice)"
+    },
+    {
+      "Name": "ASMR",
+      "Description": "(Whispering softly, clearly, and very close to the microphone)"
+    }
+  ],
+  "Languages": [
+    {
+      "Name": "English",
+      "Description": "English"
+    },
+    {
+      "Name": "Vietnamese",
+      "Description": "Vietnamese"
+    }
+  ],
+  "ScriptLenghts": [
+    {
+      "Name": "Short (~2 minutes)",
+      "Description": "Short (~2 minutes)"
+    },
+    {
+      "Name": "Medium (~5 minutes)",
+      "Description": "Medium (~5 minutes)"
+    },
+    {
+      "Name": "Long (~10 minutes)",
+      "Description": "Long (~10 minutes)"
+    },
+    {
+      "Name": "Long Long (~20 minutes)",
+      "Description": "Long Long (~20 minutes)"
+    }
+  ],
+  "VoicePersonas": [
+    {
+      "Name": "Calm conversation slow (Cuộc trò chuyện bình tĩnh, chậm rãi)",
+      "Description": "Calm conversation slow"
+    },
+    {
+      "Name": "Deep authoritative deliberate (Sâu sắc, uy quyền, thận trọng)",
+      "Description": "Deep authoritative deliberate"
+    },
+    {
+      "Name": "Bright energetic fast (Sáng sủa, năng động, nhanh chóng)",
+      "Description": "Bright energetic fast"
+    },
+    {
+      "Name": "Warm soothing gentle (Ấm áp, nhẹ nhàng, dịu dàng)",
+      "Description": "Warm soothing gentle"
+    },
+    {
+      "Name": "Gravelly serious rough (Nghiêm túc, thô ráp)",
+      "Description": "Gravelly serious rough"
+    },
+    {
+      "Name": "Sharp witty quick (Sắc sảo, dí dỏm, nhanh chóng)",
+      "Description": "Sharp witty quick"
+    },
+    {
+      "Name": "Sincere friendly natural (Chân thành, thân thiện, tự nhiên)",
+      "Description": "Sincere friendly natural"
+    },
+    {
+      "Name": "Monotone objective flat (Đơn điệu, khách quan, phẳng lặng)",
+      "Description": "Monotone objective flat"
+    },
+    {
+      "Name": "Breathy intimate soft (Thở phào, thân mật, nhẹ nhàng)",
+      "Description": "Breathy intimate soft"
+    },
+    {
+      "Name": "Booming resonant theatrical (Sôi động, cộng hưởng, kịch tính)",
+      "Description": "Booming resonant theatrical"
+    },
+    {
+      "Name": "Playful upbeat chipper (Vui tươi, lạc quan, vui vẻ)",
+      "Description": "Playful upbeat chipper"
+    },
+    {
+      "Name": "Smooth seductive low (Mượt mà, quyến rũ, trầm lắng)",
+      "Description": "Smooth seductive low"
+    },
+    {
+      "Name": "High-pitched nervous staccato (Cao độ, ngắt quãng, hồi hộp)",
+      "Description": "High-pitched nervous staccato"
+    },
+    {
+      "Name": "Casual informal conversational (Thường ngày, không chính thức)",
+      "Description": "Casual informal conversational"
+    },
+    {
+      "Name": "Measured academic precise (Học thuật, chính xác, vừa phải)",
+      "Description": "Measured academic precise"
+    },
+    {
+      "Name": "Grounded folksy earthy (Trầm lắng, dân dã, mộc mạc)",
+      "Description": "Grounded folksy earthy"
+    },
+    {
+      "Name": "Tender empathetic fragile (Dịu dàng, đồng cảm, mong manh)",
+      "Description": "Tender empathetic fragile"
+    }
+  ]
+}

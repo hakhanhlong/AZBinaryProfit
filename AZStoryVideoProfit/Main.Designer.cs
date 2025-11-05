@@ -36,6 +36,7 @@
             this.IdeaStoryVideo = new System.Windows.Forms.ToolStripButton();
             this.StoryVideo = new System.Windows.Forms.ToolStripButton();
             this.btnYoutube = new System.Windows.Forms.ToolStripButton();
+            this.btnAudio = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,8 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.IdeaStoryVideo,
             this.StoryVideo,
-            this.btnYoutube});
+            this.btnYoutube,
+            this.btnAudio});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -109,6 +111,16 @@
             this.btnYoutube.ToolTipText = "Youtube";
             this.btnYoutube.Click += new System.EventHandler(this.btnYoutube_Click);
             // 
+            // btnAudio
+            // 
+            this.btnAudio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAudio.Image = ((System.Drawing.Image)(resources.GetObject("btnAudio.Image")));
+            this.btnAudio.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAudio.Name = "btnAudio";
+            this.btnAudio.Size = new System.Drawing.Size(66, 22);
+            this.btnAudio.Text = "AUDIO";
+            this.btnAudio.Click += new System.EventHandler(this.btnAudio_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,6 +152,7 @@
         private System.Windows.Forms.ToolStripButton IdeaStoryVideo;
         private System.Windows.Forms.ToolStripButton StoryVideo;
         private System.Windows.Forms.ToolStripButton btnYoutube;
+        private System.Windows.Forms.ToolStripButton btnAudio;
     }
 }
 
