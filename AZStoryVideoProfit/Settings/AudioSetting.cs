@@ -44,13 +44,13 @@ namespace AZStoryVideoProfit.Settings
             //Read file to string
             string json = File.ReadAllText($"{PathSetting}\\Audio.json");
             //Deserialize from file to object:
-            var rootObject = new YoutubeSettingViewModel();
+            var rootObject = new AudioSettingViewModel();
             JsonConvert.PopulateObject(json, rootObject);
             Data = rootObject;
 
         }
 
-        public YoutubeSettingViewModel Data { get; set; }
+        public AudioSettingViewModel Data { get; set; }
 
         public void Save()
         {
@@ -66,8 +66,7 @@ namespace AZStoryVideoProfit.Settings
     public class AudioSettingViewModel
     {
         public List<Audio_BaseViewModel> ContentStyles { get; set; }
-
-        public List<Audio_BaseViewModel> AudioStyles { get; set; }
+        
 
         public List<Audio_BaseViewModel> TTSStyles { get; set; }
 
@@ -76,7 +75,12 @@ namespace AZStoryVideoProfit.Settings
         public List<Audio_BaseViewModel> ScriptLenghts { get; set; }
 
         public List<Audio_BaseViewModel> VoicePersonas { get; set; }
-        
+
+        public List<Audio_BaseViewModel> Styles { get; set; }
+
+        public List<Audio_BaseViewModel> Types { get; set; }
+
+
     }
 
     public class Audio_BaseViewModel

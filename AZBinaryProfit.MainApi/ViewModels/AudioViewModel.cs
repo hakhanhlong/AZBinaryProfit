@@ -11,7 +11,9 @@
         public string Style { get; set; }
         public string TTSInstruction { get; set; }
         public string Language { get; set; }
-        public int ScriptLength { get; set; }
+        public string ScriptLength { get; set; }
+
+        public string Type { get; set; }
 
     }
 }

@@ -210,5 +210,61 @@
       "Name": "Tender empathetic fragile (Dịu dàng, đồng cảm, mong manh)",
       "Description": "Tender empathetic fragile"
     }
+  ],
+  "Types": [
+    {
+      "Name": "Podcast",
+      "Description": "Podcast"
+    },
+    {
+      "Name": "ASMR Video",
+      "Description": "ASMR Video"
+    },
+    {
+      "Name": "Documentary",
+      "Description": "Documentary"
+    },
+    {
+      "Name": "Product Ad",
+      "Description": "Product Ad"
+    },
+    {
+      "Name": "Story",
+      "Description": "Story"
+    },
+    {
+      "Name": "Kids Story",
+      "Description": "Kids Story"
+    },
+    {
+      "Name": "Horror Story",
+      "Description": "Horror Story"
+    },
+    {
+      "Name": "Viral Video",
+      "Description": "Viral Video"
+    }
+  ],
+  "StoryArcs": [
+    {
+      "Name": "Hero's Journey",
+      "Description": "Podcast"
+    },
+    {
+      "Name": "Three-Act Structure",
+      "Description": "ASMR Video"
+    },
+    {
+      "Name": "Man vs. Nature",
+      "Description": "Documentary"
+    },
+    {
+      "Name": "Rags to Riches",
+      "Description": "Product Ad"
+    },
+    {
+      "Name": "Voyage and Return",
+      "Description": "Story"
+    }
   ]
 }
