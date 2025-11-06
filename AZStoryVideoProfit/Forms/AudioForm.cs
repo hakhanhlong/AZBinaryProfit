@@ -266,11 +266,12 @@ namespace AZStoryVideoProfit.Forms
                         if (listBase64Audio.Count == _ChunkTexts.Count)
                         {
                             DateTime dateTime = DateTime.Now;
-                            string dateFolderFormat = dateTime.ToString("YYYY_MM_dd");
+                            string dateFolderFormat = dateTime.ToString("yyyy_MM_dd");
+                            string folderPath = $@"{Setting.Instance.Data.RootAudioOutputPath}\{StringHelper.ToSlug(txtAudioScript_Title.Text)}\{dateFolderFormat}";
+                            if(!System.IO.Directory.Exists(folderPath))
+                                Directory.CreateDirectory(folderPath);
 
-                            string test = StringHelper.ToSlug(txtAudioScript_Title.Text);
-
-                            string filePath = Path.Combine(Setting.Instance.Data.RootAudioOutputPath, $"{dateFolderFormat}", $"{StringHelper.UniqueKey(6)}.wav");
+                            string filePath = Path.Combine($"{folderPath}", $"{StringHelper.UniqueKey(6)}.wav");
 
                             AudioConverterHelper.ProcessAudioChunks(listBase64Audio, filePath);
                         }
@@ -308,9 +309,13 @@ namespace AZStoryVideoProfit.Forms
                             string base64AudioString = audioData;
                             DateTime dateTime = DateTime.Now;
 
-                            string dateFolderFormat = dateTime.ToString("YYYY_MM_dd");
-                            string filePath = Path.Combine(Setting.Instance.Data.RootAudioOutputPath,
-                                $"{StringHelper.ToSlug(txtAudioScript_Title.Text)}", $"{dateFolderFormat}", $"{StringHelper.UniqueKey(6)}.wav");
+                            string dateFolderFormat = dateTime.ToString("yyyy_MM_dd");
+                            string folderPath = $@"{Setting.Instance.Data.RootAudioOutputPath}\{StringHelper.ToSlug(txtAudioScript_Title.Text)}\{dateFolderFormat}";
+                            if (!System.IO.Directory.Exists(folderPath))
+                                Directory.CreateDirectory(folderPath);
+
+                            string filePath = Path.Combine($"{folderPath}", $"{StringHelper.UniqueKey(6)}.wav");
+                            
 
                             AudioConverterHelper.ProcessAudioChunks(new List<string> { base64AudioString }, filePath);
                         }
