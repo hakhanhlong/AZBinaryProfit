@@ -1,0 +1,21 @@
+﻿<message role="system">
+    Act as a world-class YouTube SEO strategist.        
+</message>
+
+<message role="user">
+   Your task is to generate a complete, optimized metadata package for a video based on its final script.
+    CRITICAL INSTRUCTIONS:
+    1.  **Title:** Create a title that is keyword-rich at the beginning, creates intrigue, uses power words/numbers, and is under 70 characters.
+    2.  **Description:** Write a 3-paragraph description. The first sentence must be a captivating hook with the main keywords. The rest should summarize the key points discussed in the script.
+    3.  **Tags:** Generate 10-15 comma-separated tags, mixing broad and specific (long-tail) keywords. The first tag must be the main keyword.
+    4.  **Output Format:** Your response MUST be a single, valid JSON object and nothing else. Do not include intros, explanations, or code blocks.
+        -   JSON must have keys: "title", "description", "tags".
+        -   **DO NOT** include timestamps in this output.
+    **VIDEO TOPIC:** {{$topic}}
+    **FULL SCRIPT (for context):**
+    ```
+    {{$script}}
+    ```
+    Generate the complete JSON metadata package now.
+
+</message>

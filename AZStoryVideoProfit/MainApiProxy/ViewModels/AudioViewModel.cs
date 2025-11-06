@@ -25,4 +25,17 @@ namespace AZStoryVideoProfit.MainApiProxy.ViewModels
     {
         public string Data { get; set; }
     }
+
+
+    public class AudioScript_SEOMetadataRequestViewModel
+    {
+        public string Topic { get; set; }
+        public string Script { get; set; }
+    }
+
+
+    public class AudioScript_SEOMetadataResponseViewModel : BaseViewModel
+    {
+        public string Data { get; set; }
+    }
 }

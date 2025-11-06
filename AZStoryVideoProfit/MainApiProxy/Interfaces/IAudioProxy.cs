@@ -10,5 +10,7 @@ namespace AZStoryVideoProfit.MainApiProxy.Interfaces
     public interface IAudioProxy
     {
         AudioScriptResponseViewModel AudioScript(AudioScriptRequestViewModel requestViewModel);
+
+        AudioScript_SEOMetadataResponseViewModel SEOMetadata(AudioScript_SEOMetadataRequestViewModel requestViewModel);
     }
 }

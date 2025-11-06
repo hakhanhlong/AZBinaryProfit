@@ -67,17 +67,21 @@
             this.label18 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtAudioScript_Results = new System.Windows.Forms.RichTextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lvChunkScripts = new System.Windows.Forms.ListView();
             this.ColChunkScript_STT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColChunkScript_ChunkText = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColChunkScript_Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtChunkScript_ChunkText = new System.Windows.Forms.RichTextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAudioScript_ExecuteText2Speech = new System.Windows.Forms.Button();
             this.chkAudioScript_Text2Speech_CheckAll = new System.Windows.Forms.CheckBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtAudioScript_ScriptText = new System.Windows.Forms.RichTextBox();
+            this.txtAudioScript_SEOMetadata = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -103,6 +107,9 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -483,6 +490,7 @@
             // AudioScript_VoicePersonas
             // 
             this.AudioScript_VoicePersonas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AudioScript_VoicePersonas.DropDownWidth = 480;
             this.AudioScript_VoicePersonas.FormattingEnabled = true;
             this.AudioScript_VoicePersonas.Location = new System.Drawing.Point(206, 3);
             this.AudioScript_VoicePersonas.Name = "AudioScript_VoicePersonas";
@@ -570,9 +578,9 @@
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.txtAudioScript_Results, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.splitContainer1, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.tabControl2, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 33);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -593,18 +601,6 @@
             this.label4.Size = new System.Drawing.Size(82, 15);
             this.label4.TabIndex = 8;
             this.label4.Text = "Chunk Scripts";
-            // 
-            // txtAudioScript_Results
-            // 
-            this.txtAudioScript_Results.BackColor = System.Drawing.Color.Wheat;
-            this.txtAudioScript_Results.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAudioScript_Results.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAudioScript_Results.Location = new System.Drawing.Point(4, 3);
-            this.txtAudioScript_Results.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtAudioScript_Results.Name = "txtAudioScript_Results";
-            this.txtAudioScript_Results.Size = new System.Drawing.Size(813, 240);
-            this.txtAudioScript_Results.TabIndex = 7;
-            this.txtAudioScript_Results.Text = "";
             // 
             // splitContainer1
             // 
@@ -648,7 +644,7 @@
             // ColChunkScript_ChunkText
             // 
             this.ColChunkScript_ChunkText.Text = "Chunk Text";
-            this.ColChunkScript_ChunkText.Width = 640;
+            this.ColChunkScript_ChunkText.Width = 520;
             // 
             // ColChunkScript_Status
             // 
@@ -665,16 +661,6 @@
             this.txtChunkScript_ChunkText.Size = new System.Drawing.Size(298, 240);
             this.txtChunkScript_ChunkText.TabIndex = 8;
             this.txtChunkScript_ChunkText.Text = "";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1250, 617);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel6
             // 
@@ -721,6 +707,73 @@
             this.chkAudioScript_Text2Speech_CheckAll.TabIndex = 12;
             this.chkAudioScript_Text2Speech_CheckAll.Text = "All Chunks";
             this.chkAudioScript_Text2Speech_CheckAll.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1250, 617);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.Location = new System.Drawing.Point(3, 3);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(815, 240);
+            this.tabControl2.TabIndex = 11;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.txtAudioScript_ScriptText);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(807, 212);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Script Text";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.txtAudioScript_SEOMetadata);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(807, 212);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Seo Metadata";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // txtAudioScript_ScriptText
+            // 
+            this.txtAudioScript_ScriptText.BackColor = System.Drawing.Color.Wheat;
+            this.txtAudioScript_ScriptText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAudioScript_ScriptText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAudioScript_ScriptText.Location = new System.Drawing.Point(3, 3);
+            this.txtAudioScript_ScriptText.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtAudioScript_ScriptText.Name = "txtAudioScript_ScriptText";
+            this.txtAudioScript_ScriptText.Size = new System.Drawing.Size(801, 206);
+            this.txtAudioScript_ScriptText.TabIndex = 8;
+            this.txtAudioScript_ScriptText.Text = "";
+            // 
+            // txtAudioScript_SEOMetadata
+            // 
+            this.txtAudioScript_SEOMetadata.BackColor = System.Drawing.Color.Wheat;
+            this.txtAudioScript_SEOMetadata.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAudioScript_SEOMetadata.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAudioScript_SEOMetadata.Location = new System.Drawing.Point(3, 3);
+            this.txtAudioScript_SEOMetadata.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtAudioScript_SEOMetadata.Name = "txtAudioScript_SEOMetadata";
+            this.txtAudioScript_SEOMetadata.Size = new System.Drawing.Size(801, 206);
+            this.txtAudioScript_SEOMetadata.TabIndex = 9;
+            this.txtAudioScript_SEOMetadata.Text = "";
             // 
             // AudioForm
             // 
@@ -770,6 +823,9 @@
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -815,7 +871,6 @@
         private System.Windows.Forms.ComboBox AudioScript_Type;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.RichTextBox txtAudioScript_Results;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ListView lvChunkScripts;
@@ -826,5 +881,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button btnAudioScript_ExecuteText2Speech;
         private System.Windows.Forms.CheckBox chkAudioScript_Text2Speech_CheckAll;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.RichTextBox txtAudioScript_ScriptText;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.RichTextBox txtAudioScript_SEOMetadata;
     }
 }

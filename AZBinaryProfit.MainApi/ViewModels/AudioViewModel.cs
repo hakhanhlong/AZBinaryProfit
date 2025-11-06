@@ -16,4 +16,14 @@
         public string Type { get; set; }
 
     }
+
+
+    public class AudioScript_SEOMetadataRequestViewModel
+    {
+
+
+        public string Topic { get; set; }
+        public string Script { get; set; }
+       
+    }
 }

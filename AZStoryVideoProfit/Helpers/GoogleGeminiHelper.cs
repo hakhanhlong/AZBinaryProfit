@@ -41,6 +41,13 @@ namespace AZStoryVideoProfit.Helpers
                             }
                     }
                 },
+                ["safetySettings"] = new List<object>
+                {
+                    new { category = "HARM_CATEGORY_HARASSMENT", threshold = "BLOCK_NONE"},
+                    new { category = "HARM_CATEGORY_HATE_SPEECH", threshold = "BLOCK_NONE"},
+                    new { category = "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold = "BLOCK_NONE"},
+                    new { category = "HARM_CATEGORY_DANGEROUS_CONTENT", threshold = "BLOCK_NONE"},
+                },
                 ["generationConfig"] = new
                 {
                     responseModalities = new List<string>

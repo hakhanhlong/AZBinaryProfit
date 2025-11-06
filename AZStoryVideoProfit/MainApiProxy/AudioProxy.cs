@@ -42,5 +42,14 @@ namespace AZStoryVideoProfit.MainApiProxy
             var response = client.Execute(request);
             return JsonConvert.DeserializeObject<AudioScriptResponseViewModel>(response.Content);
         }
+
+        public AudioScript_SEOMetadataResponseViewModel SEOMetadata(AudioScript_SEOMetadataRequestViewModel requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Audio/SEOMetadata", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<AudioScript_SEOMetadataResponseViewModel>(response.Content);
+        }
     }
 }

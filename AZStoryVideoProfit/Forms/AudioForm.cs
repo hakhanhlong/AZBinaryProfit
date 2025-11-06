@@ -3,6 +3,7 @@ using AZStoryVideoProfit.MainApiProxy;
 using AZStoryVideoProfit.Settings;
 using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,9 @@ namespace AZStoryVideoProfit.Forms
     public partial class AudioForm : Form
     {
         private List<ChunkTextItem> _ChunkTexts;
+        private Hashtable ListViewItemToChunkTextItem = new Hashtable();
+        private Hashtable ChunkTextItemToListViewItem = new Hashtable();
+
         public AudioForm()
         {
             InitializeComponent();
@@ -62,6 +66,8 @@ namespace AZStoryVideoProfit.Forms
 
         private void AudioForm_Load(object sender, EventArgs e)
         {
+
+            string test = Setting.Instance.Data.RootAudioOutputPath;
             this.WindowState = FormWindowState.Maximized;
             InitData();
 
@@ -74,14 +80,11 @@ namespace AZStoryVideoProfit.Forms
             {
                 this.Invoke((Action)(() => {
 
-                    //  public string Title { get; set; }
-                    //public string Story { get; set; }
-                    //public string NarratorPersona { get; set; }
-                    //public string ContentInstruction { get; set; }
-                    //public string Style { get; set; }
-                    //public string TTSInstruction { get; set; }
-                    //public string Language { get; set; }
-                    //public int ScriptLength { get; set; }
+                    lvChunkScripts.Items.Clear();
+                    txtAudioScript_ScriptText.Text = "";
+                    ListViewItemToChunkTextItem.Clear();
+                    ChunkTextItemToListViewItem.Clear();
+                    _ChunkTexts.Clear();
 
                     var request = new MainApiProxy.ViewModels.AudioScriptRequestViewModel
                     {
@@ -99,15 +102,12 @@ namespace AZStoryVideoProfit.Forms
 
                     Task.Run(() => {
 
-
-
-
                         SetProcessStatus(true, "Process Audio Script ...");
 
                         var response = AudioProxy.Instance.AudioScript(request);
                         this.Invoke(new Action(() => {
 
-                            txtAudioScript_Results.Text = response.Data;
+                            txtAudioScript_ScriptText.Text = response.Data;
 
                             var listChunks = ChunkTextHelper.ChunkAudioScript(response.Data);
 
@@ -129,6 +129,25 @@ namespace AZStoryVideoProfit.Forms
 
 
                         }));
+
+                        SetProcessStatus(true, "Process SEO Metadata ...");
+
+
+                        this.Invoke(new Action(() =>
+                        {
+                            var request_seo_metadata = new MainApiProxy.ViewModels.AudioScript_SEOMetadataRequestViewModel
+                            {
+                                Topic = txtAudioScript_Title.Text,
+                                Script = txtAudioScript_Story.Text,
+
+                            };
+
+                            var response_seo_metadata = AudioProxy.Instance.SEOMetadata(request_seo_metadata);
+
+                            txtAudioScript_SEOMetadata.Text = response_seo_metadata.Data;
+                        }));
+                        
+
 
 
                         SetProcessStatus(false, "");
@@ -176,6 +195,11 @@ namespace AZStoryVideoProfit.Forms
                 itemAdd.SubItems.Add(chunkTextItem.ChunkText);
                 itemAdd.SubItems.Add(chunkTextItem.Status);
                 lv.Items.Add(itemAdd);
+
+
+                ListViewItemToChunkTextItem[itemAdd] = chunkTextItem;
+                ChunkTextItemToListViewItem[chunkTextItem] = itemAdd;
+
             }));
 
         }
@@ -206,15 +230,14 @@ namespace AZStoryVideoProfit.Forms
 
                         SetProcessStatus(true, $"Process Audio Generate {item.Id}/{_ChunkTexts.Count} ...");
 
-                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyBvLmvOz_OUcWI2fVqwW56cCTy6ARQ-uNE");
+                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyA3bUX30qoxazBwYOMQ7rg2zO68iFy_3dw");
 
                         dynamic dynamicObject = JsonConvert.DeserializeObject<dynamic>(responseAudio);
 
                         try
                         {
                             string audioData = (string)dynamicObject.candidates[0].content.parts[0].inlineData.data;
-                            string base64AudioString = audioData;
-                            //byte[] audioBytes = Convert.FromBase64String(base64AudioString);
+                            string base64AudioString = audioData;                            
                             listBase64Audio.Add(base64AudioString);
 
 
@@ -226,20 +249,39 @@ namespace AZStoryVideoProfit.Forms
 
                         }
 
+                        this.Invoke(new Action(() =>
+                        {
+                            ((ListViewItem)ChunkTextItemToListViewItem[item]).SubItems[2].Text = "SUCCESS";
+
+                        }));
+                        
+
                         SetProcessStatus(false, "");
                     }
 
 
-                    if(listBase64Audio.Count == _ChunkTexts.Count)
-                    {
-                        string filePath = $"C:\\temp\\output_audio_full.mp3"; // Or .mp3, .ogg, etc.
 
-                        AudioConverterHelper.ProcessAudioChunks(listBase64Audio, filePath);
-                    }
-                    else
+                    this.Invoke(new Action(() =>
                     {
-                        MessageBox.Show("Error not full chunks for merge audio");
-                    }
+                        if (listBase64Audio.Count == _ChunkTexts.Count)
+                        {
+                            DateTime dateTime = DateTime.Now;
+                            string dateFolderFormat = dateTime.ToString("YYYY_MM_dd");
+
+                            string test = StringHelper.ToSlug(txtAudioScript_Title.Text);
+
+                            string filePath = Path.Combine(Setting.Instance.Data.RootAudioOutputPath, $"{dateFolderFormat}", $"{StringHelper.UniqueKey(6)}.wav");
+
+                            AudioConverterHelper.ProcessAudioChunks(listBase64Audio, filePath);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error not full chunks for merge audio");
+                        }
+
+                    }));
+
+                   
 
                     
                 });
@@ -264,9 +306,12 @@ namespace AZStoryVideoProfit.Forms
                         {
                             string audioData = (string)dynamicObject.candidates[0].content.parts[0].inlineData.data;
                             string base64AudioString = audioData;
-                            //byte[] audioBytes = Convert.FromBase64String(base64AudioString);
+                            DateTime dateTime = DateTime.Now;
 
-                            string filePath = $"C:\\temp\\output_audio_{_Id}.mp3"; // Or .mp3, .ogg, etc.                                                                                   
+                            string dateFolderFormat = dateTime.ToString("YYYY_MM_dd");
+                            string filePath = Path.Combine(Setting.Instance.Data.RootAudioOutputPath,
+                                $"{StringHelper.ToSlug(txtAudioScript_Title.Text)}", $"{dateFolderFormat}", $"{StringHelper.UniqueKey(6)}.wav");
+
                             AudioConverterHelper.ProcessAudioChunks(new List<string> { base64AudioString }, filePath);
                         }
                         catch (Exception ex)
