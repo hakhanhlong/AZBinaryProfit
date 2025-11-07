@@ -32,6 +32,45 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.lbProcessing = new System.Windows.Forms.ToolStripLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
+            this.GenerateIdea_TxtTopic = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel37 = new System.Windows.Forms.TableLayoutPanel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.GenerateIdea_TxtNumIdea = new System.Windows.Forms.NumericUpDown();
+            this.btnGenerateIdea_Execute = new System.Windows.Forms.Button();
+            this.tableLayoutPanel38 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtGenerateIdea_Results = new System.Windows.Forms.RichTextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
+            this.GenerateShortVideoScript_VerticalFramingNote = new System.Windows.Forms.CheckBox();
+            this.GenerateShortVideoScript_IncludeSoundEffect = new System.Windows.Forms.CheckBox();
+            this.GenerateShortVideoScript_IncludeTextOverlay = new System.Windows.Forms.CheckBox();
+            this.GenerateShortVideoScript_TxtStory = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel36 = new System.Windows.Forms.TableLayoutPanel();
+            this.GenerateShortVideoScript_ContentTypes = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel39 = new System.Windows.Forms.TableLayoutPanel();
+            this.GenerateShortVideoScript_HookInstructions = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel40 = new System.Windows.Forms.TableLayoutPanel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.GenerateShortVideoScript_HookTypes = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel41 = new System.Windows.Forms.TableLayoutPanel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.GenerateShortVideoScript_DurationPerSeconds = new System.Windows.Forms.NumericUpDown();
+            this.btnGenerateShortVideoScript_Execute = new System.Windows.Forms.Button();
+            this.GenerateShortVideoScript_IncludeCaption = new System.Windows.Forms.CheckBox();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -128,48 +167,51 @@
             this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
             this.txtThumbnailImagePrompt_Result = new System.Windows.Forms.RichTextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
-            this.GenerateIdea_TxtTopic = new System.Windows.Forms.RichTextBox();
-            this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel37 = new System.Windows.Forms.TableLayoutPanel();
-            this.label30 = new System.Windows.Forms.Label();
-            this.GenerateIdea_TxtNumIdea = new System.Windows.Forms.NumericUpDown();
-            this.btnGenerateIdea_Execute = new System.Windows.Forms.Button();
-            this.tableLayoutPanel38 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtGenerateIdea_Results = new System.Windows.Forms.RichTextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
-            this.GenerateShortVideoScript_TxtStory = new System.Windows.Forms.RichTextBox();
-            this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel36 = new System.Windows.Forms.TableLayoutPanel();
-            this.GenerateShortVideoScript_ContentTypes = new System.Windows.Forms.ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel39 = new System.Windows.Forms.TableLayoutPanel();
-            this.GenerateShortVideoScript_HookInstructions = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel40 = new System.Windows.Forms.TableLayoutPanel();
-            this.label32 = new System.Windows.Forms.Label();
-            this.GenerateShortVideoScript_HookTypes = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel41 = new System.Windows.Forms.TableLayoutPanel();
-            this.label33 = new System.Windows.Forms.Label();
-            this.GenerateShortVideoScript_DurationPerSeconds = new System.Windows.Forms.NumericUpDown();
-            this.btnGenerateShortVideoScript_Execute = new System.Windows.Forms.Button();
-            this.tableLayoutPanel42 = new System.Windows.Forms.TableLayoutPanel();
-            this.GenerateShortVideoScript_TxtResult = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel43 = new System.Windows.Forms.TableLayoutPanel();
             this.label34 = new System.Windows.Forms.Label();
-            this.GenerateShortVideoScript_IncludeCaption = new System.Windows.Forms.CheckBox();
-            this.GenerateShortVideoScript_IncludeTextOverlay = new System.Windows.Forms.CheckBox();
-            this.GenerateShortVideoScript_IncludeSoundEffect = new System.Windows.Forms.CheckBox();
-            this.GenerateShortVideoScript_VerticalFramingNote = new System.Windows.Forms.CheckBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel42 = new System.Windows.Forms.TableLayoutPanel();
+            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.GenerateShortVideoScript_TxtResult = new System.Windows.Forms.RichTextBox();
+            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel44 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnGenerateShortVideoScript_CreateNarration = new System.Windows.Forms.Button();
+            this.tableLayoutPanel45 = new System.Windows.Forms.TableLayoutPanel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.GenerateShortVideoScript_ToneStyles = new System.Windows.Forms.ComboBox();
+            this.GenerateShortVideoScript_TxtScriptNarration = new System.Windows.Forms.RichTextBox();
+            this.lvAudioLines = new System.Windows.Forms.ListView();
+            this.columnAudioLine_Stt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnAudioLine_AudioLine = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
+            this.splitContainer5.Panel1.SuspendLayout();
+            this.splitContainer5.Panel2.SuspendLayout();
+            this.splitContainer5.SuspendLayout();
+            this.tableLayoutPanel32.SuspendLayout();
+            this.tableLayoutPanel33.SuspendLayout();
+            this.tableLayoutPanel37.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GenerateIdea_TxtNumIdea)).BeginInit();
+            this.tableLayoutPanel38.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.tabControl3.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
+            this.splitContainer6.Panel2.SuspendLayout();
+            this.splitContainer6.SuspendLayout();
+            this.tableLayoutPanel34.SuspendLayout();
+            this.tableLayoutPanel35.SuspendLayout();
+            this.tableLayoutPanel36.SuspendLayout();
+            this.tableLayoutPanel39.SuspendLayout();
+            this.tableLayoutPanel40.SuspendLayout();
+            this.tableLayoutPanel41.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GenerateShortVideoScript_DurationPerSeconds)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -224,29 +266,17 @@
             this.tableLayoutPanel29.SuspendLayout();
             this.tableLayoutPanel30.SuspendLayout();
             this.tableLayoutPanel31.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
-            this.splitContainer5.Panel1.SuspendLayout();
-            this.splitContainer5.Panel2.SuspendLayout();
-            this.splitContainer5.SuspendLayout();
-            this.tableLayoutPanel32.SuspendLayout();
-            this.tableLayoutPanel33.SuspendLayout();
-            this.tableLayoutPanel37.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GenerateIdea_TxtNumIdea)).BeginInit();
-            this.tableLayoutPanel38.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.Panel2.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
-            this.tableLayoutPanel34.SuspendLayout();
-            this.tableLayoutPanel35.SuspendLayout();
-            this.tableLayoutPanel36.SuspendLayout();
-            this.tableLayoutPanel39.SuspendLayout();
-            this.tableLayoutPanel40.SuspendLayout();
-            this.tableLayoutPanel41.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GenerateShortVideoScript_DurationPerSeconds)).BeginInit();
+            this.tableLayoutPanel43.SuspendLayout();
             this.tableLayoutPanel42.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
+            this.splitContainer7.Panel1.SuspendLayout();
+            this.splitContainer7.Panel2.SuspendLayout();
+            this.splitContainer7.SuspendLayout();
+            this.tabControl4.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            this.tabPage11.SuspendLayout();
+            this.tableLayoutPanel44.SuspendLayout();
+            this.tableLayoutPanel45.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -296,6 +326,514 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1258, 645);
             this.tabControl1.TabIndex = 1;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.splitContainer5);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1250, 617);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Generate Idea";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer5
+            // 
+            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer5.Name = "splitContainer5";
+            // 
+            // splitContainer5.Panel1
+            // 
+            this.splitContainer5.Panel1.Controls.Add(this.tableLayoutPanel32);
+            // 
+            // splitContainer5.Panel2
+            // 
+            this.splitContainer5.Panel2.Controls.Add(this.tableLayoutPanel38);
+            this.splitContainer5.Size = new System.Drawing.Size(1250, 617);
+            this.splitContainer5.SplitterDistance = 415;
+            this.splitContainer5.TabIndex = 1;
+            // 
+            // tableLayoutPanel32
+            // 
+            this.tableLayoutPanel32.ColumnCount = 1;
+            this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel32.Controls.Add(this.GenerateIdea_TxtTopic, 0, 2);
+            this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel33, 0, 1);
+            this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel37, 0, 0);
+            this.tableLayoutPanel32.Controls.Add(this.btnGenerateIdea_Execute, 0, 3);
+            this.tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel32.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel32.Name = "tableLayoutPanel32";
+            this.tableLayoutPanel32.RowCount = 4;
+            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel32.Size = new System.Drawing.Size(415, 617);
+            this.tableLayoutPanel32.TabIndex = 0;
+            // 
+            // GenerateIdea_TxtTopic
+            // 
+            this.GenerateIdea_TxtTopic.BackColor = System.Drawing.Color.Wheat;
+            this.GenerateIdea_TxtTopic.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GenerateIdea_TxtTopic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateIdea_TxtTopic.Location = new System.Drawing.Point(4, 63);
+            this.GenerateIdea_TxtTopic.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.GenerateIdea_TxtTopic.Name = "GenerateIdea_TxtTopic";
+            this.GenerateIdea_TxtTopic.Size = new System.Drawing.Size(407, 503);
+            this.GenerateIdea_TxtTopic.TabIndex = 7;
+            this.GenerateIdea_TxtTopic.Text = "";
+            // 
+            // tableLayoutPanel33
+            // 
+            this.tableLayoutPanel33.ColumnCount = 2;
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel33.Controls.Add(this.label23, 0, 0);
+            this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel33.Location = new System.Drawing.Point(3, 33);
+            this.tableLayoutPanel33.Name = "tableLayoutPanel33";
+            this.tableLayoutPanel33.RowCount = 1;
+            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel33.Size = new System.Drawing.Size(409, 24);
+            this.tableLayoutPanel33.TabIndex = 4;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(3, 4);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(37, 15);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Topic";
+            // 
+            // tableLayoutPanel37
+            // 
+            this.tableLayoutPanel37.ColumnCount = 2;
+            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel37.Controls.Add(this.label30, 0, 0);
+            this.tableLayoutPanel37.Controls.Add(this.GenerateIdea_TxtNumIdea, 1, 0);
+            this.tableLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel37.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel37.Name = "tableLayoutPanel37";
+            this.tableLayoutPanel37.RowCount = 1;
+            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel37.Size = new System.Drawing.Size(409, 24);
+            this.tableLayoutPanel37.TabIndex = 0;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(3, 4);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(67, 15);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "Num Ideas";
+            // 
+            // GenerateIdea_TxtNumIdea
+            // 
+            this.GenerateIdea_TxtNumIdea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateIdea_TxtNumIdea.Location = new System.Drawing.Point(207, 3);
+            this.GenerateIdea_TxtNumIdea.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.GenerateIdea_TxtNumIdea.Name = "GenerateIdea_TxtNumIdea";
+            this.GenerateIdea_TxtNumIdea.Size = new System.Drawing.Size(199, 21);
+            this.GenerateIdea_TxtNumIdea.TabIndex = 1;
+            // 
+            // btnGenerateIdea_Execute
+            // 
+            this.btnGenerateIdea_Execute.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnGenerateIdea_Execute.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnGenerateIdea_Execute.FlatAppearance.BorderSize = 0;
+            this.btnGenerateIdea_Execute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerateIdea_Execute.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateIdea_Execute.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateIdea_Execute.Location = new System.Drawing.Point(264, 572);
+            this.btnGenerateIdea_Execute.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGenerateIdea_Execute.Name = "btnGenerateIdea_Execute";
+            this.btnGenerateIdea_Execute.Size = new System.Drawing.Size(147, 42);
+            this.btnGenerateIdea_Execute.TabIndex = 6;
+            this.btnGenerateIdea_Execute.Text = "Execute";
+            this.btnGenerateIdea_Execute.UseVisualStyleBackColor = false;
+            this.btnGenerateIdea_Execute.Click += new System.EventHandler(this.btnGenerateIdea_Execute_Click);
+            // 
+            // tableLayoutPanel38
+            // 
+            this.tableLayoutPanel38.ColumnCount = 1;
+            this.tableLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel38.Controls.Add(this.txtGenerateIdea_Results, 0, 1);
+            this.tableLayoutPanel38.Controls.Add(this.label31, 0, 0);
+            this.tableLayoutPanel38.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel38.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel38.Name = "tableLayoutPanel38";
+            this.tableLayoutPanel38.RowCount = 2;
+            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel38.Size = new System.Drawing.Size(831, 617);
+            this.tableLayoutPanel38.TabIndex = 0;
+            // 
+            // txtGenerateIdea_Results
+            // 
+            this.txtGenerateIdea_Results.BackColor = System.Drawing.Color.Wheat;
+            this.txtGenerateIdea_Results.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGenerateIdea_Results.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtGenerateIdea_Results.Location = new System.Drawing.Point(4, 33);
+            this.txtGenerateIdea_Results.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtGenerateIdea_Results.Name = "txtGenerateIdea_Results";
+            this.txtGenerateIdea_Results.Size = new System.Drawing.Size(823, 581);
+            this.txtGenerateIdea_Results.TabIndex = 6;
+            this.txtGenerateIdea_Results.Text = "";
+            // 
+            // label31
+            // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(3, 7);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(48, 15);
+            this.label31.TabIndex = 1;
+            this.label31.Text = "Results";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.tabControl3);
+            this.tabPage7.Location = new System.Drawing.Point(4, 24);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1250, 617);
+            this.tabPage7.TabIndex = 4;
+            this.tabPage7.Text = "Short Video";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControl3.Controls.Add(this.tabPage8);
+            this.tabControl3.Controls.Add(this.tabPage9);
+            this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl3.Location = new System.Drawing.Point(0, 0);
+            this.tabControl3.Multiline = true;
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(1250, 617);
+            this.tabControl3.TabIndex = 0;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.splitContainer6);
+            this.tabPage8.Location = new System.Drawing.Point(24, 4);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(1222, 609);
+            this.tabPage8.TabIndex = 0;
+            this.tabPage8.Text = "Short Script";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer6
+            // 
+            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer6.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer6.Name = "splitContainer6";
+            // 
+            // splitContainer6.Panel1
+            // 
+            this.splitContainer6.Panel1.Controls.Add(this.tableLayoutPanel34);
+            // 
+            // splitContainer6.Panel2
+            // 
+            this.splitContainer6.Panel2.Controls.Add(this.tableLayoutPanel42);
+            this.splitContainer6.Size = new System.Drawing.Size(1216, 603);
+            this.splitContainer6.SplitterDistance = 403;
+            this.splitContainer6.TabIndex = 2;
+            // 
+            // tableLayoutPanel34
+            // 
+            this.tableLayoutPanel34.ColumnCount = 1;
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel34.Controls.Add(this.GenerateShortVideoScript_VerticalFramingNote, 0, 9);
+            this.tableLayoutPanel34.Controls.Add(this.GenerateShortVideoScript_IncludeSoundEffect, 0, 8);
+            this.tableLayoutPanel34.Controls.Add(this.GenerateShortVideoScript_IncludeTextOverlay, 0, 7);
+            this.tableLayoutPanel34.Controls.Add(this.GenerateShortVideoScript_TxtStory, 0, 5);
+            this.tableLayoutPanel34.Controls.Add(this.tableLayoutPanel35, 0, 4);
+            this.tableLayoutPanel34.Controls.Add(this.tableLayoutPanel36, 0, 3);
+            this.tableLayoutPanel34.Controls.Add(this.tableLayoutPanel39, 0, 2);
+            this.tableLayoutPanel34.Controls.Add(this.tableLayoutPanel40, 0, 1);
+            this.tableLayoutPanel34.Controls.Add(this.tableLayoutPanel41, 0, 0);
+            this.tableLayoutPanel34.Controls.Add(this.btnGenerateShortVideoScript_Execute, 0, 10);
+            this.tableLayoutPanel34.Controls.Add(this.GenerateShortVideoScript_IncludeCaption, 0, 6);
+            this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel34.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel34.Name = "tableLayoutPanel34";
+            this.tableLayoutPanel34.RowCount = 11;
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(403, 603);
+            this.tableLayoutPanel34.TabIndex = 0;
+            // 
+            // GenerateShortVideoScript_VerticalFramingNote
+            // 
+            this.GenerateShortVideoScript_VerticalFramingNote.AutoSize = true;
+            this.GenerateShortVideoScript_VerticalFramingNote.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_VerticalFramingNote.Location = new System.Drawing.Point(3, 523);
+            this.GenerateShortVideoScript_VerticalFramingNote.Name = "GenerateShortVideoScript_VerticalFramingNote";
+            this.GenerateShortVideoScript_VerticalFramingNote.Size = new System.Drawing.Size(397, 29);
+            this.GenerateShortVideoScript_VerticalFramingNote.TabIndex = 11;
+            this.GenerateShortVideoScript_VerticalFramingNote.Text = "- Include vertical framing notes for optimal composition";
+            this.GenerateShortVideoScript_VerticalFramingNote.UseVisualStyleBackColor = true;
+            // 
+            // GenerateShortVideoScript_IncludeSoundEffect
+            // 
+            this.GenerateShortVideoScript_IncludeSoundEffect.AutoSize = true;
+            this.GenerateShortVideoScript_IncludeSoundEffect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_IncludeSoundEffect.Location = new System.Drawing.Point(3, 488);
+            this.GenerateShortVideoScript_IncludeSoundEffect.Name = "GenerateShortVideoScript_IncludeSoundEffect";
+            this.GenerateShortVideoScript_IncludeSoundEffect.Size = new System.Drawing.Size(397, 29);
+            this.GenerateShortVideoScript_IncludeSoundEffect.TabIndex = 10;
+            this.GenerateShortVideoScript_IncludeSoundEffect.Text = "- Include sound effect suggestions";
+            this.GenerateShortVideoScript_IncludeSoundEffect.UseVisualStyleBackColor = true;
+            // 
+            // GenerateShortVideoScript_IncludeTextOverlay
+            // 
+            this.GenerateShortVideoScript_IncludeTextOverlay.AutoSize = true;
+            this.GenerateShortVideoScript_IncludeTextOverlay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_IncludeTextOverlay.Location = new System.Drawing.Point(3, 453);
+            this.GenerateShortVideoScript_IncludeTextOverlay.Name = "GenerateShortVideoScript_IncludeTextOverlay";
+            this.GenerateShortVideoScript_IncludeTextOverlay.Size = new System.Drawing.Size(397, 29);
+            this.GenerateShortVideoScript_IncludeTextOverlay.TabIndex = 9;
+            this.GenerateShortVideoScript_IncludeTextOverlay.Text = "- Include text overlay positions and timing";
+            this.GenerateShortVideoScript_IncludeTextOverlay.UseVisualStyleBackColor = true;
+            // 
+            // GenerateShortVideoScript_TxtStory
+            // 
+            this.GenerateShortVideoScript_TxtStory.BackColor = System.Drawing.Color.Wheat;
+            this.GenerateShortVideoScript_TxtStory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GenerateShortVideoScript_TxtStory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_TxtStory.Location = new System.Drawing.Point(4, 178);
+            this.GenerateShortVideoScript_TxtStory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.GenerateShortVideoScript_TxtStory.Name = "GenerateShortVideoScript_TxtStory";
+            this.GenerateShortVideoScript_TxtStory.Size = new System.Drawing.Size(395, 234);
+            this.GenerateShortVideoScript_TxtStory.TabIndex = 7;
+            this.GenerateShortVideoScript_TxtStory.Text = "";
+            // 
+            // tableLayoutPanel35
+            // 
+            this.tableLayoutPanel35.ColumnCount = 2;
+            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel35.Controls.Add(this.label27, 0, 0);
+            this.tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel35.Location = new System.Drawing.Point(3, 143);
+            this.tableLayoutPanel35.Name = "tableLayoutPanel35";
+            this.tableLayoutPanel35.RowCount = 1;
+            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel35.Size = new System.Drawing.Size(397, 29);
+            this.tableLayoutPanel35.TabIndex = 4;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(3, 7);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(34, 15);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Story";
+            // 
+            // tableLayoutPanel36
+            // 
+            this.tableLayoutPanel36.ColumnCount = 2;
+            this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel36.Controls.Add(this.GenerateShortVideoScript_ContentTypes, 1, 0);
+            this.tableLayoutPanel36.Controls.Add(this.label28, 0, 0);
+            this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel36.Location = new System.Drawing.Point(3, 108);
+            this.tableLayoutPanel36.Name = "tableLayoutPanel36";
+            this.tableLayoutPanel36.RowCount = 1;
+            this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel36.Size = new System.Drawing.Size(397, 29);
+            this.tableLayoutPanel36.TabIndex = 3;
+            // 
+            // GenerateShortVideoScript_ContentTypes
+            // 
+            this.GenerateShortVideoScript_ContentTypes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_ContentTypes.FormattingEnabled = true;
+            this.GenerateShortVideoScript_ContentTypes.Location = new System.Drawing.Point(201, 3);
+            this.GenerateShortVideoScript_ContentTypes.Name = "GenerateShortVideoScript_ContentTypes";
+            this.GenerateShortVideoScript_ContentTypes.Size = new System.Drawing.Size(193, 23);
+            this.GenerateShortVideoScript_ContentTypes.TabIndex = 3;
+            // 
+            // label28
+            // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(3, 7);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(84, 15);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Content Types";
+            // 
+            // tableLayoutPanel39
+            // 
+            this.tableLayoutPanel39.ColumnCount = 2;
+            this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel39.Controls.Add(this.GenerateShortVideoScript_HookInstructions, 1, 0);
+            this.tableLayoutPanel39.Controls.Add(this.label29, 0, 0);
+            this.tableLayoutPanel39.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel39.Location = new System.Drawing.Point(3, 73);
+            this.tableLayoutPanel39.Name = "tableLayoutPanel39";
+            this.tableLayoutPanel39.RowCount = 1;
+            this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel39.Size = new System.Drawing.Size(397, 29);
+            this.tableLayoutPanel39.TabIndex = 2;
+            // 
+            // GenerateShortVideoScript_HookInstructions
+            // 
+            this.GenerateShortVideoScript_HookInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_HookInstructions.FormattingEnabled = true;
+            this.GenerateShortVideoScript_HookInstructions.Location = new System.Drawing.Point(201, 3);
+            this.GenerateShortVideoScript_HookInstructions.Name = "GenerateShortVideoScript_HookInstructions";
+            this.GenerateShortVideoScript_HookInstructions.Size = new System.Drawing.Size(193, 23);
+            this.GenerateShortVideoScript_HookInstructions.TabIndex = 2;
+            // 
+            // label29
+            // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(3, 7);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(101, 15);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Hook Instructions";
+            // 
+            // tableLayoutPanel40
+            // 
+            this.tableLayoutPanel40.ColumnCount = 2;
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel40.Controls.Add(this.label32, 0, 0);
+            this.tableLayoutPanel40.Controls.Add(this.GenerateShortVideoScript_HookTypes, 1, 0);
+            this.tableLayoutPanel40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel40.Location = new System.Drawing.Point(3, 38);
+            this.tableLayoutPanel40.Name = "tableLayoutPanel40";
+            this.tableLayoutPanel40.RowCount = 1;
+            this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel40.Size = new System.Drawing.Size(397, 29);
+            this.tableLayoutPanel40.TabIndex = 1;
+            // 
+            // label32
+            // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(3, 7);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(71, 15);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Hook Types";
+            // 
+            // GenerateShortVideoScript_HookTypes
+            // 
+            this.GenerateShortVideoScript_HookTypes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_HookTypes.FormattingEnabled = true;
+            this.GenerateShortVideoScript_HookTypes.Location = new System.Drawing.Point(201, 3);
+            this.GenerateShortVideoScript_HookTypes.Name = "GenerateShortVideoScript_HookTypes";
+            this.GenerateShortVideoScript_HookTypes.Size = new System.Drawing.Size(193, 23);
+            this.GenerateShortVideoScript_HookTypes.TabIndex = 1;
+            // 
+            // tableLayoutPanel41
+            // 
+            this.tableLayoutPanel41.ColumnCount = 2;
+            this.tableLayoutPanel41.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel41.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel41.Controls.Add(this.label33, 0, 0);
+            this.tableLayoutPanel41.Controls.Add(this.GenerateShortVideoScript_DurationPerSeconds, 1, 0);
+            this.tableLayoutPanel41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel41.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel41.Name = "tableLayoutPanel41";
+            this.tableLayoutPanel41.RowCount = 1;
+            this.tableLayoutPanel41.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel41.Size = new System.Drawing.Size(397, 29);
+            this.tableLayoutPanel41.TabIndex = 0;
+            // 
+            // label33
+            // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(3, 7);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(126, 15);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "Duration per Seconds";
+            // 
+            // GenerateShortVideoScript_DurationPerSeconds
+            // 
+            this.GenerateShortVideoScript_DurationPerSeconds.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_DurationPerSeconds.Location = new System.Drawing.Point(201, 3);
+            this.GenerateShortVideoScript_DurationPerSeconds.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.GenerateShortVideoScript_DurationPerSeconds.Name = "GenerateShortVideoScript_DurationPerSeconds";
+            this.GenerateShortVideoScript_DurationPerSeconds.Size = new System.Drawing.Size(193, 21);
+            this.GenerateShortVideoScript_DurationPerSeconds.TabIndex = 1;
+            // 
+            // btnGenerateShortVideoScript_Execute
+            // 
+            this.btnGenerateShortVideoScript_Execute.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnGenerateShortVideoScript_Execute.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnGenerateShortVideoScript_Execute.FlatAppearance.BorderSize = 0;
+            this.btnGenerateShortVideoScript_Execute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerateShortVideoScript_Execute.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateShortVideoScript_Execute.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateShortVideoScript_Execute.Location = new System.Drawing.Point(252, 558);
+            this.btnGenerateShortVideoScript_Execute.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGenerateShortVideoScript_Execute.Name = "btnGenerateShortVideoScript_Execute";
+            this.btnGenerateShortVideoScript_Execute.Size = new System.Drawing.Size(147, 42);
+            this.btnGenerateShortVideoScript_Execute.TabIndex = 6;
+            this.btnGenerateShortVideoScript_Execute.Text = "Execute";
+            this.btnGenerateShortVideoScript_Execute.UseVisualStyleBackColor = false;
+            this.btnGenerateShortVideoScript_Execute.Click += new System.EventHandler(this.btnGenerateShortVideoScript_Execute_Click);
+            // 
+            // GenerateShortVideoScript_IncludeCaption
+            // 
+            this.GenerateShortVideoScript_IncludeCaption.AutoSize = true;
+            this.GenerateShortVideoScript_IncludeCaption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_IncludeCaption.Location = new System.Drawing.Point(3, 418);
+            this.GenerateShortVideoScript_IncludeCaption.Name = "GenerateShortVideoScript_IncludeCaption";
+            this.GenerateShortVideoScript_IncludeCaption.Size = new System.Drawing.Size(397, 29);
+            this.GenerateShortVideoScript_IncludeCaption.TabIndex = 8;
+            this.GenerateShortVideoScript_IncludeCaption.Text = "- Include caption suggestions for accessibility";
+            this.GenerateShortVideoScript_IncludeCaption.UseVisualStyleBackColor = true;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Location = new System.Drawing.Point(24, 4);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(1222, 609);
+            this.tabPage9.TabIndex = 1;
+            this.tabPage9.Text = "Short Narration";
+            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -1521,516 +2059,222 @@
             this.label26.TabIndex = 1;
             this.label26.Text = "Results";
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.splitContainer5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1250, 617);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Generate Idea";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer5
-            // 
-            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer5.Name = "splitContainer5";
-            // 
-            // splitContainer5.Panel1
-            // 
-            this.splitContainer5.Panel1.Controls.Add(this.tableLayoutPanel32);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.Controls.Add(this.tableLayoutPanel38);
-            this.splitContainer5.Size = new System.Drawing.Size(1250, 617);
-            this.splitContainer5.SplitterDistance = 415;
-            this.splitContainer5.TabIndex = 1;
-            // 
-            // tableLayoutPanel32
-            // 
-            this.tableLayoutPanel32.ColumnCount = 1;
-            this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel32.Controls.Add(this.GenerateIdea_TxtTopic, 0, 2);
-            this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel33, 0, 1);
-            this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel37, 0, 0);
-            this.tableLayoutPanel32.Controls.Add(this.btnGenerateIdea_Execute, 0, 3);
-            this.tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel32.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel32.Name = "tableLayoutPanel32";
-            this.tableLayoutPanel32.RowCount = 4;
-            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel32.Size = new System.Drawing.Size(415, 617);
-            this.tableLayoutPanel32.TabIndex = 0;
-            // 
-            // GenerateIdea_TxtTopic
-            // 
-            this.GenerateIdea_TxtTopic.BackColor = System.Drawing.Color.Wheat;
-            this.GenerateIdea_TxtTopic.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GenerateIdea_TxtTopic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateIdea_TxtTopic.Location = new System.Drawing.Point(4, 63);
-            this.GenerateIdea_TxtTopic.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GenerateIdea_TxtTopic.Name = "GenerateIdea_TxtTopic";
-            this.GenerateIdea_TxtTopic.Size = new System.Drawing.Size(407, 503);
-            this.GenerateIdea_TxtTopic.TabIndex = 7;
-            this.GenerateIdea_TxtTopic.Text = "";
-            // 
-            // tableLayoutPanel33
-            // 
-            this.tableLayoutPanel33.ColumnCount = 2;
-            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel33.Controls.Add(this.label23, 0, 0);
-            this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel33.Location = new System.Drawing.Point(3, 33);
-            this.tableLayoutPanel33.Name = "tableLayoutPanel33";
-            this.tableLayoutPanel33.RowCount = 1;
-            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel33.Size = new System.Drawing.Size(409, 24);
-            this.tableLayoutPanel33.TabIndex = 4;
-            // 
-            // label23
-            // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(3, 4);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(37, 15);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Topic";
-            // 
-            // tableLayoutPanel37
-            // 
-            this.tableLayoutPanel37.ColumnCount = 2;
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel37.Controls.Add(this.label30, 0, 0);
-            this.tableLayoutPanel37.Controls.Add(this.GenerateIdea_TxtNumIdea, 1, 0);
-            this.tableLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel37.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel37.Name = "tableLayoutPanel37";
-            this.tableLayoutPanel37.RowCount = 1;
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel37.Size = new System.Drawing.Size(409, 24);
-            this.tableLayoutPanel37.TabIndex = 0;
-            // 
-            // label30
-            // 
-            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(3, 4);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(67, 15);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "Num Ideas";
-            // 
-            // GenerateIdea_TxtNumIdea
-            // 
-            this.GenerateIdea_TxtNumIdea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateIdea_TxtNumIdea.Location = new System.Drawing.Point(207, 3);
-            this.GenerateIdea_TxtNumIdea.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.GenerateIdea_TxtNumIdea.Name = "GenerateIdea_TxtNumIdea";
-            this.GenerateIdea_TxtNumIdea.Size = new System.Drawing.Size(199, 21);
-            this.GenerateIdea_TxtNumIdea.TabIndex = 1;
-            // 
-            // btnGenerateIdea_Execute
-            // 
-            this.btnGenerateIdea_Execute.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnGenerateIdea_Execute.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnGenerateIdea_Execute.FlatAppearance.BorderSize = 0;
-            this.btnGenerateIdea_Execute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerateIdea_Execute.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerateIdea_Execute.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateIdea_Execute.Location = new System.Drawing.Point(264, 572);
-            this.btnGenerateIdea_Execute.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnGenerateIdea_Execute.Name = "btnGenerateIdea_Execute";
-            this.btnGenerateIdea_Execute.Size = new System.Drawing.Size(147, 42);
-            this.btnGenerateIdea_Execute.TabIndex = 6;
-            this.btnGenerateIdea_Execute.Text = "Execute";
-            this.btnGenerateIdea_Execute.UseVisualStyleBackColor = false;
-            this.btnGenerateIdea_Execute.Click += new System.EventHandler(this.btnGenerateIdea_Execute_Click);
-            // 
-            // tableLayoutPanel38
-            // 
-            this.tableLayoutPanel38.ColumnCount = 1;
-            this.tableLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel38.Controls.Add(this.txtGenerateIdea_Results, 0, 1);
-            this.tableLayoutPanel38.Controls.Add(this.label31, 0, 0);
-            this.tableLayoutPanel38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel38.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel38.Name = "tableLayoutPanel38";
-            this.tableLayoutPanel38.RowCount = 2;
-            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel38.Size = new System.Drawing.Size(831, 617);
-            this.tableLayoutPanel38.TabIndex = 0;
-            // 
-            // txtGenerateIdea_Results
-            // 
-            this.txtGenerateIdea_Results.BackColor = System.Drawing.Color.Wheat;
-            this.txtGenerateIdea_Results.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGenerateIdea_Results.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtGenerateIdea_Results.Location = new System.Drawing.Point(4, 33);
-            this.txtGenerateIdea_Results.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtGenerateIdea_Results.Name = "txtGenerateIdea_Results";
-            this.txtGenerateIdea_Results.Size = new System.Drawing.Size(823, 581);
-            this.txtGenerateIdea_Results.TabIndex = 6;
-            this.txtGenerateIdea_Results.Text = "";
-            // 
-            // label31
-            // 
-            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(3, 7);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(48, 15);
-            this.label31.TabIndex = 1;
-            this.label31.Text = "Results";
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.splitContainer6);
-            this.tabPage7.Location = new System.Drawing.Point(4, 24);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1250, 617);
-            this.tabPage7.TabIndex = 4;
-            this.tabPage7.Text = "Generate Short Video Script";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer6
-            // 
-            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer6.Name = "splitContainer6";
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.Controls.Add(this.tableLayoutPanel34);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.Controls.Add(this.tableLayoutPanel42);
-            this.splitContainer6.Size = new System.Drawing.Size(1250, 617);
-            this.splitContainer6.SplitterDistance = 415;
-            this.splitContainer6.TabIndex = 1;
-            // 
-            // tableLayoutPanel34
-            // 
-            this.tableLayoutPanel34.ColumnCount = 1;
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel34.Controls.Add(this.GenerateShortVideoScript_VerticalFramingNote, 0, 9);
-            this.tableLayoutPanel34.Controls.Add(this.GenerateShortVideoScript_IncludeSoundEffect, 0, 8);
-            this.tableLayoutPanel34.Controls.Add(this.GenerateShortVideoScript_IncludeTextOverlay, 0, 7);
-            this.tableLayoutPanel34.Controls.Add(this.GenerateShortVideoScript_TxtStory, 0, 5);
-            this.tableLayoutPanel34.Controls.Add(this.tableLayoutPanel35, 0, 4);
-            this.tableLayoutPanel34.Controls.Add(this.tableLayoutPanel36, 0, 3);
-            this.tableLayoutPanel34.Controls.Add(this.tableLayoutPanel39, 0, 2);
-            this.tableLayoutPanel34.Controls.Add(this.tableLayoutPanel40, 0, 1);
-            this.tableLayoutPanel34.Controls.Add(this.tableLayoutPanel41, 0, 0);
-            this.tableLayoutPanel34.Controls.Add(this.btnGenerateShortVideoScript_Execute, 0, 10);
-            this.tableLayoutPanel34.Controls.Add(this.GenerateShortVideoScript_IncludeCaption, 0, 6);
-            this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel34.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel34.Name = "tableLayoutPanel34";
-            this.tableLayoutPanel34.RowCount = 11;
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(415, 617);
-            this.tableLayoutPanel34.TabIndex = 0;
-            // 
-            // GenerateShortVideoScript_TxtStory
-            // 
-            this.GenerateShortVideoScript_TxtStory.BackColor = System.Drawing.Color.Wheat;
-            this.GenerateShortVideoScript_TxtStory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GenerateShortVideoScript_TxtStory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_TxtStory.Location = new System.Drawing.Point(4, 153);
-            this.GenerateShortVideoScript_TxtStory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GenerateShortVideoScript_TxtStory.Name = "GenerateShortVideoScript_TxtStory";
-            this.GenerateShortVideoScript_TxtStory.Size = new System.Drawing.Size(407, 273);
-            this.GenerateShortVideoScript_TxtStory.TabIndex = 7;
-            this.GenerateShortVideoScript_TxtStory.Text = "";
-            // 
-            // tableLayoutPanel35
-            // 
-            this.tableLayoutPanel35.ColumnCount = 2;
-            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel35.Controls.Add(this.label27, 0, 0);
-            this.tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel35.Location = new System.Drawing.Point(3, 123);
-            this.tableLayoutPanel35.Name = "tableLayoutPanel35";
-            this.tableLayoutPanel35.RowCount = 1;
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel35.Size = new System.Drawing.Size(409, 24);
-            this.tableLayoutPanel35.TabIndex = 4;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(3, 4);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(34, 15);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "Story";
-            // 
-            // tableLayoutPanel36
-            // 
-            this.tableLayoutPanel36.ColumnCount = 2;
-            this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel36.Controls.Add(this.GenerateShortVideoScript_ContentTypes, 1, 0);
-            this.tableLayoutPanel36.Controls.Add(this.label28, 0, 0);
-            this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel36.Location = new System.Drawing.Point(3, 93);
-            this.tableLayoutPanel36.Name = "tableLayoutPanel36";
-            this.tableLayoutPanel36.RowCount = 1;
-            this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel36.Size = new System.Drawing.Size(409, 24);
-            this.tableLayoutPanel36.TabIndex = 3;
-            // 
-            // GenerateShortVideoScript_ContentTypes
-            // 
-            this.GenerateShortVideoScript_ContentTypes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_ContentTypes.FormattingEnabled = true;
-            this.GenerateShortVideoScript_ContentTypes.Location = new System.Drawing.Point(207, 3);
-            this.GenerateShortVideoScript_ContentTypes.Name = "GenerateShortVideoScript_ContentTypes";
-            this.GenerateShortVideoScript_ContentTypes.Size = new System.Drawing.Size(199, 23);
-            this.GenerateShortVideoScript_ContentTypes.TabIndex = 3;
-            // 
-            // label28
-            // 
-            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(3, 4);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(84, 15);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Content Types";
-            // 
-            // tableLayoutPanel39
-            // 
-            this.tableLayoutPanel39.ColumnCount = 2;
-            this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel39.Controls.Add(this.GenerateShortVideoScript_HookInstructions, 1, 0);
-            this.tableLayoutPanel39.Controls.Add(this.label29, 0, 0);
-            this.tableLayoutPanel39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel39.Location = new System.Drawing.Point(3, 63);
-            this.tableLayoutPanel39.Name = "tableLayoutPanel39";
-            this.tableLayoutPanel39.RowCount = 1;
-            this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel39.Size = new System.Drawing.Size(409, 24);
-            this.tableLayoutPanel39.TabIndex = 2;
-            // 
-            // GenerateShortVideoScript_HookInstructions
-            // 
-            this.GenerateShortVideoScript_HookInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_HookInstructions.FormattingEnabled = true;
-            this.GenerateShortVideoScript_HookInstructions.Location = new System.Drawing.Point(207, 3);
-            this.GenerateShortVideoScript_HookInstructions.Name = "GenerateShortVideoScript_HookInstructions";
-            this.GenerateShortVideoScript_HookInstructions.Size = new System.Drawing.Size(199, 23);
-            this.GenerateShortVideoScript_HookInstructions.TabIndex = 2;
-            // 
-            // label29
-            // 
-            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(3, 4);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(101, 15);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Hook Instructions";
-            // 
-            // tableLayoutPanel40
-            // 
-            this.tableLayoutPanel40.ColumnCount = 2;
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel40.Controls.Add(this.label32, 0, 0);
-            this.tableLayoutPanel40.Controls.Add(this.GenerateShortVideoScript_HookTypes, 1, 0);
-            this.tableLayoutPanel40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel40.Location = new System.Drawing.Point(3, 33);
-            this.tableLayoutPanel40.Name = "tableLayoutPanel40";
-            this.tableLayoutPanel40.RowCount = 1;
-            this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel40.Size = new System.Drawing.Size(409, 24);
-            this.tableLayoutPanel40.TabIndex = 1;
-            // 
-            // label32
-            // 
-            this.label32.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(3, 4);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(71, 15);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Hook Types";
-            // 
-            // GenerateShortVideoScript_HookTypes
-            // 
-            this.GenerateShortVideoScript_HookTypes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_HookTypes.FormattingEnabled = true;
-            this.GenerateShortVideoScript_HookTypes.Location = new System.Drawing.Point(207, 3);
-            this.GenerateShortVideoScript_HookTypes.Name = "GenerateShortVideoScript_HookTypes";
-            this.GenerateShortVideoScript_HookTypes.Size = new System.Drawing.Size(199, 23);
-            this.GenerateShortVideoScript_HookTypes.TabIndex = 1;
-            // 
-            // tableLayoutPanel41
-            // 
-            this.tableLayoutPanel41.ColumnCount = 2;
-            this.tableLayoutPanel41.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel41.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel41.Controls.Add(this.label33, 0, 0);
-            this.tableLayoutPanel41.Controls.Add(this.GenerateShortVideoScript_DurationPerSeconds, 1, 0);
-            this.tableLayoutPanel41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel41.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel41.Name = "tableLayoutPanel41";
-            this.tableLayoutPanel41.RowCount = 1;
-            this.tableLayoutPanel41.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel41.Size = new System.Drawing.Size(409, 24);
-            this.tableLayoutPanel41.TabIndex = 0;
-            // 
-            // label33
-            // 
-            this.label33.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(3, 4);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(126, 15);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "Duration per Seconds";
-            // 
-            // GenerateShortVideoScript_DurationPerSeconds
-            // 
-            this.GenerateShortVideoScript_DurationPerSeconds.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_DurationPerSeconds.Location = new System.Drawing.Point(207, 3);
-            this.GenerateShortVideoScript_DurationPerSeconds.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            this.GenerateShortVideoScript_DurationPerSeconds.Name = "GenerateShortVideoScript_DurationPerSeconds";
-            this.GenerateShortVideoScript_DurationPerSeconds.Size = new System.Drawing.Size(199, 21);
-            this.GenerateShortVideoScript_DurationPerSeconds.TabIndex = 1;
-            // 
-            // btnGenerateShortVideoScript_Execute
-            // 
-            this.btnGenerateShortVideoScript_Execute.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnGenerateShortVideoScript_Execute.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnGenerateShortVideoScript_Execute.FlatAppearance.BorderSize = 0;
-            this.btnGenerateShortVideoScript_Execute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerateShortVideoScript_Execute.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerateShortVideoScript_Execute.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateShortVideoScript_Execute.Location = new System.Drawing.Point(264, 572);
-            this.btnGenerateShortVideoScript_Execute.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnGenerateShortVideoScript_Execute.Name = "btnGenerateShortVideoScript_Execute";
-            this.btnGenerateShortVideoScript_Execute.Size = new System.Drawing.Size(147, 42);
-            this.btnGenerateShortVideoScript_Execute.TabIndex = 6;
-            this.btnGenerateShortVideoScript_Execute.Text = "Execute";
-            this.btnGenerateShortVideoScript_Execute.UseVisualStyleBackColor = false;
-            this.btnGenerateShortVideoScript_Execute.Click += new System.EventHandler(this.btnGenerateShortVideoScript_Execute_Click);
+            // tableLayoutPanel43
+            // 
+            this.tableLayoutPanel43.ColumnCount = 2;
+            this.tableLayoutPanel43.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel43.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel43.Controls.Add(this.label35, 1, 0);
+            this.tableLayoutPanel43.Controls.Add(this.label34, 0, 0);
+            this.tableLayoutPanel43.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel43.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel43.Name = "tableLayoutPanel43";
+            this.tableLayoutPanel43.RowCount = 1;
+            this.tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel43.Size = new System.Drawing.Size(803, 24);
+            this.tableLayoutPanel43.TabIndex = 7;
+            // 
+            // label34
+            // 
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(3, 4);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(82, 15);
+            this.label34.TabIndex = 2;
+            this.label34.Text = "Script Results";
+            // 
+            // label35
+            // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(404, 4);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(92, 15);
+            this.label35.TabIndex = 3;
+            this.label35.Text = "Script Narration";
             // 
             // tableLayoutPanel42
             // 
             this.tableLayoutPanel42.ColumnCount = 1;
             this.tableLayoutPanel42.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel42.Controls.Add(this.GenerateShortVideoScript_TxtResult, 0, 1);
-            this.tableLayoutPanel42.Controls.Add(this.label34, 0, 0);
+            this.tableLayoutPanel42.Controls.Add(this.tableLayoutPanel43, 0, 0);
+            this.tableLayoutPanel42.Controls.Add(this.splitContainer7, 0, 1);
             this.tableLayoutPanel42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel42.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel42.Name = "tableLayoutPanel42";
             this.tableLayoutPanel42.RowCount = 2;
             this.tableLayoutPanel42.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel42.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel42.Size = new System.Drawing.Size(831, 617);
+            this.tableLayoutPanel42.Size = new System.Drawing.Size(809, 603);
             this.tableLayoutPanel42.TabIndex = 0;
+            // 
+            // splitContainer7
+            // 
+            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer7.Location = new System.Drawing.Point(3, 33);
+            this.splitContainer7.Name = "splitContainer7";
+            // 
+            // splitContainer7.Panel1
+            // 
+            this.splitContainer7.Panel1.Controls.Add(this.GenerateShortVideoScript_TxtResult);
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.Controls.Add(this.tabControl4);
+            this.splitContainer7.Size = new System.Drawing.Size(803, 567);
+            this.splitContainer7.SplitterDistance = 400;
+            this.splitContainer7.TabIndex = 8;
             // 
             // GenerateShortVideoScript_TxtResult
             // 
             this.GenerateShortVideoScript_TxtResult.BackColor = System.Drawing.Color.Wheat;
             this.GenerateShortVideoScript_TxtResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GenerateShortVideoScript_TxtResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_TxtResult.Location = new System.Drawing.Point(4, 33);
+            this.GenerateShortVideoScript_TxtResult.Location = new System.Drawing.Point(0, 0);
             this.GenerateShortVideoScript_TxtResult.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GenerateShortVideoScript_TxtResult.Name = "GenerateShortVideoScript_TxtResult";
-            this.GenerateShortVideoScript_TxtResult.Size = new System.Drawing.Size(823, 581);
-            this.GenerateShortVideoScript_TxtResult.TabIndex = 6;
+            this.GenerateShortVideoScript_TxtResult.Size = new System.Drawing.Size(400, 567);
+            this.GenerateShortVideoScript_TxtResult.TabIndex = 7;
             this.GenerateShortVideoScript_TxtResult.Text = "";
             // 
-            // label34
+            // tabControl4
             // 
-            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(3, 7);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(48, 15);
-            this.label34.TabIndex = 1;
-            this.label34.Text = "Results";
+            this.tabControl4.Controls.Add(this.tabPage10);
+            this.tabControl4.Controls.Add(this.tabPage11);
+            this.tabControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl4.Location = new System.Drawing.Point(0, 0);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(399, 567);
+            this.tabControl4.TabIndex = 0;
             // 
-            // GenerateShortVideoScript_IncludeCaption
+            // tabPage10
             // 
-            this.GenerateShortVideoScript_IncludeCaption.AutoSize = true;
-            this.GenerateShortVideoScript_IncludeCaption.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_IncludeCaption.Location = new System.Drawing.Point(3, 432);
-            this.GenerateShortVideoScript_IncludeCaption.Name = "GenerateShortVideoScript_IncludeCaption";
-            this.GenerateShortVideoScript_IncludeCaption.Size = new System.Drawing.Size(409, 29);
-            this.GenerateShortVideoScript_IncludeCaption.TabIndex = 8;
-            this.GenerateShortVideoScript_IncludeCaption.Text = "- Include caption suggestions for accessibility";
-            this.GenerateShortVideoScript_IncludeCaption.UseVisualStyleBackColor = true;
+            this.tabPage10.Controls.Add(this.tableLayoutPanel44);
+            this.tabPage10.Location = new System.Drawing.Point(4, 24);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(391, 539);
+            this.tabPage10.TabIndex = 0;
+            this.tabPage10.Text = "Narration Text";
+            this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // GenerateShortVideoScript_IncludeTextOverlay
+            // tabPage11
             // 
-            this.GenerateShortVideoScript_IncludeTextOverlay.AutoSize = true;
-            this.GenerateShortVideoScript_IncludeTextOverlay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_IncludeTextOverlay.Location = new System.Drawing.Point(3, 467);
-            this.GenerateShortVideoScript_IncludeTextOverlay.Name = "GenerateShortVideoScript_IncludeTextOverlay";
-            this.GenerateShortVideoScript_IncludeTextOverlay.Size = new System.Drawing.Size(409, 29);
-            this.GenerateShortVideoScript_IncludeTextOverlay.TabIndex = 9;
-            this.GenerateShortVideoScript_IncludeTextOverlay.Text = "- Include text overlay positions and timing";
-            this.GenerateShortVideoScript_IncludeTextOverlay.UseVisualStyleBackColor = true;
+            this.tabPage11.Controls.Add(this.lvAudioLines);
+            this.tabPage11.Location = new System.Drawing.Point(4, 24);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(391, 539);
+            this.tabPage11.TabIndex = 1;
+            this.tabPage11.Text = "Audio Lines";
+            this.tabPage11.UseVisualStyleBackColor = true;
             // 
-            // GenerateShortVideoScript_IncludeSoundEffect
+            // tableLayoutPanel44
             // 
-            this.GenerateShortVideoScript_IncludeSoundEffect.AutoSize = true;
-            this.GenerateShortVideoScript_IncludeSoundEffect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_IncludeSoundEffect.Location = new System.Drawing.Point(3, 502);
-            this.GenerateShortVideoScript_IncludeSoundEffect.Name = "GenerateShortVideoScript_IncludeSoundEffect";
-            this.GenerateShortVideoScript_IncludeSoundEffect.Size = new System.Drawing.Size(409, 29);
-            this.GenerateShortVideoScript_IncludeSoundEffect.TabIndex = 10;
-            this.GenerateShortVideoScript_IncludeSoundEffect.Text = "- Include sound effect suggestions";
-            this.GenerateShortVideoScript_IncludeSoundEffect.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel44.ColumnCount = 1;
+            this.tableLayoutPanel44.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel44.Controls.Add(this.GenerateShortVideoScript_TxtScriptNarration, 0, 0);
+            this.tableLayoutPanel44.Controls.Add(this.btnGenerateShortVideoScript_CreateNarration, 0, 2);
+            this.tableLayoutPanel44.Controls.Add(this.tableLayoutPanel45, 0, 1);
+            this.tableLayoutPanel44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel44.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel44.Name = "tableLayoutPanel44";
+            this.tableLayoutPanel44.RowCount = 3;
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel44.Size = new System.Drawing.Size(385, 533);
+            this.tableLayoutPanel44.TabIndex = 0;
             // 
-            // GenerateShortVideoScript_VerticalFramingNote
+            // btnGenerateShortVideoScript_CreateNarration
             // 
-            this.GenerateShortVideoScript_VerticalFramingNote.AutoSize = true;
-            this.GenerateShortVideoScript_VerticalFramingNote.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_VerticalFramingNote.Location = new System.Drawing.Point(3, 537);
-            this.GenerateShortVideoScript_VerticalFramingNote.Name = "GenerateShortVideoScript_VerticalFramingNote";
-            this.GenerateShortVideoScript_VerticalFramingNote.Size = new System.Drawing.Size(409, 29);
-            this.GenerateShortVideoScript_VerticalFramingNote.TabIndex = 11;
-            this.GenerateShortVideoScript_VerticalFramingNote.Text = "- Include vertical framing notes for optimal composition";
-            this.GenerateShortVideoScript_VerticalFramingNote.UseVisualStyleBackColor = true;
+            this.btnGenerateShortVideoScript_CreateNarration.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnGenerateShortVideoScript_CreateNarration.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnGenerateShortVideoScript_CreateNarration.FlatAppearance.BorderSize = 0;
+            this.btnGenerateShortVideoScript_CreateNarration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerateShortVideoScript_CreateNarration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateShortVideoScript_CreateNarration.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateShortVideoScript_CreateNarration.Location = new System.Drawing.Point(234, 488);
+            this.btnGenerateShortVideoScript_CreateNarration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGenerateShortVideoScript_CreateNarration.Name = "btnGenerateShortVideoScript_CreateNarration";
+            this.btnGenerateShortVideoScript_CreateNarration.Size = new System.Drawing.Size(147, 42);
+            this.btnGenerateShortVideoScript_CreateNarration.TabIndex = 7;
+            this.btnGenerateShortVideoScript_CreateNarration.Text = "Create Narration";
+            this.btnGenerateShortVideoScript_CreateNarration.UseVisualStyleBackColor = false;
+            this.btnGenerateShortVideoScript_CreateNarration.Click += new System.EventHandler(this.btnGenerateShortVideoScript_CreateNarration_Click);
+            // 
+            // tableLayoutPanel45
+            // 
+            this.tableLayoutPanel45.ColumnCount = 2;
+            this.tableLayoutPanel45.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel45.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel45.Controls.Add(this.label36, 0, 0);
+            this.tableLayoutPanel45.Controls.Add(this.GenerateShortVideoScript_ToneStyles, 1, 0);
+            this.tableLayoutPanel45.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel45.Location = new System.Drawing.Point(3, 453);
+            this.tableLayoutPanel45.Name = "tableLayoutPanel45";
+            this.tableLayoutPanel45.RowCount = 1;
+            this.tableLayoutPanel45.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel45.Size = new System.Drawing.Size(379, 29);
+            this.tableLayoutPanel45.TabIndex = 8;
+            // 
+            // label36
+            // 
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(3, 7);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(70, 15);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "Tone Styles";
+            // 
+            // GenerateShortVideoScript_ToneStyles
+            // 
+            this.GenerateShortVideoScript_ToneStyles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_ToneStyles.FormattingEnabled = true;
+            this.GenerateShortVideoScript_ToneStyles.Location = new System.Drawing.Point(192, 3);
+            this.GenerateShortVideoScript_ToneStyles.Name = "GenerateShortVideoScript_ToneStyles";
+            this.GenerateShortVideoScript_ToneStyles.Size = new System.Drawing.Size(184, 23);
+            this.GenerateShortVideoScript_ToneStyles.TabIndex = 1;
+            // 
+            // GenerateShortVideoScript_TxtScriptNarration
+            // 
+            this.GenerateShortVideoScript_TxtScriptNarration.BackColor = System.Drawing.Color.Wheat;
+            this.GenerateShortVideoScript_TxtScriptNarration.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GenerateShortVideoScript_TxtScriptNarration.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_TxtScriptNarration.Location = new System.Drawing.Point(4, 3);
+            this.GenerateShortVideoScript_TxtScriptNarration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.GenerateShortVideoScript_TxtScriptNarration.Name = "GenerateShortVideoScript_TxtScriptNarration";
+            this.GenerateShortVideoScript_TxtScriptNarration.Size = new System.Drawing.Size(377, 444);
+            this.GenerateShortVideoScript_TxtScriptNarration.TabIndex = 9;
+            this.GenerateShortVideoScript_TxtScriptNarration.Text = "";
+            // 
+            // lvAudioLines
+            // 
+            this.lvAudioLines.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnAudioLine_Stt,
+            this.columnAudioLine_AudioLine});
+            this.lvAudioLines.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvAudioLines.FullRowSelect = true;
+            this.lvAudioLines.GridLines = true;
+            this.lvAudioLines.HideSelection = false;
+            this.lvAudioLines.Location = new System.Drawing.Point(3, 3);
+            this.lvAudioLines.Name = "lvAudioLines";
+            this.lvAudioLines.Size = new System.Drawing.Size(385, 533);
+            this.lvAudioLines.TabIndex = 0;
+            this.lvAudioLines.UseCompatibleStateImageBehavior = false;
+            this.lvAudioLines.View = System.Windows.Forms.View.Details;
+            // 
+            // columnAudioLine_Stt
+            // 
+            this.columnAudioLine_Stt.Text = "STT";
+            // 
+            // columnAudioLine_AudioLine
+            // 
+            this.columnAudioLine_AudioLine.Text = "Audio Line";
+            this.columnAudioLine_AudioLine.Width = 480;
             // 
             // YoutubeForm
             // 
@@ -2047,6 +2291,39 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.splitContainer5.Panel1.ResumeLayout(false);
+            this.splitContainer5.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
+            this.splitContainer5.ResumeLayout(false);
+            this.tableLayoutPanel32.ResumeLayout(false);
+            this.tableLayoutPanel33.ResumeLayout(false);
+            this.tableLayoutPanel33.PerformLayout();
+            this.tableLayoutPanel37.ResumeLayout(false);
+            this.tableLayoutPanel37.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GenerateIdea_TxtNumIdea)).EndInit();
+            this.tableLayoutPanel38.ResumeLayout(false);
+            this.tableLayoutPanel38.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabControl3.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.splitContainer6.Panel1.ResumeLayout(false);
+            this.splitContainer6.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
+            this.tableLayoutPanel34.ResumeLayout(false);
+            this.tableLayoutPanel34.PerformLayout();
+            this.tableLayoutPanel35.ResumeLayout(false);
+            this.tableLayoutPanel35.PerformLayout();
+            this.tableLayoutPanel36.ResumeLayout(false);
+            this.tableLayoutPanel36.PerformLayout();
+            this.tableLayoutPanel39.ResumeLayout(false);
+            this.tableLayoutPanel39.PerformLayout();
+            this.tableLayoutPanel40.ResumeLayout(false);
+            this.tableLayoutPanel40.PerformLayout();
+            this.tableLayoutPanel41.ResumeLayout(false);
+            this.tableLayoutPanel41.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GenerateShortVideoScript_DurationPerSeconds)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -2127,39 +2404,19 @@
             this.tableLayoutPanel30.PerformLayout();
             this.tableLayoutPanel31.ResumeLayout(false);
             this.tableLayoutPanel31.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.splitContainer5.Panel1.ResumeLayout(false);
-            this.splitContainer5.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
-            this.splitContainer5.ResumeLayout(false);
-            this.tableLayoutPanel32.ResumeLayout(false);
-            this.tableLayoutPanel33.ResumeLayout(false);
-            this.tableLayoutPanel33.PerformLayout();
-            this.tableLayoutPanel37.ResumeLayout(false);
-            this.tableLayoutPanel37.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GenerateIdea_TxtNumIdea)).EndInit();
-            this.tableLayoutPanel38.ResumeLayout(false);
-            this.tableLayoutPanel38.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            this.splitContainer6.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
-            this.tableLayoutPanel34.ResumeLayout(false);
-            this.tableLayoutPanel34.PerformLayout();
-            this.tableLayoutPanel35.ResumeLayout(false);
-            this.tableLayoutPanel35.PerformLayout();
-            this.tableLayoutPanel36.ResumeLayout(false);
-            this.tableLayoutPanel36.PerformLayout();
-            this.tableLayoutPanel39.ResumeLayout(false);
-            this.tableLayoutPanel39.PerformLayout();
-            this.tableLayoutPanel40.ResumeLayout(false);
-            this.tableLayoutPanel40.PerformLayout();
-            this.tableLayoutPanel41.ResumeLayout(false);
-            this.tableLayoutPanel41.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GenerateShortVideoScript_DurationPerSeconds)).EndInit();
+            this.tableLayoutPanel43.ResumeLayout(false);
+            this.tableLayoutPanel43.PerformLayout();
             this.tableLayoutPanel42.ResumeLayout(false);
-            this.tableLayoutPanel42.PerformLayout();
+            this.splitContainer7.Panel1.ResumeLayout(false);
+            this.splitContainer7.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
+            this.splitContainer7.ResumeLayout(false);
+            this.tabControl4.ResumeLayout(false);
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage11.ResumeLayout(false);
+            this.tableLayoutPanel44.ResumeLayout(false);
+            this.tableLayoutPanel45.ResumeLayout(false);
+            this.tableLayoutPanel45.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2280,8 +2537,13 @@
         private System.Windows.Forms.RichTextBox txtGenerateIdea_Results;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.SplitContainer splitContainer6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel34;
+        private System.Windows.Forms.CheckBox GenerateShortVideoScript_VerticalFramingNote;
+        private System.Windows.Forms.CheckBox GenerateShortVideoScript_IncludeSoundEffect;
+        private System.Windows.Forms.CheckBox GenerateShortVideoScript_IncludeTextOverlay;
         private System.Windows.Forms.RichTextBox GenerateShortVideoScript_TxtStory;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel35;
         private System.Windows.Forms.Label label27;
@@ -2298,12 +2560,25 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.NumericUpDown GenerateShortVideoScript_DurationPerSeconds;
         private System.Windows.Forms.Button btnGenerateShortVideoScript_Execute;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel42;
-        private System.Windows.Forms.RichTextBox GenerateShortVideoScript_TxtResult;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.CheckBox GenerateShortVideoScript_IncludeCaption;
-        private System.Windows.Forms.CheckBox GenerateShortVideoScript_VerticalFramingNote;
-        private System.Windows.Forms.CheckBox GenerateShortVideoScript_IncludeSoundEffect;
-        private System.Windows.Forms.CheckBox GenerateShortVideoScript_IncludeTextOverlay;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel42;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel43;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.SplitContainer splitContainer7;
+        private System.Windows.Forms.RichTextBox GenerateShortVideoScript_TxtResult;
+        private System.Windows.Forms.TabControl tabControl4;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.TabPage tabPage11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel44;
+        private System.Windows.Forms.Button btnGenerateShortVideoScript_CreateNarration;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel45;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.ComboBox GenerateShortVideoScript_ToneStyles;
+        private System.Windows.Forms.RichTextBox GenerateShortVideoScript_TxtScriptNarration;
+        private System.Windows.Forms.ListView lvAudioLines;
+        private System.Windows.Forms.ColumnHeader columnAudioLine_Stt;
+        private System.Windows.Forms.ColumnHeader columnAudioLine_AudioLine;
     }
 }

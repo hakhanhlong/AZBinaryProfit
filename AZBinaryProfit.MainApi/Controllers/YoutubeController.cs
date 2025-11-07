@@ -171,6 +171,82 @@ namespace AZBinaryProfit.MainApi.Controllers
 
 
 
+
+        [HttpPost]
+        [Route("YoutubeShortVideoScriptNarration")]
+        public async Task<IActionResult> YoutubeShortVideoScriptNarration([FromBody] YoutubeShortVideoScriptNarrationRequest request)
+        {
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Youtube", "GenerateShortVideoScriptNarration", "skprompt.txt");
+            
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+            
+
+
+            // Create the function with both prompt and config
+            //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
+            var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+
+            float Words_Per_Second = 2.5f;
+            float Narration_Padding = 0.5f;
+
+            int Target_Words = (int)((Convert.ToInt32(request.duration_seconds) - Narration_Padding) * Words_Per_Second);
+
+
+            string[] scenes = request.shorts_script.Split("\n\n");
+
+
+
+            var kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+            {
+                ThinkingConfig = new GeminiThinkingConfig
+                {
+                    ThinkingBudget = 0
+                },
+                MaxTokens = 4096,
+                Temperature = 0.7,
+                TopP = 0.9,
+                TopK = 1
+            })
+            {
+                ["shorts_script"] = request.shorts_script,
+                ["duration_seconds"] = request.shorts_script,
+                ["tone_style"] = request.tone_style,
+                ["target_words"] = Target_Words,
+                ["words_per_second"] = Words_Per_Second
+            };
+
+            // Querying the prompt function
+            var response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+
+            var metadata = response.Metadata;
+            //var tokenUsage = metadata!["Usage"] as ChatTokenUsage;
+
+            var responseData = response.GetValue<string>();
+
+
+
+            return new JsonResult(
+            new
+            {
+                Data = responseData,
+                Info = new
+                {
+                    TotalTokenCount = metadata!["TotalTokenCount"],
+                    PromptTokenCount = metadata!["PromptTokenCount"],
+                    CandidatesTokenCount = metadata!["CandidatesTokenCount"],
+                    CurrentCandidateTokenCount = metadata!["CurrentCandidateTokenCount"]
+                }
+            });
+        }
+
+
+
+
+
         [HttpPost]
         [Route("GenerateTitle")]
         public async Task<IActionResult> GenerateTitle([FromBody] YoutubeGenerateTitleRequestViewModel request)

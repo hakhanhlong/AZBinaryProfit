@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +16,8 @@ namespace AZStoryVideoProfit.Forms
 {
     public partial class YoutubeForm : Form
     {
+
+        List<AudioLineTextItem> _AudioLineTextItems = new List<AudioLineTextItem>();
         public YoutubeForm()
         {
             InitializeComponent();
@@ -106,6 +109,10 @@ namespace AZStoryVideoProfit.Forms
             GenerateShortVideoScript_ContentTypes.DataSource = YoutubeSetting.Instance.Data.GenerateShortScript.ContentTypes;
             GenerateShortVideoScript_ContentTypes.DisplayMember = "Name";
             GenerateShortVideoScript_ContentTypes.ValueMember = "Description";
+
+            GenerateShortVideoScript_ToneStyles.DataSource = YoutubeSetting.Instance.Data.GenerateShortScript.ToneStyles;
+            GenerateShortVideoScript_ToneStyles.DisplayMember = "Name";
+            GenerateShortVideoScript_ToneStyles.ValueMember = "Description";
 
 
 
@@ -415,5 +422,130 @@ namespace AZStoryVideoProfit.Forms
             catch
             { SetProcessStatus(false, ""); }
         }
+
+        private void btnGenerateShortVideoScript_CreateNarration_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Invoke((Action)(() => {
+
+
+
+                    var request = new MainApiProxy.ViewModels.YoutubeShortVideoScriptNarrationRequest
+                    {
+                        duration_seconds = (int)GenerateShortVideoScript_DurationPerSeconds.Value,
+                        shorts_script = GenerateShortVideoScript_TxtResult.Text,
+                        tone_style = GenerateShortVideoScript_ToneStyles.SelectedValue.ToString()
+                    };
+
+
+                    Task.Run(() => {
+
+
+
+
+                        SetProcessStatus(true, "Process Generate Short Video Script Narration...");
+
+                        var response = YoutubeProxy.Instance.YoutubeShortVideoScriptNarration(request);
+                        this.Invoke(new Action(() => {
+
+                            GenerateShortVideoScript_TxtScriptNarration.Text = response.Data;
+
+                        }));
+
+
+
+                        var audioLines = ExtractAudioLines(request.shorts_script);
+                        int count = 1;
+                        foreach (var line in audioLines)
+                        {
+                            var audioLine = new AudioLineTextItem();
+                            audioLine.Id = count;
+                            audioLine.AudioLine = line;                            
+                            AddAudioLineTextItemToListView(audioLine, count, lvAudioLines);
+                            count++;
+
+                            _AudioLineTextItems.Add(audioLine);
+                        }
+
+
+                        SetProcessStatus(false, "");
+                    });
+
+                }));
+
+
+
+
+            }
+            catch
+            { SetProcessStatus(false, ""); }
+        }
+
+
+
+        private void AddAudioLineTextItemToListView(AudioLineTextItem audioLineTextItem, int count, ListView lv)
+        {
+            this.Invoke(new Action(() => {
+                ListViewItem itemAdd = new ListViewItem();
+                itemAdd.Text = count.ToString();
+                itemAdd.Tag = count.ToString();
+                itemAdd.SubItems.Add(audioLineTextItem.AudioLine);                
+                lv.Items.Add(itemAdd);                
+
+            }));
+
+        }
+
+
+        public List<string> ExtractAudioLines(string script)
+        {
+            // Equivalent to: scenes = re.split(r'\n\n+', script)
+            // Splits the script by one or more consecutive newline characters.
+            string[] scenes = Regex.Split(script, @"\n\n+");
+
+            List<string> audioLines = new List<string>();
+
+            foreach (string scene in scenes)
+            {
+                string pattern = @"\*+\s*Audio/Voiceover:\s*((\s|\S)*)";
+
+                Match audioMatch = Regex.Match(scene, pattern, RegexOptions.IgnoreCase);
+
+                if (audioMatch.Success)
+                {
+
+
+                    string patternAudio = @"^\s*\*\s*(.*)$";
+
+                    // RegexOptions.Multiline is key here to treat '^' as the start of a line
+                    // and not just the start of the entire string.
+                    MatchCollection matches = Regex.Matches(audioMatch.Groups[1].Value.Trim(), patternAudio, RegexOptions.Multiline);
+
+                    List<string> individualLines = new List<string>();
+
+                    foreach (Match match in matches)
+                    {
+                        // Group[1] contains the text after the bullet and whitespace
+                        audioLines.Add(match.Groups[1].Value.Trim());
+                    }
+
+
+                    
+                }
+            }
+
+            return audioLines;
+        }
+
     }
+
+    public class AudioLineTextItem
+    {
+        public int Id { get; set; }
+        public string AudioLine { get; set; }
+        public string Status { get; set; } = "";
+    }
+
+
 }

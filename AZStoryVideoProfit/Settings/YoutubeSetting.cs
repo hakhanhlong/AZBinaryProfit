@@ -82,6 +82,10 @@ namespace AZStoryVideoProfit.Settings
         public List<YoutubeGenerateShortScript_BaseViewModel> HookInstructions { get; set; }
         public List<YoutubeGenerateShortScript_BaseViewModel> ContentTypes { get; set; }
 
+        public List<YoutubeGenerateShortScript_BaseViewModel> ToneStyles { get; set; }
+
+        
+
     }
 
     public class YoutubeGenerateTitleViewModel

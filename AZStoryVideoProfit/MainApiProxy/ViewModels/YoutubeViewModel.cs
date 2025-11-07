@@ -93,6 +93,24 @@ namespace AZStoryVideoProfit.MainApiProxy.ViewModels
         public string Data { get; set; }
     }
 
+
+    public class YoutubeShortVideoScriptNarrationRequest
+    {
+        public string shorts_script { get; set; }
+        public int duration_seconds { get; set; }
+
+        [Description("Energetic, Professional, Casual, Humorous, Dramatic, Educational, Entertaining, Inspirational")]
+        public string tone_style { get; set; }
+    }
+
+
+    public class YoutubeShortVideoScriptNarrationResponse : BaseViewModel
+    {
+        public string Data { get; set; }
+    }
+
+
+
     public class YoutubeGenerateTitleRequestViewModel
     {
 

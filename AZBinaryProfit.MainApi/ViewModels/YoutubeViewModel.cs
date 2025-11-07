@@ -82,6 +82,15 @@ namespace AZBinaryProfit.MainApi.ViewModels
 
     }
 
+    public class YoutubeShortVideoScriptNarrationRequest
+    {
+        public string shorts_script { get; set; }
+        public int duration_seconds { get; set; }
+
+        [Description("Energetic, Professional, Casual, Humorous, Dramatic, Educational, Entertaining, Inspirational")]
+        public string tone_style { get; set; }
+    }
+
 
     public class YoutubeGenerateTitleRequestViewModel
     {

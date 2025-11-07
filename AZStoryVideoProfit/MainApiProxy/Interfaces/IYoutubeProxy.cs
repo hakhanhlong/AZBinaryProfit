@@ -15,6 +15,8 @@ namespace AZStoryVideoProfit.MainApiProxy.Interfaces
 
         YoutubeShortVideoScriptResponse YoutubeShortVideoScript(YoutubeShortVideoScriptRequest requestViewModel);
 
+        YoutubeShortVideoScriptNarrationResponse YoutubeShortVideoScriptNarration(YoutubeShortVideoScriptNarrationRequest requestViewModel);
+
         YoutubeGenerateTitleResponseViewModel GenerateTitle(YoutubeGenerateTitleRequestViewModel requestViewModel);
 
         YoutubeGenerateDescriptionResponseViewModel GenerateDescription(YoutubeGenerateDescriptionRequestViewModel requestViewModel);

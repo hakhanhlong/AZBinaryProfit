@@ -1,5 +1,39 @@
 {
   "GenerateShortScript": {
+    "ToneStyles": [
+      {
+        "Name": "Energetic",
+        "Description": "Energetic"
+      },
+      {
+        "Name": "Professional",
+        "Description": "Professional"
+      },
+      {
+        "Name": "Casual",
+        "Description": "Casual"
+      },
+      {
+        "Name": "Humorous",
+        "Description": "Humorous"
+      },
+      {
+        "Name": "Dramatic",
+        "Description": "Dramatic"
+      },
+      {
+        "Name": "Educational",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Entertaining",
+        "Description": "Entertaining"
+      },
+      {
+        "Name": "Inspirational",
+        "Description": "Inspirational"
+      }
+    ],
     "HookTypes": [
       {
         "Name": "Question",

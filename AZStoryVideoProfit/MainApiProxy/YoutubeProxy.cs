@@ -55,6 +55,15 @@ namespace AZStoryVideoProfit.MainApiProxy
             return JsonConvert.DeserializeObject<YoutubeShortVideoScriptResponse>(response.Content);
         }
 
+        public YoutubeShortVideoScriptNarrationResponse YoutubeShortVideoScriptNarration(YoutubeShortVideoScriptNarrationRequest requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Youtube/YoutubeShortVideoScriptNarration", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<YoutubeShortVideoScriptNarrationResponse>(response.Content);
+        }
+
         public YoutubeGenerateTitleResponseViewModel GenerateTitle(YoutubeGenerateTitleRequestViewModel requestViewModel)
         {
             var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
