@@ -34,6 +34,27 @@ namespace AZStoryVideoProfit.MainApiProxy
             }
         }
 
+
+        public YoutubeIdeaResponseViewModel YoutubeIdea(YoutubeIdeaRequestViewModel requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Youtube/YoutubeIdea", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<YoutubeIdeaResponseViewModel>(response.Content);
+
+        }
+
+
+        public YoutubeShortVideoScriptResponse YoutubeShortVideoScript(YoutubeShortVideoScriptRequest requestViewModel)
+        {
+            var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");
+            var request = new RestRequest($"Youtube/YoutubeShortVideoScript", Method.Post);
+            request.AddParameter("application/json", JsonConvert.SerializeObject(requestViewModel), ParameterType.RequestBody);
+            var response = client.Execute(request);
+            return JsonConvert.DeserializeObject<YoutubeShortVideoScriptResponse>(response.Content);
+        }
+
         public YoutubeGenerateTitleResponseViewModel GenerateTitle(YoutubeGenerateTitleRequestViewModel requestViewModel)
         {
             var client = new RestClient($"{ConfigurationManager.AppSettings["AZBinaryProfit_MainApi_URL"]}");

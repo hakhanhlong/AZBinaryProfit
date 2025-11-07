@@ -94,6 +94,22 @@ namespace AZStoryVideoProfit.Forms
             ThumbnailImagePrompt_TextStyles.DisplayMember = "Name";
             ThumbnailImagePrompt_TextStyles.ValueMember = "Description";
 
+
+            GenerateShortVideoScript_HookTypes.DataSource = YoutubeSetting.Instance.Data.GenerateShortScript.HookTypes;
+            GenerateShortVideoScript_HookTypes.DisplayMember = "Name";
+            GenerateShortVideoScript_HookTypes.ValueMember = "Description";
+
+            GenerateShortVideoScript_HookInstructions.DataSource = YoutubeSetting.Instance.Data.GenerateShortScript.HookInstructions;
+            GenerateShortVideoScript_HookInstructions.DisplayMember = "Name";
+            GenerateShortVideoScript_HookInstructions.ValueMember = "Description";
+
+            GenerateShortVideoScript_ContentTypes.DataSource = YoutubeSetting.Instance.Data.GenerateShortScript.ContentTypes;
+            GenerateShortVideoScript_ContentTypes.DisplayMember = "Name";
+            GenerateShortVideoScript_ContentTypes.ValueMember = "Description";
+
+
+
+
         }
 
 
@@ -290,6 +306,99 @@ namespace AZStoryVideoProfit.Forms
                         this.Invoke(new Action(() => {
 
                             txtThumbnailImagePrompt_Result.Text = response.Data;
+
+                        }));
+
+
+                        SetProcessStatus(false, "");
+                    });
+
+                }));
+
+
+
+
+            }
+            catch
+            { SetProcessStatus(false, ""); }
+        }
+
+        private void btnGenerateIdea_Execute_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Invoke((Action)(() => {
+
+
+
+                    var request = new MainApiProxy.ViewModels.YoutubeIdeaRequestViewModel
+                    {
+                       Idea_Number = (int)GenerateIdea_TxtNumIdea.Value,
+                       Topic = GenerateIdea_TxtTopic.Text
+                    };
+
+
+                    Task.Run(() => {
+
+
+
+
+                        SetProcessStatus(true, "Process Generate Idea ...");
+
+                        var response = YoutubeProxy.Instance.YoutubeIdea(request);
+                        this.Invoke(new Action(() => {
+
+                            txtGenerateIdea_Results.Text = JsonConvert.SerializeObject(response, Formatting.Indented);
+
+                        }));
+
+
+                        SetProcessStatus(false, "");
+                    });
+
+                }));
+
+
+
+
+            }
+            catch
+            { SetProcessStatus(false, ""); }
+        }
+
+        private void btnGenerateShortVideoScript_Execute_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Invoke((Action)(() => {
+
+
+
+                    var request = new MainApiProxy.ViewModels.YoutubeShortVideoScriptRequest
+                    {
+                        story = GenerateShortVideoScript_TxtStory.Text,
+                        duration_seconds = (int)GenerateShortVideoScript_DurationPerSeconds.Value,
+                        content_type = GenerateShortVideoScript_ContentTypes.SelectedValue.ToString(),
+                        hook_instructions = GenerateShortVideoScript_HookInstructions.SelectedValue.ToString(),
+                        hook_type = GenerateShortVideoScript_HookTypes.SelectedValue.ToString(),
+                        include_captions = GenerateShortVideoScript_IncludeCaption.Checked,
+                        include_sound_effects = GenerateShortVideoScript_IncludeSoundEffect.Checked,
+                        include_text_overlay = GenerateShortVideoScript_IncludeTextOverlay.Checked,
+                        vertical_framing_notes = GenerateShortVideoScript_VerticalFramingNote.Checked
+                    };
+
+
+                    Task.Run(() => {
+
+
+
+
+                        SetProcessStatus(true, "Process Generate Short Video Script ...");
+
+                        var response = YoutubeProxy.Instance.YoutubeShortVideoScript(request);
+                        this.Invoke(new Action(() => {
+
+                            GenerateShortVideoScript_TxtResult.Text = response.Data;
 
                         }));
 

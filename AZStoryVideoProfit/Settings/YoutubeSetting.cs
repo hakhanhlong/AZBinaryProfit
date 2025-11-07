@@ -71,6 +71,17 @@ namespace AZStoryVideoProfit.Settings
 
         public YoutubeGenerateThumbnailViewModel GenerateThumbnail {  get; set; }
 
+        public YoutubeGenerateShortScriptViewModel GenerateShortScript { get; set; }
+
+    }
+
+    public class YoutubeGenerateShortScriptViewModel
+    {
+
+        public List<YoutubeGenerateShortScript_BaseViewModel> HookTypes { get; set; }
+        public List<YoutubeGenerateShortScript_BaseViewModel> HookInstructions { get; set; }
+        public List<YoutubeGenerateShortScript_BaseViewModel> ContentTypes { get; set; }
+
     }
 
     public class YoutubeGenerateTitleViewModel
@@ -80,6 +91,13 @@ namespace AZStoryVideoProfit.Settings
         public List<YoutubeGenerateTitle_BaseViewModel> TargetAudiences { get; set; }
         public List<YoutubeGenerateTitle_BaseViewModel> UseCases { get; set; }
 
+    }
+
+
+    public class YoutubeGenerateShortScript_BaseViewModel
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 
     public class YoutubeGenerateTitle_BaseViewModel

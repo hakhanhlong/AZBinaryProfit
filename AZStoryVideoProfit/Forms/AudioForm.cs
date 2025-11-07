@@ -230,7 +230,7 @@ namespace AZStoryVideoProfit.Forms
 
                         SetProcessStatus(true, $"Process Audio Generate {item.Id}/{_ChunkTexts.Count} ...");
 
-                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyA3bUX30qoxazBwYOMQ7rg2zO68iFy_3dw");
+                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyBot7HqtnDl3aFnVAB45bF_1G63ACQVShw");
 
                         dynamic dynamicObject = JsonConvert.DeserializeObject<dynamic>(responseAudio);
 

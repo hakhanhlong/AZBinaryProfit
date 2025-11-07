@@ -1,4 +1,112 @@
 {
+  "GenerateShortScript": {
+    "HookTypes": [
+      {
+        "Name": "Question",
+        "Description": "Question"
+      },
+      {
+        "Name": "Statistic",
+        "Description": "Statistic"
+      },
+      {
+        "Name": "Challenge",
+        "Description": "Challenge"
+      },
+      {
+        "Name": "Tutorial",
+        "Description": "Tutorial"
+      },
+      {
+        "Name": "Transformation",
+        "Description": "Transformation"
+      },
+      {
+        "Name": "Trend",
+        "Description": "Trend"
+      },
+      {
+        "Name": "Story",
+        "Description": "Story"
+      },
+      {
+        "Name": "Controversy",
+        "Description": "Controversy"
+      }
+    ],
+    "HookInstructions": [
+      {
+        "Name": "Question",
+        "Description": "Start with an intriguing question that stops the scroll"
+      },
+      {
+        "Name": "Statistic",
+        "Description": "Begin with a surprising statistic or fact"
+      },
+      {
+        "Name": "Challenge",
+        "Description": "Present a challenge or dare to the viewer"
+      },
+      {
+        "Name": "Tutorial",
+        "Description": "Jump straight into a quick how-to or life hack"
+      },
+      {
+        "Name": "Transformation",
+        "Description": "Show a before/after or transformation hook"
+      },
+      {
+        "Name": "Trend",
+        "Description": "Leverage a current trend or sound"
+      },
+      {
+        "Name": "Story",
+        "Description": "Start with a captivating micro-story"
+      },
+      {
+        "Name": "Controversy",
+        "Description": "Present a controversial or surprising statement"
+      }
+    ],
+    "ContentTypes": [
+      {
+        "Name": "Tutorial/How-to",
+        "Description": "Tutorial/How-to"
+      },
+      {
+        "Name": "Life Hack",
+        "Description": "Life Hack"
+      },
+      {
+        "Name": "Entertainment",
+        "Description": "Entertainment"
+      },
+      {
+        "Name": "Educational",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Trend",
+        "Description": "Trend"
+      },
+      {
+        "Name": "Story",
+        "Description": "Story"
+      },
+      {
+        "Name": "Challenge",
+        "Description": "Challenge"
+      },
+      {
+        "Name": "Review",
+        "Description": "Review"
+      },
+      {
+        "Name": "News",
+        "Description": "News"
+      }
+    ]
+  },
   "GenerateTitle": {
     "ToneStyles": [
       {

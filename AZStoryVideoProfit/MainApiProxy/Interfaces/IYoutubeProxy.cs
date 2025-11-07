@@ -9,6 +9,12 @@ namespace AZStoryVideoProfit.MainApiProxy.Interfaces
 {
     public interface IYoutubeProxy
     {
+
+
+        YoutubeIdeaResponseViewModel YoutubeIdea(YoutubeIdeaRequestViewModel requestViewModel);
+
+        YoutubeShortVideoScriptResponse YoutubeShortVideoScript(YoutubeShortVideoScriptRequest requestViewModel);
+
         YoutubeGenerateTitleResponseViewModel GenerateTitle(YoutubeGenerateTitleRequestViewModel requestViewModel);
 
         YoutubeGenerateDescriptionResponseViewModel GenerateDescription(YoutubeGenerateDescriptionRequestViewModel requestViewModel);

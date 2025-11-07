@@ -34,6 +34,143 @@ namespace AZBinaryProfit.MainApi.Controllers
 
         }
 
+
+        [HttpPost]
+        [Route("YoutubeIdea")]
+        public async Task<IActionResult> YoutubeIdea([FromBody] YoutubeIdeaRequestViewModel request)
+        {
+
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Youtube", "GenerateIdea", "skprompt.txt");
+            
+
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+  
+
+
+            // Create the function with both prompt and config
+            //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
+            var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+            var kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+            {
+                ResponseSchema = typeof(YoutubeIdeaResponseViewModel),
+                ResponseMimeType = "application/json",
+                ThinkingConfig = new GeminiThinkingConfig
+                {
+                    ThinkingBudget = 0
+                },
+                MaxTokens = 8192,
+                Temperature = 0.7,
+                TopK = 1,
+                TopP = 0.9
+
+            })
+            {
+                ["idea_number"] = request.Idea_Number,
+                ["topic"] = request.Topic
+            };
+
+            // Querying the prompt function
+            var response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+            var responseData = response.GetValue<string>();
+
+
+            var metadata = response.Metadata;
+
+            return new JsonResult(new
+            {
+                Data = JsonConvert.DeserializeObject<YoutubeIdeaResponseViewModel>(responseData),
+                Info = new
+                {
+                    TotalTokenCount = metadata!["TotalTokenCount"],
+                    PromptTokenCount = metadata!["PromptTokenCount"],
+                    CandidatesTokenCount = metadata!["CandidatesTokenCount"],
+                    CurrentCandidateTokenCount = metadata!["CurrentCandidateTokenCount"]
+                }
+            });
+
+        }
+
+
+        [HttpPost]
+        [Route("YoutubeShortVideoScript")]
+        public async Task<IActionResult> YoutubeShortVideoScript([FromBody] YoutubeShortVideoScriptRequest request)
+        {
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts","Youtube", "GenerateShortVideoScript", "skprompt.txt");
+            
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+
+
+            // Create the function with both prompt and config
+            //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
+            var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+
+
+
+            string required_elements = "";
+            if (request.include_captions)
+                required_elements += "- Include caption suggestions for accessibility.\n\n";
+            if (request.include_text_overlay)
+                required_elements += "- Include text overlay positions and timing.\n\n";
+            if (request.include_sound_effects)
+                required_elements += "- Include sound effect suggestions.\n\n";
+            if (request.vertical_framing_notes)
+                required_elements += "- Include vertical framing notes for optimal composition.\n\n";
+
+
+
+            var kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+            {
+                ThinkingConfig = new GeminiThinkingConfig
+                {
+                    ThinkingBudget = 0
+                },
+                MaxTokens = 8192,
+                Temperature = 0.7,
+                TopP = 0.9,
+                TopK = 1
+            })
+            {
+                ["story"] = request.story,                               
+                ["duration_seconds"] = request.duration_seconds,
+                ["hook_type"] = request.hook_type,
+                ["hook_instructions"] = request.hook_instructions,
+                ["required_elements"] = required_elements
+            };
+
+            // Querying the prompt function
+            var response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+
+            var metadata = response.Metadata;
+            //var tokenUsage = metadata!["Usage"] as ChatTokenUsage;
+
+            var responseData = response.GetValue<string>();
+
+
+
+            return new JsonResult(
+            new
+            {
+                Data = responseData,
+                Info = new
+                {
+                    TotalTokenCount = metadata!["TotalTokenCount"],
+                    PromptTokenCount = metadata!["PromptTokenCount"],
+                    CandidatesTokenCount = metadata!["CandidatesTokenCount"],
+                    CurrentCandidateTokenCount = metadata!["CurrentCandidateTokenCount"]
+                }
+            });
+        }
+
+
+
         [HttpPost]
         [Route("GenerateTitle")]
         public async Task<IActionResult> GenerateTitle([FromBody] YoutubeGenerateTitleRequestViewModel request)
