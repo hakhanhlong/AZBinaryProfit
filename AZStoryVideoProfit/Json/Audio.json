@@ -125,6 +125,10 @@
   ],
   "ScriptLenghts": [
     {
+      "Name": "Small Short (~1 minutes)",
+      "Description": "Small Short (~1 minutes)"
+    },
+    {
       "Name": "Short (~2 minutes)",
       "Description": "Short (~2 minutes)"
     },
