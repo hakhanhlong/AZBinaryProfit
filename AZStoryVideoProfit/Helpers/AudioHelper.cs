@@ -10,7 +10,7 @@ using System.Diagnostics;
 
 namespace AZStoryVideoProfit.Helpers
 {
-    public class AudioMixerHelper
+    public class AudioHelper
     {
         // Hàm Log Information giả định
         private static void LogInfo(string message)
@@ -23,6 +23,59 @@ namespace AZStoryVideoProfit.Helpers
         {
             Console.Error.WriteLine(string.Format("[ERROR] {0}", message));
         }
+
+        public static string WaveToMp3(string inputPath, string outputPath)
+        {
+            LogInfo("🎵 Convert wav to mp3...");
+
+            if (!File.Exists(inputPath))
+            {
+                LogError("❌ Error: One input files not found.");
+                return inputPath;
+            }
+
+            try
+            {
+                // Xây dựng chuỗi lệnh FFmpeg
+                string arguments = string.Format(
+                    "-i \"{0}\" \"{1}\"",
+                    inputPath,
+                    outputPath
+                );
+
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    FileName = "ffmpeg", // Cần có trong PATH hoặc chỉ định đường dẫn đầy đủ
+                    Arguments = arguments,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                    // Có thể thêm RedirectStandardOutput/Error để đọc kết quả log
+                };
+
+                using (Process process = new Process { StartInfo = startInfo })
+                {
+                    process.Start();
+                    process.WaitForExit();
+
+                    if (process.ExitCode == 0)
+                    {
+                        LogInfo(string.Format("✅ Audio convert and saved to {0}", outputPath));
+                        return outputPath;
+                    }
+                    else
+                    {
+                        LogError(string.Format("❌ FFmpeg failed with exit code {0}. Please check your FFmpeg installation and arguments.", process.ExitCode));
+                        return outputPath;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogError(string.Format("❌ Error convert audio: {0}", e.Message));
+                return outputPath;
+            }
+        }
+
 
         /// <summary>
         /// Mixes a podcast audio file with a background music file using an external FFmpeg process.

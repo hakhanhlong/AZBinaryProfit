@@ -137,7 +137,7 @@
       <DependentUpon>YoutubeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AudioConverterHelper.cs" />
-    <Compile Include="Helpers\AudioMixerHelper.cs" />
+    <Compile Include="Helpers\AudioHelper.cs" />
     <Compile Include="Helpers\ChunkTextHelper.cs" />
     <Compile Include="Helpers\FFMPEGHelper.cs" />
     <Compile Include="Helpers\GoogleGeminiHelper.cs" />
