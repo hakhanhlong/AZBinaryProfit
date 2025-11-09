@@ -242,7 +242,7 @@ namespace AZStoryVideoProfit.Forms
                         
 
 
-                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyBot7HqtnDl3aFnVAB45bF_1G63ACQVShw");
+                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyA3bUX30qoxazBwYOMQ7rg2zO68iFy_3dw");
 
                         dynamic dynamicObject = JsonConvert.DeserializeObject<dynamic>(responseAudio);
 
