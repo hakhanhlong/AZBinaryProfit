@@ -223,12 +223,24 @@ namespace AZStoryVideoProfit.Forms
                 var listBase64Audio = new List<string>();
 
                 Task.Run(() => {
-
+                    int count = 0;
                     foreach (var item in _ChunkTexts)
                     {
 
-
+                        count++;
                         SetProcessStatus(true, $"Process Audio Generate {item.Id}/{_ChunkTexts.Count} ...");
+
+
+                        this.Invoke(new Action(() =>
+                        {
+                            if (count == _ChunkTexts.Count && chkChunkScript_TextEndScript.Checked && !string.IsNullOrEmpty(txtChunkScript_TextEndScript.Text))
+                            {
+                                item.ChunkText = item.ChunkText + "\n\n" + txtChunkScript_TextEndScript.Text;
+                            }
+
+                        }));
+                        
+
 
                         string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyBot7HqtnDl3aFnVAB45bF_1G63ACQVShw");
 
@@ -257,6 +269,7 @@ namespace AZStoryVideoProfit.Forms
                         
 
                         SetProcessStatus(false, "");
+                        
                     }
 
 

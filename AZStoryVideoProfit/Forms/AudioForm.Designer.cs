@@ -72,16 +72,19 @@
             this.ColChunkScript_STT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColChunkScript_ChunkText = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColChunkScript_Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtChunkScript_TextEndScript = new System.Windows.Forms.RichTextBox();
             this.txtChunkScript_ChunkText = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAudioScript_ExecuteText2Speech = new System.Windows.Forms.Button();
             this.chkAudioScript_Text2Speech_CheckAll = new System.Windows.Forms.CheckBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.txtAudioScript_ScriptText = new System.Windows.Forms.RichTextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.txtAudioScript_SEOMetadata = new System.Windows.Forms.RichTextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.chkChunkScript_TextEndScript = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -106,6 +109,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -614,7 +618,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.txtChunkScript_ChunkText);
+            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel7);
             this.splitContainer1.Size = new System.Drawing.Size(815, 240);
             this.splitContainer1.SplitterDistance = 513;
             this.splitContainer1.TabIndex = 9;
@@ -650,28 +654,56 @@
             // 
             this.ColChunkScript_Status.Text = "Status";
             // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Controls.Add(this.txtChunkScript_TextEndScript, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.txtChunkScript_ChunkText, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.chkChunkScript_TextEndScript, 0, 1);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 3;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(298, 240);
+            this.tableLayoutPanel7.TabIndex = 0;
+            // 
+            // txtChunkScript_TextEndScript
+            // 
+            this.txtChunkScript_TextEndScript.BackColor = System.Drawing.Color.Wheat;
+            this.txtChunkScript_TextEndScript.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtChunkScript_TextEndScript.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtChunkScript_TextEndScript.Location = new System.Drawing.Point(4, 140);
+            this.txtChunkScript_TextEndScript.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtChunkScript_TextEndScript.Name = "txtChunkScript_TextEndScript";
+            this.txtChunkScript_TextEndScript.Size = new System.Drawing.Size(290, 97);
+            this.txtChunkScript_TextEndScript.TabIndex = 11;
+            this.txtChunkScript_TextEndScript.Text = "";
+            // 
             // txtChunkScript_ChunkText
             // 
             this.txtChunkScript_ChunkText.BackColor = System.Drawing.Color.Wheat;
             this.txtChunkScript_ChunkText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtChunkScript_ChunkText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtChunkScript_ChunkText.Location = new System.Drawing.Point(0, 0);
+            this.txtChunkScript_ChunkText.Location = new System.Drawing.Point(4, 3);
             this.txtChunkScript_ChunkText.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtChunkScript_ChunkText.Name = "txtChunkScript_ChunkText";
-            this.txtChunkScript_ChunkText.Size = new System.Drawing.Size(298, 240);
-            this.txtChunkScript_ChunkText.TabIndex = 8;
+            this.txtChunkScript_ChunkText.Size = new System.Drawing.Size(290, 96);
+            this.txtChunkScript_ChunkText.TabIndex = 9;
             this.txtChunkScript_ChunkText.Text = "";
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.ColumnCount = 4;
+            this.tableLayoutPanel6.ColumnCount = 3;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.btnAudioScript_ExecuteText2Speech, 3, 0);
-            this.tableLayoutPanel6.Controls.Add(this.chkAudioScript_Text2Speech_CheckAll, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnAudioScript_ExecuteText2Speech, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.chkAudioScript_Text2Speech_CheckAll, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 530);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -701,22 +733,12 @@
             // 
             this.chkAudioScript_Text2Speech_CheckAll.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.chkAudioScript_Text2Speech_CheckAll.AutoSize = true;
-            this.chkAudioScript_Text2Speech_CheckAll.Location = new System.Drawing.Point(523, 11);
+            this.chkAudioScript_Text2Speech_CheckAll.Location = new System.Drawing.Point(524, 11);
             this.chkAudioScript_Text2Speech_CheckAll.Name = "chkAudioScript_Text2Speech_CheckAll";
             this.chkAudioScript_Text2Speech_CheckAll.Size = new System.Drawing.Size(83, 19);
             this.chkAudioScript_Text2Speech_CheckAll.TabIndex = 12;
             this.chkAudioScript_Text2Speech_CheckAll.Text = "All Chunks";
             this.chkAudioScript_Text2Speech_CheckAll.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1250, 617);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabControl2
             // 
@@ -740,17 +762,6 @@
             this.tabPage3.Text = "Script Text";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.txtAudioScript_SEOMetadata);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(807, 212);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Seo Metadata";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // txtAudioScript_ScriptText
             // 
             this.txtAudioScript_ScriptText.BackColor = System.Drawing.Color.Wheat;
@@ -763,6 +774,17 @@
             this.txtAudioScript_ScriptText.TabIndex = 8;
             this.txtAudioScript_ScriptText.Text = "";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.txtAudioScript_SEOMetadata);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(807, 212);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Seo Metadata";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // txtAudioScript_SEOMetadata
             // 
             this.txtAudioScript_SEOMetadata.BackColor = System.Drawing.Color.Wheat;
@@ -774,6 +796,27 @@
             this.txtAudioScript_SEOMetadata.Size = new System.Drawing.Size(801, 206);
             this.txtAudioScript_SEOMetadata.TabIndex = 9;
             this.txtAudioScript_SEOMetadata.Text = "";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1250, 617);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // chkChunkScript_TextEndScript
+            // 
+            this.chkChunkScript_TextEndScript.AutoSize = true;
+            this.chkChunkScript_TextEndScript.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkChunkScript_TextEndScript.Location = new System.Drawing.Point(3, 105);
+            this.chkChunkScript_TextEndScript.Name = "chkChunkScript_TextEndScript";
+            this.chkChunkScript_TextEndScript.Size = new System.Drawing.Size(292, 29);
+            this.chkChunkScript_TextEndScript.TabIndex = 12;
+            this.chkChunkScript_TextEndScript.Text = "Text End Script";
+            this.chkChunkScript_TextEndScript.UseVisualStyleBackColor = true;
             // 
             // AudioForm
             // 
@@ -821,6 +864,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tabControl2.ResumeLayout(false);
@@ -877,7 +922,6 @@
         private System.Windows.Forms.ColumnHeader ColChunkScript_STT;
         private System.Windows.Forms.ColumnHeader ColChunkScript_ChunkText;
         private System.Windows.Forms.ColumnHeader ColChunkScript_Status;
-        private System.Windows.Forms.RichTextBox txtChunkScript_ChunkText;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button btnAudioScript_ExecuteText2Speech;
         private System.Windows.Forms.CheckBox chkAudioScript_Text2Speech_CheckAll;
@@ -886,5 +930,9 @@
         private System.Windows.Forms.RichTextBox txtAudioScript_ScriptText;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.RichTextBox txtAudioScript_SEOMetadata;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.RichTextBox txtChunkScript_ChunkText;
+        private System.Windows.Forms.RichTextBox txtChunkScript_TextEndScript;
+        private System.Windows.Forms.CheckBox chkChunkScript_TextEndScript;
     }
 }
