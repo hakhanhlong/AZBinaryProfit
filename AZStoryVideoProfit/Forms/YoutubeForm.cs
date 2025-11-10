@@ -446,12 +446,12 @@ namespace AZStoryVideoProfit.Forms
 
                         SetProcessStatus(true, "Process Generate Short Video Script Narration...");
 
-                        var response = YoutubeProxy.Instance.YoutubeShortVideoScriptNarration(request);
-                        this.Invoke(new Action(() => {
+                        //var response = YoutubeProxy.Instance.YoutubeShortVideoScriptNarration(request);
+                        //this.Invoke(new Action(() => {
 
-                            GenerateShortVideoScript_TxtScriptNarration.Text = response.Data;
+                        //    GenerateShortVideoScript_TxtScriptNarration.Text = response.Data;
 
-                        }));
+                        //}));
 
 
 
@@ -509,6 +509,15 @@ namespace AZStoryVideoProfit.Forms
 
             foreach (string scene in scenes)
             {
+
+                if(scene.Contains("Visual Instructions:"))
+                {
+                    var visual_desc = scene.Split(new string[] { "Visual Instructions:" }, StringSplitOptions.None);
+                    var test = visual_desc[1].Split('\n');
+                }
+
+                
+
                 string pattern = @"\*+\s*Audio/Voiceover:\s*((\s|\S)*)";
 
                 Match audioMatch = Regex.Match(scene, pattern, RegexOptions.IgnoreCase);
