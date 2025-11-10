@@ -288,7 +288,6 @@ namespace AZStoryVideoProfit.Forms
                             StringBuilder stringBuilder = new StringBuilder();
                             string fileName = $"{StringHelper.UniqueKey(6)}.wav";
 
-
                             string filePath = Path.Combine($"{folderPath}", $"{fileName}");
                             AudioConverterHelper.ProcessAudioChunks(listBase64Audio, filePath);
 
@@ -308,6 +307,18 @@ namespace AZStoryVideoProfit.Forms
                             stringBuilder.AppendLine($"ffmpeg -i static_video.mp4 -i output.mp3 -c:v copy -c:a copy -shortest output.mp4");
 
                             txtAudioScript_FFMPEGCommandText.Text = stringBuilder.ToString();
+
+
+
+                            txtAudioScript_FFMPEGCommandText.AppendText("🎵 Converting wav to mp3...");
+                            AudioHelper.WaveToMp3(filePath, $@"{folderPath}\output.mp3");
+                            txtAudioScript_FFMPEGCommandText.AppendText("🎵 Converted wav to mp3...");
+                            txtAudioScript_FFMPEGCommandText.AppendText("🎵 Mixing background music...");
+                            string backgroundMusic = $"{Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)}\\Music\\AudioBackgrounds\\SeamlesslyLoved.mp3";
+                            AudioHelper.MixAudioWithMusic($@"{folderPath}\output.mp3", backgroundMusic, $@"{folderPath}\mixoutput.mp3");
+                            txtAudioScript_FFMPEGCommandText.AppendText("🎵 Mixed background music...");
+
+
                         }
                         else
                         {
@@ -339,19 +350,25 @@ namespace AZStoryVideoProfit.Forms
 
                         try
                         {
-                            string audioData = (string)dynamicObject.candidates[0].content.parts[0].inlineData.data;
-                            string base64AudioString = audioData;
-                            DateTime dateTime = DateTime.Now;
 
-                            string dateFolderFormat = dateTime.ToString("yyyy_MM_dd");
-                            string folderPath = $@"{Setting.Instance.Data.RootAudioOutputPath}\{StringHelper.ToSlug(txtAudioScript_Title.Text)}\{dateFolderFormat}";
-                            if (!System.IO.Directory.Exists(folderPath))
-                                Directory.CreateDirectory(folderPath);
+                            this.Invoke(new Action(() =>
+                            {
+                                string audioData = (string)dynamicObject.candidates[0].content.parts[0].inlineData.data;
+                                string base64AudioString = audioData;
+                                DateTime dateTime = DateTime.Now;
 
-                            string filePath = Path.Combine($"{folderPath}", $"{StringHelper.UniqueKey(6)}.wav");
-                            
+                                string dateFolderFormat = dateTime.ToString("yyyy_MM_dd");
+                                string folderPath = $@"{Setting.Instance.Data.RootAudioOutputPath}\{StringHelper.ToSlug(txtAudioScript_Title.Text)}\{dateFolderFormat}";
+                                if (!System.IO.Directory.Exists(folderPath))
+                                    Directory.CreateDirectory(folderPath);
 
-                            AudioConverterHelper.ProcessAudioChunks(new List<string> { base64AudioString }, filePath);
+                                string filePath = Path.Combine($"{folderPath}", $"{StringHelper.UniqueKey(6)}.wav");
+
+
+                                AudioConverterHelper.ProcessAudioChunks(new List<string> { base64AudioString }, filePath);
+
+                            }));
+                          
                         }
                         catch (Exception ex)
                         {
