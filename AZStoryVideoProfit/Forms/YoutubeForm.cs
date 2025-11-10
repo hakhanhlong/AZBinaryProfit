@@ -502,7 +502,8 @@ namespace AZStoryVideoProfit.Forms
         {
             // Equivalent to: scenes = re.split(r'\n\n+', script)
             // Splits the script by one or more consecutive newline characters.
-            string[] scenes = Regex.Split(script, @"\n\n+");
+            //string[] scenes = Regex.Split(script, @"\n\n+");
+            string[] scenes = Regex.Split(script, @"\n\n");
 
             List<string> audioLines = new List<string>();
 
