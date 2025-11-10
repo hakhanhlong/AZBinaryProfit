@@ -75,6 +75,7 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.txtChunkScript_TextEndScript = new System.Windows.Forms.RichTextBox();
             this.txtChunkScript_ChunkText = new System.Windows.Forms.RichTextBox();
+            this.chkChunkScript_TextEndScript = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAudioScript_ExecuteText2Speech = new System.Windows.Forms.Button();
             this.chkAudioScript_Text2Speech_CheckAll = new System.Windows.Forms.CheckBox();
@@ -84,7 +85,8 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.txtAudioScript_SEOMetadata = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.chkChunkScript_TextEndScript = new System.Windows.Forms.CheckBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.txtAudioScript_FFMPEGCommandText = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -114,6 +116,7 @@
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -695,6 +698,17 @@
             this.txtChunkScript_ChunkText.TabIndex = 9;
             this.txtChunkScript_ChunkText.Text = "";
             // 
+            // chkChunkScript_TextEndScript
+            // 
+            this.chkChunkScript_TextEndScript.AutoSize = true;
+            this.chkChunkScript_TextEndScript.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkChunkScript_TextEndScript.Location = new System.Drawing.Point(3, 105);
+            this.chkChunkScript_TextEndScript.Name = "chkChunkScript_TextEndScript";
+            this.chkChunkScript_TextEndScript.Size = new System.Drawing.Size(292, 29);
+            this.chkChunkScript_TextEndScript.TabIndex = 12;
+            this.chkChunkScript_TextEndScript.Text = "Text End Script";
+            this.chkChunkScript_TextEndScript.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 3;
@@ -744,6 +758,7 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
@@ -782,7 +797,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(807, 212);
             this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Seo Metadata";
+            this.tabPage4.Text = "SEO Metadata";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // txtAudioScript_SEOMetadata
@@ -807,16 +822,27 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // chkChunkScript_TextEndScript
+            // tabPage5
             // 
-            this.chkChunkScript_TextEndScript.AutoSize = true;
-            this.chkChunkScript_TextEndScript.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkChunkScript_TextEndScript.Location = new System.Drawing.Point(3, 105);
-            this.chkChunkScript_TextEndScript.Name = "chkChunkScript_TextEndScript";
-            this.chkChunkScript_TextEndScript.Size = new System.Drawing.Size(292, 29);
-            this.chkChunkScript_TextEndScript.TabIndex = 12;
-            this.chkChunkScript_TextEndScript.Text = "Text End Script";
-            this.chkChunkScript_TextEndScript.UseVisualStyleBackColor = true;
+            this.tabPage5.Controls.Add(this.txtAudioScript_FFMPEGCommandText);
+            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(807, 212);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "FFMPEG Command";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // txtAudioScript_FFMPEGCommandText
+            // 
+            this.txtAudioScript_FFMPEGCommandText.BackColor = System.Drawing.Color.Wheat;
+            this.txtAudioScript_FFMPEGCommandText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAudioScript_FFMPEGCommandText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAudioScript_FFMPEGCommandText.Location = new System.Drawing.Point(0, 0);
+            this.txtAudioScript_FFMPEGCommandText.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtAudioScript_FFMPEGCommandText.Name = "txtAudioScript_FFMPEGCommandText";
+            this.txtAudioScript_FFMPEGCommandText.Size = new System.Drawing.Size(807, 212);
+            this.txtAudioScript_FFMPEGCommandText.TabIndex = 10;
+            this.txtAudioScript_FFMPEGCommandText.Text = "";
             // 
             // AudioForm
             // 
@@ -871,6 +897,7 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -934,5 +961,7 @@
         private System.Windows.Forms.RichTextBox txtChunkScript_ChunkText;
         private System.Windows.Forms.RichTextBox txtChunkScript_TextEndScript;
         private System.Windows.Forms.CheckBox chkChunkScript_TextEndScript;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.RichTextBox txtAudioScript_FFMPEGCommandText;
     }
 }

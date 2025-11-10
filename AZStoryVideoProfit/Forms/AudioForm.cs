@@ -284,9 +284,30 @@ namespace AZStoryVideoProfit.Forms
                             if(!System.IO.Directory.Exists(folderPath))
                                 Directory.CreateDirectory(folderPath);
 
-                            string filePath = Path.Combine($"{folderPath}", $"{StringHelper.UniqueKey(6)}.wav");
 
+                            StringBuilder stringBuilder = new StringBuilder();
+                            string fileName = $"{StringHelper.UniqueKey(6)}.wav";
+
+
+                            string filePath = Path.Combine($"{folderPath}", $"{fileName}");
                             AudioConverterHelper.ProcessAudioChunks(listBase64Audio, filePath);
+
+
+                            int duration = MediaInfoHelper.GetDuration(filePath);
+
+                            stringBuilder.AppendLine($"//Tạo ảnh ra video");
+                            stringBuilder.AppendLine($"//Video dọc 9:16");
+                            stringBuilder.AppendLine($"ffmpeg -r 1 -loop 1 -i 1.jpeg  -t {duration} -acodec copy -r 1 -vf scale=720:1280 -c:v libx264 -preset ultrafast -crf 21 static_video.mp4");
+                            stringBuilder.AppendLine($"//Video ngang 16:9");
+                            stringBuilder.AppendLine($"ffmpeg -r 1 -loop 1 -i 1.jpeg  -t {duration} -acodec copy -r 1 -vf scale=1920:1080 -c:v libx264 -preset ultrafast -crf 21 static_video.mp4");
+
+                            stringBuilder.AppendLine($"//Chuyển wav audio sang mp3");
+                            stringBuilder.AppendLine($"ffmpeg -i {fileName} output.mp3");
+
+                            stringBuilder.AppendLine($"//Ghép video vào audio");
+                            stringBuilder.AppendLine($"ffmpeg -i static_video.mp4 -i output.mp3 -c:v copy -c:a copy -shortest output.mp4");
+
+                            txtAudioScript_FFMPEGCommandText.Text = stringBuilder.ToString();
                         }
                         else
                         {

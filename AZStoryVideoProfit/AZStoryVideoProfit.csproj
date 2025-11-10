@@ -110,6 +110,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TagLibSharp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <HintPath>..\packages\TagLibSharp.2.3.0\lib\net462\TagLibSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forms\AudioForm.cs">
@@ -141,6 +144,7 @@
     <Compile Include="Helpers\ChunkTextHelper.cs" />
     <Compile Include="Helpers\FFMPEGHelper.cs" />
     <Compile Include="Helpers\GoogleGeminiHelper.cs" />
+    <Compile Include="Helpers\MediaInfoHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\TextSanitizerHelper.cs" />
     <Compile Include="Helpers\TimeFormatterHelper.cs" />
