@@ -57,7 +57,6 @@
             this.lvResultIdeas = new System.Windows.Forms.ListView();
             this.lvColumnSttResultIdea = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvColumnNameResultIdea = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtViewResultIdea = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -83,6 +82,9 @@
             this.txtStoryContinuationPlusEnd = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.lbProcessing = new System.Windows.Forms.ToolStripLabel();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtViewResultIdea = new System.Windows.Forms.RichTextBox();
+            this.lbStoryIdeaNote = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -118,6 +120,7 @@
             this.tabPage6.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -297,6 +300,7 @@
             this.selectPersonas.Name = "selectPersonas";
             this.selectPersonas.Size = new System.Drawing.Size(200, 21);
             this.selectPersonas.TabIndex = 3;
+            this.selectPersonas.SelectedIndexChanged += new System.EventHandler(this.selectPersonas_SelectedIndexChanged);
             // 
             // txtIdeaText
             // 
@@ -502,7 +506,7 @@
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.txtViewResultIdea);
+            this.splitContainer3.Panel2.Controls.Add(this.tableLayoutPanel17);
             this.splitContainer3.Size = new System.Drawing.Size(810, 574);
             this.splitContainer3.SplitterDistance = 225;
             this.splitContainer3.TabIndex = 3;
@@ -532,18 +536,6 @@
             // 
             this.lvColumnNameResultIdea.Text = "Name";
             this.lvColumnNameResultIdea.Width = 320;
-            // 
-            // txtViewResultIdea
-            // 
-            this.txtViewResultIdea.BackColor = System.Drawing.Color.Wheat;
-            this.txtViewResultIdea.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtViewResultIdea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtViewResultIdea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtViewResultIdea.Location = new System.Drawing.Point(0, 0);
-            this.txtViewResultIdea.Name = "txtViewResultIdea";
-            this.txtViewResultIdea.Size = new System.Drawing.Size(810, 345);
-            this.txtViewResultIdea.TabIndex = 5;
-            this.txtViewResultIdea.Text = "";
             // 
             // tableLayoutPanel8
             // 
@@ -861,6 +853,43 @@
             this.lbProcessing.Text = "Processing ...";
             this.lbProcessing.Visible = false;
             // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.ColumnCount = 1;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Controls.Add(this.lbStoryIdeaNote, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.txtViewResultIdea, 0, 0);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 2;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(810, 345);
+            this.tableLayoutPanel17.TabIndex = 0;
+            // 
+            // txtViewResultIdea
+            // 
+            this.txtViewResultIdea.BackColor = System.Drawing.Color.Wheat;
+            this.txtViewResultIdea.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtViewResultIdea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtViewResultIdea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtViewResultIdea.Location = new System.Drawing.Point(3, 3);
+            this.txtViewResultIdea.Name = "txtViewResultIdea";
+            this.txtViewResultIdea.Size = new System.Drawing.Size(804, 291);
+            this.txtViewResultIdea.TabIndex = 6;
+            this.txtViewResultIdea.Text = "";
+            // 
+            // lbStoryIdeaNote
+            // 
+            this.lbStoryIdeaNote.AutoSize = true;
+            this.lbStoryIdeaNote.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbStoryIdeaNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStoryIdeaNote.Location = new System.Drawing.Point(3, 297);
+            this.lbStoryIdeaNote.Name = "lbStoryIdeaNote";
+            this.lbStoryIdeaNote.Size = new System.Drawing.Size(804, 48);
+            this.lbStoryIdeaNote.TabIndex = 7;
+            // 
             // StoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -917,6 +946,8 @@
             this.tableLayoutPanel15.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.tableLayoutPanel17.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -951,7 +982,6 @@
         private System.Windows.Forms.ListView lvResultIdeas;
         private System.Windows.Forms.ColumnHeader lvColumnSttResultIdea;
         private System.Windows.Forms.ColumnHeader lvColumnNameResultIdea;
-        private System.Windows.Forms.RichTextBox txtViewResultIdea;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
@@ -978,5 +1008,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.Button btnStoryContinuationPlusEnd;
         private System.Windows.Forms.Label lbStoryStartingWordCount;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        private System.Windows.Forms.RichTextBox txtViewResultIdea;
+        private System.Windows.Forms.Label lbStoryIdeaNote;
     }
 }

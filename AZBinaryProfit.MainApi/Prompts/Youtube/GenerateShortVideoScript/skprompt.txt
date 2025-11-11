@@ -7,6 +7,136 @@
     Write the entire script in English.
     Remember that Shorts are viewed vertically (9:16 aspect ratio) and need to work without sound.
 
+
+
+    **FINAL ULTIMATE PROMPT STRUCTURE (MUST BE FOLLOWED) JSON objects:**
+    ```
+    {
+        "Name": "The Harmony of Echoes",        
+        "Sections": [
+            {
+                "Name":"1. HOOK (0-2 seconds)",
+                "Scenes":[
+                    {
+                        "VisualInstructions":[
+                            {
+                                "id":"visual_id",
+                                "description":"Close-up of a hand gently plucking a guitar string, then quickly cutting to a close-up of a dusty grand piano key."
+                            }                            
+                        ],
+                        "TextOverlays":[
+                            {
+                                "visualid":"visual_id",
+                                "timing":"0-1s",
+                                "description":"He played with doubt. (Bottom Third, Centered)"
+                            },
+                            {
+                                "visualid":"visual_id",
+                                "timing":"0-2s",
+                                "description":"She lived in silence. (Bottom Third, Centered)"
+                            }                           
+                        ],
+                        "AudioVoiceover":[
+                            {
+                                "visualid":"visual_id",
+                                "timing":"0-1s",
+                                "description":"Soft, hesitant guitar melody."
+                            },
+                            {
+                                "visualid":"visual_id",
+                                "timing":"1-2s",
+                                "description":"melancholic piano note."
+                            }                            
+                        ],
+                        "Timing":"2 seconds",
+                        "CameraAnglesFramingNotes":"Extreme close-ups, vertical framing emphasizing the instruments."
+                    }
+                ]                
+            },
+            {
+                "Name":"2. MAIN CONTENT (3-50 seconds)",
+                "Scenes":[
+                   {
+                        "VisualInstructions":[
+                            {
+                                "id":"visual_id",
+                                "description":"Close-up of a hand gently plucking a guitar string, then quickly cutting to a close-up of a dusty grand piano key."
+                            }                            
+                        ],
+                        "TextOverlays":[
+                            {
+                                "visualid":"visual_id",
+                                "timing":"0-1s",
+                                "description":"He played with doubt. (Bottom Third, Centered)"
+                            },
+                            {
+                                "visualid":"visual_id",
+                                "timing":"0-2s",
+                                "description":"She lived in silence. (Bottom Third, Centered)"
+                            }                           
+                        ],
+                        "AudioVoiceover":[
+                            {
+                                "visualid":"visual_id",
+                                "timing":"0-1s",
+                                "description":"Soft, hesitant guitar melody."
+                            },
+                            {
+                                "visualid":"visual_id",
+                                "timing":"1-2s",
+                                "description":"melancholic piano note."
+                            }                            
+                        ],
+                        "Timing":"2 seconds",
+                        "CameraAnglesFramingNotes":"Extreme close-ups, vertical framing emphasizing the instruments."
+                    }
+                ]
+                
+            },
+            {
+                "Name":"3. CALL TO ACTION (last 10 seconds)",
+                "Scenes":[
+                   {
+                        "VisualInstructions":[
+                            {
+                                "id":"visual_id",
+                                "description":"Close-up of a hand gently plucking a guitar string, then quickly cutting to a close-up of a dusty grand piano key."
+                            }                            
+                        ],
+                        "TextOverlays":[
+                            {
+                                "visualid":"visual_id",
+                                "timing":"0-1s",
+                                "description":"He played with doubt. (Bottom Third, Centered)"
+                            },
+                            {
+                                "visualid":"visual_id",
+                                "timing":"0-2s",
+                                "description":"She lived in silence. (Bottom Third, Centered)"
+                            }                           
+                        ],
+                        "AudioVoiceover":[
+                            {
+                                "visualid":"visual_id",
+                                "timing":"0-1s",
+                                "description":"Soft, hesitant guitar melody."
+                            },
+                            {
+                                "visualid":"visual_id",
+                                "timing":"1-2s",
+                                "description":"melancholic piano note."
+                            }                            
+                        ],
+                        "Timing":"2 seconds",
+                        "CameraAnglesFramingNotes":"Extreme close-ups, vertical framing emphasizing the instruments."
+                    }
+                ]
+               
+            }
+        ],
+        "CaptionSuggestionsforAccessibility":""
+    }
+    ```
 </message>
 <message role="user">
 
@@ -30,9 +160,9 @@ with these specifications:
 
 
 **Format the script in this structure:**
-1. HOOK (0-2 seconds)
-2. MAIN CONTENT (3-50 seconds)
-3. CALL TO ACTION (last 10 seconds)
+1. HOOK
+2. MAIN CONTENT
+3. CALL TO ACTION
 
 **For each section, specify:**
 - Visual Instructions (what to show)

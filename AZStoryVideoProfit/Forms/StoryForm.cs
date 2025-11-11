@@ -33,6 +33,7 @@ namespace AZStoryVideoProfit.Forms
             selectPersonas.DataSource = StorySetting.Instance.Data.Personas;
             selectPersonas.DisplayMember = "Name";
             selectPersonas.ValueMember = "Description";
+            
 
 
             selectLanguage.DataSource = new List<object>
@@ -424,6 +425,15 @@ namespace AZStoryVideoProfit.Forms
                 { }
             }
         }
-        
+
+        private void selectPersonas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dynamic obj = selectPersonas.SelectedItem;
+            if (obj != null) {
+
+                lbStoryIdeaNote.Text = obj.Note;
+
+            }
+        }
     }
 }

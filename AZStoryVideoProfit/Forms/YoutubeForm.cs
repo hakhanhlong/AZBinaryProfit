@@ -1,5 +1,6 @@
 ﻿using AZStoryVideoProfit.MainApiProxy;
 using AZStoryVideoProfit.Settings;
+using AZStoryVideoProfit.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,9 @@ namespace AZStoryVideoProfit.Forms
     public partial class YoutubeForm : Form
     {
 
-        List<AudioLineTextItem> _AudioLineTextItems = new List<AudioLineTextItem>();
+        List<SceneLineTextItem> _SceneLineTextItems = new List<SceneLineTextItem>();
+        YoutubeShortStoryVideoViewModel _YoutubeShortStoryVideoScripts = new YoutubeShortStoryVideoViewModel();
+
         public YoutubeForm()
         {
             InitializeComponent();
@@ -430,6 +433,7 @@ namespace AZStoryVideoProfit.Forms
                 this.Invoke((Action)(() => {
 
 
+                    _YoutubeShortStoryVideoScripts = JsonConvert.DeserializeObject<YoutubeShortStoryVideoViewModel>(GenerateShortVideoScript_TxtResult.Text.Replace("```json", "").Replace("```", ""));
 
                     var request = new MainApiProxy.ViewModels.YoutubeShortVideoScriptNarrationRequest
                     {
@@ -442,31 +446,116 @@ namespace AZStoryVideoProfit.Forms
                     Task.Run(() => {
 
 
-
-
                         SetProcessStatus(true, "Process Generate Short Video Script Narration...");
 
                         //var response = YoutubeProxy.Instance.YoutubeShortVideoScriptNarration(request);
-                        //this.Invoke(new Action(() => {
+                        //this.Invoke(new Action(() =>
+                        //{
 
                         //    GenerateShortVideoScript_TxtScriptNarration.Text = response.Data;
 
                         //}));
 
 
+                        
+                        //1.Sections
 
-                        var audioLines = ExtractAudioLines(request.shorts_script);
-                        int count = 1;
-                        foreach (var line in audioLines)
+                        int totalScenes = _YoutubeShortStoryVideoScripts.Sections.SelectMany(x => x.Scenes).SelectMany(x=> x.TextOverlays).Count();
+                        int sceneNumber = 1;
+                        foreach (var section in _YoutubeShortStoryVideoScripts.Sections)
                         {
-                            var audioLine = new AudioLineTextItem();
-                            audioLine.Id = count;
-                            audioLine.AudioLine = line;                            
-                            AddAudioLineTextItemToListView(audioLine, count, lvAudioLines);
-                            count++;
 
-                            _AudioLineTextItems.Add(audioLine);
+                            //2.Scenes
+                            
+                            foreach (var scene in section.Scenes)
+                            {
+                                //3.TextOverlay
+                                foreach (var textOverlay in scene.TextOverlays)
+                                {
+
+                                    this.Invoke(new Action(() =>
+                                    {
+                                        var visualDesc = scene.VisualInstructions.FirstOrDefault(x => x.Id == textOverlay.VisualId);
+                                        var voiceOver = scene.AudioVoiceover.FirstOrDefault(x => x.VisualId == textOverlay.VisualId);
+
+                                        string prompt = $"Create a vertical (9:16) image for YouTube Shorts video.\n" +
+                                         $"Scene {sceneNumber} of {totalScenes}:\n" +
+                                         $"Visual Description: {visualDesc.Description}\n" +
+                                         $"Context: {voiceOver.Description}\n" +
+
+                                         "Style Requirements:\n" +
+                                         "- High contrast and vibrant colors for better mobile viewing\n" +
+                                         "- Clear focal point in the center for vertical format\n" +
+                                         "- Professional quality, cinematic lighting\n" +
+                                         "- Text-safe areas on top and bottom\n" +
+                                         "- Visually distinct from other scenes\n" +
+                                         "- Modern, engaging composition\n" +
+                                         $"- Text Overlays \"{textOverlay.Description}\" \n" +
+                                         $"- Suitable for {GenerateShortVideoScript_ContentTypes.SelectedValue} style content\n" +
+
+                                         "Technical Requirements:\n" +
+                                         "- Vertical 9:16 aspect ratio\n" +
+                                         "- High resolution, sharp details\n" +
+                                         "- No text or watermarks\n" +
+                                         "- No blurry or low-quality elements";
+
+
+                                        var sceneLine = new SceneLineTextItem
+                                        {
+                                            Id = sceneNumber,
+                                            SceneImagePrompt = prompt,
+                                            Status = "Draft"
+                                        };
+
+                                        _SceneLineTextItems.Add(sceneLine);
+                                        sceneNumber++;
+
+                                    }));
+
+                                 
+
+                                }
+
+                                
+
+
+                            }
+
+
                         }
+
+                        //var audioLines = ExtractAudioLines(request.shorts_script);
+                        //int count = 1;
+                        //foreach (var line in audioLines)
+                        //{
+                        //    var audioLine = new AudioLineTextItem();
+                        //    audioLine.Id = count;
+                        //    audioLine.AudioLine = line;                            
+                        //    AddAudioLineTextItemToListView(audioLine, count, lvAudioLines);
+                        //    count++;
+
+                        //    _AudioLineTextItems.Add(audioLine);
+                        //}
+
+
+
+                        foreach (var line in _SceneLineTextItems)
+                        {
+                           
+                            AddSceneLineTextItemToListView(line, line.Id, lvSceneLines);
+                           
+
+                            
+                        }
+
+
+
+
+
+
+
+
+
 
 
                         SetProcessStatus(false, "");
@@ -484,13 +573,14 @@ namespace AZStoryVideoProfit.Forms
 
 
 
-        private void AddAudioLineTextItemToListView(AudioLineTextItem audioLineTextItem, int count, ListView lv)
+        private void AddSceneLineTextItemToListView(SceneLineTextItem sceneLineTextItem, int count, ListView lv)
         {
             this.Invoke(new Action(() => {
                 ListViewItem itemAdd = new ListViewItem();
                 itemAdd.Text = count.ToString();
                 itemAdd.Tag = count.ToString();
-                itemAdd.SubItems.Add(audioLineTextItem.AudioLine);                
+                itemAdd.SubItems.Add(sceneLineTextItem.SceneImagePrompt);
+                itemAdd.SubItems.Add(sceneLineTextItem.Status);
                 lv.Items.Add(itemAdd);                
 
             }));
@@ -548,12 +638,28 @@ namespace AZStoryVideoProfit.Forms
             return audioLines;
         }
 
+        private void lvSceneLines_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvSceneLines.SelectedItems.Count > 0)
+            {
+                int _Id = Convert.ToInt32(lvSceneLines.SelectedItems[0].Tag);
+                var item = _SceneLineTextItems.FirstOrDefault(x => x.Id == _Id);
+                GenerateShortVideoScript_TxtLogs.Text = item.SceneImagePrompt;
+            }
+       }
     }
 
     public class AudioLineTextItem
     {
         public int Id { get; set; }
         public string AudioLine { get; set; }
+        public string Status { get; set; } = "";
+    }
+
+    public class SceneLineTextItem
+    {
+        public int Id { get; set; }
+        public string SceneImagePrompt { get; set; }
         public string Status { get; set; } = "";
     }
 
