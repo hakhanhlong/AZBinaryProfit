@@ -144,7 +144,9 @@
     <Compile Include="Helpers\ChunkTextHelper.cs" />
     <Compile Include="Helpers\FFMPEGHelper.cs" />
     <Compile Include="Helpers\GoogleGeminiHelper.cs" />
+    <Compile Include="Helpers\ImageConverterHelper.cs" />
     <Compile Include="Helpers\MediaInfoHelper.cs" />
+    <Compile Include="Helpers\StoryVideoCreationHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\TextSanitizerHelper.cs" />
     <Compile Include="Helpers\TimeFormatterHelper.cs" />

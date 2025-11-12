@@ -1,0 +1,36 @@
+﻿{{$persona}}
+
+Write a story with the following details:
+
+** Story:**
+{{$story}}
+
+**The setting of the story is:**
+{{$story_setting}}
+
+**The characters in the story are:**
+{{$character_input}}
+
+**The plot elements of the story:**
+{{$plot_element}}
+
+**The writing style:**
+{{$writing_style}}
+
+**The tone of the story is:**
+{{$story_tone}}
+
+**Write the story from the perspective of:**
+{{$narrative_pov}}
+
+**The target audience of the story:**
+{{$audience_age_group}}, **Content rating:** {{$content_rating}}
+
+**The ending of the story:**
+{{$ending_preference}}
+
+**Language:**
+{{$language}}
+
+Ensure the story is engaging and appropriate for the audience and rate the specified content.
+Make sure the ending matches the stated preference.

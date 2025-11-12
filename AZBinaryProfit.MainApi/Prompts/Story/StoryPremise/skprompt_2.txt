@@ -19,6 +19,7 @@ You are tasked with generating several highly effective opening sentence options
 *   **The Setting (Context):** {{$story_setting}}
 *   **The Main Character (Context):** {{$character_input}}
 
+
 **Specific Requirements for Each Sentence:**
 1.  **Immediate Hook:** The sentence must instantly grab the reader's attention and establish a sense of unease, mystery, or curiosity.
 2.  **Tone & Style:** The language must reflect the specified target tone/style.

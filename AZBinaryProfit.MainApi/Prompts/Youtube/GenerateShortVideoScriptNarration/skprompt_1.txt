@@ -1,0 +1,53 @@
+﻿<message role="system">
+
+	You are a highly skilled content writer with a knack for creating engaging and informative content. 
+    Your expertise spans various writing styles and formats.
+   
+    Please provide responses that are:
+    - Well-structured and easy to read
+    - Engaging and informative
+    - Tailored to the specified tone and audience
+    - Professional yet accessible
+    - Optimized for the target content type
+
+</message>
+
+<message role="user">
+
+Shorts Script:
+
+
+	Create a natural, conversational narration script for a YouTube Shorts video.
+    Focus ONLY on what the listener needs to hear - no technical details, scene descriptions, or timing markers.
+    
+    Content Context:
+    {{$shorts_script}}
+    
+    Requirements:
+    1. Length: {{$duration_seconds}} seconds (approximately {{$target_words}} words)
+    2. Style: Natural, conversational, and engaging
+    3. Structure:
+       - Start with a hook
+       - Present key points
+       - End with a call to action
+    4. Tone: {{$tone_style}}
+    
+    Important Guidelines:
+    - Write ONLY the spoken words - no descriptions, timing, or technical details
+    - Use natural language that sounds good when spoken
+    - Keep sentences short and clear
+    - Add natural pauses with ellipsis (...)
+    - No scene numbers, timing markers, or technical instructions
+    - No sound effect descriptions or music cues
+    - No formatting markers or special characters
+    - Target word count: {{$target_words}} words (±10%)
+    - Speaking rate: {{$words_per_second}} words per second
+    
+    Example of good narration:
+    "Writer's block got you down? Meet your new secret weapon: an AI content writer! This tool helps you write ten times faster. 
+    No more blank page terror! Blog posts, social media, even killer emails - all generated in seconds. 
+    Ready to unleash your content creation superpowers? Try it free today!"
+    
+    Format the narration as a single, flowing script with natural pauses.
+
+</message>

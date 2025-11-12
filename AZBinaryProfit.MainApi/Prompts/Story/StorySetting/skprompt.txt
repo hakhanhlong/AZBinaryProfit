@@ -1,36 +1,41 @@
 ﻿{{$persona}}
 
-Write a story with the following details:
+Write a complete and engaging short story based on the following detailed specifications. Adherence to all parameters is **MANDATORY**.
 
-** Story:**
-{{$story}}
+**1. CREATIVE FOUNDATION:**
 
-**The setting of the story is:**
-{{$story_setting}}
+*   **Story Idea/Synopsis:**
+    {{$story}}
+*   **The Setting (Time, Place, Atmosphere):**
+    {{$story_setting}}
+*   **Core Conflict:**
+    {{$core_conflict}} (The central struggle, e.g., Man vs. Nature, Internal Doubt, Social Injustice)
+*   **Thematic Statement:**
+    {{$thematic_statement}} (The core message or moral the story explores, e.g., "The true cost of power is isolation.")
 
-**The characters in the story are:**
-{{$character_input}}
+**2. NARRATIVE PARAMETERS:**
 
-**The plot elements of the story:**
-{{$plot_element}}
+*   **The Characters (Detailed Descriptions):**
+    {{$character_input}}
+*   **The Plot Elements (Key Events to Be Included):**
+    {{$plot_element}}
+*   **Narrative POV:**
+    {{$narrative_pov}} (e.g., First Person, Third Person Limited, Third Person Omniscient)
 
-**The writing style:**
-{{$writing_style}}
+**3. STYLISTIC & AUDIENCE GUIDELINES:**
 
-**The tone of the story is:**
-{{$story_tone}}
+*   **Writing Style:**
+    {{$writing_style}} (e.g., Literary, Journalistic, Fast-paced Action, Magical Realism)
+*   **Story Tone:**
+    {{$story_tone}} (e.g., Melancholic, Uplifting, Cynical, Tense and Suspenseful)
+*   **Target Audience:**
+    {{$audience_age_group}}, **Content Rating:** {{$content_rating}} (The story must be appropriate for this level)
+*   **Language:**
+    {{$language}}
 
-**Write the story from the perspective of:**
-{{$narrative_pov}}
+**4. CONCLUSION MANDATE:**
 
-**The target audience of the story:**
-{{$audience_age_group}}, **Content rating:** {{$content_rating}}
+*   **The Ending Preference:**
+    {{$ending_preference}} (e.g., Triumphant, Tragic, Ambiguous, Twist Ending)
 
-**The ending of the story:**
-{{$ending_preference}}
-
-**Language:**
-{{$language}}
-
-Ensure the story is engaging and appropriate for the audience and rate the specified content.
-Make sure the ending matches the stated preference.
+The story should be detailed, immersive, and must organically incorporate all plot elements while adhering to the specified style, tone, and final conclusion.

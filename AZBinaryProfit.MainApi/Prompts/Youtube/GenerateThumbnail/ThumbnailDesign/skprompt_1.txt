@@ -1,0 +1,16 @@
+﻿Create a YouTube thumbnail image with the following specifications:    
+Concept: {{$concept_description}}
+Thumbnail Style: {{$style_preference}}
+Aspect Ratio: {{$aspect_ratio}}
+Image Style: {{$image_style}}
+Image Focus: {{$image_focus}}
+Text Style: {{$text_style}}
+    
+The image should be:
+- High contrast and visually striking
+- Suitable for a YouTube thumbnail
+- Include the specified visual elements and text
+- Follow the color scheme described
+- Optimized for small display sizes
+    
+Make sure the text is large and readable, and the main subject is centered and prominent.

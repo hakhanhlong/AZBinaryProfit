@@ -448,16 +448,16 @@ namespace AZStoryVideoProfit.Forms
 
                         SetProcessStatus(true, "Process Generate Short Video Script Narration...");
 
-                        //var response = YoutubeProxy.Instance.YoutubeShortVideoScriptNarration(request);
-                        //this.Invoke(new Action(() =>
-                        //{
+                        var response = YoutubeProxy.Instance.YoutubeShortVideoScriptNarration(request);
+                        this.Invoke(new Action(() =>
+                        {
 
-                        //    GenerateShortVideoScript_TxtScriptNarration.Text = response.Data;
+                            GenerateShortVideoScript_TxtScriptNarration.Text = response.Data;
 
-                        //}));
+                        }));
 
 
-                        
+
                         //1.Sections
 
                         int totalScenes = _YoutubeShortStoryVideoScripts.Sections.SelectMany(x => x.Scenes).SelectMany(x=> x.TextOverlays).Count();

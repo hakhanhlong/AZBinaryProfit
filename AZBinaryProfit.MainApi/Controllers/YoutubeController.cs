@@ -466,6 +466,7 @@ namespace AZBinaryProfit.MainApi.Controllers
                 ["primary_keywords"] = request.UseCase,
                 ["secondary_keywords"] = request.UseCase,
                 ["seo_goals"] = request.UseCase,
+                ["timecode_status"] = "YES"
             };
 
             // Querying the prompt function
@@ -525,7 +526,8 @@ namespace AZBinaryProfit.MainApi.Controllers
                 ["video_description"] = request.VideoDescription,
                 ["target_audience"] = request.TargetAudience,
                 ["content_type"] = request.ContentType,
-                ["style_preference"] = request.Style_Preference,                
+                ["style_preference"] = request.Style_Preference,
+                ["host_element"] = "YES"
             };
 
             // Querying the prompt function

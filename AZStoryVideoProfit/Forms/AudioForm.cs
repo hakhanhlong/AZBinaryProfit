@@ -242,7 +242,7 @@ namespace AZStoryVideoProfit.Forms
                         
 
 
-                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyA3bUX30qoxazBwYOMQ7rg2zO68iFy_3dw");
+                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText);
 
                         dynamic dynamicObject = JsonConvert.DeserializeObject<dynamic>(responseAudio);
 
@@ -344,10 +344,8 @@ namespace AZStoryVideoProfit.Forms
                         SetProcessStatus(true, "Process Audio Generate ...");
 
                         var item = _ChunkTexts.FirstOrDefault(x => x.Id == _Id);
-                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText, apiKey: "AIzaSyBvLmvOz_OUcWI2fVqwW56cCTy6ARQ-uNE");
-
+                        string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: item.ChunkText);
                         dynamic dynamicObject = JsonConvert.DeserializeObject<dynamic>(responseAudio);
-
                         try
                         {
 

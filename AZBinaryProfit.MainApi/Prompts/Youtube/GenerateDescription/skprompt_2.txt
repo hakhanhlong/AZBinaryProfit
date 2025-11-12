@@ -17,7 +17,8 @@
     **Content Context & Strategy:**
     *   **Target Audience:** {{$target_audience}} (e.g., Small Business Owners, Gen Z Gamers, Beginner Gardeners)
     *   **Tone and Style:** {{$tone_style}} (e.g., Casual, Professional, Hyper-Energetic, Deeply Reflective)
-    *   **Use Case (Content Goal):** {{$use_case}} (e.g., To drive sign-ups to a course, to increase views on related videos, to build brand authority)    
+    *   **Use Case (Content Goal):** {{$use_case}} (e.g., To drive sign-ups to a course, to increase views on related videos, to build brand authority)
+    *   **Primary Keywords to Target:** {{$primary_keywords}} (e.g., "AI marketing strategy," "best gaming headset," "winter gardening tips")
 
     **Description Structure & Elements:**
     1.  **The Hook (First 2-3 lines):** Must immediately engage the viewer and contain the most important primary keyword.

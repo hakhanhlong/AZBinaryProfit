@@ -13,7 +13,8 @@ namespace AZStoryVideoProfit.Helpers
 {
     public class GoogleGeminiHelper
     {
-        public static string GenerateText2Speech(string chunkText, string voiceName = "Kore", string modelName= "gemini-2.5-flash-preview-tts", string apiKey = "")
+        public static string GenerateText2Speech(string chunkText, string voiceName = "Kore", string modelName= "gemini-2.5-flash-preview-tts", 
+            string apiKey = "AIzaSyAobELdluKtCD8cN3Md7Mvsg0LibMLBU00")
         {
 
 
@@ -78,6 +79,57 @@ namespace AZStoryVideoProfit.Helpers
         }
 
 
+        public static string GenerateText2Image(string promptText, string modelName = "gemini-2.5-flash-image",
+           string apiKey = "AIzaSyAobELdluKtCD8cN3Md7Mvsg0LibMLBU00", string aspectRatio = "16:9")
+        {
 
+
+            var options = new RestClientOptions($"https://generativelanguage.googleapis.com")
+            {
+                ThrowOnAnyError = true,
+                Timeout = TimeSpan.FromSeconds(900) // 1 second
+            };
+            var client = new RestClient(options);
+
+
+            var request = new RestRequest($"/v1beta/models/{modelName}:generateContent?key={apiKey}", Method.Post);
+            request.AddHeader("Content-Type", "application/json");
+
+
+
+            var body = new Dictionary<string, object>
+            {
+                ["contents"] = new List<object>
+                {
+                    new {
+                            role = "user",
+                            parts = new List<object>{
+                                new {text = promptText}
+                            }
+                    }
+                },               
+                ["generationConfig"] = new
+                {
+                    responseModalities = new List<string>
+                    {
+                        "IMAGE",
+                        "TEXT"
+                    },
+                    imageConfig = new
+                    {
+                        aspectRatio = aspectRatio,
+                        image_size = "1K"
+                    }
+                }
+            };
+
+
+            string jsonRequest = JsonConvert.SerializeObject(body);
+            request.AddStringBody(jsonRequest, DataFormat.Json);
+
+            var response = client.Execute(request);
+
+            return response.Content;
+        }
     }
 }

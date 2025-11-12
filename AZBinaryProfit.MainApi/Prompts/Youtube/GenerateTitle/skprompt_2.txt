@@ -19,7 +19,9 @@
 
     *   **Target Audience:** {{$target_audience}} (e.g., Small Business Owners, Gen Z Gamers, Beginner Gardeners)
     *   **Tone and Style:** {{$tone_style}} (e.g., Shocking/Exaggerated, Educational/Expert, Casual/Vlog, Humorous)
-    *   **Use Case (Content Goal):** {{$use_case}} (e.g., To teach a skill, to debunk a myth, to entertain with a challenge)   
+    *   **Use Case (Content Goal):** {{$use_case}} (e.g., To teach a skill, to debunk a myth, to entertain with a challenge)
+    *   **Video Length:** {{$video_length}} (e.g., Short (Under 60s), Medium (5-10 min), Long (20+ min))
+    *   **Primary Keywords to Target:** {{$primary_keywords}} (e.g., "AI writing," "passive income," "elden ring build")
     *   **Desired Title Archetypes (Vary your options):** (e.g., Listicle [7 Ways...], How-To [How I Learned...], Shock/Reveal [I Can't Believe...])
 
     **Specific Title Optimization Guidelines:**

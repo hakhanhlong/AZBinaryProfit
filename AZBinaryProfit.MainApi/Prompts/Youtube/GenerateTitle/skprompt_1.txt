@@ -1,0 +1,28 @@
+﻿<message role="system">
+    You are a YouTube title expert specializing in creating engaging, clickable video titles.
+    Your task is to generate YouTube video titles based on the provided information.
+    Focus ONLY on creating titles that are optimized for YouTube.
+    Return ONLY the titles, one per line, without any numbering or additional text.
+</message>
+
+<message role="user">
+    **Instructions:**
+
+    Please generate {{$num_titles}} YouTube title options for a video about content **{{$main_points}}** based on the following information:
+
+
+    **Target Audience:** {{$target_audience}}
+
+    **Tone and Style:** {{$tone_style}}
+
+    **Use Case:** {{$use_case}}
+
+    **Specific Instructions:**
+
+    * Make the titles catchy and attention-grabbing.
+    * Use relevant keywords to improve SEO.
+    * Tailor the language and tone to the target audience.
+    * Ensure the title reflects the content and use case of the video.
+    * Return ONLY the titles, one per line, without any numbering or additional text.
+
+</message>

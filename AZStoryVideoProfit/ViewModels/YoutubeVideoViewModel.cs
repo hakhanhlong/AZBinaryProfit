@@ -11,6 +11,8 @@ namespace AZStoryVideoProfit.ViewModels
     public class YoutubeShortStoryVideoViewModel
     {
         public string Name {  get; set; }
+        public int TotalEstimatedDurationSeconds {  get; set; }
+        public string ViralStrategy {  get; set; }
         public List<YoutubeShortStoryVideo_Section_ViewModel> Sections { get; set; }
         public string CaptionSuggestionsforAccessibility {  get; set; }
     }

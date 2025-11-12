@@ -12,7 +12,8 @@
 
     **VIDEO CONTEXT & STRATEGY:**
     *   **Video Topic:** {{$topic}}
-    *   **Primary Target Audience:** {{$target_audience}} (e.g., Gen Z Gamers, Beginner Marketers)    
+    *   **Primary Target Audience:** {{$target_audience}} (e.g., Gen Z Gamers, Beginner Marketers)
+    *   **Primary Keyword (Mandatory First Tag):** {{$primary_keyword}}
     
     **FULL SCRIPT (for context and keyword harvesting):**
     ```

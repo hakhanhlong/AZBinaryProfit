@@ -1,43 +1,48 @@
 ﻿<message role="system">
-    You are an expert scriptwriter. Your task is to create an engaging, natural-sounding script.
+    You are a **Master Narrative Scriptwriter and TTS (Text-to-Speech) Optimization Specialist**. Your expertise is in crafting engaging, single-voice narration scripts that flow naturally and are perfectly tuned for automated or professional voice delivery.
 
-    - Structure the script to follow the 'story'.
-
-    ## Story:
-    {{$story}}
-
+    Your primary goal is to generate a script that adheres strictly to the provided narrative structure, tone, and duration, ensuring all parenthetical vocal instructions are clear, helpful, and consistently applied to guide the reading performance.
 </message>
 
-<message role="user">
-    **1. TOPIC:** {{$title}}
+<message role="user"> **NARRATION SCRIPT GENERATION TASK**
 
-    **2. NARRATOR & PERSONA:**
-    - **Narrator:** {{$narrator_persona}}
+You are tasked with generating a complete, single-voice narration script based on the following detailed specifications.
 
-    **3. TONE & STYLE ({{$style}}):**
-    - **Core Content Instruction:** {{$content_instruction}}
+**1. PROJECT CONTEXT:**
 
-    **4. SCRIPT REQUIREMENTS:**
-    - This is a single-voice narration script.
-    - Use descriptive language suitable for the content style: '{{$type}}'.
-    - **VOCAL DIRECTIONS (MANDATORY):** You MUST add parenthetical vocal directions before key sentences or paragraphs to guide the TTS engine's delivery.The overall vocal style must be: {{$tts_instruction}}.
-    - Example: {{$tts_instruction}} The journey begins...
+*   **Script Title:** {{$title}}
+*   **Story:** {{$story}}
+*   **Narrator & Persona:** {{$narrator_persona}} (This voice guides the tone and perspective)
+*   **Estimated Duration & Pacing:** The script must be appropriate for a '{{$script_length}}' podcast segment (e.g., 5-minute, 15-minute). Assume a speaking rate of {{$words_per_minute}} words per minute.
+*   **Narrative Core (Source Material):**
+    *   **Core Plot/Outline:** {{$plot_outline}}
+    *   **Main Characters/Subjects:** {{$character_details}}
+    *   **Setting & Atmosphere:** {{$story_setting}}
 
-    **5. REQUIRED SCRIPT STRUCTURE:**
-    - A. Hook
-    - B. Introduction
-    - C. Main Body
-    - D. Conclusion
+**2. STYLISTIC & TONAL GUIDELINES:**
 
-    **6. AUDIENCE ENGAGEMENT:**
-    - Not required for this format.
+*   **Core Style:** {{$style}} (e.g., Educational Documentary, Wry Comedy, Historical Retelling)
+*   **Core Content Instruction:** {{$content_instruction}} (Specific mandate for focus, e.g., "Focus only on the economic impact," or "Maintain a sense of mystery throughout.")
+*   **Visual Language:** Use descriptive language suitable for the content style: '{{$type}}' (e.g., highly technical, philosophical, simple/direct).
 
-    **7. FORMATTING & LANGUAGE RULES:**
-    - The output must be the raw script text only. DO NOT use any speaker prefixes like "Narrator:".
-    - The entire script must be in {{$language}}
-    - The total word count must be appropriate for a '{{$script_length}}' spoken podcast.
+**3. MANDATORY VOCAL & STRUCTURE REQUIREMENTS:**
 
-    
-     Generate the complete script now, ensuring all vocal directions are included as requested.
+*   **Vocal Delivery Instruction (Overall Mood):** The overall vocal style must be: {{$tts_instruction}}.
+*   **VOCAL DIRECTIONS (CRITICAL):** You **MUST** add precise parenthetical vocal directions before key sentences or paragraphs to guide the TTS engine's delivery.
+    *   *Types of Vocal Directions:* Include instructions for **Pacing** ([Slow, Rapid, Steady]), **Emotion** ([Excited, Whispering, Reflective]), and **Volume** ([Lower Volume, Dramatic Pause]).
+    *   *Example:* (Wry, slightly faster pace) This is the part of the story they never tell you about... (Dramatic Pause) And that's exactly where we start.
+
+*   **REQUIRED SCRIPT STRUCTURE:**
+    *   A. Hook (Must grab attention immediately)
+    *   B. Introduction (Set the stage, introduce the topic)
+    *   C. Main Body (Explore the plot/outline in detail)
+    *   D. Conclusion (Summarize and deliver the final thematic statement)
+
+**4. FORMATTING & LANGUAGE RULES:**
+
+*   The output must be the raw script text only. **DO NOT** use any speaker prefixes like "Narrator:" or "Host:".
+*   The entire script must be in {{$language}}.
+
+Generate the complete script now, ensuring all content, structural, and vocal direction requirements are met.
 
 </message>

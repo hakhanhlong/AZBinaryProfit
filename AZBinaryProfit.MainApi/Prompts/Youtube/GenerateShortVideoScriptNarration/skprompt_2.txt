@@ -25,6 +25,8 @@ Create a natural, conversational, and highly engaging narration script for a You
 1.  **Format:** Voice-over Narration (Spoken Words ONLY)
 2.  **Total Length:** {{$duration_seconds}} seconds (Targeting: {{$target_words}} words)
 3.  **Speaking Rate:** {{$words_per_second}} words per second
+4.  **Tone & Style:** {{$tone_style}} (e.g., Casual, Exciting, Wry/Sarcastic, Informative)
+5.  **Pacing/Rhythm:** {{$pacing_rhythm}} (e.g., Fast-paced/Punchy, Measured/Thoughtful, Build-up/Reveal)
     
 **Mandatory Structure:**
 -   **Hook:** Start with a question or shocking statement to grab attention immediately.

@@ -90,6 +90,7 @@
             this.columnSceneLine_Stt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnSceneLine_SceneImagePrompt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnSceneLine_Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.GenerateShortVideoScript_TxtLogs = new System.Windows.Forms.RichTextBox();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -187,7 +188,6 @@
             this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
             this.txtThumbnailImagePrompt_Result = new System.Windows.Forms.RichTextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.GenerateShortVideoScript_TxtLogs = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1073,6 +1073,18 @@
             // columnSceneLine_Status
             // 
             this.columnSceneLine_Status.Text = "Status";
+            // 
+            // GenerateShortVideoScript_TxtLogs
+            // 
+            this.GenerateShortVideoScript_TxtLogs.BackColor = System.Drawing.Color.Wheat;
+            this.GenerateShortVideoScript_TxtLogs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GenerateShortVideoScript_TxtLogs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_TxtLogs.Location = new System.Drawing.Point(0, 0);
+            this.GenerateShortVideoScript_TxtLogs.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.GenerateShortVideoScript_TxtLogs.Name = "GenerateShortVideoScript_TxtLogs";
+            this.GenerateShortVideoScript_TxtLogs.Size = new System.Drawing.Size(399, 567);
+            this.GenerateShortVideoScript_TxtLogs.TabIndex = 9;
+            this.GenerateShortVideoScript_TxtLogs.Text = "";
             // 
             // tabPage9
             // 
@@ -2307,18 +2319,6 @@
             this.label26.Size = new System.Drawing.Size(48, 15);
             this.label26.TabIndex = 1;
             this.label26.Text = "Results";
-            // 
-            // GenerateShortVideoScript_TxtLogs
-            // 
-            this.GenerateShortVideoScript_TxtLogs.BackColor = System.Drawing.Color.Wheat;
-            this.GenerateShortVideoScript_TxtLogs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GenerateShortVideoScript_TxtLogs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_TxtLogs.Location = new System.Drawing.Point(0, 0);
-            this.GenerateShortVideoScript_TxtLogs.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GenerateShortVideoScript_TxtLogs.Name = "GenerateShortVideoScript_TxtLogs";
-            this.GenerateShortVideoScript_TxtLogs.Size = new System.Drawing.Size(399, 567);
-            this.GenerateShortVideoScript_TxtLogs.TabIndex = 9;
-            this.GenerateShortVideoScript_TxtLogs.Text = "";
             // 
             // YoutubeForm
             // 

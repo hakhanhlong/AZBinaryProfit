@@ -127,6 +127,8 @@ Create a highly engaging YouTube Shorts script about the 'story' below, maximizi
 **Content Specifications:**
 - Hook Type: {{$hook_type}} - {{$hook_instructions}}
 - Content Type: {{$content_type}}
+- Script Tone: {{$script_tone}} (e.g., Comedic, Serious, Mysterious, Educational)
+- Pacing Style: {{$pacing_style}} (e.g., Extremely Fast Cuts (1-2s per scene), Build-Up/Reveal, Listicle Style)
 - Duration Maximum: {{$duration_seconds}} seconds
 - Language: English
 

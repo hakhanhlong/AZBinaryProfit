@@ -12,9 +12,12 @@ Generate a single, high-resolution image designed specifically as a YouTube thum
 *   **Image Focus (The Main Subject):** {{$image_focus}} (Specify the subject, its action, and the desired emotional expression, e.g., "A shocked person screaming directly into the camera," "A golden object floating in a void.")
 *   **Visual Hierarchy:** The main subject must be prominent, occupying the majority of the frame, with the background visually blurred or simple to ensure the subject **pops**.
 *   **Lighting & Depth:** Use dramatic, high-contrast lighting (e.g., hard shadows, rim lighting) and shallow depth of field to make the subject stand out.
+*   **Color Palette (Mandatory):** {{$color_palette}} (List the 2-3 main colors, e.g., "Neon Yellow, Deep Black, Crimson Red accents.")
 
 **3. TEXT & READABILITY:**
 *   **Text Content (Exact):** {{$text_content}} (The concise, high-impact text to overlay on the image.)
+*   **Text Style:** {{$text_style}} (e.g., Bold, Blocky sans-serif, Hand-drawn/Grungy, Outline/Shadow effect.)
+*   **Text Location & Visual Flow:** {{$text_location}} (Specify placement: e.g., "Large text angled from lower left to upper right," "Text contained within a colorful, distinct shape in the upper-right quadrant.")
 *   **Readability:** The text must be large, high-contrast, and instantly readable even on the smallest mobile phone display.
 
 **MANDATORY OUTPUT REQUIREMENT:**
