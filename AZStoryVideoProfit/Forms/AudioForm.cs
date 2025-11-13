@@ -7,14 +7,24 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.InteropServices.ComTypes;
+using System.Runtime.Remoting.Contexts;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
+using System.Xml.Linq;
 
 namespace AZStoryVideoProfit.Forms
 {
@@ -59,19 +69,15 @@ namespace AZStoryVideoProfit.Forms
             AudioScript_Type.DataSource = AudioSetting.Instance.Data.Types;
             AudioScript_Type.DisplayMember = "Name";
             AudioScript_Type.ValueMember = "Description";
-
-
-
         }
-
         private void AudioForm_Load(object sender, EventArgs e)
         {
-
             string test = Setting.Instance.Data.RootAudioOutputPath;
             this.WindowState = FormWindowState.Maximized;
             InitData();
-
             _ChunkTexts = new List<ChunkTextItem>();
+
+          
         }
 
         private void btnAudioScript_Execute_Click(object sender, EventArgs e)

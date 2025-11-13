@@ -90,7 +90,6 @@
             this.columnSceneLine_Stt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnSceneLine_SceneImagePrompt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnSceneLine_Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.GenerateShortVideoScript_TxtLogs = new System.Windows.Forms.RichTextBox();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -188,6 +187,13 @@
             this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
             this.txtThumbnailImagePrompt_Result = new System.Windows.Forms.RichTextBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel46 = new System.Windows.Forms.TableLayoutPanel();
+            this.GenerateShortVideoScript_TxtSceneDetail = new System.Windows.Forms.RichTextBox();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.GenerateShortVideoScript_TxtLogs = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -284,6 +290,13 @@
             this.tableLayoutPanel29.SuspendLayout();
             this.tableLayoutPanel30.SuspendLayout();
             this.tableLayoutPanel31.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
+            this.splitContainer9.Panel1.SuspendLayout();
+            this.splitContainer9.Panel2.SuspendLayout();
+            this.splitContainer9.SuspendLayout();
+            this.tableLayoutPanel46.SuspendLayout();
+            this.tabControl5.SuspendLayout();
+            this.tabPage12.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -542,7 +555,7 @@
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(1222, 609);
             this.tabPage8.TabIndex = 0;
-            this.tabPage8.Text = "Short Script";
+            this.tabPage8.Text = "Short Story Video";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // splitContainer6
@@ -868,9 +881,9 @@
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(404, 4);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(34, 15);
+            this.label35.Size = new System.Drawing.Size(77, 15);
             this.label35.TabIndex = 3;
-            this.label35.Text = "Logs";
+            this.label35.Text = "Scene Detail";
             // 
             // label34
             // 
@@ -894,7 +907,7 @@
             // 
             // splitContainer7.Panel2
             // 
-            this.splitContainer7.Panel2.Controls.Add(this.GenerateShortVideoScript_TxtLogs);
+            this.splitContainer7.Panel2.Controls.Add(this.splitContainer9);
             this.splitContainer7.Size = new System.Drawing.Size(803, 567);
             this.splitContainer7.SplitterDistance = 400;
             this.splitContainer7.TabIndex = 8;
@@ -988,12 +1001,12 @@
             this.btnGenerateShortVideoScript_CreateNarration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateShortVideoScript_CreateNarration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateShortVideoScript_CreateNarration.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateShortVideoScript_CreateNarration.Location = new System.Drawing.Point(235, 186);
+            this.btnGenerateShortVideoScript_CreateNarration.Location = new System.Drawing.Point(134, 186);
             this.btnGenerateShortVideoScript_CreateNarration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGenerateShortVideoScript_CreateNarration.Name = "btnGenerateShortVideoScript_CreateNarration";
-            this.btnGenerateShortVideoScript_CreateNarration.Size = new System.Drawing.Size(147, 42);
+            this.btnGenerateShortVideoScript_CreateNarration.Size = new System.Drawing.Size(248, 42);
             this.btnGenerateShortVideoScript_CreateNarration.TabIndex = 7;
-            this.btnGenerateShortVideoScript_CreateNarration.Text = "Create Narration";
+            this.btnGenerateShortVideoScript_CreateNarration.Text = "Create Narration and Scene Lines";
             this.btnGenerateShortVideoScript_CreateNarration.UseVisualStyleBackColor = false;
             this.btnGenerateShortVideoScript_CreateNarration.Click += new System.EventHandler(this.btnGenerateShortVideoScript_CreateNarration_Click);
             // 
@@ -1073,18 +1086,6 @@
             // columnSceneLine_Status
             // 
             this.columnSceneLine_Status.Text = "Status";
-            // 
-            // GenerateShortVideoScript_TxtLogs
-            // 
-            this.GenerateShortVideoScript_TxtLogs.BackColor = System.Drawing.Color.Wheat;
-            this.GenerateShortVideoScript_TxtLogs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GenerateShortVideoScript_TxtLogs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GenerateShortVideoScript_TxtLogs.Location = new System.Drawing.Point(0, 0);
-            this.GenerateShortVideoScript_TxtLogs.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GenerateShortVideoScript_TxtLogs.Name = "GenerateShortVideoScript_TxtLogs";
-            this.GenerateShortVideoScript_TxtLogs.Size = new System.Drawing.Size(399, 567);
-            this.GenerateShortVideoScript_TxtLogs.TabIndex = 9;
-            this.GenerateShortVideoScript_TxtLogs.Text = "";
             // 
             // tabPage9
             // 
@@ -2320,6 +2321,94 @@
             this.label26.TabIndex = 1;
             this.label26.Text = "Results";
             // 
+            // splitContainer9
+            // 
+            this.splitContainer9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer9.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer9.Name = "splitContainer9";
+            this.splitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer9.Panel1
+            // 
+            this.splitContainer9.Panel1.Controls.Add(this.GenerateShortVideoScript_TxtSceneDetail);
+            // 
+            // splitContainer9.Panel2
+            // 
+            this.splitContainer9.Panel2.Controls.Add(this.tableLayoutPanel46);
+            this.splitContainer9.Size = new System.Drawing.Size(399, 567);
+            this.splitContainer9.SplitterDistance = 250;
+            this.splitContainer9.TabIndex = 0;
+            // 
+            // tableLayoutPanel46
+            // 
+            this.tableLayoutPanel46.ColumnCount = 1;
+            this.tableLayoutPanel46.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel46.Controls.Add(this.tabControl5, 0, 0);
+            this.tableLayoutPanel46.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel46.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel46.Name = "tableLayoutPanel46";
+            this.tableLayoutPanel46.RowCount = 2;
+            this.tableLayoutPanel46.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel46.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel46.Size = new System.Drawing.Size(399, 313);
+            this.tableLayoutPanel46.TabIndex = 0;
+            // 
+            // GenerateShortVideoScript_TxtSceneDetail
+            // 
+            this.GenerateShortVideoScript_TxtSceneDetail.BackColor = System.Drawing.Color.Wheat;
+            this.GenerateShortVideoScript_TxtSceneDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GenerateShortVideoScript_TxtSceneDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_TxtSceneDetail.Location = new System.Drawing.Point(0, 0);
+            this.GenerateShortVideoScript_TxtSceneDetail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.GenerateShortVideoScript_TxtSceneDetail.Name = "GenerateShortVideoScript_TxtSceneDetail";
+            this.GenerateShortVideoScript_TxtSceneDetail.Size = new System.Drawing.Size(399, 250);
+            this.GenerateShortVideoScript_TxtSceneDetail.TabIndex = 11;
+            this.GenerateShortVideoScript_TxtSceneDetail.Text = "";
+            // 
+            // tabControl5
+            // 
+            this.tabControl5.Controls.Add(this.tabPage12);
+            this.tabControl5.Controls.Add(this.tabPage13);
+            this.tabControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl5.Location = new System.Drawing.Point(3, 3);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(393, 259);
+            this.tabControl5.TabIndex = 0;
+            // 
+            // tabPage12
+            // 
+            this.tabPage12.Controls.Add(this.GenerateShortVideoScript_TxtLogs);
+            this.tabPage12.Location = new System.Drawing.Point(4, 24);
+            this.tabPage12.Name = "tabPage12";
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage12.Size = new System.Drawing.Size(385, 231);
+            this.tabPage12.TabIndex = 0;
+            this.tabPage12.Text = "Logs";
+            this.tabPage12.UseVisualStyleBackColor = true;
+            // 
+            // tabPage13
+            // 
+            this.tabPage13.Location = new System.Drawing.Point(4, 24);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage13.Size = new System.Drawing.Size(385, 231);
+            this.tabPage13.TabIndex = 1;
+            this.tabPage13.Text = "tabPage13";
+            this.tabPage13.UseVisualStyleBackColor = true;
+            // 
+            // GenerateShortVideoScript_TxtLogs
+            // 
+            this.GenerateShortVideoScript_TxtLogs.BackColor = System.Drawing.Color.Wheat;
+            this.GenerateShortVideoScript_TxtLogs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GenerateShortVideoScript_TxtLogs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GenerateShortVideoScript_TxtLogs.Location = new System.Drawing.Point(3, 3);
+            this.GenerateShortVideoScript_TxtLogs.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.GenerateShortVideoScript_TxtLogs.Name = "GenerateShortVideoScript_TxtLogs";
+            this.GenerateShortVideoScript_TxtLogs.Size = new System.Drawing.Size(379, 225);
+            this.GenerateShortVideoScript_TxtLogs.TabIndex = 12;
+            this.GenerateShortVideoScript_TxtLogs.Text = "";
+            // 
             // YoutubeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2465,6 +2554,13 @@
             this.tableLayoutPanel30.PerformLayout();
             this.tableLayoutPanel31.ResumeLayout(false);
             this.tableLayoutPanel31.PerformLayout();
+            this.splitContainer9.Panel1.ResumeLayout(false);
+            this.splitContainer9.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
+            this.splitContainer9.ResumeLayout(false);
+            this.tableLayoutPanel46.ResumeLayout(false);
+            this.tabControl5.ResumeLayout(false);
+            this.tabPage12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2630,6 +2726,12 @@
         private System.Windows.Forms.ColumnHeader columnSceneLine_Stt;
         private System.Windows.Forms.ColumnHeader columnSceneLine_SceneImagePrompt;
         private System.Windows.Forms.ColumnHeader columnSceneLine_Status;
+        private System.Windows.Forms.SplitContainer splitContainer9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel46;
+        private System.Windows.Forms.RichTextBox GenerateShortVideoScript_TxtSceneDetail;
+        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabPage tabPage12;
+        private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.RichTextBox GenerateShortVideoScript_TxtLogs;
     }
 }

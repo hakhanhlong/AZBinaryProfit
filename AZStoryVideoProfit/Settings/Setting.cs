@@ -66,12 +66,14 @@ namespace AZStoryVideoProfit.Settings
     public class SettingViewModel
     {
         public string RootAudioOutputPath {  get; set; }
-        
+        public string RootShortStoryVideoOutputPath { get; set; }
+
 
     }
 
     public class SettingItemViewModel
     {
         public string RootAudioOutputPath { get; set; }        
+        
     }
 }

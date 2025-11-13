@@ -21,7 +21,7 @@ namespace AZStoryVideoProfit.Helpers
         private string _tempDir;
         private string _ffmpegPath; // Path to ffmpeg.exe
 
-        public StoryVideoCreationHelper(string tempDirectory = null, string ffmpegExecutablePath = "ffmpeg.exe")
+        public StoryVideoCreationHelper(string tempDirectory = null, string ffmpegExecutablePath = "ffmpeg")
         {
             _tempDir = tempDirectory ?? Path.Combine(Path.GetTempPath(), "VideoCreatorTemp");
             _ffmpegPath = ffmpegExecutablePath;
@@ -32,10 +32,10 @@ namespace AZStoryVideoProfit.Helpers
             }
 
             // Verify ffmpeg exists
-            if (!File.Exists(_ffmpegPath) && !IsFfmpegInPath())
-            {
-                throw new FileNotFoundException($"FFmpeg executable not found at '{_ffmpegPath}' or in system PATH. Please ensure ffmpeg is installed and accessible.");
-            }
+            //if (!File.Exists(_ffmpegPath) && !IsFfmpegInPath())
+            //{
+            //    throw new FileNotFoundException($"FFmpeg executable not found at '{_ffmpegPath}' or in system PATH. Please ensure ffmpeg is installed and accessible.");
+            //}
         }
 
         // Helper to check if ffmpeg is in the system's PATH
@@ -130,6 +130,7 @@ namespace AZStoryVideoProfit.Helpers
                 Size? targetSize = null;
                 Console.WriteLine("Loading and processing images for video...");
 
+                int numbers = 0;
                 // Process images: ensure consistent size and save as a sequence
                 for (int i = 0; i < imagePaths.Count; i++)
                 {
@@ -154,8 +155,14 @@ namespace AZStoryVideoProfit.Helpers
 
                             // Save images to a sequential format FFmpeg can understand
                             // %05d means 5 digits, padded with zeros (e.g., 00001.png)
-                            string seqImagePath = Path.Combine(tempImageSequenceDir, $"img_{i:D5}.png");
-                            processedImage.Save(seqImagePath, ImageFormat.Png);
+
+                            for (int z = 0; z < durationPerImage * fps; z++) {
+                                string seqImagePath = Path.Combine(tempImageSequenceDir, $"img_{numbers:D5}.png");
+                                processedImage.Save(seqImagePath, ImageFormat.Png);
+                                numbers++;
+                            }
+
+                           
                         }
                     }
                     catch (Exception imgErr)
@@ -194,7 +201,8 @@ namespace AZStoryVideoProfit.Helpers
                 if (hasAudio)
                 {
                     // FFprobe to get audio duration to correctly loop/trim
-                    double audioDuration = GetMediaDuration(audioPath);
+                    //double audioDuration = GetMediaDuration(audioPath);
+                    double audioDuration = MediaInfoHelper.GetDuration(audioPath);
                     if (audioDuration <= 0)
                     {
                         Console.Error.WriteLine($"Could not determine duration for audio file '{audioPath}'. Proceeding without audio.");
@@ -212,7 +220,7 @@ namespace AZStoryVideoProfit.Helpers
                         ffmpegArgs.Add("-c:a");
                         ffmpegArgs.Add("aac"); // Audio codec
                         ffmpegArgs.Add("-b:a");
-                        ffmpegArgs.Add("192k"); // Audio bitrate
+                        ffmpegArgs.Add("128k"); // Audio bitrate
                         ffmpegArgs.Add("-vf");
                         ffmpegArgs.Add($"fps={fps},format=yuv420p"); // Ensure filter chain correctly applied
                         ffmpegArgs.Add("-shortest"); // Ensure video ends when shortest stream ends
@@ -281,7 +289,7 @@ namespace AZStoryVideoProfit.Helpers
                 {
                     try
                     {
-                        Directory.Delete(tempImageSequenceDir, true);
+                        //Directory.Delete(tempImageSequenceDir, true);
                         Console.WriteLine($"Cleaned up temporary image directory: {tempImageSequenceDir}");
                     }
                     catch (Exception ex)

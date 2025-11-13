@@ -190,7 +190,7 @@ namespace AZBinaryProfit.MainApi.Controllers
             //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
             var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
 
-            float Words_Per_Second = 2.5f;
+            float Words_Per_Second = 3.5f;
             float Narration_Padding = 0.5f;
 
             int Target_Words = (int)((Convert.ToInt32(request.duration_seconds) - Narration_Padding) * Words_Per_Second);

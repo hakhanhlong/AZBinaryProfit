@@ -10,6 +10,45 @@ namespace AZStoryVideoProfit.Helpers
 {
     public class StringHelper
     {
+        public static string GetStringBetween(string Str, string Seq, string SeqEnd)
+        {
+            string Orgi = Str;
+            try
+            {
+                Str = Str.ToLower();
+                Seq = Seq.ToLower();
+
+                try
+                {
+                    SeqEnd = SeqEnd.ToLower();
+                }
+                catch
+                {
+
+                }
+
+
+                int i = Str.IndexOf(Seq);
+
+                if (i < 0)
+                    return "";
+
+                i = i + Seq.Length;
+
+                int j = string.IsNullOrEmpty(SeqEnd) ? Str.Length : Str.IndexOf(SeqEnd, i);
+                int end;
+
+                if (j > 0) end = j - i;
+                else end = Str.Length - i;
+
+                return Orgi.Substring(i, end);
+            }
+            catch (Exception)
+            {
+                return "";
+            }
+        }
+
         public static int CountWords(string s)
         {
             MatchCollection collection = Regex.Matches(s, @"[\S]+");
