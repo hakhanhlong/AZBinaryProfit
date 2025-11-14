@@ -28,5 +28,8 @@ namespace AZStoryVideoProfit.MainApiProxy.Interfaces
 
         YoutubeGenerateStoryVideoScriptResponseViewModel GenerateStoryVideoScript(YoutubeGenerateStoryVideoScriptRequestViewModel requestViewModel);
 
+
+        YoutubeStoryVideoScriptNarrationResponse YoutubeStoryVideoScriptNarration(YoutubeStoryVideoScriptNarrationRequest requestViewModel);
+
     }
 }

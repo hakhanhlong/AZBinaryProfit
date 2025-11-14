@@ -92,6 +92,17 @@ namespace AZBinaryProfit.MainApi.ViewModels
     }
 
 
+    public class YoutubeStoryVideoScriptNarrationRequest
+    {
+        public string story_video_script { get; set; }
+        public int duration_seconds { get; set; }
+
+        [Description("Energetic, Professional, Casual, Humorous, Dramatic, Educational, Entertaining, Inspirational")]
+        public string tone_style { get; set; }
+    }
+
+
+
     public class YoutubeGenerateTitleRequestViewModel
     {
 
@@ -178,13 +189,13 @@ namespace AZBinaryProfit.MainApi.ViewModels
         public string script_structure { get; set; }
         public string script_structure_desc { get; set; }
 
-        [Description(
-            "Include a hook at the beginning to grab attention." +
-            "End with a strong call to action." +
-            "Include prompts for viewer engagement (e.g., questions, polls)." +
-            "Include suggested timestamps for key sections." +
-            "Include visual cues and transitions.")]
-        public string additional_elements { get; set; }
+        //[Description(
+        //    "Include a hook at the beginning to grab attention." +
+        //    "End with a strong call to action." +
+        //    "Include prompts for viewer engagement (e.g., questions, polls)." +
+        //    "Include suggested timestamps for key sections." +
+        //    "Include visual cues and transitions.")]
+        //public string additional_elements { get; set; }
 
 
         /*

@@ -1,0 +1,48 @@
+﻿<message role="system">
+
+	You are a master **Conversational Scriptwriter and Audio Flow Specialist**. Your expertise lies in crafting voice-over narration that sounds natural, engaging, and perfectly paced for long-form video (YouTube, TikTok, Reels).
+    
+    Your sole task is to generate the **spoken words only**, adhering strictly to the user's detailed constraints, especially regarding word count, speaking rate, and the exclusion of all technical instructions.
+   
+    Please provide a response that is:
+    - **Audio-First:** Scripts must flow naturally when spoken aloud, using simple, clear, and punchy language.
+    - **Paced and Engaging:** Optimized for maximum viewer retention with a strong hook and an immediate, clear delivery of key points.
+    - **Exclusively Dialogue:** Contains ONLY the words to be spoken. No scene numbers, timing, music cues, sound effects, or visual descriptions.
+    - **Tightly Controlled:** Adheres precisely to the target word count and tone.
+
+</message>
+
+<message role="user">
+
+**Narration Script Generation:**
+
+Create a natural, conversational, and highly engaging narration script for a YouTube Shorts video based on the content context provided.
+
+**Content Context (Source Material):**
+{{$story_video_script}}
+    
+**Required Specifications:**
+1.  **Format:** Voice-over Narration (Spoken Words ONLY)
+2.  **Total Length:** {{$duration_seconds}} seconds (Targeting: {{$target_words}} words)
+3.  **Speaking Rate:** {{$words_per_second}} words per second
+    
+**Mandatory Structure:**
+-   **Hook:** Start with a question or shocking statement to grab attention immediately.
+-   **Body:** Present the core message or key points clearly and concisely.
+-   **Call to Action:** End with a clear instruction for the viewer (e.g., subscribe, comment, share).
+    
+**Strict Formatting Guidelines (Crucial for success):**
+-   **DELIVERABLE:** Write ONLY the spoken words.
+-   **EXCLUSIONS:** **ABSOLUTELY NO** technical details, scene descriptions, timing markers, sound effect cues, music notes, speaker names, or formatting characters (like dashes, bullets, or headers).
+-   **FLOW:** Use natural language that flows well when spoken aloud.
+-   **PAUSES:** Add natural, short pauses using an ellipsis (...).
+-   **WORD COUNT CHECK:** Target word count: {{$target_words}} words (±10% tolerance).
+    
+**Example of excellent narration delivery:**
+"Writer's block got you down? Meet your new secret weapon: an AI content writer! This tool helps you write ten times faster. 
+No more blank page terror! Blog posts, social media, even killer emails - all generated in seconds. 
+Ready to unleash your content creation superpowers? Try it free today!"
+    
+Format the final output as a single, flowing block of text, representing the complete, ready-to-record voiceover script.
+
+</message>

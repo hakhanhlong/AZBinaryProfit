@@ -25,6 +25,13 @@ namespace AZStoryVideoProfit.Forms
         List<string> _SceneImagePaths = new List<string>();
         YoutubeShortStoryVideoViewModel _YoutubeShortStoryVideoScripts = new YoutubeShortStoryVideoViewModel();
 
+
+
+
+        List<SceneLineTextItem> _StoryVideoSceneLineTextItems = new List<SceneLineTextItem>();
+        List<string> _StoryVideoSceneImagePaths = new List<string>();
+        YoutubeStoryVideoViewModel _YoutubeStoryVideoScripts = new YoutubeStoryVideoViewModel();
+
         public YoutubeForm()
         {
             InitializeComponent();
@@ -123,16 +130,7 @@ namespace AZStoryVideoProfit.Forms
 
 
 
-
-
-
-
-
-
-
-
-
-
+            
 
             GenerateStoryVideo_ToneStyles.DataSource = YoutubeSetting.Instance.Data.GenerateStoryVideo.ToneStyles;
             GenerateStoryVideo_ToneStyles.DisplayMember = "Name";
@@ -154,9 +152,21 @@ namespace AZStoryVideoProfit.Forms
             GenerateStoryVideo_CommunityInteractions.DisplayMember = "Name";
             GenerateStoryVideo_CommunityInteractions.ValueMember = "Description";
 
-            
+            GenerateStoryVideo_Language.DataSource = new List<object>
+            {
+                new {Name = "English", Description="English"},
+                new {Name = "Vietnamese", Description="Vietnamese"},
+            };
+            GenerateStoryVideo_Language.DisplayMember = "Name";
+            GenerateStoryVideo_Language.ValueMember = "Description";
 
 
+
+
+
+            GenerateStoryVideo_Narration_ToneStyles.DataSource = YoutubeSetting.Instance.Data.GenerateShortScript.ToneStyles;
+            GenerateStoryVideo_Narration_ToneStyles.DisplayMember = "Name";
+            GenerateStoryVideo_Narration_ToneStyles.ValueMember = "Description";
 
 
         }
@@ -734,6 +744,21 @@ namespace AZStoryVideoProfit.Forms
         }
 
 
+        private void AddStoryVideoSceneLineTextItemToListView(SceneLineTextItem sceneLineTextItem, int count, ListView lv)
+        {
+            this.Invoke(new Action(() => {
+                ListViewItem itemAdd = new ListViewItem();
+                itemAdd.Text = count.ToString();
+                itemAdd.Tag = count.ToString();
+                itemAdd.SubItems.Add(sceneLineTextItem.SceneImagePrompt);
+                itemAdd.SubItems.Add(sceneLineTextItem.Status);
+                lv.Items.Add(itemAdd);
+
+            }));
+
+        }
+
+
         public List<string> ExtractAudioLines(string script)
         {
             // Equivalent to: scenes = re.split(r'\n\n+', script)
@@ -809,7 +834,7 @@ namespace AZStoryVideoProfit.Forms
                         target_audience = GenerateStoryVideo_TxtTargetAudiences.Text,
                         tone_style = GenerateStoryVideo_ToneStyles.SelectedValue.ToString(),
                         use_case = GenerateStoryVideo_Usecases.SelectedValue.ToString(),
-                        script_structure = GenerateStoryVideo_ScriptStructures.SelectedText.ToString(),
+                        script_structure = ((YoutubeGenerateStoryVideo_BaseViewModel)GenerateStoryVideo_ScriptStructures.SelectedItem).Name,
                         script_structure_desc = GenerateStoryVideo_ScriptStructures.SelectedValue.ToString(),
                         hooks = GenerateStoryVideo_Hooks.SelectedValue.ToString(),
                         community_interactions = GenerateStoryVideo_CommunityInteractions.SelectedValue.ToString(),
@@ -818,6 +843,7 @@ namespace AZStoryVideoProfit.Forms
                         include_engagement = GenerateStoryVideo_IncludeEngagement.Checked,
                         include_timestamps = GenerateStoryVideo_IncludeTimestamp.Checked,
                         include_visual_cues = GenerateStoryVideo_IncludeVisualCue.Checked,
+                        language = GenerateStoryVideo_Language.SelectedValue.ToString(),
                         
                     };
 
@@ -848,6 +874,129 @@ namespace AZStoryVideoProfit.Forms
             }
             catch
             { SetProcessStatus(false, ""); }
+        }
+
+        private void btnGenerateStoryVideo_CreateNarration_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Invoke((Action)(() => {
+
+
+                    _YoutubeStoryVideoScripts = JsonConvert.DeserializeObject<YoutubeStoryVideoViewModel>(GenerateStoryVideo_TxtScriptResult.Text.Replace("```json", "").Replace("```", ""));
+
+                    var request = new MainApiProxy.ViewModels.YoutubeStoryVideoScriptNarrationRequest
+                    {
+                        duration_seconds = (int)GenerateStoryVideo_DurationPerSeconds.Value,
+                        story_video_script = GenerateStoryVideo_TxtScriptResult.Text,
+                        tone_style = GenerateStoryVideo_Narration_ToneStyles.SelectedValue.ToString()
+                    };
+
+
+                    Task.Run(() => {
+
+
+                        SetProcessStatus(true, "Process Generate Story Video Script Narration...");
+
+                        var response = YoutubeProxy.Instance.YoutubeStoryVideoScriptNarration(request);
+                        this.Invoke(new Action(() =>
+                        {
+                            GenerateStoryVideo_TxtNarrationText.Text = response.Data;
+
+                        }));
+
+
+
+                        //1.Sections
+
+                        int totalScenes = _YoutubeStoryVideoScripts.Sections.SelectMany(x => x.Scenes).SelectMany(x => x.TextOverlays).Count();
+                        int sceneNumber = 1;
+                        foreach (var section in _YoutubeStoryVideoScripts.Sections)
+                        {
+
+                            //2.Scenes
+
+                            foreach (var scene in section.Scenes)
+                            {
+                                //3.TextOverlay
+                                foreach (var textOverlay in scene.TextOverlays)
+                                {
+
+                                    this.Invoke(new Action(() =>
+                                    {
+                                        var visualDesc = scene.VisualInstructions.FirstOrDefault(x => x.Id == textOverlay.VisualId);
+                                        var voiceOver = scene.AudioVoiceover.FirstOrDefault(x => x.VisualId == textOverlay.VisualId);
+
+                                        string prompt = $"Create a vertical (9:16) image for YouTube Shorts video.\n" +
+                                         $"Scene {sceneNumber} of {totalScenes}:\n" +
+                                         $"Visual Description: {visualDesc.Description}\n" +
+                                         $"Context: {voiceOver.Description}\n" +
+
+                                         "Style Requirements:\n" +
+                                         "- High contrast and vibrant colors for better mobile viewing\n" +
+                                         "- Clear focal point in the center for vertical format\n" +
+                                         "- Professional quality, cinematic lighting\n" +
+                                         "- Text-safe areas on top and bottom\n" +
+                                         "- Visually distinct from other scenes\n" +
+                                         "- Modern, engaging composition\n" +
+                                         $"- Text Overlays \"{textOverlay.Description}\" \n" +
+                                         //$"- Suitable for {GenerateShortVideoScript_ContentTypes.SelectedValue} style content\n" +
+                                         $"- Character must consistent\n" +
+
+                                         "Technical Requirements:\n" +
+                                         "- Vertical 9:16 aspect ratio\n" +
+                                         "- High resolution, sharp details\n" +
+                                         "- No text or watermarks\n" +
+                                         "- No blurry or low-quality elements";
+
+
+                                        var sceneLine = new SceneLineTextItem
+                                        {
+                                            Id = sceneNumber,
+                                            SceneImagePrompt = prompt,
+                                            Status = "Draft"
+                                        };
+
+                                        _StoryVideoSceneLineTextItems.Add(sceneLine);
+                                        sceneNumber++;
+
+                                    }));
+
+                                }
+
+                            }
+                        }
+
+                        foreach (var line in _StoryVideoSceneLineTextItems)
+                        {
+                            AddStoryVideoSceneLineTextItemToListView(line, line.Id, lvStoryVideoSceneLine);
+                        }
+
+
+
+
+                        
+
+
+
+
+
+
+
+
+                        SetProcessStatus(false, "");
+                    });
+
+                }));
+
+
+
+
+            }
+            catch
+            { SetProcessStatus(false, ""); }
+
+
         }
     }
 

@@ -119,6 +119,9 @@
     <None Update="Prompts\Youtube\GenerateShortVideoScript\skprompt.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Prompts\Youtube\GenerateStoryVideoScriptNarration\skprompt.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Prompts\Youtube\GenerateStoryVideoScript\skprompt.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

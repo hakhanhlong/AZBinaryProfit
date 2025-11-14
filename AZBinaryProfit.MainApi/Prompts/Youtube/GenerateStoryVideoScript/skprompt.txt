@@ -14,6 +14,125 @@
     
     Write the entire script in {{$language}}.
 
+    **FINAL ULTIMATE PROMPT STRUCTURE (MUST BE FOLLOWED) JSON objects:**
+    ```json
+    {
+        "Name": "The Harmony of Echoes", 
+        "TotalEstimatedDurationSeconds": 58,  // New field to check total time
+        "ViralStrategy": "Use a curiosity gap hook, then a rapid-fire list reveal.", // New field for AI to define its strategy
+        "Sections": [
+            {
+                "Name":"1. HOOK (0-2 seconds)",
+                "Scenes":[
+                    {   "Characters":[
+                            {
+                                "id": "character_id",
+                                "character": ""
+                            }
+                        ],
+                        "VisualInstructions":[
+                            {
+                                "id":"visual_id_1",
+                                "description":"Extreme close-up: A shocking image or a rapid sequence of 3 different images. Vertical framing."
+                            }                            
+                        ],
+                        "TextOverlays":[
+                            {
+                                "visualid":"visual_id_1",
+                                "timing":"0-2s",
+                                "description":"The 1 Thing Hollywood Doesn't Tell You (Bold, White Text on Black Background)"
+                            }                           
+                        ],
+                        "AudioVoiceover":[
+                            {
+                                "visualid":"visual_id_1",
+                                "timing":"0-2s",
+                                "description":"Loud, dramatic sound effect (e.g., *WHIP CRACK* or *GASP*)."
+                            }                            
+                        ],
+                        "Timing":"2 seconds",
+                        "CameraAnglesFramingNotes":"High-energy, fast cuts, centered vertical composition for text."
+                    }
+                ]                
+            },
+            {
+                "Name":"2. MAIN CONTENT (2-50 seconds)",
+                "Scenes":[
+                   {
+                        "Characters":[
+                            {
+                                "id": "character_id",
+                                "character": ""
+                            }
+                        ],
+                        "VisualInstructions":[
+                            {
+                                "id":"visual_id_2",
+                                "description":"Rapid scene change: Host talking directly to camera, then a cut to B-roll showing a related object/action."
+                            }                            
+                        ],
+                        "TextOverlays":[
+                            {
+                                "visualid":"visual_id_2",
+                                "timing":"2-5s",
+                                "description":"*PATTERN INTERRUPT* Fact #1: The secret life of X (Middle of screen)"
+                            }                           
+                        ],
+                        "AudioVoiceover":[
+                            {
+                                "visualid":"visual_id_2",
+                                "timing":"2-5s",
+                                "description":"Host speaking with high energy: 'And that's not even the craziest part...'"
+                            }                            
+                        ],
+                        "Timing":"3 seconds",
+                        "CameraAnglesFramingNotes":"Switch between close-up and medium shot of the host. Dynamic motion."
+                    }
+                    // ... More scenes to fill the duration ...
+                ]
+                
+            },
+            {
+                "Name":"3. CALL TO ACTION (last 5-10 seconds)",
+                "Scenes":[
+                   {
+                        "Characters":[
+                            {
+                                "id": "character_id",
+                                "character": ""
+                            }
+                        ],
+                        "VisualInstructions":[
+                            {
+                                "id":"visual_id_CTA",
+                                "description":"Visual of an arrow pointing down towards the 'Subscribe' button/comment section."
+                            }                            
+                        ],
+                        "TextOverlays":[
+                            {
+                                "visualid":"visual_id_CTA",
+                                "timing":"55-58s",
+                                "description":"Did you know this? Let me know! (Comment below)"
+                            }                           
+                        ],
+                        "AudioVoiceover":[
+                            {
+                                "visualid":"visual_id_CTA",
+                                "timing":"55-58s",
+                                "description":"Upbeat music fades, Host: 'Follow for the whole story tomorrow!'"
+                            }                            
+                        ],
+                        "Timing":"3 seconds",
+                        "CameraAnglesFramingNotes":"Clear visual focus on the CTA. Text is positioned to not block the UI elements."
+                    }
+                ]
+               
+            }
+        ],
+        "CaptionSuggestionsforAccessibility":""
+    }
+    ```
+
 </message>
 <message role="user">
 
