@@ -25,5 +25,8 @@ namespace AZStoryVideoProfit.MainApiProxy.Interfaces
 
         YoutubeGenerateThumbnail_ThumbnailImagePromptResponseViewModel GenerateThumbnail_ImagePrompt(YoutubeGenerateThumbnail_ThumbnailImagePromptRequestViewModel requestViewModel);
 
+
+        YoutubeGenerateStoryVideoScriptResponseViewModel GenerateStoryVideoScript(YoutubeGenerateStoryVideoScriptRequestViewModel requestViewModel);
+
     }
 }

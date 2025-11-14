@@ -14,7 +14,7 @@ namespace AZStoryVideoProfit.Helpers
     public class GoogleGeminiHelper
     {
         public static string GenerateText2Speech(string chunkText, string voiceName = "Kore", string modelName= "gemini-2.5-flash-preview-tts", 
-            string apiKey = "AIzaSyCvcquttp73Ty6_rB2I-mDOih4LPwqJDm8")
+            string apiKey = "AIzaSyDltkFsFRACRM_6GefC-td-Kq_8CYZ6V6o")
         {
 
 
@@ -80,7 +80,7 @@ namespace AZStoryVideoProfit.Helpers
 
 
         public static string GenerateText2Image(string promptText, string modelName = "gemini-2.5-flash-image",
-           string apiKey = "AIzaSyCvcquttp73Ty6_rB2I-mDOih4LPwqJDm8", string aspectRatio = "16:9")
+           string apiKey = "AIzaSyDltkFsFRACRM_6GefC-td-Kq_8CYZ6V6o", string aspectRatio = "16:9")
         {
 
 

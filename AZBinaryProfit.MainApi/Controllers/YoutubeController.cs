@@ -591,5 +591,90 @@ namespace AZBinaryProfit.MainApi.Controllers
 
 
 
+
+        [HttpPost]
+        [Route("GenerateStoryVideoScript")]
+        public async Task<IActionResult> GenerateStoryVideoScript([FromBody] YoutubeGenerateStoryVideoScriptRequestViewModel request)
+        {
+
+            var promptFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Prompts", "Youtube", "GenerateStoryVideoScript", "skprompt.txt");
+
+
+            // Read prompt content
+            var promptContent = System.IO.File.ReadAllText(promptFilePath);
+
+
+
+            // Create the function with both prompt and config
+            //var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent, config.ExecutionSettings["default"]);
+            var promptFunctionFromPrompt = _Kernel.CreateFunctionFromPrompt(promptContent);
+
+
+
+            string required_elements = "";
+            if (request.include_hook)
+                required_elements += "- Include a hook at the beginning to grab attention.\n\n";
+            if (request.include_cta)
+                required_elements += "- End with a strong call to action.\n\n";
+            if (request.include_engagement)
+                required_elements += "- Include prompts for viewer engagement (e.g., questions, polls).\n\n";
+            if (request.include_timestamps)
+                required_elements += "- Include suggested timestamps for key sections.\n\n";
+            if (request.include_visual_cues)
+                required_elements += "- Include visual cues and transitions.\n\n";
+
+
+
+            var kernelArguments = new KernelArguments(new GeminiPromptExecutionSettings
+            {
+                ThinkingConfig = new GeminiThinkingConfig
+                {
+                    ThinkingBudget = 0
+                },
+                MaxTokens = 8192,
+                Temperature = 0.7,
+                TopP = 0.9,
+                TopK = 1
+            })
+            {
+                ["language"] = request.language,
+                ["story"] = request.story,
+                ["duration_seconds"] = request.duration_seconds,
+                ["target_audience"] = request.target_audience,
+                ["tone_style"] = request.tone_style,
+                ["use_case"] = request.use_case,
+                ["script_structure"] = request.script_structure,
+                ["script_structure_desc"] = request.script_structure_desc,
+                ["additional_elements"] = required_elements,
+                ["hooks"] = request.hooks,
+                ["community_interactions"] = request.community_interactions,
+
+            };
+
+            // Querying the prompt function
+            var response = await promptFunctionFromPrompt.InvokeAsync(_Kernel, kernelArguments);
+
+            var metadata = response.Metadata;
+            //var tokenUsage = metadata!["Usage"] as ChatTokenUsage;
+
+            var responseData = response.GetValue<string>();
+
+
+
+            return new JsonResult(
+            new
+            {
+                Data = responseData,
+                Info = new
+                {
+                    TotalTokenCount = metadata!["TotalTokenCount"],
+                    PromptTokenCount = metadata!["PromptTokenCount"],
+                    CandidatesTokenCount = metadata!["CandidatesTokenCount"],
+                    CurrentCandidateTokenCount = metadata!["CurrentCandidateTokenCount"]
+                }
+            });
+
+        }
+
     }
 }

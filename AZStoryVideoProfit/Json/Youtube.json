@@ -466,5 +466,193 @@
         "Description": "wide-angle"
       }
     ]
+  },
+  "GenerateStoryVideo": {
+    "ToneStyles": [
+      {
+        "Name": "Energetic",
+        "Description": "Energetic"
+      },
+      {
+        "Name": "Professional",
+        "Description": "Professional"
+      },
+      {
+        "Name": "Casual",
+        "Description": "Casual"
+      },
+      {
+        "Name": "Humorous",
+        "Description": "Humorous"
+      },
+      {
+        "Name": "Dramatic",
+        "Description": "Dramatic"
+      },
+      {
+        "Name": "Educational",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Entertaining",
+        "Description": "Entertaining"
+      },
+      {
+        "Name": "Inspirational",
+        "Description": "Inspirational"
+      }
+    ],
+    "UseCases": [
+      {
+        "Name": "Tutorial/How-to",
+        "Description": "Tutorial/How-to"
+      },
+      {
+        "Name": "Life Hack",
+        "Description": "Life Hack"
+      },
+      {
+        "Name": "Entertainment",
+        "Description": "Entertainment"
+      },
+      {
+        "Name": "Educational",
+        "Description": "Educational"
+      },
+      {
+        "Name": "Trend",
+        "Description": "Trend"
+      },
+      {
+        "Name": "Story",
+        "Description": "Story"
+      },
+      {
+        "Name": "Challenge",
+        "Description": "Challenge"
+      },
+      {
+        "Name": "Review",
+        "Description": "Review"
+      },
+      {
+        "Name": "News",
+        "Description": "News"
+      }
+    ],
+    "ScriptStructures": [
+      {
+        "Name": "Problem-Solution",
+        "Description": "Structure the script to first present a problem, then provide a solution."
+      },
+      {
+        "Name": "Before-After-Bridge",
+        "Description": "Structure the script to show the before state, the transformation process, and the after state."
+      },
+      {
+        "Name": "Hook-Problem-Solution-Call to Action",
+        "Description": "Start with a hook, present the problem, provide the solution, and end with a call to action"
+      },
+      {
+        "Name": "Compare and Contrast",
+        "Description": "Structure the script to compare and contrast different options or approaches."
+      },
+      {
+        "Name": "Step-by-Step Tutorial",
+        "Description": "Break down the content into clear, sequential steps."
+      },
+      {
+        "Name": "Case Study",
+        "Description": "Present a real-world example or case study to illustrate the main points."
+      },
+      {
+        "Name": "Interview Format",
+        "Description": "Structure the script as an interview with questions and answers."
+      },
+      {
+        "Name": "Review Format",
+        "Description": "Structure the script as a review with pros, cons, and a final verdict."
+      },
+      {
+        "Name": "Vlog Format",
+        "Description": "Structure the script as a personal video blog with a conversational tone."
+      },
+      {
+        "Name": "Educational Format",
+        "Description": "Structure the script to teach a concept with examples and explanations."
+      },
+      {
+        "Name": "Entertainment Format",
+        "Description": "Structure the script to entertain while delivering the main message."
+      }
+    ],
+    "Hooks": [
+      {
+        "Name": "Question Hook",
+        "Description": "Start with a thought-provoking question to engage viewers immediately"
+      },
+      {
+        "Name": "Story Hook",
+        "Description": "Begin with a brief, relevant story or anecdote"
+      },
+      {
+        "Name": "Statistic Hook",
+        "Description": "Open with an interesting statistic or fact"
+      },
+      {
+        "Name": "Controversy Hook",
+        "Description": "Present a controversial statement or opinion to spark interest"
+      },
+      {
+        "Name": "Promise Hook",
+        "Description": "Make a promise about what viewers will learn or gain"
+      },
+      {
+        "Name": "Scenario Hook",
+        "Description": "Describe a scenario or situation viewers can relate to"
+      },
+      {
+        "Name": "Mystery Hook",
+        "Description": "Create a sense of mystery or intrigue"
+      },
+      {
+        "Name": "Quote Hook",
+        "Description": "Start with a relevant quote from an expert or notable figure"
+      }
+    ],
+    "CommunityInteractions": [
+      {
+        "Name": "Comment Prompt",
+        "Description": "Ask viewers to share their experiences or opinions in the comments"
+      },
+      {
+        "Name": "Poll Suggestion",
+        "Description": "Suggest creating a poll for viewers to vote on"
+      },
+      {
+        "Name": "Question for Comments",
+        "Description": "Pose a specific question for viewers to answer in the comments"
+      },
+      {
+        "Name": "Challenge",
+        "Description": "Challenge viewers to try something and report back"
+      },
+      {
+        "Name": "Tag Friends",
+        "Description": "Encourage viewers to tag friends who might benefit from the content"
+      },
+      {
+        "Name": "Share Request",
+        "Description": "Ask viewers to share the video with others who might find it helpful"
+      },
+      {
+        "Name": "Community Post",
+        "Description": "Mention creating a community post to continue the discussion"
+      },
+      {
+        "Name": "Live Stream Teaser",
+        "Description": "Tease an upcoming live stream on the same topic"
+      }
+    ]
   }
 }

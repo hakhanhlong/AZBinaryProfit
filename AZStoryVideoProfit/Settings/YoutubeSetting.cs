@@ -73,6 +73,25 @@ namespace AZStoryVideoProfit.Settings
 
         public YoutubeGenerateShortScriptViewModel GenerateShortScript { get; set; }
 
+        public YoutubeGenerateStoryVideoViewModel GenerateStoryVideo {  get; set; }
+
+    }
+
+
+    public class YoutubeGenerateStoryVideoViewModel
+    {
+
+        public List<YoutubeGenerateStoryVideo_BaseViewModel> ToneStyles { get; set; }
+        public List<YoutubeGenerateStoryVideo_BaseViewModel> UseCases { get; set; }
+        public List<YoutubeGenerateStoryVideo_BaseViewModel> ScriptStructures { get; set; }
+        public List<YoutubeGenerateStoryVideo_BaseViewModel> Hooks { get; set; }
+        public List<YoutubeGenerateStoryVideo_BaseViewModel> CommunityInteractions { get; set; }        
+    }
+
+    public class YoutubeGenerateStoryVideo_BaseViewModel
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 
     public class YoutubeGenerateShortScriptViewModel

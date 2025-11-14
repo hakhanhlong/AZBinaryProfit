@@ -9,6 +9,7 @@
     2.  **Mute-Proof Design:** The entire narrative MUST function perfectly without sound; all key information must be communicated via dynamic visuals and concise text overlays.
     3.  **Pattern Interruption:** Integrate visual and/or audio changes frequently (ideally every 1-3 seconds) to maintain high pacing and keep the viewer engaged.
     4.  **Clarity & Structure:** Adhere strictly to the provided JSON structure, ensuring the total estimated timing *never* exceeds {{$duration_seconds}} seconds.
+    5.  **Character Design & Outfits:** Detailed description for consistency, e.g., "ID: PROTAGONIST, Character: Man with deep scar, worn leather coat, always looks weary."
 
     Format the script with clear, time-coded JSON objects for visuals, audio, and text overlays. The entire script must be written in English.
 
@@ -22,7 +23,12 @@
             {
                 "Name":"1. HOOK (0-2 seconds)",
                 "Scenes":[
-                    {
+                    {   "Characters":[
+                            {
+                                "id": "character_id",
+                                "character": ""
+                            }
+                        ],
                         "VisualInstructions":[
                             {
                                 "id":"visual_id_1",
@@ -52,6 +58,12 @@
                 "Name":"2. MAIN CONTENT (2-50 seconds)",
                 "Scenes":[
                    {
+                        "Characters":[
+                            {
+                                "id": "character_id",
+                                "character": ""
+                            }
+                        ],
                         "VisualInstructions":[
                             {
                                 "id":"visual_id_2",
@@ -83,6 +95,12 @@
                 "Name":"3. CALL TO ACTION (last 5-10 seconds)",
                 "Scenes":[
                    {
+                        "Characters":[
+                            {
+                                "id": "character_id",
+                                "character": ""
+                            }
+                        ],
                         "VisualInstructions":[
                             {
                                 "id":"visual_id_CTA",

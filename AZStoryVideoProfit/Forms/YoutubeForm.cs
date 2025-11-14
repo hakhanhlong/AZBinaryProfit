@@ -124,6 +124,41 @@ namespace AZStoryVideoProfit.Forms
 
 
 
+
+
+
+
+
+
+
+
+
+
+            GenerateStoryVideo_ToneStyles.DataSource = YoutubeSetting.Instance.Data.GenerateStoryVideo.ToneStyles;
+            GenerateStoryVideo_ToneStyles.DisplayMember = "Name";
+            GenerateStoryVideo_ToneStyles.ValueMember = "Description";
+
+            GenerateStoryVideo_Hooks.DataSource = YoutubeSetting.Instance.Data.GenerateStoryVideo.Hooks;
+            GenerateStoryVideo_Hooks.DisplayMember = "Name";
+            GenerateStoryVideo_Hooks.ValueMember = "Description";
+
+            GenerateStoryVideo_Usecases.DataSource = YoutubeSetting.Instance.Data.GenerateStoryVideo.UseCases;
+            GenerateStoryVideo_Usecases.DisplayMember = "Name";
+            GenerateStoryVideo_Usecases.ValueMember = "Description";
+
+            GenerateStoryVideo_ScriptStructures.DataSource = YoutubeSetting.Instance.Data.GenerateStoryVideo.ScriptStructures;
+            GenerateStoryVideo_ScriptStructures.DisplayMember = "Name";
+            GenerateStoryVideo_ScriptStructures.ValueMember = "Description";
+
+            GenerateStoryVideo_CommunityInteractions.DataSource = YoutubeSetting.Instance.Data.GenerateStoryVideo.CommunityInteractions;
+            GenerateStoryVideo_CommunityInteractions.DisplayMember = "Name";
+            GenerateStoryVideo_CommunityInteractions.ValueMember = "Description";
+
+            
+
+
+
+
         }
 
 
@@ -758,6 +793,62 @@ namespace AZStoryVideoProfit.Forms
                 GenerateShortVideoScript_TxtSceneDetail.Text = item.SceneImagePrompt;
             }
        }
+
+        private void btnGenerateStoryVideo_Execute_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Invoke((Action)(() => {
+
+
+
+                    var request = new MainApiProxy.ViewModels.YoutubeGenerateStoryVideoScriptRequestViewModel
+                    {
+                        story = GenerateStoryVideo_TxtStory.Text,
+                        duration_seconds = (int)GenerateStoryVideo_DurationPerSeconds.Value,
+                        target_audience = GenerateStoryVideo_TxtTargetAudiences.Text,
+                        tone_style = GenerateStoryVideo_ToneStyles.SelectedValue.ToString(),
+                        use_case = GenerateStoryVideo_Usecases.SelectedValue.ToString(),
+                        script_structure = GenerateStoryVideo_ScriptStructures.SelectedText.ToString(),
+                        script_structure_desc = GenerateStoryVideo_ScriptStructures.SelectedValue.ToString(),
+                        hooks = GenerateStoryVideo_Hooks.SelectedValue.ToString(),
+                        community_interactions = GenerateStoryVideo_CommunityInteractions.SelectedValue.ToString(),
+                        include_hook = GenerateStoryVideo_IncludeHook.Checked,
+                        include_cta = GenerateStoryVideo_IncludeCTA.Checked,
+                        include_engagement = GenerateStoryVideo_IncludeEngagement.Checked,
+                        include_timestamps = GenerateStoryVideo_IncludeTimestamp.Checked,
+                        include_visual_cues = GenerateStoryVideo_IncludeVisualCue.Checked,
+                        
+                    };
+
+
+                    Task.Run(() => {
+
+
+
+
+                        SetProcessStatus(true, "Process Generate Story Video Script ...");
+
+                        var response = YoutubeProxy.Instance.GenerateStoryVideoScript(request);
+                        this.Invoke(new Action(() => {
+
+                            GenerateStoryVideo_TxtScriptResult.Text = response.Data;
+
+                        }));
+
+
+                        SetProcessStatus(false, "");
+                    });
+
+                }));
+
+
+
+
+            }
+            catch
+            { SetProcessStatus(false, ""); }
+        }
     }
 
     public class AudioLineTextItem
