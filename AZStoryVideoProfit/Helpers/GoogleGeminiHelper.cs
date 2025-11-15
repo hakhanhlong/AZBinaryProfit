@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
@@ -13,8 +14,12 @@ namespace AZStoryVideoProfit.Helpers
 {
     public class GoogleGeminiHelper
     {
-        public static string GenerateText2Speech(string chunkText, string voiceName = "Kore", string modelName= "gemini-2.5-flash-preview-tts", 
-            string apiKey = "AIzaSyC4PFHfPlKhMuxE_ro5_NPPUQOodiSG0vM")
+
+        //
+        //Gacrux,Kore (giong nu)
+        //Algieba(giong nam)
+        public static string GenerateText2Speech(string chunkText, string voiceName = "Algieba", string modelName= "gemini-2.5-flash-preview-tts", 
+            string apiKey = "AIzaSyAhvEmBxhSHoNgPiVZyjv-aRm8r2tTJ37U")
         {
 
 
@@ -62,7 +67,7 @@ namespace AZStoryVideoProfit.Helpers
                         {
                             prebuilt_voice_config = new
                             {
-                                voice_name = "Kore"
+                                voice_name = voiceName
                             }
                         }
                     }
@@ -80,7 +85,7 @@ namespace AZStoryVideoProfit.Helpers
 
 
         public static string GenerateText2Image(string promptText, string modelName = "gemini-2.5-flash-image",
-           string apiKey = "AIzaSyC4PFHfPlKhMuxE_ro5_NPPUQOodiSG0vM", string aspectRatio = "16:9")
+           string apiKey = "AIzaSyAhvEmBxhSHoNgPiVZyjv-aRm8r2tTJ37U", string aspectRatio = "16:9")
         {
 
 
