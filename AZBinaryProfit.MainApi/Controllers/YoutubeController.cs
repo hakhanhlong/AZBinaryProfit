@@ -132,10 +132,10 @@ namespace AZBinaryProfit.MainApi.Controllers
                 {
                     ThinkingBudget = 0
                 },
-                MaxTokens = 8192,
-                Temperature = 0.7,
-                TopP = 0.9,
-                TopK = 1
+                MaxTokens = 16384,
+                Temperature = 0.2
+               // TopP = 0.9,
+               // TopK = 1
             })
             {
                 ["story"] = request.story,                               
@@ -204,9 +204,9 @@ namespace AZBinaryProfit.MainApi.Controllers
                     ThinkingBudget = 0
                 },
                 MaxTokens = 4096,
-                Temperature = 0.7,
-                TopP = 0.9,
-                TopK = 1
+                Temperature = 0.2,
+                //TopP = 0.9,
+                //TopK = 1
             })
             {
                 ["shorts_script"] = request.shorts_script,
@@ -267,9 +267,9 @@ namespace AZBinaryProfit.MainApi.Controllers
                     ThinkingBudget = 0
                 },
                 MaxTokens = 8192,
-                Temperature = 0.7,
-                TopK = 1,
-                TopP = 0.9
+                Temperature = 0.2,
+                //TopK = 1,
+                //TopP = 0.9
 
             })
             {
@@ -450,9 +450,9 @@ namespace AZBinaryProfit.MainApi.Controllers
                     ThinkingBudget = 0
                 },
                 MaxTokens = 8192,
-                Temperature = 0.7,
-                TopK = 1,
-                TopP = 0.9
+                Temperature = 0.2,
+                //TopK = 1,
+                //TopP = 0.9
 
             })
             {
@@ -512,9 +512,9 @@ namespace AZBinaryProfit.MainApi.Controllers
                     ThinkingBudget = 0
                 },
                 MaxTokens = 8192,
-                Temperature = 0.7,
-                TopK = 1,
-                TopP = 0.9
+                Temperature = 0.2,
+                //TopK = 1,
+                //TopP = 0.9
 
             })
             {
@@ -628,10 +628,11 @@ namespace AZBinaryProfit.MainApi.Controllers
                 {
                     ThinkingBudget = 0
                 },
-                MaxTokens = 8192,
-                Temperature = 0.7,
-                TopP = 0.9,
-                TopK = 1
+                MaxTokens = 16382,
+                Temperature = 0.2
+                //,
+                //TopP = 0.9,
+                //TopK = 1
             })
             {
                 ["language"] = request.language,
@@ -709,10 +710,10 @@ namespace AZBinaryProfit.MainApi.Controllers
                 {
                     ThinkingBudget = 0
                 },
-                MaxTokens = 4096,
-                Temperature = 0.7,
-                TopP = 0.9,
-                TopK = 1
+                MaxTokens = 8192,
+                Temperature = 0.2,
+                //TopP = 0.9,
+                //TopK = 1
             })
             {
                 ["story_video_script"] = request.story_video_script,

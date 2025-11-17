@@ -67,6 +67,7 @@ namespace AZStoryVideoProfit.Settings
     {
         public string RootAudioOutputPath {  get; set; }
         public string RootShortStoryVideoOutputPath { get; set; }
+        public string RootStoryVideoOutputPath { get; set; }
 
 
     }

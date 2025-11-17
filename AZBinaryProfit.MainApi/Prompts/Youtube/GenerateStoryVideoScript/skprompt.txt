@@ -24,12 +24,7 @@
             {
                 "Name":"1. HOOK (0-2 seconds)",
                 "Scenes":[
-                    {   "Characters":[
-                            {
-                                "id": "character_id",
-                                "character": ""
-                            }
-                        ],
+                    {  
                         "VisualInstructions":[
                             {
                                 "id":"visual_id_1",
@@ -59,12 +54,7 @@
                 "Name":"2. MAIN CONTENT (2-50 seconds)",
                 "Scenes":[
                    {
-                        "Characters":[
-                            {
-                                "id": "character_id",
-                                "character": ""
-                            }
-                        ],
+                       
                         "VisualInstructions":[
                             {
                                 "id":"visual_id_2",
@@ -96,12 +86,6 @@
                 "Name":"3. CALL TO ACTION (last 5-10 seconds)",
                 "Scenes":[
                    {
-                        "Characters":[
-                            {
-                                "id": "character_id",
-                                "character": ""
-                            }
-                        ],
                         "VisualInstructions":[
                             {
                                 "id":"visual_id_CTA",

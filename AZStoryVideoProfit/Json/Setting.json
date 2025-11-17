@@ -1,4 +1,5 @@
 {
   "RootAudioOutputPath": "C:\\temp\\",
-  "RootShortStoryVideoOutputPath": "C:\\temp\\ShortStoryVideo\\"
+  "RootShortStoryVideoOutputPath": "C:\\temp\\ShortStoryVideo\\",
+  "RootStoryVideoOutputPath": "C:\\temp\\StoryVideo\\"
 }

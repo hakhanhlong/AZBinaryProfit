@@ -1955,6 +1955,7 @@
             this.lvStoryVideoSceneLine.TabIndex = 0;
             this.lvStoryVideoSceneLine.UseCompatibleStateImageBehavior = false;
             this.lvStoryVideoSceneLine.View = System.Windows.Forms.View.Details;
+            this.lvStoryVideoSceneLine.SelectedIndexChanged += new System.EventHandler(this.lvStoryVideoSceneLine_SelectedIndexChanged);
             // 
             // columnHeader1
             // 

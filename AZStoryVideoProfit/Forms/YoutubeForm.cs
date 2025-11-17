@@ -540,6 +540,7 @@ namespace AZStoryVideoProfit.Forms
                                          "- Modern, engaging composition\n" +
                                          $"- Text Overlays \"{textOverlay.Description}\" \n" +
                                          $"- Suitable for {GenerateShortVideoScript_ContentTypes.SelectedValue} style content\n" +
+                                         "- Image Style/Quality: Sketch/Drawing (e.g., Photorealistic, Detailed Digital Painting, 3D Render, Film Grain/Vintage.)\n" + 
                                          $"- Character must consistent\n" +
 
                                          "Technical Requirements:\n" +
@@ -909,7 +910,7 @@ namespace AZStoryVideoProfit.Forms
 
                         //1.Sections
 
-                        int totalScenes = _YoutubeStoryVideoScripts.Sections.SelectMany(x => x.Scenes).SelectMany(x => x.TextOverlays).Count();
+                        int totalScenes = _YoutubeStoryVideoScripts.Sections.SelectMany(x => x.Scenes).SelectMany(x => x.VisualInstructions).Count();
                         int sceneNumber = 1;
                         foreach (var section in _YoutubeStoryVideoScripts.Sections)
                         {
@@ -918,16 +919,28 @@ namespace AZStoryVideoProfit.Forms
 
                             foreach (var scene in section.Scenes)
                             {
-                                //3.TextOverlay
-                                foreach (var textOverlay in scene.TextOverlays)
+                                //3.VisualInstructions
+                                foreach (var visual in scene.VisualInstructions)
                                 {
 
                                     this.Invoke(new Action(() =>
                                     {
-                                        var visualDesc = scene.VisualInstructions.FirstOrDefault(x => x.Id == textOverlay.VisualId);
-                                        var voiceOver = scene.AudioVoiceover.FirstOrDefault(x => x.VisualId == textOverlay.VisualId);
+                                        var visualDesc = visual; //scene.VisualInstructions.FirstOrDefault(x => x.Id == textOverlay.VisualId);
+                                        var voiceOver = scene.AudioVoiceover.FirstOrDefault(x => x.VisualId == visual.Id);
+                                        var textOverlay = scene.TextOverlays.FirstOrDefault(x => x.VisualId == visual.Id);
+                                        if(textOverlay == null)
+                                        {
+                                            textOverlay = scene.TextOverlays.FirstOrDefault();
+                                        }
 
-                                        string prompt = $"Create a vertical (9:16) image for YouTube Shorts video.\n" +
+
+                                        if (voiceOver == null)
+                                        {
+                                            voiceOver = scene.AudioVoiceover.FirstOrDefault();
+                                        }
+
+
+                                        string prompt = $"Create a vertical (16:9) image for YouTube video.\n" +
                                          $"Scene {sceneNumber} of {totalScenes}:\n" +
                                          $"Visual Description: {visualDesc.Description}\n" +
                                          $"Context: {voiceOver.Description}\n" +
@@ -939,12 +952,22 @@ namespace AZStoryVideoProfit.Forms
                                          "- Text-safe areas on top and bottom\n" +
                                          "- Visually distinct from other scenes\n" +
                                          "- Modern, engaging composition\n" +
-                                         $"- Text Overlays \"{textOverlay.Description}\" \n" +
-                                         //$"- Suitable for {GenerateShortVideoScript_ContentTypes.SelectedValue} style content\n" +
-                                         $"- Character must consistent\n" +
+                                         "- Image Style/Quality: Sketch/Drawing (e.g., Photorealistic, Detailed Digital Painting, 3D Render, Film Grain/Vintage.)\n";
+
+
+                                         if(textOverlay != null)
+                                        {
+                                            prompt += $"- Text Overlays \"{textOverlay.Description}\" \n";
+                                        }
+
+
+
+
+                                        //$"- Suitable for {GenerateShortVideoScript_ContentTypes.SelectedValue} style content\n" +
+                                        prompt+= $"- Character must consistent\n" +
 
                                          "Technical Requirements:\n" +
-                                         "- Vertical 9:16 aspect ratio\n" +
+                                         "- Vertical 16:9 aspect ratio\n" +
                                          "- High resolution, sharp details\n" +
                                          "- No text or watermarks\n" +
                                          "- No blurry or low-quality elements";
@@ -975,10 +998,155 @@ namespace AZStoryVideoProfit.Forms
 
 
 
-                        
 
 
 
+                        try
+                        {
+
+                            DateTime dateTime = DateTime.Now;
+                            string dateFolderFormat = dateTime.ToString("yyyy_MM_dd");
+                            string folderPath = $@"{Setting.Instance.Data.RootStoryVideoOutputPath}\{dateFolderFormat}\{StringHelper.UniqueKey(8)}";
+                            if (!System.IO.Directory.Exists(folderPath))
+                                Directory.CreateDirectory(folderPath);
+
+
+                            //tạo audio Narration
+                            this.Invoke(new Action(() => {
+                                GenerateStoryVideo_TxtLogs.AppendText("1. Creating audio narration...\n");
+                            }));
+                            string scriptNarration = string.Empty;
+                            this.Invoke(new Action(() => {
+                                scriptNarration = GenerateStoryVideo_TxtNarrationText.Text;
+                            }));
+
+
+
+                            var listChunks = ChunkTextHelper.ChunkAudioScript(scriptNarration);
+                            var listAudioBase64 = new List<string>();
+
+                            foreach (var chunk in listChunks) {
+                                string responseAudio = GoogleGeminiHelper.GenerateText2Speech(chunkText: chunk);
+                                
+                                string audioData = StringHelper.GetStringBetween(responseAudio, "\"data\": \"", "\"");//(string)dynamicObject.candidates[0].content.parts[0].inlineData.data;
+                                listAudioBase64.Add(audioData);
+
+                                this.Invoke(new Action(() => {
+                                    GenerateStoryVideo_TxtLogs.AppendText("Chunked audio ...\n");
+                                }));
+
+                               
+                            }
+
+                           
+
+
+                            string audioFileName = $"{StringHelper.UniqueKey(6)}.wav";
+                            string audioFilePath = Path.Combine($"{folderPath}", $"{audioFileName}");
+                            AudioConverterHelper.ProcessAudioChunks(listAudioBase64, audioFilePath);
+
+                            this.Invoke(new Action(() => {
+                                GenerateStoryVideo_TxtLogs.AppendText($"1.1 Created audio narration with name {audioFileName}...\n");
+                            }));
+
+
+
+                            AudioHelper.WaveToMp3(audioFilePath, $@"{folderPath}\audio_narration.mp3");
+                            audioFilePath = $@"{folderPath}\audio_narration.mp3";
+
+                            this.Invoke(new Action(() =>
+                            {
+                                GenerateStoryVideo_TxtLogs.AppendText($"1.2 Converted audio .wav narration to .mp3...\n");
+                                GenerateStoryVideo_TxtLogs.AppendText($"1.3 Mix background music to narration audio...\n");
+                            }));
+
+                            string backgroundMusic = $"{Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)}\\Music\\AudioBackgrounds\\TheLeavesThatFall.mp3";
+                            AudioHelper.MixAudioWithMusic($@"{audioFilePath}", backgroundMusic, $@"{folderPath}\audio_narration_mixed.mp3");
+                            audioFilePath = $@"{folderPath}\audio_narration_mixed.mp3";
+
+                            this.Invoke(new Action(() =>
+                            {
+                                GenerateStoryVideo_TxtLogs.AppendText("🎵 Mixed background music...");
+                            }));
+
+                            //tạo image
+                            string promptText = string.Empty;
+                            this.Invoke(new Action(() => {
+                                GenerateStoryVideo_TxtLogs.AppendText("2. Creating scane image ...\n");
+                            }));
+
+                            sceneNumber = 1;
+                            foreach (var scene in _StoryVideoSceneLineTextItems)
+                            {
+                                Thread.Sleep(10000);
+
+                                this.Invoke(new Action(() => {
+                                    GenerateStoryVideo_TxtLogs.AppendText($"- Creating scene  {sceneNumber} of {totalScenes}...\n");
+                                }));
+
+
+                                promptText = JsonConvert.SerializeObject(scene.SceneImagePrompt);
+                                string responseImage = GoogleGeminiHelper.GenerateText2Image(promptText, aspectRatio: "16:9");
+                                //dynamicObject = JsonConvert.DeserializeObject<dynamic>(responseImage);
+                                //string imageData = (string)dynamicObject.candidates[0].content.parts[0].inlineData.data;
+
+                                string imageData = StringHelper.GetStringBetween(responseImage, "\"data\": \"", "\"");
+                                string base64ImageString = imageData;
+                                if (string.IsNullOrEmpty(imageData))
+                                {
+                                    responseImage = GoogleGeminiHelper.GenerateText2Image(promptText, aspectRatio: "16:9");
+                                    imageData = StringHelper.GetStringBetween(responseImage, "\"data\": \"", "\"");
+                                    base64ImageString = imageData;
+                                }
+
+                                if (!System.IO.Directory.Exists($@"{folderPath}/Scenes"))
+                                    Directory.CreateDirectory($@"{folderPath}/Scenes");
+                                if (!string.IsNullOrEmpty(base64ImageString))
+                                {
+                                    string sceneImagePath = $@"{folderPath}/Scenes/{sceneNumber}_{totalScenes}.png";
+                                    ImageConverterHelper.ConvertBase64ToPng(base64ImageString, sceneImagePath);
+                                    _StoryVideoSceneImagePaths.Add(sceneImagePath);
+                                }
+
+
+                                sceneNumber++;
+                                this.Invoke(new Action(() => {
+                                    GenerateStoryVideo_TxtLogs.AppendText($"- Wait 10s for next scene...\n");
+                                }));
+
+
+                            }
+                            this.Invoke(new Action(() => {
+                                GenerateStoryVideo_TxtLogs.AppendText("Created scenes image ...\n");
+
+                                GenerateStoryVideo_TxtLogs.AppendText("3. Creating short video ...\n");
+                            }));
+
+
+                            var videoCreator = new StoryVideoCreationHelper(folderPath);
+
+
+
+                            int audio_duration = MediaInfoHelper.GetDuration(audioFilePath);
+                            int durationPerImage = (int)Math.Ceiling(Convert.ToDecimal(audio_duration / totalScenes));
+
+                            this.Invoke(new Action(() => {
+                                GenerateStoryVideo_TxtLogs.AppendText($"Frame per seconds: 12\n");
+                                GenerateStoryVideo_TxtLogs.AppendText($"Duration per image: {durationPerImage}\n");
+                            }));
+
+                            videoCreator.CreateVideo(_StoryVideoSceneImagePaths, audioFilePath, 1, durationPerImage);
+
+                            this.Invoke(new Action(() => {
+                                GenerateStoryVideo_TxtLogs.AppendText("3. Created short video ...\n");
+                            }));
+
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
 
 
 
@@ -997,6 +1165,16 @@ namespace AZStoryVideoProfit.Forms
             { SetProcessStatus(false, ""); }
 
 
+        }
+
+        private void lvStoryVideoSceneLine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvStoryVideoSceneLine.SelectedItems.Count > 0)
+            {
+                int _Id = Convert.ToInt32(lvStoryVideoSceneLine.SelectedItems[0].Tag);
+                var item = _StoryVideoSceneLineTextItems.FirstOrDefault(x => x.Id == _Id);
+                GenerateStoryVideo_TxtSceneDetail.Text = item.SceneImagePrompt;
+            }
         }
     }
 

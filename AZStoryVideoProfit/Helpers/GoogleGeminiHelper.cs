@@ -18,8 +18,8 @@ namespace AZStoryVideoProfit.Helpers
         //
         //Gacrux,Kore (giong nu)
         //Algieba(giong nam)
-        public static string GenerateText2Speech(string chunkText, string voiceName = "Algieba", string modelName= "gemini-2.5-flash-preview-tts", 
-            string apiKey = "AIzaSyAhvEmBxhSHoNgPiVZyjv-aRm8r2tTJ37U")
+        public static string GenerateText2Speech(string chunkText, string voiceName = "Gacrux", string modelName= "gemini-2.5-flash-preview-tts", 
+            string apiKey = "AIzaSyABX9I3LC0tN4MN1XHQOo_2BIiIHoo5O9U")
         {
 
 
@@ -85,7 +85,7 @@ namespace AZStoryVideoProfit.Helpers
 
 
         public static string GenerateText2Image(string promptText, string modelName = "gemini-2.5-flash-image",
-           string apiKey = "AIzaSyAhvEmBxhSHoNgPiVZyjv-aRm8r2tTJ37U", string aspectRatio = "16:9")
+           string apiKey = "AIzaSyABX9I3LC0tN4MN1XHQOo_2BIiIHoo5O9U", string aspectRatio = "16:9")
         {
 
 
