@@ -128,9 +128,17 @@ namespace AZStoryVideoProfit.Forms
             GenerateShortVideoScript_ToneStyles.DisplayMember = "Name";
             GenerateShortVideoScript_ToneStyles.ValueMember = "Description";
 
+            GenerateShortVideoScript_ImageStyles.DataSource = YoutubeSetting.Instance.Data.GenerateThumbnail.ImageStyles;
+            GenerateShortVideoScript_ImageStyles.DisplayMember = "Name";
+            GenerateShortVideoScript_ImageStyles.ValueMember = "Description";
 
+            GenerateStoryVideo_ImageStyles.DataSource = YoutubeSetting.Instance.Data.GenerateThumbnail.ImageStyles;
+            GenerateStoryVideo_ImageStyles.DisplayMember = "Name";
+            GenerateStoryVideo_ImageStyles.ValueMember = "Description";
 
             
+
+
 
             GenerateStoryVideo_ToneStyles.DataSource = YoutubeSetting.Instance.Data.GenerateStoryVideo.ToneStyles;
             GenerateStoryVideo_ToneStyles.DisplayMember = "Name";
@@ -482,6 +490,9 @@ namespace AZStoryVideoProfit.Forms
                 this.Invoke((Action)(() => {
 
 
+                    _SceneLineTextItems.Clear();
+                    GenerateShortVideoScript_TxtLogs.Clear();
+
                     _YoutubeShortStoryVideoScripts = JsonConvert.DeserializeObject<YoutubeShortStoryVideoViewModel>(GenerateShortVideoScript_TxtResult.Text.Replace("```json", "").Replace("```", ""));
 
                     var request = new MainApiProxy.ViewModels.YoutubeShortVideoScriptNarrationRequest
@@ -508,7 +519,7 @@ namespace AZStoryVideoProfit.Forms
 
                         //1.Sections
 
-                        int totalScenes = _YoutubeShortStoryVideoScripts.Sections.SelectMany(x => x.Scenes).SelectMany(x=> x.TextOverlays).Count();
+                        int totalScenes = _YoutubeShortStoryVideoScripts.Sections.SelectMany(x => x.Scenes).SelectMany(x=> x.AudioVoiceover).Count();
                         int sceneNumber = 1;
                         foreach (var section in _YoutubeShortStoryVideoScripts.Sections)
                         {
@@ -517,37 +528,78 @@ namespace AZStoryVideoProfit.Forms
                             
                             foreach (var scene in section.Scenes)
                             {
-                                //3.TextOverlay
-                                foreach (var textOverlay in scene.TextOverlays)
+                                //3.AudioVoiceover
+                                foreach (var voiceOver in scene.AudioVoiceover)
                                 {
 
                                     this.Invoke(new Action(() =>
                                     {
-                                        var visualDesc = scene.VisualInstructions.FirstOrDefault(x => x.Id == textOverlay.VisualId);
-                                        var voiceOver = scene.AudioVoiceover.FirstOrDefault(x => x.VisualId == textOverlay.VisualId);
+                                        var visualDesc = scene.VisualInstructions.FirstOrDefault(x => x.Id == voiceOver.VisualId);
+                                        //var voiceOver = scene.AudioVoiceover.FirstOrDefault(x => x.VisualId == visual.Id);
+                                        var textOverlay = scene.TextOverlays.FirstOrDefault(x => x.Id == voiceOver.TextOverlayId);
+
+                                        var character = _YoutubeShortStoryVideoScripts.Character.FirstOrDefault(x => x.Id == visualDesc.Character);
+
+                                        //if (textOverlay == null)
+                                        //{
+                                        //    textOverlay = scene.TextOverlays.FirstOrDefault();
+                                        //}
+
+
+                                        //if (voiceOver == null)
+                                        //{
+                                        //    visualDesc = scene.VisualInstructions.FirstOrDefault();
+                                        //}
+
 
                                         string prompt = $"Create a vertical (9:16) image for YouTube Shorts video.\n" +
                                          $"Scene {sceneNumber} of {totalScenes}:\n" +
                                          $"Visual Description: {visualDesc.Description}\n" +
-                                         $"Context: {voiceOver.Description}\n" +
+                                         $"Context: {voiceOver.Description}\n";
+                                        if (character != null)
+                                        {
+                                            prompt += $"Character:  {character.Description}\n";
+                                        }
+                                        //$"Negative prompt: {visualDesc.negative_prompt}\n" +
+                                        //$"Style:{visualDesc.style}\n" +
 
-                                         "Style Requirements:\n" +
+                                        prompt+= "Style Requirements:\n" +
                                          "- High contrast and vibrant colors for better mobile viewing\n" +
                                          "- Clear focal point in the center for vertical format\n" +
                                          "- Professional quality, cinematic lighting\n" +
                                          "- Text-safe areas on top and bottom\n" +
                                          "- Visually distinct from other scenes\n" +
                                          "- Modern, engaging composition\n" +
-                                         $"- Text Overlays \"{textOverlay.Description}\" \n" +
-                                         $"- Suitable for {GenerateShortVideoScript_ContentTypes.SelectedValue} style content\n" +
-                                         "- Image Style/Quality: Sketch/Drawing (e.g., Photorealistic, Detailed Digital Painting, 3D Render, Film Grain/Vintage.)\n" + 
-                                         $"- Character must consistent\n" +
+                                         //$"- Text Overlays \"{textOverlay.Description}\" \n" +
+                                         //$"- Suitable for {GenerateShortVideoScript_ContentTypes.SelectedValue} style content\n" +
+                                         $"- Image Style/Quality: {GenerateShortVideoScript_ImageStyles.SelectedValue} (e.g., Photorealistic, Detailed Digital Painting, 3D Render, Film Grain/Vintage.)\n";
 
-                                         "Technical Requirements:\n" +
+
+
+
+                                        if (textOverlay != null)
+                                        {
+                                            prompt += $"- Text Overlays \"{textOverlay.Description}\" \n";
+                                        }
+
+
+                                        prompt += "Technical Requirements:\n" +
                                          "- Vertical 9:16 aspect ratio\n" +
                                          "- High resolution, sharp details\n" +
                                          "- No text or watermarks\n" +
-                                         "- No blurry or low-quality elements";
+                                         "- No blurry or low-quality elements\n";
+
+                                     
+
+                                         
+
+                                        prompt += "Camera: \n" +
+                                                   $"- {scene.Camera}\n";
+
+                                        prompt += "lighting and color: \n" +
+                                       $"- {scene.lighting_and_color}";
+
+
 
 
                                         var sceneLine = new SceneLineTextItem
@@ -696,7 +748,7 @@ namespace AZStoryVideoProfit.Forms
                                 GenerateShortVideoScript_TxtLogs.AppendText($"Duration per image: {durationPerImage}\n");
                             }));
 
-                            videoCreator.CreateVideo(_SceneImagePaths, audioFilePath, 12, durationPerImage);
+                            videoCreator.CreateVideo(_SceneImagePaths, audioFilePath, 1, durationPerImage);
 
                             this.Invoke(new Action(() => {
                                 GenerateShortVideoScript_TxtLogs.AppendText("3. Created short video ...\n");
@@ -919,44 +971,54 @@ namespace AZStoryVideoProfit.Forms
 
                             foreach (var scene in section.Scenes)
                             {
-                                //3.VisualInstructions
-                                foreach (var visual in scene.VisualInstructions)
+
+                                //3.AudioVoiceovers           
+                                foreach (var voiceOver in scene.AudioVoiceover)
                                 {
 
                                     this.Invoke(new Action(() =>
                                     {
-                                        var visualDesc = visual; //scene.VisualInstructions.FirstOrDefault(x => x.Id == textOverlay.VisualId);
-                                        var voiceOver = scene.AudioVoiceover.FirstOrDefault(x => x.VisualId == visual.Id);
-                                        var textOverlay = scene.TextOverlays.FirstOrDefault(x => x.VisualId == visual.Id);
-                                        if(textOverlay == null)
-                                        {
-                                            textOverlay = scene.TextOverlays.FirstOrDefault();
-                                        }
+                                        var visualDesc = scene.VisualInstructions.FirstOrDefault(x => x.Id == voiceOver.VisualId);
+                                        //var voiceOver = scene.AudioVoiceover.FirstOrDefault(x => x.VisualId == visual.Id);
+                                        var textOverlay = scene.TextOverlays.FirstOrDefault(x => x.VisualId == voiceOver.TextOverlayId);
+
+                                        var character = _YoutubeShortStoryVideoScripts.Character.FirstOrDefault(x => x.Id == visualDesc.Character);
+
+                                        //if (textOverlay == null)
+                                        //{
+                                        //    textOverlay = scene.TextOverlays.FirstOrDefault();
+                                        //}
 
 
-                                        if (voiceOver == null)
-                                        {
-                                            voiceOver = scene.AudioVoiceover.FirstOrDefault();
-                                        }
+                                        //if (voiceOver == null)
+                                        //{
+                                        //    visualDesc = scene.VisualInstructions.FirstOrDefault();
+                                        //}
 
 
                                         string prompt = $"Create a vertical (16:9) image for YouTube video.\n" +
                                          $"Scene {sceneNumber} of {totalScenes}:\n" +
                                          $"Visual Description: {visualDesc.Description}\n" +
-                                         $"Context: {voiceOver.Description}\n" +
+                                         $"Context: {voiceOver.Description}\n";
+                                         if (character != null)
+                                        {
+                                            prompt += $"Character:  {character.Description}\n";
+                                        }
+                                        //$"Negative prompt: {visualDesc.negative_prompt}\n" +
+                                        //$"Style:{visualDesc.style}\n" + 
 
-                                         "Style Requirements:\n" +
+                                        prompt += "Style Requirements:\n" +
                                          "- High contrast and vibrant colors for better mobile viewing\n" +
                                          "- Clear focal point in the center for vertical format\n" +
                                          "- Professional quality, cinematic lighting\n" +
                                          "- Text-safe areas on top and bottom\n" +
                                          "- Visually distinct from other scenes\n" +
                                          "- Modern, engaging composition\n" +
-                                         "- Image Style/Quality: Sketch/Drawing (e.g., Photorealistic, Detailed Digital Painting, 3D Render, Film Grain/Vintage.)\n";
+                                         $"- Image Style/Quality: {GenerateStoryVideo_ImageStyles.SelectedValue} (e.g., Photorealistic, Detailed Digital Painting, 3D Render, Film Grain/Vintage.)\n";
 
 
-                                         if(textOverlay != null)
-                                        {
+                                        if (textOverlay != null)
+                                        {                                            
                                             prompt += $"- Text Overlays \"{textOverlay.Description}\" \n";
                                         }
 
@@ -964,13 +1026,18 @@ namespace AZStoryVideoProfit.Forms
 
 
                                         //$"- Suitable for {GenerateShortVideoScript_ContentTypes.SelectedValue} style content\n" +
-                                        prompt+= $"- Character must consistent\n" +
-
-                                         "Technical Requirements:\n" +
+                                        prompt += "Technical Requirements:\n" +
                                          "- Vertical 16:9 aspect ratio\n" +
                                          "- High resolution, sharp details\n" +
                                          "- No text or watermarks\n" +
-                                         "- No blurry or low-quality elements";
+                                         "- No blurry or low-quality elements\n";
+                                         
+
+                                        prompt += "Camera: \n" +
+                                       $"- {scene.Camera}\n";
+
+                                        prompt += "lighting and color: \n" +
+                                       $"- {scene.lighting_and_color}";
 
 
                                         var sceneLine = new SceneLineTextItem
@@ -986,6 +1053,10 @@ namespace AZStoryVideoProfit.Forms
                                     }));
 
                                 }
+
+
+
+
 
                             }
                         }
@@ -1119,7 +1190,7 @@ namespace AZStoryVideoProfit.Forms
                             this.Invoke(new Action(() => {
                                 GenerateStoryVideo_TxtLogs.AppendText("Created scenes image ...\n");
 
-                                GenerateStoryVideo_TxtLogs.AppendText("3. Creating short video ...\n");
+                                GenerateStoryVideo_TxtLogs.AppendText("3. Creating story video ...\n");
                             }));
 
 
@@ -1131,14 +1202,14 @@ namespace AZStoryVideoProfit.Forms
                             int durationPerImage = (int)Math.Ceiling(Convert.ToDecimal(audio_duration / totalScenes));
 
                             this.Invoke(new Action(() => {
-                                GenerateStoryVideo_TxtLogs.AppendText($"Frame per seconds: 12\n");
+                                GenerateStoryVideo_TxtLogs.AppendText($"Frame per seconds: 1\n");
                                 GenerateStoryVideo_TxtLogs.AppendText($"Duration per image: {durationPerImage}\n");
                             }));
 
                             videoCreator.CreateVideo(_StoryVideoSceneImagePaths, audioFilePath, 1, durationPerImage);
 
                             this.Invoke(new Action(() => {
-                                GenerateStoryVideo_TxtLogs.AppendText("3. Created short video ...\n");
+                                GenerateStoryVideo_TxtLogs.AppendText("3. Created story video ...\n");
                             }));
 
 

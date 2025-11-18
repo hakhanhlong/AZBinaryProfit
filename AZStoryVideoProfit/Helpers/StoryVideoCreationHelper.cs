@@ -289,7 +289,7 @@ namespace AZStoryVideoProfit.Helpers
                 {
                     try
                     {
-                        //Directory.Delete(tempImageSequenceDir, true);
+                        Directory.Delete(tempImageSequenceDir, true);
                         Console.WriteLine($"Cleaned up temporary image directory: {tempImageSequenceDir}");
                     }
                     catch (Exception ex)

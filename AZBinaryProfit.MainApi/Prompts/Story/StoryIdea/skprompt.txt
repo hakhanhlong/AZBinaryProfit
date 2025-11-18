@@ -8,6 +8,7 @@ These story ideas must be:
 3.  **Diverse in Approach:** Actively explore different perspectives, points of view, hidden corners, and thematic interpretations of the 'topic' across the set of ideas provided (e.g., vary genre, tone, and setting).
 4.  **Robustly Structured:** Each idea must be a complete concept, fully detailed according to the user's provided structure.
 
+
 For each concept, ensure a strong core conflict and a clear thematic statement are present. Your expertise in narrative architecture and audience engagement is crucial.
 </message>
 
@@ -16,29 +17,19 @@ You **MUST** provide {{$idea_number}} highly creative and compelling story ideas
 
 {{$topic}}
 
-Each idea **MUST** adhere strictly to the following structure and detailed requirements. Do not skip or combine any fields:
-
-- **Name:** Clear, intriguing, and easy-to-understand title.
-- **Story Content (Elevator Pitch):** A captivating 2-3 sentence logline/summary that clearly outlines the *protagonist*, the *conflict*, and the *stakes*.
-- **Thematic Statement:** A single sentence stating the core moral, philosophical question, or message the story explores (e.g., "The true cost of immortality is the loss of empathy.").
-- **Genre Identification:** Specify the **Primary** and up to **Two Secondary** genres (e.g., Primary: Sci-Fi, Secondary: Thriller, Romance).
-- **Story Setting:** Detailed specification of the time period, location (e.g., dystopian future London, 1920s rural China, a floating space station).
-- **Character Sketches:** Include **at least one** main protagonist and **one** antagonist/foil. For each, use the following mandatory sub-fields:
-    - [character_name]
-    - [species]
-    - [role_in_story] (e.g., Protagonist, Antagonist, Mentor, Foil)
-    - [age/period] (Specific age or relevant period of life)
-    - [gender]
-    - [Description]: A concise, vivid description of their appearance and **core personality/internal conflict**.
-- **Plot Elements (Outline):** A structured, multi-paragraph outline covering the **Inciting Incident**, **Rising Action (key turns)**, **Climax**, and **Resolution**.
-- **Potential Format:** Suggest the BEST format to maximize impact (e.g., 6-episode limited series, YA novel, cinematic short film, narrative podcast).
-- **Story Writing Style:** Specific style suggestions (e.g., Noir, Magical Realism, Stream of Consciousness, Epistolary, journalistic).
-- **Story Tone:** Specify the dominant emotional tone (e.g., Existential Dread, Hopeful and Uplifting, Cynical, Wry Comedy, Melancholic).
-- **Narrative POV:** Specify the Point of View (e.g., First Person Limited - Protagonist, Third Person Omniscient, Second Person).
-- **Audience Age Group:** Be specific (e.g., Adults 30+, Young Adult/YA 14-18, Middle Grade 8-12).
-- **Content Rating:** (e.g., PG-13 for moderate violence, R for strong language and thematic material, TV-MA).
-- **Ending Preference:** (e.g., Tragic, Ambiguous, Triumphant, Twist/Shock).
-- **Guidelines for Writing:** Provide 2-3 specific, actionable creative mandates for a writer approaching this idea 
-(e.g., "The technology must feel grounded in real science," or "Use sensory details heavily to establish the atmosphere.").
-- **Written in:** {{$language}}
+Requirements for each IdeaStories:
+- Clear and easy-to-understand name (name)
+- Story content (story)
+- Genre identification (genre)
+- Story setting (story_setting)
+- Character sketches including [character name], [species], [role in story/movie], [age/period], [gender], [Description of appearance and core personality]
+- Plot Elements of the story (plot_elements)
+- Story writing style (story_writing_style)
+- Story tone (story_tone)
+- Narrative_pov
+- Audience_age_group
+- Content rating (content_rating)
+- Ending preference (ending_preference)
+- Guidelines for writing (guidelines)
+- Written in {{$language}}
 </message>

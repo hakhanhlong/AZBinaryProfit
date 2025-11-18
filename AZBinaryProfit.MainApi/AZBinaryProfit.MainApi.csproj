@@ -53,6 +53,9 @@
     <None Update="Prompts\Story\StoryGuideline\skprompt.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Prompts\Story\StoryIdea\skprompt_2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Prompts\Story\StoryIdea\skprompt_bk.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

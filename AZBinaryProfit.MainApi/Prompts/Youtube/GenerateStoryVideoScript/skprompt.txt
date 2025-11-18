@@ -17,9 +17,15 @@
     **FINAL ULTIMATE PROMPT STRUCTURE (MUST BE FOLLOWED) JSON objects:**
     ```json
     {
-        "Name": "The Harmony of Echoes", 
+        "Name": "", 
         "TotalEstimatedDurationSeconds": 58,  // New field to check total time
-        "ViralStrategy": "Use a curiosity gap hook, then a rapid-fire list reveal.", // New field for AI to define its strategy
+        "ViralStrategy": "", // New field for AI to define its strategy
+        "Character": [
+            {
+                "id":"character_1",
+                "description":"Name:\"\",Species:\"\",Role:\"\",Age:\"\",Gender:\"\", Description:\"\""
+            }
+        ],
         "Sections": [
             {
                 "Name":"1. HOOK (0-2 seconds)",
@@ -28,25 +34,29 @@
                         "VisualInstructions":[
                             {
                                 "id":"visual_id_1",
-                                "description":"Extreme close-up: A shocking image or a rapid sequence of 3 different images. Vertical framing."
+                                "character":"character_1",
+                                "description":""                                
                             }                            
                         ],
                         "TextOverlays":[
                             {
+                                "id":"textoverlay_id_1",
                                 "visualid":"visual_id_1",
                                 "timing":"0-2s",
-                                "description":"The 1 Thing Hollywood Doesn't Tell You (Bold, White Text on Black Background)"
+                                "description":""
                             }                           
                         ],
                         "AudioVoiceover":[
                             {
+                                "textoverlayid":"textoverlay_id_1",
                                 "visualid":"visual_id_1",
                                 "timing":"0-2s",
-                                "description":"Loud, dramatic sound effect (e.g., *WHIP CRACK* or *GASP*)."
+                                "description":""
                             }                            
                         ],
                         "Timing":"2 seconds",
-                        "CameraAnglesFramingNotes":"High-energy, fast cuts, centered vertical composition for text."
+                        "Camera":"  shot_type: ,focal_length_mm: ,f_stop: ,shutter_speed: ,angle: ,tilt_roll: ,lens_effect: ",
+                        "lighting_and_color":"main_light: ,rim_light: ,background_color: ,color_palette: "
                     }
                 ]                
             },
@@ -58,25 +68,29 @@
                         "VisualInstructions":[
                             {
                                 "id":"visual_id_2",
-                                "description":"Rapid scene change: Host talking directly to camera, then a cut to B-roll showing a related object/action."
+                                "character":"character_1",
+                                "description":""                                
                             }                            
                         ],
                         "TextOverlays":[
                             {
+                                "id":"textoverlay_id_1",
                                 "visualid":"visual_id_2",
                                 "timing":"2-5s",
-                                "description":"*PATTERN INTERRUPT* Fact #1: The secret life of X (Middle of screen)"
+                                "description":""
                             }                           
                         ],
                         "AudioVoiceover":[
                             {
+                                "textoverlayid":"textoverlay_id_1",
                                 "visualid":"visual_id_2",
                                 "timing":"2-5s",
-                                "description":"Host speaking with high energy: 'And that's not even the craziest part...'"
+                                "description":"'"
                             }                            
                         ],
                         "Timing":"3 seconds",
-                        "CameraAnglesFramingNotes":"Switch between close-up and medium shot of the host. Dynamic motion."
+                        "Camera":"  shot_type: ,focal_length_mm: ,f_stop: ,shutter_speed: ,angle: ,tilt_roll: ,lens_effect: ",
+                        "lighting_and_color":"main_light: ,rim_light: ,background_color: ,color_palette: "
                     }
                     // ... More scenes to fill the duration ...
                 ]
@@ -89,25 +103,29 @@
                         "VisualInstructions":[
                             {
                                 "id":"visual_id_CTA",
-                                "description":"Visual of an arrow pointing down towards the 'Subscribe' button/comment section."
+                                "character":"character_1",
+                                "description":"Visual of an arrow pointing down towards the 'Subscribe' button/comment section."                                
                             }                            
                         ],
                         "TextOverlays":[
                             {
+                                "id":"textoverlay_id_1",
                                 "visualid":"visual_id_CTA",
                                 "timing":"55-58s",
-                                "description":"Did you know this? Let me know! (Comment below)"
+                                "description":""
                             }                           
                         ],
                         "AudioVoiceover":[
                             {
+                                "textoverlayid":"textoverlay_id_1",
                                 "visualid":"visual_id_CTA",
                                 "timing":"55-58s",
-                                "description":"Upbeat music fades, Host: 'Follow for the whole story tomorrow!'"
+                                "description":""
                             }                            
                         ],
                         "Timing":"3 seconds",
-                        "CameraAnglesFramingNotes":"Clear visual focus on the CTA. Text is positioned to not block the UI elements."
+                        "Camera":"  shot_type: ,focal_length_mm: ,f_stop: ,shutter_speed: ,angle: ,tilt_roll: ,lens_effect: ",
+                        "lighting_and_color":"main_light: ,rim_light: ,background_color: ,color_palette: "
                     }
                 ]
                
