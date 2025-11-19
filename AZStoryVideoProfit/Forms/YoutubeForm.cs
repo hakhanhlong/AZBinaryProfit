@@ -572,7 +572,7 @@ namespace AZStoryVideoProfit.Forms
                                          "- Modern, engaging composition\n" +
                                          //$"- Text Overlays \"{textOverlay.Description}\" \n" +
                                          //$"- Suitable for {GenerateShortVideoScript_ContentTypes.SelectedValue} style content\n" +
-                                         $"- Image Style/Quality: {GenerateShortVideoScript_ImageStyles.SelectedValue} (e.g., Photorealistic, Detailed Digital Painting, 3D Render, Film Grain/Vintage.)\n";
+                                         $"- Image Style: {GenerateShortVideoScript_ImageStyles.SelectedValue}\n";
 
 
 
@@ -593,11 +593,11 @@ namespace AZStoryVideoProfit.Forms
 
                                          
 
-                                        prompt += "Camera: \n" +
-                                                   $"- {scene.Camera}\n";
+                                       // prompt += "Camera: \n" +
+                                       //            $"- {scene.Camera}\n";
 
-                                        prompt += "lighting and color: \n" +
-                                       $"- {scene.lighting_and_color}";
+                                       // prompt += "lighting and color: \n" +
+                                       //$"- {scene.lighting_and_color}";
 
 
 
@@ -679,7 +679,7 @@ namespace AZStoryVideoProfit.Forms
 
                             this.Invoke(new Action(() =>
                             {
-                                GenerateShortVideoScript_TxtLogs.AppendText("🎵 Mixed background music...");
+                                GenerateShortVideoScript_TxtLogs.AppendText("🎵 Mixed background music...\n");
                             }));
 
                             //tạo image
@@ -962,7 +962,7 @@ namespace AZStoryVideoProfit.Forms
 
                         //1.Sections
 
-                        int totalScenes = _YoutubeStoryVideoScripts.Sections.SelectMany(x => x.Scenes).SelectMany(x => x.VisualInstructions).Count();
+                        int totalScenes = _YoutubeStoryVideoScripts.Sections.SelectMany(x => x.Scenes).SelectMany(x => x.AudioVoiceover).Count();
                         int sceneNumber = 1;
                         foreach (var section in _YoutubeStoryVideoScripts.Sections)
                         {
@@ -978,11 +978,11 @@ namespace AZStoryVideoProfit.Forms
 
                                     this.Invoke(new Action(() =>
                                     {
-                                        var visualDesc = scene.VisualInstructions.FirstOrDefault(x => x.Id == voiceOver.VisualId);
+                                        var visualDesc = scene.VisualInstructions?.FirstOrDefault(x => x.Id == voiceOver.VisualId);
                                         //var voiceOver = scene.AudioVoiceover.FirstOrDefault(x => x.VisualId == visual.Id);
-                                        var textOverlay = scene.TextOverlays.FirstOrDefault(x => x.VisualId == voiceOver.TextOverlayId);
+                                        var textOverlay = scene.TextOverlays?.FirstOrDefault(x => x.VisualId == voiceOver.TextOverlayId);
 
-                                        var character = _YoutubeShortStoryVideoScripts.Character.FirstOrDefault(x => x.Id == visualDesc.Character);
+                                        var character = _YoutubeShortStoryVideoScripts.Character?.FirstOrDefault(x => x.Id == visualDesc.Character);
 
                                         //if (textOverlay == null)
                                         //{
@@ -996,7 +996,7 @@ namespace AZStoryVideoProfit.Forms
                                         //}
 
 
-                                        string prompt = $"Create a vertical (16:9) image for YouTube video.\n" +
+                                        string prompt = $"Create a horizontal (16:9) image for YouTube video.\n" +
                                          $"Scene {sceneNumber} of {totalScenes}:\n" +
                                          $"Visual Description: {visualDesc.Description}\n" +
                                          $"Context: {voiceOver.Description}\n";
@@ -1009,7 +1009,7 @@ namespace AZStoryVideoProfit.Forms
 
                                         prompt += "Style Requirements:\n" +
                                          "- High contrast and vibrant colors for better mobile viewing\n" +
-                                         "- Clear focal point in the center for vertical format\n" +
+                                         "- Clear focal point in the center for horizontal format\n" +
                                          "- Professional quality, cinematic lighting\n" +
                                          "- Text-safe areas on top and bottom\n" +
                                          "- Visually distinct from other scenes\n" +
@@ -1027,17 +1027,17 @@ namespace AZStoryVideoProfit.Forms
 
                                         //$"- Suitable for {GenerateShortVideoScript_ContentTypes.SelectedValue} style content\n" +
                                         prompt += "Technical Requirements:\n" +
-                                         "- Vertical 16:9 aspect ratio\n" +
+                                         "- Horizontal 16:9 aspect ratio\n" +
                                          "- High resolution, sharp details\n" +
                                          "- No text or watermarks\n" +
                                          "- No blurry or low-quality elements\n";
                                          
 
-                                        prompt += "Camera: \n" +
-                                       $"- {scene.Camera}\n";
+                                       // prompt += "Camera: \n" +
+                                       //$"- {scene.Camera}\n";
 
-                                        prompt += "lighting and color: \n" +
-                                       $"- {scene.lighting_and_color}";
+                                       // prompt += "lighting and color: \n" +
+                                       //$"- {scene.lighting_and_color}";
 
 
                                         var sceneLine = new SceneLineTextItem
@@ -1137,7 +1137,7 @@ namespace AZStoryVideoProfit.Forms
 
                             this.Invoke(new Action(() =>
                             {
-                                GenerateStoryVideo_TxtLogs.AppendText("🎵 Mixed background music...");
+                                GenerateStoryVideo_TxtLogs.AppendText("🎵 Mixed background music...\n");
                             }));
 
                             //tạo image

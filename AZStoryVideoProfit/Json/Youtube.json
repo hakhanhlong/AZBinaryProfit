@@ -442,6 +442,50 @@
       {
         "Name": "3D Render",
         "Description": "3d_render"
+      },
+      {
+        "Name": "Realistic",
+        "Description": "Realistic"
+      },
+      {
+        "Name": "Glass Distortion",
+        "Description": "Glass Distortion"
+      },
+      {
+        "Name": "Bohemian portrait",
+        "Description": "Bohemian portrait"
+      },
+      {
+        "Name": "Blueprint",
+        "Description": "Blueprint"
+      },
+      {
+        "Name": "Cinematic",
+        "Description": "Cinematic"
+      },
+      {
+        "Name": "Hyper realistic",
+        "Description": "Hyper realistic"
+      },
+      {
+        "Name": "Flat illustration",
+        "Description": "Flat illustration"
+      },
+      {
+        "Name": "Oil Painting",
+        "Description": "Oil Painting"
+      },
+      {
+        "Name": "Watercolor",
+        "Description": "Watercolor"
+      },
+      {
+        "Name": "Low Poly",
+        "Description": "Low Poly"
+      },
+      {
+        "Name": "Pixel Art",
+        "Description": "Pixel Art"
       }
     ],
     "ImageFocus": [
