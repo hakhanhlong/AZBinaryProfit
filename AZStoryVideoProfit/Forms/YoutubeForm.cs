@@ -1031,13 +1031,13 @@ namespace AZStoryVideoProfit.Forms
                                          "- High resolution, sharp details\n" +
                                          "- No text or watermarks\n" +
                                          "- No blurry or low-quality elements\n";
-                                         
 
-                                       // prompt += "Camera: \n" +
-                                       //$"- {scene.Camera}\n";
 
-                                       // prompt += "lighting and color: \n" +
-                                       //$"- {scene.lighting_and_color}";
+                                        prompt += "Camera: \n" +
+                                       $"- {scene.CameraAnglesFramingNotes}\n";
+
+                                        // prompt += "lighting and color: \n" +
+                                        //$"- {scene.lighting_and_color}";
 
 
                                         var sceneLine = new SceneLineTextItem

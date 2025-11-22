@@ -55,8 +55,7 @@
                             }                            
                         ],
                         "Timing":"2 seconds",
-                        "Camera":"  shot_type: ,focal_length_mm: ,f_stop: ,shutter_speed: ,angle: ,tilt_roll: ,lens_effect: ",
-                        "lighting_and_color":"main_light: ,rim_light: ,background_color: ,color_palette: "
+                        "CameraAnglesFramingNotes":""
                     }
                 ]                
             },
@@ -89,8 +88,7 @@
                             }                            
                         ],
                         "Timing":"3 seconds",
-                        "Camera":"  shot_type: ,focal_length_mm: ,f_stop: ,shutter_speed: ,angle: ,tilt_roll: ,lens_effect: ",
-                        "lighting_and_color":"main_light: ,rim_light: ,background_color: ,color_palette: "
+                        "CameraAnglesFramingNotes":""
                     }
                     // ... More scenes to fill the duration ...
                 ]
@@ -104,7 +102,7 @@
                             {
                                 "id":"visual_id_CTA",
                                 "character":"character_1",
-                                "description":"Visual of an arrow pointing down towards the 'Subscribe' button/comment section."                                
+                                "description":""                                
                             }                            
                         ],
                         "TextOverlays":[
@@ -124,8 +122,7 @@
                             }                            
                         ],
                         "Timing":"3 seconds",
-                        "Camera":"  shot_type: ,focal_length_mm: ,f_stop: ,shutter_speed: ,angle: ,tilt_roll: ,lens_effect: ",
-                        "lighting_and_color":"main_light: ,rim_light: ,background_color: ,color_palette: "
+                        "CameraAnglesFramingNotes":""
                     }
                 ]
                

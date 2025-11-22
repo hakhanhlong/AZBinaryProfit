@@ -628,7 +628,7 @@ namespace AZBinaryProfit.MainApi.Controllers
                 {
                     ThinkingBudget = 0
                 },
-                MaxTokens = 16382,
+                MaxTokens = 32000,
                 Temperature = 0.2
                 //,
                 //TopP = 0.9,

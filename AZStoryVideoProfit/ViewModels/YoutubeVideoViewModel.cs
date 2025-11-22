@@ -105,8 +105,7 @@ namespace AZStoryVideoProfit.ViewModels
         public List<YoutubeStoryVideo_TextOverlay_ViewModel> TextOverlays { get; set; }
         public List<YoutubeStoryVideo_AudioVoiceover_ViewModel> AudioVoiceover { get; set; }
 
-        public string Camera { get; set; }
-        public string lighting_and_color { get; set; }
+        public string CameraAnglesFramingNotes { get; set; }        
         public string Timing { get; set; }
     }
 
